@@ -1,0 +1,453 @@
+--- PAGE 1 ---
+Does INT8 make Leela stronger per second?
+Quantizing the BT3 transformer in Leela Chess Zero with TensorRT, and measuring how much of the error 
+the search absorbs
+INT8 inference
+Network quality ↓
+A N D
+Inference speed ↑
+More search per 
+second
+Stronger or weaker 
+engine?
+C O R E  Q U E S T I O N
+At the same wall-clock time, does the extra search from faster INT8 inference make up for the network 
+quality it loses?
+Ritwik Mishra · ME23B237
+Anjan R D · ME23B157
+CS6886 · Systems for Deep Learning
+IIT Madras
+--- PAGE 2 ---
+How Leela Chess Zero works
+CS6886 · Systems for Deep Learning 2
+Chess position
+BT3 Transformer
+Neural-network evaluator
+Policy  P(a | s)
+Prior preference over legal moves
+Value  V(s)
+Estimated quality of the position
++
+MCTS
+Final move
+M C T S  L O O P
+Select Expand / Evaluate Backup Repeat
+The network guides the search. The final move comes from the search statistics, not straight from the network.
+--- PAGE 3 ---
+How MCTS uses policy and value
+CS6886 · Systems for Deep Learning 3
+A T  S T A T E  s
+s BT3 Transformer
+NN evaluator
+Policy  P(a | s)
+Value  V(s)
+P U C T  S E L E C T I O N  R U L E
+a* = argmaxa [ Q(s,a) + cpuct P(s,a) √( Σb N(s,b) )
+1 + N(s,a) ]
+P = neural-network prior ·      Q = average backed-up branch value ·      N = visit count
+S I M U L A T I O N  1
+Select A → new leaf → BT3 evaluates it 
+(P, V) → expand → back up
+P = 0.70 P = 0.30
+S
+A B
+backup
+BT3 evaluates → P, V
+S I M U L A T I O N  2
+Exploration term lets B be selected → 
+BT3 evaluates B → expand → back up
+P = 0.70 P = 0.30
+S
+A B
+backup
+BT3 evaluates → P, V
+S I M U L A T I O N  3
+Updated Q and N may make B more 
+attractive, although A had the higher 
+prior
+P = 0.70 P = 0.30
+S
+A B
+next selection
+Q(s,A) ↓ Q(s,B) ↑
+M C T S  L O O P
+SELECT
+EXPAND / BT3 EVALUATE
+BACKUP
+REPEAT
+INT8 adds error to both P and V. The search can correct that error, or it can amplify it.
+--- PAGE 4 ---
+Why network accuracy alone isn't enough
+CS6886 · Systems for Deep Learning 4
+A different top move is not always a worse move
+T A B L E B A S E  E X A M P L E
+FP16 
+model
+prefers Move A INT8 model prefers Move B
+C A S E  1
+Move A Win
+Move B Win
+The top move changed, but both 
+moves still win.
+C A S E  2
+Move A Win
+Move B Draw
+INT8 turned a win into a draw. That 
+is a real error.
+Leela is a network plus a search
+Raw INT8 policy error
+MCTS
+May recover the error
+A different network output doesn't always 
+mean a worse final move.
+So we measure both how much the network changes and whether the final move is still correct.
+--- PAGE 5 ---
+Prior evidence and our hypothesis
+CS6886 · Systems for Deep Learning 5
+P R I O R  W O R K
+Haque, Wei and Müller, ACG 2021
+"On the Road to Perfection? Evaluating Leela Chess Zero Against Endgame 
+Tablebases"
+• They evaluated raw Lc0 policy decisions using exact endgame tablebases.
+• They then evaluated the same positions after MCTS search.
+• Search corrected almost all of the raw network errors.
+KQkq tablebase positions ·   Strong network ·   2,055,004 positions tested
+3075
+Raw policy mistakes
+36
+Mistakes after search
+400 MCTS
+simulations
+Note: the study used an older Lc0 network. We cite it as evidence that search corrects 
+network errors, not as evidence about BT3 or INT8.
+O U R  H Y P O T H E S I S
+INT8 Network quality ↓
+B U T
+INT8 Inference 
+throughput ↑
+More MCTS search in 
+the same time
+H Y P O T H E S I S
+An INT8 BT3 may be weaker per evaluation, but 
+stronger per second if the faster inference buys 
+enough extra search.
+Haque et al. found that search fixes most raw network errors. We test whether it also fixes the errors INT8 adds.
+--- PAGE 6 ---
+Three questions, from the network to the whole engine
+1
+R Q 1
+Network damage
+How much does INT8 change BT3's policy 
+and value outputs, and which 
+compression techniques shrink that 
+change?
+Measured by
+Policy KL, top-move agreement, value error, 
+raw-policy tablebase accuracy
+2
+R Q 2
+What search hides
+With the same number of search nodes, 
+how much of the damage does MCTS 
+correct? Does it cope better with policy 
+error or with value error?
+Measured by
+Tablebase accuracy at fixed node budgets, 
+and the policy/value swap test
+3
+R Q 3
+Does speed pay off?
+With the same wall-clock time, or the 
+same energy, does faster inference buy 
+enough extra search to make up for the 
+lost quality?
+Measured by
+nodes/s, accuracy at equal time and equal 
+energy, INT8 vs FP16 matches
+W H A T  W E  
+C O M P A R E
+FP16
+The baseline. BT3 in TensorRT at half 
+precision
+INT8 (W8A8)
+Weights and activations in 8 bits, run on the 
+INT8 tensor cores
+2:4 sparse INT8
+INT8 plus pruning in the one pattern the 
+tensor cores can skip
+Every model runs inside the real lc0 engine through TensorRT. FP8, W4 and custom kernels are out of scope.
+CS6886 · Systems for Deep Learning 6
+--- PAGE 7 ---
+From Leela network to measured result
+CS6886 · Systems for Deep Learning 7
+1 E X P O R T
+leela2onnx
+BT3 weights to an 
+FP16 ONNX graph
+2 C O M P R E S S
+ModelOpt
+INT8 QDQ ONNX: 
+calibration, 
+SmoothQuant, 2:4 
+pruning
+3 W R A P
+onnx2leela
+Turns our ONNX into 
+an lc0 network file
+4 RUN
+lc0 onnx-trt
+optimize=8 builds 
+the TensorRT INT8 
+engine
+5 M E A S U R E
+Evaluation
+Tablebase accuracy, 
+nodes/s, energy, 
+profiles
+Optional training branch
+leela2onnx --onnx2pytorch
+then
+QAT and distillation in PyTorch
+then
+back to ONNX
+--- PAGE 8 ---
+Compression ablation: one technique at a time
+M A I N  L A D D E R :  E A C H  S T E P  K E E P S  E V E R Y T H I N G  A B O V E  I T
+0 FP16 Baseline
+1 Naive W8A8 PTQ Per-tensor weights, max calibration, random 
+positions Must
+2 + per-channel weights A separate scale for each output channel Must
+3 + better calibration Entropy or percentile instead of max Must
+4 + SmoothQuant Moves activation outliers into the weights Must
+5 + search-aware calibration Calibrate on positions the search actually visits Must
+6 + QAT Fine-tune with fake quantization Should
+7 + distillation Train against FP16 outputs during QAT Should
+S P A R S E  B R A N C H
+Prune the FP16 weights first, then quantize with the best 
+recipe from the ladder
+S0 Magnitude 2:4 + INT8
+Speed ceiling, no data needed
+Must
+S1 SparseGPT 2:4 + INT8
+Keeps accuracy without training?
+Should
+S2 SparseGPT 2:4 + INT8 + KD
+Recovery training, only if QAT runs
+Could
+Why the split matters
+Steps 1 to 7 all run at the same speed, so they are a quality 
+study. Sparsity changes speed, so the best sparse model also 
+goes into the timed studies.
+CS6886 · Systems for Deep Learning 8
+--- PAGE 9 ---
+2:4 sparsity: pruning in the pattern the GPU can skip
+T H E  P A T T E R N
+0.8 0 -0.3 0 0 1.1 0 0.4
+0 -0.6 0 0.2 0.9 0 -0.2 0
+Two weight rows, split into groups of four
+• In every group of four weights, exactly two are zero.
+• The sparse tensor cores on the RTX 4060 skip the zeros, which halves the 
+multiplications on paper.
+• End to end we expect far less than 2x, because only the matmuls get 
+faster.
+W H I C H  T W O  W E I G H T S  G O ?
+Magnitude 2:4 SparseGPT 2:4
+Rule Drop the two smallest Drop the two whose loss 
+changes the output least
+Data None Calibration positions
+Repair None Adjusts the surviving weights
+Our use Speed ceiling (S0) Accuracy without training (S1)
+Both leave the same pattern, so both run at the same speed. SparseGPT reuses the Hessian code 
+from our Assignment 2 GPTQ implementation.
+O R D E R  O F  O P E R A T I O N S
+FP16 weights Prune to 2:4 INT8, calibrated on the 
+pruned net
+TensorRT build with sparsity 
+on
+Check layer info for sparse 
+kernels
+CS6886 · Systems for Deep Learning 9
+--- PAGE 10 ---
+Three comparisons against FP16
+A · Network only
+Q U E S T I O N
+How much does each model change the 
+network?
+M O D E L S
+Every ablation step
+M E A S U R E
+• Policy KL against FP16
+• Top-move agreement
+• Value/WDL error
+• Raw-policy tablebase accuracy
+B · Fixed nodes
+Q U E S T I O N
+How much of the damage does search hide?
+M O D E L S
+Every ablation step
+M E A S U R E
+• Tablebase accuracy at a fixed node budget
+• Node-equivalents: extra nodes FP16 needs to 
+match each model
+C · Fixed time
+Q U E S T I O N
+Does the speed pay off?
+M O D E L S
+FP16, best INT8, best 2:4
+M E A S U R E
+• nodes/s in lc0
+• Tablebase accuracy at equal wall-clock time
+• About 1000 games of INT8 vs FP16 at 100 ms 
+per move
+Node budgets 0 100 400 800 1600
+H O W  A  M O V E  I S  S C O R E D
+Wrong if it changes the tablebase result. DTZ-optimal rate is a secondary number. Win → Draw or Loss or Draw → Loss
+Test positions: Syzygy endgames, plus a hard subset where FP16 is close to getting the move wrong.
+CS6886 · Systems for Deep Learning 10
+--- PAGE 11 ---
+Does search cope better with policy error or value error?
+FP16 network
+exact P and V
+INT8 network
+noisy P and V
+S W A P  1
+INT8 policy + FP16 value
+Only the policy is noisy
+S W A P  2
+FP16 policy + INT8 value
+Only the value is noisy
+Both mixes go into the same fixed-node search and are scored against FP16 and full INT8. Two 
+networks per position make timing meaningless, so this runs at fixed nodes only.
+W H Y  N O T  K E E P  O N E  H E A D  I N  F P 1 6 ?
+Almost all of BT3's compute is in the shared body. The policy and value 
+heads are small layers on top of it. Keeping one head in FP16 still 
+leaves it reading noisy INT8 features, so both variants would look like 
+full INT8. Swapping the outputs of two whole networks isolates each 
+error cleanly.
+H O W  W E  R E A D  T H E  R E S U L T
+• If swap 1 stays close to FP16 and swap 2 drops, the search absorbs 
+policy error but not value error.
+• A plausible reason: search explores past a bad policy, but a wrong 
+value is backed up the tree. We will test this, not assume it.
+This tells us which part of the INT8 error the search can repair.
+V
+P
+P
+V
+CS6886 · Systems for Deep Learning 11
+--- PAGE 12 ---
+Hardware studies that explain the speed numbers
+1 Profile and roofline
+INT8 roof
+FP16 roof
+FLOPs per byte moved
+H O W
+Time per layer from trtexec. Each matmul 
+placed against the 4060's compute and memory 
+limits.
+Shows which layers INT8 speeds up and 
+which ones set the limit.
+2 Energy per node
+FP16 INT8
+GPU
+CPU
+J per node (sketch)
+H O W
+GPU energy from the NVML counter, CPU 
+energy from RAPL, both above idle. Accuracy at 
+equal energy budgets.
+Tests whether INT8 is stronger per joule as 
+well as per second.
+3 Search batch size
+best batch
+batch size
+fixed-time accuracy (sketch)
+H O W
+nodes/s and tablebase accuracy for lc0 
+minibatch sizes from 8 to 512.
+Big batches use the GPU better but make 
+search less exact. The best size may differ 
+for FP16 and INT8.
+Timed runs use a locked GPU clock where the laptop allows it, warm-ups, repeated runs and medians. Sketches show the plot layoutonly, not results.
+CS6886 · Systems for Deep Learning 12
+--- PAGE 13 ---
+Four weeks, two people, four gates
+P E R S O N  A
+model
+P E R S O N  B
+systems
+G A T E
+Week 1  FP16 end to end
+• Export BT3, build lc0 onnx-trt
+• Tablebase test set and splits
+• Outlier check
+• Day-1 test: lc0 runs our INT8 file
+• FP16 baselines: nodes/s, profile, 
+energy
+• Clock-lock check
+C1 FP16 runs end to end
+Week 2  INT8 ladder
+• Ablation steps 1 to 5
+• Studies A and B on every step
+• Mid-week: QAT go or drop
+• An INT8 engine per step
+• Check matmuls really run in INT8
+• 2:4 speed ceiling (S0)
+C2 Best PTQ frozen: safety net
+Week 3  Training and timing
+• QAT and KD (if kept)
+• SparseGPT (S1)
+• Policy/value swap study
+• Study C and overnight matches
+• Energy and batch-size sweeps
+• Roofline
+C3 All results frozen
+Week 4  Analysis and report
+• Ablation and swap plots
+• Method and results sections
+• Timing, energy and roofline plots
+• Check every number against logs
+C4 Report and code frozen
+After gate C2 the project is complete even if nothing else works. QAT, SparseGPT and sparse recovery are extras on top of it.
+CS6886 · Systems for Deep Learning 13
+--- PAGE 14 ---
+What we will hand in
+H E A D L I N E  F I G U R E  ( F 1 1 ) ,  L A Y O U T  O N L Y
+nodes/s
+tablebase 
+accuracy
+FP16
+INT8 PTQ
+INT8 QAT+KD
+2:4 INT8
+Point positions are placeholders. No results yet.
+Code
+Export, quantization ladder, SmoothQuant, sparsity, training, swap 
+MCTS, benchmarks. One script per experiment, reproducible from a 
+fresh clone.
+Models and data ONNX files, lc0 network files, engine caches and calibration data for 
+every model. Tablebase test set, hard subset and splits.
+Tables T1 ablation · T2 speed · T3 energy · T4 matches · T5 2:4 speed ceiling
+Figures
+F1 ablation ladder · F2 accuracy vs nodes · F3 node-equivalents · F4 
+policy/value swap · F5 accuracy vs time · F6 profile and roofline · F7 
+J/node · F8 equal-energy accuracy · F9, F10 batch size · F11 frontier · 
+F12 outliers
+Report and demo Full write-up, plus the INT8 engine playing in lc0 with nodes/s on 
+screen.
+Success means an honest accuracy-per-second answer for INT8 on BT3, whichever way it comes out.
+CS6886 · Systems for Deep Learning 14
+--- PAGE 15 ---
+References
+[1]  Haque, R., Wei, T.-H., Müller, M. On the Road to Perfection? Evaluating Leela Chess Zero Against Endgame Tablebases. Advances in Computer Games, 2021.
+[2]  Frantar, E., Ashkboos, S., Hoefler, T., Alistarh, D. GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers. ICLR, 2023.
+[3]  Xiao, G., Lin, J., Seznec, M., Wu, H., Demouth, J., Han, S. SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models. ICML, 2023.
+[4]  Frantar, E., Alistarh, D. SparseGPT: Massive Language Models Can Be Accurately Pruned in One-Shot. ICML, 2023.
+[5]  Mishra, A. et al. Accelerating Sparse Deep Neural Networks. arXiv:2104.08378, 2021.
+[6]  Jacob, B. et al. Quantization and Training of Neural Networks for Efficient Integer-Arithmetic-Only Inference. CVPR, 2018.
+[7]  Hinton, G., Vinyals, O., Dean, J. Distilling the Knowledge in a Neural Network. arXiv:1503.02531, 2015.
+[8]  Williams, S., Waterman, A., Patterson, D. Roofline: An Insightful Visual Performance Model for Multicore Architectures. Communications of the ACM, 2009.
+[9]  Silver, D. et al. Mastering Chess and Shogi by Self-Play with a General Reinforcement Learning Algorithm. arXiv:1712.01815, 2017.
+[10]  Monroe, D. et al. Chessformer: A Unified Architecture for Chess Modeling. ICLR, 2026.
+Software: Leela Chess Zero (lc0 v0.33, onnx-trt backend), NVIDIA TensorRT and ModelOpt, ONNX Runtime, Syzygy tablebases.
+CS6886 · Systems for Deep Learning 16
