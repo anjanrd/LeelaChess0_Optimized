@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "activation_statistics": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/calibration-outliers.json",
+    "sha256": "2f04c523240bd07d6a8894a88723630ac0e5edc436b6da00934d88f232a85afd"
+  },
+  "port_check": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/environment/week1-v2-torch-check.json",
+    "sha256": "98baf0885b86f5e96c7b818b9b28635add2fa583b2f8f6302a0e4b7c9ed0c08a"
+  },
+  "training_performed": false
+}

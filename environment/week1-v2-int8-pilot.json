@@ -1,0 +1,51 @@
+{
+  "status": "passed_A_side",
+  "created_at_utc": "2026-10-27T10:36:32.427649+00:00",
+  "graph": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-i1-v2.onnx",
+    "sha256": "a0c83c57040a6a7b761536fee8fa2303766f17d82b30fba1b8b8ef9a53963992"
+  },
+  "engine": {
+    "path": "/home/anjanrd/.local/share/lc0-int8/week1-v2/bt3-i1.plan",
+    "sha256": "2e98cd4e59144a92f351eb3a3b2822d0cddbe0b93f7f6419f9cd41d4f9b0c866"
+  },
+  "wrapper": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/wrapped/bt3-i1-v2.pb.gz",
+    "sha256": "9bab715b177da5443034dacdd4adc7db6b61e825ea72f9b0a876ab49919691fc"
+  },
+  "wrapper_embedded_graph_byte_identical": true,
+  "wrapper_command": [
+    "/home/anjanrd/.local/share/lc0-int8/build/lc0-tools/lc0",
+    "onnx2leela",
+    "--input=/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-i1-v2.onnx",
+    "--output=/mnt/c/Users/HP/Desktop/LC0/models/wrapped/bt3-i1-v2.pb.gz",
+    "--input-format=INPUT_CLASSICAL_112_PLANE",
+    "--policy-format=POLICY_ATTENTION",
+    "--value-format=VALUE_WDL",
+    "--moves-left-format=MOVES_LEFT_V1",
+    "--onnx-input=/input/planes",
+    "--onnx-output-policy=/output/policy",
+    "--onnx-output-wdl=/output/wdl",
+    "--onnx-output-mlh=/output/mlh"
+  ],
+  "wrapper_metadata": "\nFormat\n~~~~~~\n                       Input: INPUT_CLASSICAL_112_PLANE\n                     Network: NETWORK_ONNX\n                      Policy: POLICY_ATTENTION\n                       Value: VALUE_WDL\n                         MLH: MOVES_LEFT_V1\n\nONNX interface\n~~~~~~~~~~~~~~\n                   Data type: FLOAT16\n                Input planes: /input/planes\n                  Output WDL: /output/wdl\n               Output Policy: /output/policy\n                  Output MLH: /output/mlh\n\nONNX model\n~~~~~~~~~~\n                  IR version: 9\n               Producer Name: onnx.quantize\n            Producer Version: 0.1.0\n                       Input: /input/planes\n                      Output: /output/policy\n                      Output: /output/wdl\n                      Output: /output/mlh\n                       Opset:  19\nDone.\n\u001b[1m\u001b[31m       _\n|   _ | |\n|_ |_ |_|\u001b[0m v0.33.0-rc0 built Oct 21 2026\n",
+  "native_description": "\nGeneral\n~~~~~~~\n         Minimal Lc0 version: v0.28.0\n\nFormat\n~~~~~~\n                       Input: INPUT_CLASSICAL_112_PLANE\n                     Network: NETWORK_ONNX\n                      Policy: POLICY_ATTENTION\n                       Value: VALUE_WDL\n                         MLH: MOVES_LEFT_V1\n\nONNX interface\n~~~~~~~~~~~~~~\n                   Data type: FLOAT16\n                Input planes: /input/planes\n                  Output WDL: /output/wdl\n               Output Policy: /output/policy\n                  Output MLH: /output/mlh\n\nONNX model\n~~~~~~~~~~\n                  IR version: 9\n               Producer Name: onnx.quantize\n            Producer Version: 0.1.0\n                       Input: /input/planes\n                      Output: /output/policy\n                      Output: /output/wdl\n                      Output: /output/mlh\n                       Opset:  19\n\u001b[1m\u001b[31m       _\n|   _ | |\n|_ |_ |_|\u001b[0m v0.33.0-rc0 built Oct 21 2026\n",
+  "graph_audit": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/environment/week1-v2-i1-graph.json",
+    "sha256": "562263999301ddaa8aec2d48e63e911e2f9c8882291dfc92b942695921474966"
+  },
+  "precision_audit": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/environment/week1-v2-i1-engine.json",
+    "sha256": "7814848fa6d3c3ca0bfba11544819275df32e6ba2f8de47c21cbf8665cec61ee"
+  },
+  "validation": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/int8-validation.json",
+    "sha256": "4c4bc71c8cbd66a4f1712279085702494a788a77aa6b4dbf3ee1e505d9b0010c"
+  },
+  "lc0_GPU_integration": "UNVERIFIED; Person B and joint C1",
+  "INT8_test_evaluated": false,
+  "batch_tuning": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/batch-tuning.json",
+    "sha256": "f421d9b8a02abdeeb9924971c791facc68cbd59a286c6b4bd89b68da2ee5021e"
+  }
+}
