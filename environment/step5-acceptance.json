@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-10-25T14:07:43.528669+00:00",
+  "decision": "accepted_with_documented_drift",
+  "authority": "Direct human reply in this conversation",
+  "user_reply": "Accept first engine with documented drift (Recommended)",
+  "engine_sha256": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+  "engine_path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/bt3-f16-4271981b85fb44dd.plan",
+  "baseline": "F16_TRT",
+  "original_tolerances_sha256": "9f1f32f4d4865c822850a94d20371a83b0d8f7b2d702d684f90f2266f1d04866",
+  "raw_confirmation_status": "failed",
+  "confirmation_report_sha256": "6bab0ec51cd1f63ba53a3bf22b13f92d57f3aa7db585dca1c80178d8f8dba214",
+  "accepted_exception": {
+    "position": "export-confirm-073",
+    "metric": "wdl_max_abs",
+    "original_limit": 0.015,
+    "observed_vs_native": 0.019593477249145508,
+    "observed_vs_R32_CUDA_max": 0.019594907760620117,
+    "confirmation_positions": 128,
+    "note": "One position, duplicated across batch/reference checks; raw failure remains recorded"
+  },
+  "scope": "Accept this exact engine and its measured drift; no blanket relaxation for future engines/models/positions",
+  "unchanged": [
+    "two baseline definitions",
+    "checkpoint and ONNX hashes",
+    "original numerical limits"
+  ],
+  "scientific_limit": "Prediction agreement only; no tablebase accuracy or chess-strength conclusion"
+}

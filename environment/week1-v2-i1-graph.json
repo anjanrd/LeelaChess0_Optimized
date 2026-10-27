@@ -1,0 +1,353 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-27T09:20:21.313911+00:00",
+  "graph": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-i1-v2.onnx",
+    "sha256": "a0c83c57040a6a7b761536fee8fa2303766f17d82b30fba1b8b8ef9a53963992"
+  },
+  "parent": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-f16-opset19.onnx",
+    "sha256": "e5a65e3e09fe917b3a9d8e23b8f65b8ce9a6e89e1e8a7ca0ad069b5571c40d33"
+  },
+  "targets": [
+    "/attn_body/embedding/preprocess/matmul",
+    "/attn_body/ffn/dense1/w",
+    "/attn_body/ffn/dense2/w",
+    "/attn_body/matmul",
+    "/encoder0/ffn/dense1/w",
+    "/encoder0/ffn/dense2/w",
+    "/encoder0/mha/K/w",
+    "/encoder0/mha/Q/w",
+    "/encoder0/mha/V/w",
+    "/encoder0/mha/out/dense/w",
+    "/encoder0/smolgen/compress",
+    "/encoder0/smolgen/dense1/w",
+    "/encoder0/smolgen/dense2/w",
+    "/encoder0/smolgen/smol_weight_gen",
+    "/encoder1/ffn/dense1/w",
+    "/encoder1/ffn/dense2/w",
+    "/encoder1/mha/K/w",
+    "/encoder1/mha/Q/w",
+    "/encoder1/mha/V/w",
+    "/encoder1/mha/out/dense/w",
+    "/encoder1/smolgen/compress",
+    "/encoder1/smolgen/dense1/w",
+    "/encoder1/smolgen/dense2/w",
+    "/encoder1/smolgen/smol_weight_gen",
+    "/encoder10/ffn/dense1/w",
+    "/encoder10/ffn/dense2/w",
+    "/encoder10/mha/K/w",
+    "/encoder10/mha/Q/w",
+    "/encoder10/mha/V/w",
+    "/encoder10/mha/out/dense/w",
+    "/encoder10/smolgen/compress",
+    "/encoder10/smolgen/dense1/w",
+    "/encoder10/smolgen/dense2/w",
+    "/encoder10/smolgen/smol_weight_gen",
+    "/encoder11/ffn/dense1/w",
+    "/encoder11/ffn/dense2/w",
+    "/encoder11/mha/K/w",
+    "/encoder11/mha/Q/w",
+    "/encoder11/mha/V/w",
+    "/encoder11/mha/out/dense/w",
+    "/encoder11/smolgen/compress",
+    "/encoder11/smolgen/dense1/w",
+    "/encoder11/smolgen/dense2/w",
+    "/encoder11/smolgen/smol_weight_gen",
+    "/encoder12/ffn/dense1/w",
+    "/encoder12/ffn/dense2/w",
+    "/encoder12/mha/K/w",
+    "/encoder12/mha/Q/w",
+    "/encoder12/mha/V/w",
+    "/encoder12/mha/out/dense/w",
+    "/encoder12/smolgen/compress",
+    "/encoder12/smolgen/dense1/w",
+    "/encoder12/smolgen/dense2/w",
+    "/encoder12/smolgen/smol_weight_gen",
+    "/encoder13/ffn/dense1/w",
+    "/encoder13/ffn/dense2/w",
+    "/encoder13/mha/K/w",
+    "/encoder13/mha/Q/w",
+    "/encoder13/mha/V/w",
+    "/encoder13/mha/out/dense/w",
+    "/encoder13/smolgen/compress",
+    "/encoder13/smolgen/dense1/w",
+    "/encoder13/smolgen/dense2/w",
+    "/encoder13/smolgen/smol_weight_gen",
+    "/encoder14/ffn/dense1/w",
+    "/encoder14/ffn/dense2/w",
+    "/encoder14/mha/K/w",
+    "/encoder14/mha/Q/w",
+    "/encoder14/mha/V/w",
+    "/encoder14/mha/out/dense/w",
+    "/encoder14/smolgen/compress",
+    "/encoder14/smolgen/dense1/w",
+    "/encoder14/smolgen/dense2/w",
+    "/encoder14/smolgen/smol_weight_gen",
+    "/encoder2/ffn/dense1/w",
+    "/encoder2/ffn/dense2/w",
+    "/encoder2/mha/K/w",
+    "/encoder2/mha/Q/w",
+    "/encoder2/mha/V/w",
+    "/encoder2/mha/out/dense/w",
+    "/encoder2/smolgen/compress",
+    "/encoder2/smolgen/dense1/w",
+    "/encoder2/smolgen/dense2/w",
+    "/encoder2/smolgen/smol_weight_gen",
+    "/encoder3/ffn/dense1/w",
+    "/encoder3/ffn/dense2/w",
+    "/encoder3/mha/K/w",
+    "/encoder3/mha/Q/w",
+    "/encoder3/mha/V/w",
+    "/encoder3/mha/out/dense/w",
+    "/encoder3/smolgen/compress",
+    "/encoder3/smolgen/dense1/w",
+    "/encoder3/smolgen/dense2/w",
+    "/encoder3/smolgen/smol_weight_gen",
+    "/encoder4/ffn/dense1/w",
+    "/encoder4/ffn/dense2/w",
+    "/encoder4/mha/K/w",
+    "/encoder4/mha/Q/w",
+    "/encoder4/mha/V/w",
+    "/encoder4/mha/out/dense/w",
+    "/encoder4/smolgen/compress",
+    "/encoder4/smolgen/dense1/w",
+    "/encoder4/smolgen/dense2/w",
+    "/encoder4/smolgen/smol_weight_gen",
+    "/encoder5/ffn/dense1/w",
+    "/encoder5/ffn/dense2/w",
+    "/encoder5/mha/K/w",
+    "/encoder5/mha/Q/w",
+    "/encoder5/mha/V/w",
+    "/encoder5/mha/out/dense/w",
+    "/encoder5/smolgen/compress",
+    "/encoder5/smolgen/dense1/w",
+    "/encoder5/smolgen/dense2/w",
+    "/encoder5/smolgen/smol_weight_gen",
+    "/encoder6/ffn/dense1/w",
+    "/encoder6/ffn/dense2/w",
+    "/encoder6/mha/K/w",
+    "/encoder6/mha/Q/w",
+    "/encoder6/mha/V/w",
+    "/encoder6/mha/out/dense/w",
+    "/encoder6/smolgen/compress",
+    "/encoder6/smolgen/dense1/w",
+    "/encoder6/smolgen/dense2/w",
+    "/encoder6/smolgen/smol_weight_gen",
+    "/encoder7/ffn/dense1/w",
+    "/encoder7/ffn/dense2/w",
+    "/encoder7/mha/K/w",
+    "/encoder7/mha/Q/w",
+    "/encoder7/mha/V/w",
+    "/encoder7/mha/out/dense/w",
+    "/encoder7/smolgen/compress",
+    "/encoder7/smolgen/dense1/w",
+    "/encoder7/smolgen/dense2/w",
+    "/encoder7/smolgen/smol_weight_gen",
+    "/encoder8/ffn/dense1/w",
+    "/encoder8/ffn/dense2/w",
+    "/encoder8/mha/K/w",
+    "/encoder8/mha/Q/w",
+    "/encoder8/mha/V/w",
+    "/encoder8/mha/out/dense/w",
+    "/encoder8/smolgen/compress",
+    "/encoder8/smolgen/dense1/w",
+    "/encoder8/smolgen/dense2/w",
+    "/encoder8/smolgen/smol_weight_gen",
+    "/encoder9/ffn/dense1/w",
+    "/encoder9/ffn/dense2/w",
+    "/encoder9/mha/K/w",
+    "/encoder9/mha/Q/w",
+    "/encoder9/mha/V/w",
+    "/encoder9/mha/out/dense/w",
+    "/encoder9/smolgen/compress",
+    "/encoder9/smolgen/dense1/w",
+    "/encoder9/smolgen/dense2/w",
+    "/encoder9/smolgen/smol_weight_gen",
+    "/mlh/dense1/matmul",
+    "/policy/K/matmul",
+    "/policy/Q/matmul",
+    "/policy/dense1/matmul",
+    "/value/dense1/matmul",
+    "/value/embed/matmul"
+  ],
+  "calibration": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy-v2/calibration-inputs.npz",
+    "sha256": "9c55e7222d1a981ebbeee6e1670e03b5ae09f0e150c266dc97e7841f4e070695"
+  },
+  "n_calibration": 1024,
+  "calibration_batch": 8,
+  "signed_symmetric": true,
+  "activation_scaling": "per-tensor",
+  "weight_scaling": "per-tensor",
+  "calibration_method": "max",
+  "quantized_matmuls": 160,
+  "adapter": "Same process-local lower-level ModelOpt adapter and shared-QDQ floating-edge restoration as historical pilot; installed packages unchanged.",
+  "restored_floating_edges": [
+    {
+      "consumer": "/attn_body/ffn/skip",
+      "input": 1,
+      "float_tensor": "/attn_body/rehape"
+    },
+    {
+      "consumer": "/encoder0/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/attn_body/ln2"
+    },
+    {
+      "consumer": "/encoder0/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder0/ln1"
+    },
+    {
+      "consumer": "/encoder1/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder0/ln2"
+    },
+    {
+      "consumer": "/encoder1/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder1/ln1"
+    },
+    {
+      "consumer": "/encoder2/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder1/ln2"
+    },
+    {
+      "consumer": "/encoder2/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder2/ln1"
+    },
+    {
+      "consumer": "/encoder3/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder2/ln2"
+    },
+    {
+      "consumer": "/encoder3/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder3/ln1"
+    },
+    {
+      "consumer": "/encoder4/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder3/ln2"
+    },
+    {
+      "consumer": "/encoder4/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder4/ln1"
+    },
+    {
+      "consumer": "/encoder5/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder4/ln2"
+    },
+    {
+      "consumer": "/encoder5/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder5/ln1"
+    },
+    {
+      "consumer": "/encoder6/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder5/ln2"
+    },
+    {
+      "consumer": "/encoder6/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder6/ln1"
+    },
+    {
+      "consumer": "/encoder7/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder6/ln2"
+    },
+    {
+      "consumer": "/encoder7/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder7/ln1"
+    },
+    {
+      "consumer": "/encoder8/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder7/ln2"
+    },
+    {
+      "consumer": "/encoder8/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder8/ln1"
+    },
+    {
+      "consumer": "/encoder9/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder8/ln2"
+    },
+    {
+      "consumer": "/encoder9/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder9/ln1"
+    },
+    {
+      "consumer": "/encoder10/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder9/ln2"
+    },
+    {
+      "consumer": "/encoder10/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder10/ln1"
+    },
+    {
+      "consumer": "/encoder11/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder10/ln2"
+    },
+    {
+      "consumer": "/encoder11/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder11/ln1"
+    },
+    {
+      "consumer": "/encoder12/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder11/ln2"
+    },
+    {
+      "consumer": "/encoder12/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder12/ln1"
+    },
+    {
+      "consumer": "/encoder13/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder12/ln2"
+    },
+    {
+      "consumer": "/encoder13/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder13/ln1"
+    },
+    {
+      "consumer": "/encoder14/mha/out/skip",
+      "input": 1,
+      "float_tensor": "/encoder13/ln2"
+    },
+    {
+      "consumer": "/encoder14/ffn/skip",
+      "input": 1,
+      "float_tensor": "/encoder14/ln1"
+    },
+    {
+      "consumer": "/mlh/embed/matmul",
+      "input": 0,
+      "float_tensor": "/encoder14/ln2"
+    }
+  ],
+  "seconds": 37.616730808,
+  "script": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/scripts/refresh_int8_week1.py",
+    "sha256": "2709240d23ccc76c563bb7f2e0438eb9f98b0102a8fca5af73871aa08b35149a"
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-25T20:42:01.647225+00:00",
+  "selection_protocol": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/environment/week1-native-check-protocol.json",
+    "sha256": "c1b4c456b6c2d76025969d041135ebcc9aee6a3d38f4215a131f7a090e7dd7f0"
+  },
+  "positions": [
+    {
+      "id": "test-06875",
+      "native_move": "e7e6",
+      "R32_move": "e7e6",
+      "legal_probability_max_abs": 2.5331974029541016e-07,
+      "policy_KL": 1.2832729056916358e-07,
+      "WDL_max_abs": 2.8585418476723135e-08,
+      "native_move_outcome": 0,
+      "R32_move_outcome": 0
+    },
+    {
+      "id": "test-06250",
+      "native_move": "c7c6",
+      "R32_move": "c7c6",
+      "legal_probability_max_abs": 1.1920928955078125e-07,
+      "policy_KL": 4.0384875693731787e-08,
+      "WDL_max_abs": 5.50062395632267e-09,
+      "native_move_outcome": 1,
+      "R32_move_outcome": 1
+    },
+    {
+      "id": "test-05625",
+      "native_move": "d2d3",
+      "R32_move": "d2d3",
+      "legal_probability_max_abs": 3.427267074584961e-07,
+      "policy_KL": 1.0381886618854827e-07,
+      "WDL_max_abs": 1.747685018926859e-08,
+      "native_move_outcome": 0,
+      "R32_move_outcome": 0
+    },
+    {
+      "id": "test-05000",
+      "native_move": "g4h5",
+      "R32_move": "g4h5",
+      "legal_probability_max_abs": 7.450580596923828e-08,
+      "policy_KL": 5.8649634455792566e-08,
+      "WDL_max_abs": 4.114554030820727e-09,
+      "native_move_outcome": 1,
+      "R32_move_outcome": 1
+    },
+    {
+      "id": "test-09375",
+      "native_move": "h7g6",
+      "R32_move": "h7g6",
+      "legal_probability_max_abs": 1.7881393432617188e-07,
+      "policy_KL": -8.105652365263952e-08,
+      "WDL_max_abs": 2.4693690647836775e-08,
+      "native_move_outcome": 0,
+      "R32_move_outcome": 0
+    },
+    {
+      "id": "test-08750",
+      "native_move": "e8e7",
+      "R32_move": "e8e7",
+      "legal_probability_max_abs": 6.705522537231445e-08,
+      "policy_KL": -9.762274276489989e-08,
+      "WDL_max_abs": 2.443027824483579e-08,
+      "native_move_outcome": 1,
+      "R32_move_outcome": 1
+    },
+    {
+      "id": "test-08125",
+      "native_move": "h6g5",
+      "R32_move": "h6g5",
+      "legal_probability_max_abs": 2.980232238769531e-07,
+      "policy_KL": 4.642930748411893e-08,
+      "WDL_max_abs": 5.960464477539063e-08,
+      "native_move_outcome": -1,
+      "R32_move_outcome": -1
+    },
+    {
+      "id": "test-07500",
+      "native_move": "d6c6",
+      "R32_move": "d6c6",
+      "legal_probability_max_abs": 1.7136335372924805e-07,
+      "policy_KL": -1.323757550141837e-07,
+      "WDL_max_abs": 9.320572758042545e-09,
+      "native_move_outcome": 0,
+      "R32_move_outcome": 0
+    },
+    {
+      "id": "test-01875",
+      "native_move": "b6b7",
+      "R32_move": "b6b7",
+      "legal_probability_max_abs": 8.195638656616211e-08,
+      "policy_KL": -1.2289177872192068e-09,
+      "WDL_max_abs": 6.484015102614649e-09,
+      "native_move_outcome": 0,
+      "R32_move_outcome": 0
+    },
+    {
+      "id": "test-01250",
+      "native_move": "e7f7",
+      "R32_move": "e7f7",
+      "legal_probability_max_abs": 1.6391277313232422e-07,
+      "policy_KL": -8.518124890748553e-09,
+      "WDL_max_abs": 7.496851139876526e-09,
+      "native_move_outcome": -1,
+      "R32_move_outcome": -1
+    },
+    {
+      "id": "test-00625",
+      "native_move": "c1c2",
+      "R32_move": "c1c2",
+      "legal_probability_max_abs": 6.705522537231445e-08,
+      "policy_KL": 3.230931300144599e-08,
+      "WDL_max_abs": 5.960464477539063e-08,
+      "native_move_outcome": 0,
+      "R32_move_outcome": 0
+    },
+    {
+      "id": "test-00000",
+      "native_move": "h2g3",
+      "R32_move": "h2g3",
+      "legal_probability_max_abs": 2.682209014892578e-07,
+      "policy_KL": 3.3467321409452885e-08,
+      "WDL_max_abs": 2.3176198737928644e-08,
+      "native_move_outcome": -1,
+      "R32_move_outcome": -1
+    },
+    {
+      "id": "test-04375",
+      "native_move": "a7b6",
+      "R32_move": "a7b6",
+      "legal_probability_max_abs": 4.470348358154297e-08,
+      "policy_KL": -1.085492000289859e-07,
+      "WDL_max_abs": 1.1920928955078125e-07,
+      "native_move_outcome": -1,
+      "R32_move_outcome": -1
+    },
+    {
+      "id": "test-03750",
+      "native_move": "g3f3",
+      "R32_move": "g3f3",
+      "legal_probability_max_abs": 6.705522537231445e-08,
+      "policy_KL": -2.1846930453551793e-08,
+      "WDL_max_abs": 1.9397987216507317e-08,
+      "native_move_outcome": -1,
+      "R32_move_outcome": -1
+    },
+    {
+      "id": "test-03125",
+      "native_move": "g4f3",
+      "R32_move": "g4f3",
+      "legal_probability_max_abs": 1.4901161193847656e-07,
+      "policy_KL": 1.4822043775764147e-08,
+      "WDL_max_abs": 5.893340926377277e-09,
+      "native_move_outcome": -1,
+      "R32_move_outcome": -1
+    },
+    {
+      "id": "test-02500",
+      "native_move": "b2c3",
+      "R32_move": "b2c3",
+      "legal_probability_max_abs": 8.940696716308594e-08,
+      "policy_KL": 1.468653825242412e-07,
+      "WDL_max_abs": 7.0974195409689855e-09,
+      "native_move_outcome": 1,
+      "R32_move_outcome": 1
+    }
+  ],
+  "outputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1/native-test-spot-check.npz",
+    "sha256": "52e3aeb5e0ba58d67f3ab567e5d99795cb48c56a1414ab16bbdfcba14585e7c5"
+  },
+  "interpretation": "Independent native CPU evaluator agrees with R32 export within original gates. This is a spot check, not native evaluation of all 10,000 roots."
+}

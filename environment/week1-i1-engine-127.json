@@ -1,0 +1,2067 @@
+{
+  "status": "passed",
+  "engine_path": "/home/anjanrd/.local/share/lc0-int8/week1/int8/bt3-i1-scope127.plan",
+  "engine_sha256": "afb5729dac3600b3d9d5bb47456902ee3632efbd91a6fdc4fb8b201ba13c6c8c",
+  "graph": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-i1-scope127.onnx",
+    "sha256": "1efe99e38930bc3f47b3508e0bc81c9283b8a08bdb7a45206509eb20b188cce4"
+  },
+  "scope": "127",
+  "tf32": false,
+  "workspace_bytes": 536870912,
+  "profile": [
+    1,
+    4,
+    8
+  ],
+  "normalization_fp32_compute": [
+    "/attn_body/ln",
+    "/attn_body/ln2",
+    "/encoder0/smolgen/ln1",
+    "/encoder0/smolgen/ln2",
+    "/encoder0/ln1",
+    "/encoder0/ln2",
+    "/encoder1/smolgen/ln1",
+    "/encoder1/smolgen/ln2",
+    "/encoder1/ln1",
+    "/encoder1/ln2",
+    "/encoder2/smolgen/ln1",
+    "/encoder2/smolgen/ln2",
+    "/encoder2/ln1",
+    "/encoder2/ln2",
+    "/encoder3/smolgen/ln1",
+    "/encoder3/smolgen/ln2",
+    "/encoder3/ln1",
+    "/encoder3/ln2",
+    "/encoder4/smolgen/ln1",
+    "/encoder4/smolgen/ln2",
+    "/encoder4/ln1",
+    "/encoder4/ln2",
+    "/encoder5/smolgen/ln1",
+    "/encoder5/smolgen/ln2",
+    "/encoder5/ln1",
+    "/encoder5/ln2",
+    "/encoder6/smolgen/ln1",
+    "/encoder6/smolgen/ln2",
+    "/encoder6/ln1",
+    "/encoder6/ln2",
+    "/encoder7/smolgen/ln1",
+    "/encoder7/smolgen/ln2",
+    "/encoder7/ln1",
+    "/encoder7/ln2",
+    "/encoder8/smolgen/ln1",
+    "/encoder8/smolgen/ln2",
+    "/encoder8/ln1",
+    "/encoder8/ln2",
+    "/encoder9/smolgen/ln1",
+    "/encoder9/smolgen/ln2",
+    "/encoder9/ln1",
+    "/encoder9/ln2",
+    "/encoder10/smolgen/ln1",
+    "/encoder10/smolgen/ln2",
+    "/encoder10/ln1",
+    "/encoder10/ln2",
+    "/encoder11/smolgen/ln1",
+    "/encoder11/smolgen/ln2",
+    "/encoder11/ln1",
+    "/encoder11/ln2",
+    "/encoder12/smolgen/ln1",
+    "/encoder12/smolgen/ln2",
+    "/encoder12/ln1",
+    "/encoder12/ln2",
+    "/encoder13/smolgen/ln1",
+    "/encoder13/smolgen/ln2",
+    "/encoder13/ln1",
+    "/encoder13/ln2",
+    "/encoder14/smolgen/ln1",
+    "/encoder14/smolgen/ln2",
+    "/encoder14/ln1",
+    "/encoder14/ln2"
+  ],
+  "tensorrt": "10.9.0.34",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "build_seconds": 253.336390063,
+  "script_sha256": "a5779a3ecae2cfd02f43962e3bcee3cb9343b668ae3a90762bb29e332dda403d",
+  "verified_at_utc": "2026-10-25T20:25:08.038409+00:00",
+  "mapped_INT8_targets": 127,
+  "unmapped_targets": [],
+  "inspected_int8_layers": [
+    {
+      "layer": "/attn_body/matmul_myl1_4",
+      "targets": [
+        "/attn_body/matmul"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115464_q8",
+          "Dimensions": [
+            -1,
+            240
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/attn_body/ffn/dense1/w_myl1_6",
+      "targets": [
+        "/attn_body/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115470_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/attn_body/ffn/dense2/w_myl1_8",
+      "targets": [
+        "/attn_body/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/attn_body/ffn/dense2/b'.1_18",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_10",
+      "targets": [
+        "/encoder0/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_20",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder0/mha/V/w+/encoder0/mha/K/w+/encoder0/mha/Q/w_myl1_11",
+      "targets": [
+        "/encoder0/mha/K/w",
+        "/encoder0/mha/Q/w",
+        "/encoder0/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_20",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder0/smolgen/smol_weight_gen_myl1_16",
+      "targets": [
+        "/encoder0/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115476_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder0/mha/out/dense/w_myl1_26",
+      "targets": [
+        "/encoder0/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115606_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder0/ffn/dense1/w_myl1_28",
+      "targets": [
+        "/encoder0/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_35",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder0/ffn/dense2/w_myl1_30",
+      "targets": [
+        "/encoder0/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder0/ffn/dense2/b'.1_38",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_32",
+      "targets": [
+        "/encoder1/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_40",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder1/mha/V/w+/encoder1/mha/K/w+/encoder1/mha/Q/w_myl1_33",
+      "targets": [
+        "/encoder1/mha/K/w",
+        "/encoder1/mha/Q/w",
+        "/encoder1/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_40",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder1/smolgen/smol_weight_gen_myl1_38",
+      "targets": [
+        "/encoder1/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115484_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder1/mha/out/dense/w_myl1_48",
+      "targets": [
+        "/encoder1/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115612_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder1/ffn/dense1/w_myl1_50",
+      "targets": [
+        "/encoder1/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_55",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder1/ffn/dense2/w_myl1_52",
+      "targets": [
+        "/encoder1/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder1/ffn/dense2/b'.1_58",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_54",
+      "targets": [
+        "/encoder2/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_60",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder2/mha/V/w+/encoder2/mha/K/w+/encoder2/mha/Q/w_myl1_55",
+      "targets": [
+        "/encoder2/mha/K/w",
+        "/encoder2/mha/Q/w",
+        "/encoder2/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_60",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder2/smolgen/smol_weight_gen_myl1_60",
+      "targets": [
+        "/encoder2/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115492_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder2/mha/out/dense/w_myl1_70",
+      "targets": [
+        "/encoder2/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115618_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder2/ffn/dense1/w_myl1_72",
+      "targets": [
+        "/encoder2/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_75",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder2/ffn/dense2/w_myl1_74",
+      "targets": [
+        "/encoder2/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder2/ffn/dense2/b'.1_78",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_76",
+      "targets": [
+        "/encoder3/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_80",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder3/mha/V/w+/encoder3/mha/K/w+/encoder3/mha/Q/w_myl1_77",
+      "targets": [
+        "/encoder3/mha/K/w",
+        "/encoder3/mha/Q/w",
+        "/encoder3/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_80",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder3/smolgen/smol_weight_gen_myl1_82",
+      "targets": [
+        "/encoder3/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115500_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder3/mha/out/dense/w_myl1_92",
+      "targets": [
+        "/encoder3/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115624_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder3/ffn/dense1/w_myl1_94",
+      "targets": [
+        "/encoder3/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_95",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder3/ffn/dense2/w_myl1_96",
+      "targets": [
+        "/encoder3/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder3/ffn/dense2/b'.1_98",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_98",
+      "targets": [
+        "/encoder4/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_100",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder4/mha/V/w+/encoder4/mha/K/w+/encoder4/mha/Q/w_myl1_99",
+      "targets": [
+        "/encoder4/mha/K/w",
+        "/encoder4/mha/Q/w",
+        "/encoder4/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_100",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder4/smolgen/smol_weight_gen_myl1_104",
+      "targets": [
+        "/encoder4/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115508_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder4/mha/out/dense/w_myl1_114",
+      "targets": [
+        "/encoder4/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115630_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder4/ffn/dense1/w_myl1_116",
+      "targets": [
+        "/encoder4/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_115",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder4/ffn/dense2/w_myl1_118",
+      "targets": [
+        "/encoder4/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder4/ffn/dense2/b'.1_118",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_120",
+      "targets": [
+        "/encoder5/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_120",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder5/mha/V/w+/encoder5/mha/K/w+/encoder5/mha/Q/w_myl1_121",
+      "targets": [
+        "/encoder5/mha/K/w",
+        "/encoder5/mha/Q/w",
+        "/encoder5/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_120",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder5/smolgen/smol_weight_gen_myl1_126",
+      "targets": [
+        "/encoder5/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115516_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder5/mha/out/dense/w_myl1_136",
+      "targets": [
+        "/encoder5/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115636_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder5/ffn/dense1/w_myl1_138",
+      "targets": [
+        "/encoder5/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_135",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder5/ffn/dense2/w_myl1_140",
+      "targets": [
+        "/encoder5/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder5/ffn/dense2/b'.1_138",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_142",
+      "targets": [
+        "/encoder6/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_140",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder6/mha/V/w+/encoder6/mha/K/w+/encoder6/mha/Q/w_myl1_143",
+      "targets": [
+        "/encoder6/mha/K/w",
+        "/encoder6/mha/Q/w",
+        "/encoder6/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_140",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder6/smolgen/smol_weight_gen_myl1_148",
+      "targets": [
+        "/encoder6/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115524_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder6/mha/out/dense/w_myl1_158",
+      "targets": [
+        "/encoder6/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115642_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder6/ffn/dense1/w_myl1_160",
+      "targets": [
+        "/encoder6/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_155",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder6/ffn/dense2/w_myl1_162",
+      "targets": [
+        "/encoder6/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder6/ffn/dense2/b'.1_158",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_164",
+      "targets": [
+        "/encoder7/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_160",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder7/mha/V/w+/encoder7/mha/K/w+/encoder7/mha/Q/w_myl1_165",
+      "targets": [
+        "/encoder7/mha/K/w",
+        "/encoder7/mha/Q/w",
+        "/encoder7/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_160",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder7/smolgen/smol_weight_gen_myl1_170",
+      "targets": [
+        "/encoder7/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115532_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder7/mha/out/dense/w_myl1_180",
+      "targets": [
+        "/encoder7/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115648_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder7/ffn/dense1/w_myl1_182",
+      "targets": [
+        "/encoder7/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_175",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder7/ffn/dense2/w_myl1_184",
+      "targets": [
+        "/encoder7/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder7/ffn/dense2/b'.1_178",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_186",
+      "targets": [
+        "/encoder8/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_180",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder8/mha/V/w+/encoder8/mha/K/w+/encoder8/mha/Q/w_myl1_187",
+      "targets": [
+        "/encoder8/mha/K/w",
+        "/encoder8/mha/Q/w",
+        "/encoder8/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_180",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder8/smolgen/smol_weight_gen_myl1_192",
+      "targets": [
+        "/encoder8/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115540_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder8/mha/out/dense/w_myl1_202",
+      "targets": [
+        "/encoder8/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115654_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder8/ffn/dense1/w_myl1_204",
+      "targets": [
+        "/encoder8/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_195",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder8/ffn/dense2/w_myl1_206",
+      "targets": [
+        "/encoder8/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder8/ffn/dense2/b'.1_198",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_208",
+      "targets": [
+        "/encoder9/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_200",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder9/mha/V/w+/encoder9/mha/K/w+/encoder9/mha/Q/w_myl1_209",
+      "targets": [
+        "/encoder9/mha/K/w",
+        "/encoder9/mha/Q/w",
+        "/encoder9/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_200",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder9/smolgen/smol_weight_gen_myl1_214",
+      "targets": [
+        "/encoder9/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115548_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder9/mha/out/dense/w_myl1_224",
+      "targets": [
+        "/encoder9/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115660_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder9/ffn/dense1/w_myl1_226",
+      "targets": [
+        "/encoder9/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_215",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder9/ffn/dense2/w_myl1_228",
+      "targets": [
+        "/encoder9/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder9/ffn/dense2/b'.1_218",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_230",
+      "targets": [
+        "/encoder10/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_220",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder10/mha/V/w+/encoder10/mha/K/w+/encoder10/mha/Q/w_myl1_231",
+      "targets": [
+        "/encoder10/mha/K/w",
+        "/encoder10/mha/Q/w",
+        "/encoder10/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_220",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder10/smolgen/smol_weight_gen_myl1_236",
+      "targets": [
+        "/encoder10/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115556_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder10/mha/out/dense/w_myl1_246",
+      "targets": [
+        "/encoder10/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115666_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder10/ffn/dense1/w_myl1_248",
+      "targets": [
+        "/encoder10/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_235",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder10/ffn/dense2/w_myl1_250",
+      "targets": [
+        "/encoder10/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder10/ffn/dense2/b'.1_238",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_252",
+      "targets": [
+        "/encoder11/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_240",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder11/mha/V/w+/encoder11/mha/K/w+/encoder11/mha/Q/w_myl1_253",
+      "targets": [
+        "/encoder11/mha/K/w",
+        "/encoder11/mha/Q/w",
+        "/encoder11/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_240",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder11/smolgen/smol_weight_gen_myl1_258",
+      "targets": [
+        "/encoder11/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115564_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder11/mha/out/dense/w_myl1_268",
+      "targets": [
+        "/encoder11/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115672_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder11/ffn/dense1/w_myl1_270",
+      "targets": [
+        "/encoder11/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_255",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder11/ffn/dense2/w_myl1_272",
+      "targets": [
+        "/encoder11/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder11/ffn/dense2/b'.1_258",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_274",
+      "targets": [
+        "/encoder12/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_260",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder12/mha/V/w+/encoder12/mha/K/w+/encoder12/mha/Q/w_myl1_275",
+      "targets": [
+        "/encoder12/mha/K/w",
+        "/encoder12/mha/Q/w",
+        "/encoder12/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_260",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder12/smolgen/smol_weight_gen_myl1_280",
+      "targets": [
+        "/encoder12/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115572_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder12/mha/out/dense/w_myl1_290",
+      "targets": [
+        "/encoder12/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115678_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder12/ffn/dense1/w_myl1_292",
+      "targets": [
+        "/encoder12/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_275",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder12/ffn/dense2/w_myl1_294",
+      "targets": [
+        "/encoder12/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder12/ffn/dense2/b'.1_278",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_296",
+      "targets": [
+        "/encoder13/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_280",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder13/mha/V/w+/encoder13/mha/K/w+/encoder13/mha/Q/w_myl1_297",
+      "targets": [
+        "/encoder13/mha/K/w",
+        "/encoder13/mha/Q/w",
+        "/encoder13/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_280",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder13/smolgen/smol_weight_gen_myl1_302",
+      "targets": [
+        "/encoder13/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115580_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder13/mha/out/dense/w_myl1_312",
+      "targets": [
+        "/encoder13/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115684_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder13/ffn/dense1/w_myl1_314",
+      "targets": [
+        "/encoder13/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_295",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder13/ffn/dense2/w_myl1_316",
+      "targets": [
+        "/encoder13/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder13/ffn/dense2/b'.1_298",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "__myl_FcCast_myl1_318",
+      "targets": [
+        "/encoder14/smolgen/compress"
+      ],
+      "tactic": "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_by_fusion_tactic",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_300",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder14/mha/V/w+/encoder14/mha/K/w+/encoder14/mha/Q/w_myl1_319",
+      "targets": [
+        "/encoder14/mha/K/w",
+        "/encoder14/mha/Q/w",
+        "/encoder14/mha/V/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_300",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder14/smolgen/smol_weight_gen_myl1_324",
+      "targets": [
+        "/encoder14/smolgen/smol_weight_gen"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115588_q8",
+          "Dimensions": [
+            -1,
+            256
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder14/mha/out/dense/w_myl1_334",
+      "targets": [
+        "/encoder14/mha/out/dense/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye115690_q8",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder14/ffn/dense1/w_myl1_336",
+      "targets": [
+        "/encoder14/ffn/dense1/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_315",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/encoder14/ffn/dense2/w_myl1_338",
+      "targets": [
+        "/encoder14/ffn/dense2/w"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "/encoder14/ffn/dense2/b'.1_318",
+          "Dimensions": [
+            -1,
+            1024
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/value/embed/matmul+/policy/dense1/matmul_myl1_340",
+      "targets": [
+        "/policy/dense1/matmul",
+        "/value/embed/matmul"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__myln_k_arg__bb1_320",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    },
+    {
+      "layer": "/policy/K/matmul+/policy/Q/matmul_myl1_343",
+      "targets": [
+        "/policy/K/matmul",
+        "/policy/Q/matmul"
+      ],
+      "tactic": "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32",
+      "inputs": [
+        {
+          "Name": "__mye130165_324",
+          "Dimensions": [
+            -1,
+            768
+          ],
+          "Format/Datatype": "Int8"
+        }
+      ]
+    }
+  ],
+  "executed_int8_kernels": {
+    "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize128x64x64_stage3_warpsize2x2x1_tensor16x8x32_execute_kernel_trt": 126,
+    "sm80_xmma_gemm_i8f32_i8i32_f32_tn_n_tilesize64x64x64_stage4_warpsize2x2x1_tensor16x8x32_execute_kernel_trt": 34,
+    "sm80_xmma_gemm_i8i8_i8i32_f32_tn_n_tilesize32x64x64_stage6_warpsize2x2x1_tensor16x8x32_fused": 30
+  },
+  "metrics_vs_F16": {
+    "1": {
+      "top_policy_agreement_with_F16": 0.234375,
+      "policy_KL_mean": 0.24688547916421574,
+      "legal_probability_max_abs": 0.7069259881973267,
+      "wdl_max_abs": 0.4521484375,
+      "wdl_mae": 0.013565617613494396
+    },
+    "8": {
+      "top_policy_agreement_with_F16": 0.234375,
+      "policy_KL_mean": 0.24688547916421574,
+      "legal_probability_max_abs": 0.7069259881973267,
+      "wdl_max_abs": 0.4521484375,
+      "wdl_mae": 0.013565617613494396
+    }
+  },
+  "host_pipeline_timings": {
+    "1": {
+      "F16_TRT": {
+        "median_ms": 3.368981499995982,
+        "samples_ms": [
+          2.8655420000092136,
+          3.7506620000016255,
+          3.3341329999956315,
+          3.0132159999993746,
+          3.0783929999955717,
+          3.357175000004986,
+          3.6526989999998705,
+          3.7587120000068808,
+          3.2173800000094843,
+          3.685816000000841,
+          3.86336500000084,
+          3.5679419999894435,
+          3.3936709999977666,
+          3.3316170000006196,
+          3.43323500000281,
+          3.3780419999942524,
+          3.3240399999954207,
+          3.313359000003402,
+          3.3168859999932465,
+          3.4016150000013567,
+          3.175914999999918,
+          3.4324730000037107,
+          3.299389999995128,
+          3.609471000004305,
+          3.3638979999892626,
+          3.2207229999983156,
+          3.485746999999151,
+          3.411221999996883,
+          3.387848000002691,
+          3.3740650000027017,
+          3.120713000001274,
+          3.7147349999884227,
+          3.3424259999890182,
+          3.3435550000007197,
+          2.8503790000087292,
+          3.8541910000020607,
+          3.411138999993568,
+          3.286920999997278,
+          3.187350000004585,
+          3.861850000006939
+        ]
+      },
+      "I1": {
+        "median_ms": 3.7425264999981778,
+        "samples_ms": [
+          3.3434470000059946,
+          3.6951549999884037,
+          3.6984710000069754,
+          3.556471999999644,
+          3.225260000007779,
+          3.3521699999994325,
+          4.341103999990992,
+          4.032391999999163,
+          3.6614570000068625,
+          3.3997049999925366,
+          4.106145999998034,
+          4.00191999999322,
+          3.6334309999972447,
+          3.6201879999993025,
+          4.216131999996264,
+          3.8365949999956683,
+          4.005061000000865,
+          3.5373329999970338,
+          4.1536079999957565,
+          3.932848999994576,
+          3.759385999998699,
+          3.6287020000003167,
+          3.7579739999955564,
+          4.199830000004567,
+          3.764364000005571,
+          3.6597980000010466,
+          4.027918999994995,
+          4.048729999993839,
+          3.7628299999994397,
+          3.7939730000005056,
+          3.5709080000003723,
+          3.6024080000061076,
+          3.820817000004695,
+          3.6542419999960885,
+          3.580202999998505,
+          3.727079000000799,
+          3.81625299999655,
+          3.832250000002091,
+          3.4187800000040625,
+          3.676778999988528
+        ]
+      },
+      "I1_over_F16": 1.1108777237282665
+    },
+    "4": {
+      "F16_TRT": {
+        "median_ms": 3.2687674999962724,
+        "samples_ms": [
+          3.0958689999920352,
+          3.103308999996557,
+          3.3218640000001187,
+          3.2707559999920477,
+          2.9393049999981713,
+          3.5303989999988517,
+          3.2101709999921013,
+          3.3414520000007997,
+          2.9906510000046183,
+          2.9068859999910046,
+          3.3390640000021676,
+          3.4872810000052823,
+          3.131410999998252,
+          3.4957480000059604,
+          3.104144000005249,
+          3.1251659999895764,
+          3.2903259999983447,
+          2.958985999995889,
+          2.9075389999917434,
+          3.8963249999994787,
+          3.3512520000016366,
+          3.0218029999957707,
+          2.97729800000468,
+          2.8473950000034165,
+          3.047666000000504,
+          3.2764130000089153,
+          3.193859999996107,
+          3.4416740000011714,
+          3.611499999990997,
+          3.4998259999952097,
+          3.4434469999951034,
+          3.1737580000026355,
+          3.3959590000023354,
+          3.0981929999995828,
+          3.0124439999923425,
+          3.520002999991334,
+          3.266779000000497,
+          3.637549999993439,
+          3.707894000001488,
+          3.4740840000040407
+        ]
+      },
+      "I1": {
+        "median_ms": 3.8009105000043064,
+        "samples_ms": [
+          3.804294999994795,
+          3.4782139999975925,
+          3.4368250000085254,
+          3.574417000010044,
+          3.439232000005177,
+          3.3690399999954934,
+          3.92670499999781,
+          3.81950399999198,
+          3.226546000007602,
+          3.1022539999980836,
+          4.392404000000738,
+          4.041308999987336,
+          3.797526000013818,
+          3.569925999997281,
+          3.9611759999900187,
+          3.5989650000090023,
+          3.5485370000003513,
+          3.217305999996256,
+          3.4358979999922212,
+          3.825445000003924,
+          4.117562000004682,
+          3.961208999996302,
+          3.930205000003184,
+          4.1186639999892805,
+          3.591572000004817,
+          3.3580840000126955,
+          3.6237519999957613,
+          3.5108010000044487,
+          4.243801000001213,
+          3.903874000002361,
+          3.8288150000056476,
+          3.5645530000039116,
+          4.1820050000040965,
+          3.9426480000059883,
+          3.833829999990712,
+          4.029876000004151,
+          4.804268000000889,
+          3.876942999994526,
+          3.6607269999962,
+          3.4337829999913083
+        ]
+      },
+      "I1_over_F16": 1.1627962221261197
+    },
+    "8": {
+      "F16_TRT": {
+        "median_ms": 4.069581000003097,
+        "samples_ms": [
+          4.3524980000029245,
+          3.728629999997679,
+          3.717481999998995,
+          4.274323000004188,
+          4.307280999995555,
+          4.133375999998634,
+          4.134504999996125,
+          4.164250000002312,
+          3.914262999998641,
+          3.640653000005045,
+          4.002945999999952,
+          4.964907000001517,
+          4.928274999997484,
+          3.962053999998716,
+          4.13563099999692,
+          4.11073700000486,
+          3.9747689999956037,
+          4.254443999997193,
+          4.015785000007099,
+          3.8591619999976956,
+          3.8565680000033353,
+          4.261513000002992,
+          3.8932770000030814,
+          3.950681999995709,
+          4.46110400000066,
+          3.8522729999925787,
+          3.681545000006281,
+          3.8177539999963983,
+          3.552937999998562,
+          4.2655620000005,
+          3.777330999994888,
+          4.478800000001115,
+          4.245986999990237,
+          4.0696190000062415,
+          4.319686999991745,
+          3.91682999999432,
+          5.123969999999645,
+          4.069542999999953,
+          3.850818000003642,
+          4.143264000006752
+        ]
+      },
+      "I1": {
+        "median_ms": 4.478095999999709,
+        "samples_ms": [
+          4.871930000007296,
+          4.524391999993327,
+          4.267320000010955,
+          5.180638000013005,
+          4.343446999996559,
+          4.348672999995529,
+          4.874094000001605,
+          4.431800000006092,
+          4.416800999990755,
+          3.773422999998388,
+          4.759677999999212,
+          4.534120000002417,
+          3.990551000001119,
+          3.787509999995109,
+          5.332025000001295,
+          4.378455999997755,
+          3.976736000012693,
+          4.531206000010002,
+          4.415954999998917,
+          4.526694999995584,
+          4.85529600000234,
+          5.502011999993783,
+          4.622980000007715,
+          4.209334000009335,
+          4.012262000003375,
+          4.035907000002226,
+          4.6016359999896395,
+          4.290148999999133,
+          4.356229000009648,
+          5.012511000003883,
+          4.378645000002734,
+          4.554505000001541,
+          4.743052999998554,
+          4.894598999996447,
+          4.363756000003605,
+          4.116695000007553,
+          4.68118499999548,
+          4.556374000003416,
+          4.217886000006388,
+          4.801857000003906
+        ]
+      },
+      "I1_over_F16": 1.1003825700966023
+    }
+  },
+  "outputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/data/pilot/week1-i1-scope127-outputs.npz",
+    "sha256": "80300d80a00020625bc378483eededfae1f61f2ab6961f8b4b4191319a41f2e5"
+  },
+  "runtime_evidence": [
+    {
+      "path": "/home/anjanrd/.local/share/lc0-int8/week1/int8/inspector-127.json",
+      "sha256": "acba00db7650092a7f01d8cfe181098602d8ef8cec25ed8d28999ce9f456896a"
+    },
+    {
+      "path": "/home/anjanrd/.local/share/lc0-int8/week1/int8/kernels-127.json",
+      "sha256": "ac7f43127206ecb3f13a97f01ff156e6034ead43de6dc209028c9a9a8e767574"
+    }
+  ],
+  "engine_bytes": 147620084,
+  "interpretation": "Naive numerical differences on calibration/development inputs; no Syzygy accuracy claim; mixed-precision exclusions disclosed",
+  "audit_script_sha256": "5c9902529233f537d9db80ac83598b301ab66bbce1980333cdba0395bc251212",
+  "precision_detail": "All floating ONNX inputs, outputs and initializers are FP16. TensorRT fuses INT8 x INT8 / INT32 accumulation with FP32 dequantized intermediates, FP16 outputs or a requantized INT8 output, as listed per layer in the inspector. Nonselected matrix precision is constrained FP16; normalization computation is FP32. These actual mixed intermediates are disclosed, not described as an all-FP16 remainder.",
+  "audit_executed_source": {
+    "path": "/home/anjanrd/.local/share/lc0-int8/week1/int8/audit-executed-5c9902529233f537.py",
+    "sha256": "5c9902529233f537d9db80ac83598b301ab66bbce1980333cdba0395bc251212"
+  },
+  "int8_layer_output_types": {
+    "('gemm', 'Float')": 80,
+    "('fusion', 'Half')": 15
+  },
+  "precision_metadata_corrected_at_utc": "2026-10-25T20:32:15.716138+00:00",
+  "precision_metadata_source_sha256": "6ae51b843f43e375ba1869a1afd754fd712bb412fd2f527853c9af389004f718"
+}

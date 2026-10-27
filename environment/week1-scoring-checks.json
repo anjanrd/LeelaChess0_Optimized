@@ -1,0 +1,47 @@
+{
+  "fixtures": [
+    {
+      "name": "KQK-win",
+      "fen": "7k/8/6K1/8/8/8/2Q5/8 w - - 0 1",
+      "outcome": 1,
+      "mirror_agrees": true
+    },
+    {
+      "name": "KRK-win",
+      "fen": "7k/8/6K1/8/8/8/2R5/8 w - - 0 1",
+      "outcome": 1,
+      "mirror_agrees": true
+    },
+    {
+      "name": "mate",
+      "fen": "7k/6Q1/6K1/8/8/8/8/8 b - - 0 1",
+      "outcome": -1,
+      "mirror_agrees": true
+    },
+    {
+      "name": "stalemate",
+      "fen": "7k/5Q2/6K1/8/8/8/8/8 b - - 0 1",
+      "outcome": 0,
+      "mirror_agrees": true
+    },
+    {
+      "name": "insufficient",
+      "fen": "7k/8/6K1/8/8/8/8/8 w - - 0 1",
+      "outcome": 0,
+      "mirror_agrees": true
+    }
+  ],
+  "mate_in_one_sign": true,
+  "capture_terminal_sign": true,
+  "missing_tables_raise": true,
+  "five_way_mapping": {
+    "-2": -1,
+    "-1": -1,
+    "0": 0,
+    "1": 1,
+    "2": 1
+  },
+  "note": "Cursed/blessed mapping checked by explicit mapping and any naturally sampled cases; no fabricated tablebase fixture",
+  "status": "passed",
+  "verified_at_utc": "2026-10-25T20:34:43.610616+00:00"
+}

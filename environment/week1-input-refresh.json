@@ -1,0 +1,80 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-27T07:32:34.561515+00:00",
+  "dataset_manifest": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy-v2/manifest.json",
+    "sha256": "4e26a94128483352576375226155f432e0d16c374f73d0abcb46a698fd60f2d1"
+  },
+  "splits": [
+    {
+      "split": "calibration",
+      "count": 1024,
+      "unique_games": 1024,
+      "hashes_valid": true,
+      "piece_counts": {
+        "4": 512,
+        "5": 512
+      },
+      "source_transforms": {
+        "identity": 502,
+        "color_rank_mirror": 522
+      },
+      "source_board_reconstruction_all_exact": true,
+      "eight_cells_balanced": true
+    },
+    {
+      "split": "validation",
+      "count": 2048,
+      "unique_games": 2048,
+      "hashes_valid": true,
+      "piece_counts": {
+        "4": 1024,
+        "5": 1024
+      },
+      "source_transforms": {
+        "identity": 1029,
+        "color_rank_mirror": 1019
+      },
+      "source_board_reconstruction_all_exact": true,
+      "eight_cells_balanced": true
+    },
+    {
+      "split": "test",
+      "count": 10000,
+      "unique_games": 10000,
+      "hashes_valid": true,
+      "piece_counts": {
+        "4": 5000,
+        "5": 5000
+      },
+      "source_transforms": {
+        "identity": 5000,
+        "color_rank_mirror": 5000
+      },
+      "source_board_reconstruction_all_exact": true,
+      "eight_cells_balanced": true
+    }
+  ],
+  "all_split_games_and_symmetry_groups_disjoint": true,
+  "all_old_positions_and_prior_development_groups_excluded": true,
+  "all_13072_native_inputs_and_legal_maps_exact": true,
+  "history_and_edge_fixtures": 22,
+  "fixture_planes_and_legal_maps_exact": true,
+  "source_url": "https://github.com/IgorRigolon/chess.endgames",
+  "source_commit": "2e2f0842c435905940d4bf06c002fa1d463fd859",
+  "source_object_generation": "1754704938545033",
+  "source_ranges_and_candidate_hashes_verified": true,
+  "all_13072_original_FEN_game_pairs_relocated_in_published_raw_source": true,
+  "source_filter_bias_and_symmetry_handling": "Upstream is_tablebase counts piece letters over the whole FEN, so the side-to-move b omits true 5-piece Black roots. Source evaluations converted White -> STM before any mirror.",
+  "published_source_root_WDL_independently_verified": true,
+  "test_project_NN_outputs_inspected_before_freeze": false,
+  "old_hard_subset_not_applied_to_new_data": true,
+  "input_shape": "[B,112,8,8]",
+  "network_computation_graph_changed": false,
+  "network_inference_or_INT8_recalibration_run": false,
+  "historical_frozen_Step5_Step6_unchanged": true,
+  "script": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/scripts/refresh_inputs_week1.py",
+    "sha256": "5b66744cd7616144f9795c42508ba2b555ea688e5b1f58a27c434acccfe0348e"
+  }
+}

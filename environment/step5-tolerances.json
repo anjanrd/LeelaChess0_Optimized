@@ -1,0 +1,35 @@
+{
+  "recorded_before_development_inference_utc": "2026-10-21T11:10:17.074799+00:00",
+  "development": "all 22 data/pilot/fixtures.jsonl; no pilot inference in develop",
+  "confirmation": "all 64 data/pilot/positions.jsonl; never final experiment test data",
+  "gates": {
+    "f32": {
+      "legal_probability_max_abs": 0.0002,
+      "legal_kl_max": 1e-05,
+      "wdl_max_abs": 0.0005,
+      "q_max_abs": 0.001,
+      "moves_left_atol": 0.02,
+      "moves_left_rtol": 0.0002,
+      "batch_probability_max_abs": 0.0002
+    },
+    "f16": {
+      "legal_probability_max_abs": 0.015,
+      "legal_kl_max": 0.003,
+      "wdl_max_abs": 0.015,
+      "q_max_abs": 0.03,
+      "moves_left_atol": 0.5,
+      "moves_left_rtol": 0.01,
+      "batch_probability_max_abs": 0.005
+    }
+  },
+  "interpretation": "Per-position bounds; raw logit errors diagnostic; top flips only within 2x probability bound",
+  "selection": "Conservative precision-specific starting bounds, confirmed on independent native development outputs; no tuning on pilot",
+  "frozen_at_utc": "2026-10-21T11:10:34.693151+00:00",
+  "development_passed": true,
+  "development_report_sha256": "b12bd8c09f2aed8d91fe7f699d78265cfdea3565aad6789c3e19a23637d184b8",
+  "graphs_sha256": {
+    "f32": "a518a0bac511a5f66f68041cac5dbb17e6c1e4060d67c8658e7a1851453abed5",
+    "f16": "2541ee8be138ca02bd1cdfaed2003b9d784ce015cddba2693f8d3a35f70c9a99"
+  },
+  "fixtures_sha256": "8db87a8d215bd3906cfe7f9119427f89cc0f16c281bdc36cb444bd8d05c60f21"
+}

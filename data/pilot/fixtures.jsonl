@@ -1,0 +1,22 @@
+{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "id": "start-white", "moves": [], "role": "diagnostic_only"}
+{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR b KQkq - 0 1", "id": "start-black", "moves": [], "role": "diagnostic_only"}
+{"fen": "r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1", "id": "castle-white", "moves": [], "role": "diagnostic_only"}
+{"fen": "r3k2r/8/8/8/8/8/8/R3K2R b KQkq - 0 1", "id": "castle-black", "moves": [], "role": "diagnostic_only"}
+{"fen": "1r5k/P7/8/8/8/8/8/7K w - - 0 1", "id": "promote-white", "moves": [], "role": "diagnostic_only"}
+{"fen": "7k/8/8/8/8/8/p7/1R5K b - - 0 1", "id": "promote-black", "moves": [], "role": "diagnostic_only"}
+{"fen": "1r5k/P7/8/8/8/8/8/7K w - - 0 1", "id": "after-knight-promotion", "moves": ["a7a8n"], "role": "diagnostic_only"}
+{"fen": "1r5k/P7/8/8/8/8/8/7K w - - 0 1", "id": "after-promotion-capture", "moves": ["a7b8q"], "role": "diagnostic_only"}
+{"fen": "7k/8/8/3pP3/8/8/8/K7 w - d6 0 1", "id": "en-passant-white", "moves": [], "role": "diagnostic_only"}
+{"fen": "k7/8/8/8/3Pp3/8/8/7K b - d3 0 1", "id": "en-passant-black", "moves": [], "role": "diagnostic_only"}
+{"fen": "7k/8/8/3pP3/8/8/8/K7 w - d6 0 1", "id": "after-en-passant", "moves": ["e5d6"], "role": "diagnostic_only"}
+{"fen": "7k/8/8/8/8/8/2Q5/K7 w - - 0 50", "id": "rule50-zero", "moves": [], "role": "diagnostic_only"}
+{"fen": "7k/8/8/8/8/8/2Q5/K7 w - - 99 50", "id": "rule50-99", "moves": [], "role": "diagnostic_only"}
+{"fen": "7k/6Q1/6K1/8/8/8/8/8 b - - 0 1", "id": "checkmate", "moves": [], "role": "diagnostic_only"}
+{"fen": "7k/5Q2/6K1/8/8/8/8/8 b - - 0 1", "id": "stalemate", "moves": [], "role": "diagnostic_only"}
+{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "id": "one-known-ply", "moves": ["e2e4"], "role": "diagnostic_only"}
+{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "id": "opening-black", "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "a7a6", "b5a4", "g8f6", "e1g1"], "role": "diagnostic_only"}
+{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "id": "opening-white", "moves": ["e2e4", "e7e5", "g1f3", "b8c6", "f1b5", "a7a6", "b5a4", "g8f6", "e1g1", "f8e7"], "role": "diagnostic_only"}
+{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "id": "capture-history", "moves": ["e2e4", "d7d5", "e4d5", "d8d5", "b1c3", "d5a5"], "role": "diagnostic_only"}
+{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "id": "second-occurrence", "moves": ["g1f3", "g8f6", "f3g1", "f6g8"], "role": "diagnostic_only"}
+{"fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1", "id": "third-occurrence", "moves": ["g1f3", "g8f6", "f3g1", "f6g8", "g1f3", "g8f6", "f3g1", "f6g8"], "role": "diagnostic_only"}
+{"fen": "8/8/7K/8/2r5/8/6Qk/8 b - - 0 1", "id": "one-legal-evasion", "moves": [], "role": "diagnostic_only"}

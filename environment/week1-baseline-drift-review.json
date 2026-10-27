@@ -1,0 +1,303 @@
+{
+  "status": "NEW_BASELINE_DRIFT_REQUIRES_USER_REVIEW",
+  "recorded_at_utc": "2026-10-25T20:44:03.618439+00:00",
+  "engine_identity": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+  "original_WDL_limit": 0.015,
+  "previously_accepted_observation": 0.019593477,
+  "test_max_F16_vs_R32_WDL_abs": 0.23239879310131073,
+  "roots_above_original_1_5pp_WDL_limit_vs_R32": 111,
+  "roots_above_previous_1_9593pp_observation_vs_R32": 94,
+  "by_material_above_1_5pp": {
+    "KPkr": 42,
+    "KQkq": 20,
+    "KQkr": 23,
+    "KPkp": 26
+  },
+  "diagnostics": [
+    {
+      "id": "test-07819",
+      "family": "KPkr",
+      "fen": "4k3/6P1/8/8/8/8/r7/1K6 w - - 0 1",
+      "native_WDL": [
+        4.208087921142578e-05,
+        0.22099065780639648,
+        0.7789672613143921
+      ],
+      "R32_WDL": [
+        4.210465704090893e-05,
+        0.22097034752368927,
+        0.7789875864982605
+      ],
+      "F16_batch8_WDL": [
+        7.015466690063477e-05,
+        0.453369140625,
+        0.546875
+      ],
+      "F16_batch1_WDL": [
+        7.015466690063477e-05,
+        0.453369140625,
+        0.546875
+      ],
+      "R32_vs_native_WDL_max_abs": 2.0325183868408203e-05,
+      "F16_batch8_vs_native_WDL_max_abs": 0.23237848281860352,
+      "F16_batch1_vs_native_WDL_max_abs": 0.23237848281860352,
+      "F16_batch8_repeat_bit_identical": true,
+      "native_move": "b1a2",
+      "R32_move": "b1a2",
+      "F16_move": "b1a2",
+      "R32_vs_native_legal_probability_max_abs": 2.562999725341797e-06,
+      "F16_vs_native_legal_probability_max_abs": 0.021271049976348877
+    },
+    {
+      "id": "test-08649",
+      "family": "KPkr",
+      "fen": "8/8/2k5/8/8/1P6/3r4/2K5 w - - 0 1",
+      "native_WDL": [
+        8.869171142578125e-05,
+        0.330752968788147,
+        0.6691583395004272
+      ],
+      "R32_WDL": [
+        8.8698354375083e-05,
+        0.3307555913925171,
+        0.6691557168960571
+      ],
+      "F16_batch8_WDL": [
+        0.00012105703353881836,
+        0.55908203125,
+        0.44140625
+      ],
+      "F16_batch1_WDL": [
+        0.00012105703353881836,
+        0.55908203125,
+        0.44140625
+      ],
+      "R32_vs_native_WDL_max_abs": 2.6226043701171875e-06,
+      "F16_batch8_vs_native_WDL_max_abs": 0.22832906246185303,
+      "F16_batch1_vs_native_WDL_max_abs": 0.22832906246185303,
+      "F16_batch8_repeat_bit_identical": true,
+      "native_move": "c1d2",
+      "R32_move": "c1d2",
+      "F16_move": "c1d2",
+      "R32_vs_native_legal_probability_max_abs": 2.980232238769531e-07,
+      "F16_vs_native_legal_probability_max_abs": 0.018772363662719727
+    },
+    {
+      "id": "test-08676",
+      "family": "KPkr",
+      "fen": "8/3kP3/8/8/8/6r1/7K/8 w - - 0 1",
+      "native_WDL": [
+        9.57101583480835e-05,
+        0.460910826921463,
+        0.5389934778213501
+      ],
+      "R32_WDL": [
+        9.56981020863168e-05,
+        0.46088993549346924,
+        0.5390143990516663
+      ],
+      "F16_batch8_WDL": [
+        6.383657455444336e-05,
+        0.253173828125,
+        0.7470703125
+      ],
+      "F16_batch1_WDL": [
+        6.383657455444336e-05,
+        0.253173828125,
+        0.7470703125
+      ],
+      "R32_vs_native_WDL_max_abs": 2.092123031616211e-05,
+      "F16_batch8_vs_native_WDL_max_abs": 0.2080768346786499,
+      "F16_batch1_vs_native_WDL_max_abs": 0.2080768346786499,
+      "F16_batch8_repeat_bit_identical": true,
+      "native_move": "h2g3",
+      "R32_move": "h2g3",
+      "F16_move": "h2g3",
+      "R32_vs_native_legal_probability_max_abs": 1.6093254089355469e-06,
+      "F16_vs_native_legal_probability_max_abs": 0.019459068775177002
+    },
+    {
+      "id": "test-03805",
+      "family": "KQkr",
+      "fen": "8/8/8/8/8/1Q4K1/2k5/7r b - - 0 1",
+      "native_WDL": [
+        0.0001343265175819397,
+        0.2323712557554245,
+        0.7674944400787354
+      ],
+      "R32_WDL": [
+        0.00013434418360702693,
+        0.23236994445323944,
+        0.7674957513809204
+      ],
+      "F16_batch8_WDL": [
+        0.00019419193267822266,
+        0.43359375,
+        0.56591796875
+      ],
+      "F16_batch1_WDL": [
+        0.00019419193267822266,
+        0.43359375,
+        0.56591796875
+      ],
+      "R32_vs_native_WDL_max_abs": 1.3113021850585938e-06,
+      "F16_batch8_vs_native_WDL_max_abs": 0.20157647132873535,
+      "F16_batch1_vs_native_WDL_max_abs": 0.20157647132873535,
+      "F16_batch8_repeat_bit_identical": true,
+      "native_move": "c2b3",
+      "R32_move": "c2b3",
+      "F16_move": "c2b3",
+      "R32_vs_native_legal_probability_max_abs": 7.748603820800781e-07,
+      "F16_vs_native_legal_probability_max_abs": 0.0251806378364563
+    },
+    {
+      "id": "test-04770",
+      "family": "KQkr",
+      "fen": "5Q1K/5kr1/8/8/8/8/8/8 b - - 0 1",
+      "native_WDL": [
+        0.0004318505525588989,
+        0.5534037351608276,
+        0.44616442918777466
+      ],
+      "R32_WDL": [
+        0.0004318447900004685,
+        0.5533866882324219,
+        0.4461815059185028
+      ],
+      "F16_batch8_WDL": [
+        0.0004892349243164062,
+        0.7392578125,
+        0.260009765625
+      ],
+      "F16_batch1_WDL": [
+        0.0004892349243164062,
+        0.7392578125,
+        0.260009765625
+      ],
+      "R32_vs_native_WDL_max_abs": 1.7076730728149414e-05,
+      "F16_batch8_vs_native_WDL_max_abs": 0.18615466356277466,
+      "F16_batch1_vs_native_WDL_max_abs": 0.18615466356277466,
+      "F16_batch8_repeat_bit_identical": true,
+      "native_move": "f7f8",
+      "R32_move": "f7f8",
+      "F16_move": "f7f8",
+      "R32_vs_native_legal_probability_max_abs": 2.86102294921875e-06,
+      "F16_vs_native_legal_probability_max_abs": 0.029255151748657227
+    },
+    {
+      "id": "test-08515",
+      "family": "KPkr",
+      "fen": "8/8/4k3/8/8/4P3/8/3rK3 w - - 0 1",
+      "native_WDL": [
+        6.414949893951416e-05,
+        0.37948670983314514,
+        0.6204491257667542
+      ],
+      "R32_WDL": [
+        6.41740916762501e-05,
+        0.37947654724121094,
+        0.620459258556366
+      ],
+      "F16_batch8_WDL": [
+        7.927417755126953e-05,
+        0.5537109375,
+        0.446533203125
+      ],
+      "F16_batch1_WDL": [
+        7.927417755126953e-05,
+        0.5537109375,
+        0.446533203125
+      ],
+      "R32_vs_native_WDL_max_abs": 1.0162591934204102e-05,
+      "F16_batch8_vs_native_WDL_max_abs": 0.17422422766685486,
+      "F16_batch1_vs_native_WDL_max_abs": 0.17422422766685486,
+      "F16_batch8_repeat_bit_identical": true,
+      "native_move": "e1d1",
+      "R32_move": "e1d1",
+      "F16_move": "e1d1",
+      "R32_vs_native_legal_probability_max_abs": 6.556510925292969e-07,
+      "F16_vs_native_legal_probability_max_abs": 0.015388786792755127
+    },
+    {
+      "id": "test-03808",
+      "family": "KQkr",
+      "fen": "8/6K1/8/4r3/8/8/3kQ3/8 b - - 0 1",
+      "native_WDL": [
+        0.00025454163551330566,
+        0.5372617840766907,
+        0.462483674287796
+      ],
+      "R32_WDL": [
+        0.0002545387833379209,
+        0.5372189879417419,
+        0.46252647042274475
+      ],
+      "F16_batch8_WDL": [
+        0.00021123886108398438,
+        0.391845703125,
+        0.60791015625
+      ],
+      "F16_batch1_WDL": [
+        0.00021123886108398438,
+        0.391845703125,
+        0.60791015625
+      ],
+      "R32_vs_native_WDL_max_abs": 4.279613494873047e-05,
+      "F16_batch8_vs_native_WDL_max_abs": 0.14542648196220398,
+      "F16_batch1_vs_native_WDL_max_abs": 0.14542648196220398,
+      "F16_batch8_repeat_bit_identical": true,
+      "native_move": "d2e2",
+      "R32_move": "d2e2",
+      "F16_move": "d2e2",
+      "R32_vs_native_legal_probability_max_abs": 1.519918441772461e-06,
+      "F16_vs_native_legal_probability_max_abs": 0.00634351372718811
+    },
+    {
+      "id": "test-04629",
+      "family": "KQkr",
+      "fen": "8/8/8/8/8/1Q6/2k3r1/5K2 b - - 0 1",
+      "native_WDL": [
+        0.0002046450972557068,
+        0.7824594974517822,
+        0.21733585000038147
+      ],
+      "R32_WDL": [
+        0.00020464065892156214,
+        0.7824435234069824,
+        0.21735188364982605
+      ],
+      "F16_batch8_WDL": [
+        0.00019729137420654297,
+        0.65087890625,
+        0.34912109375
+      ],
+      "F16_batch1_WDL": [
+        0.00019729137420654297,
+        0.65087890625,
+        0.34912109375
+      ],
+      "R32_vs_native_WDL_max_abs": 1.6033649444580078e-05,
+      "F16_batch8_vs_native_WDL_max_abs": 0.13178524374961853,
+      "F16_batch1_vs_native_WDL_max_abs": 0.13178524374961853,
+      "F16_batch8_repeat_bit_identical": true,
+      "native_move": "c2b3",
+      "R32_move": "c2b3",
+      "F16_move": "c2b3",
+      "R32_vs_native_legal_probability_max_abs": 1.6093254089355469e-06,
+      "F16_vs_native_legal_probability_max_abs": 0.01170039176940918
+    }
+  ],
+  "accepted_engine_repeated_outputs_exact": true,
+  "native_reference_confirms_R32_on_all_eight_largest_cases": true,
+  "no_baseline_rebuild_or_tolerance_change": true,
+  "no_INT8_test_tuning": true,
+  "interpretation": "Both baseline move-accuracy measurements remain valid measurements of these frozen artifacts. The previous acceptance does not automatically cover this newly observed larger numerical discrepancy. Further acceptance-dependent comparison work is held for user review.",
+  "options": [
+    "Retain this exact FP16 baseline with explicit acceptance of the newly measured drift; continue to report both baselines separately.",
+    "Reopen FP16 baseline engineering under a new bounded, registered investigation. Preserve all existing results and reassess held-out validation after any model/runtime changes."
+  ],
+  "script": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/scripts/investigate_week1_drift.py",
+    "sha256": "06ae7c39f0c74012e1aa8c5d1b07f3f296c2cd698da463dba76f61018b7e3a14"
+  }
+}

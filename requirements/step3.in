@@ -1,0 +1,12 @@
+# Ubuntu 22.04 / Python 3.10 / CUDA 12 runtime wheels.
+# Full resolved versions are captured in step3.lock after verification.
+pip==25.3
+meson==1.9.1
+numpy==1.26.4
+torch==2.8.0
+onnx==1.21.0
+onnxruntime-gpu==1.22.0
+tensorrt-cu12==10.9.0.34
+nvidia-modelopt[onnx]==0.47.0
+matplotlib==3.10.7
+python-chess==1.999

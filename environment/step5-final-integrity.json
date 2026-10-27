@@ -1,0 +1,12 @@
+{
+  "verified_at_utc": "2026-10-25T14:10:55.503326+00:00",
+  "status": "passed",
+  "engine_sha256": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+  "original_limits_unchanged": true,
+  "raw_failure_preserved": true,
+  "acceptance_sha256": "dcea38f581389cba3f692b20384c807fa992ec408a556640f9dfea395f48caac",
+  "restored_engine_outputs": "bit-identical to archived outputs, including accepted outlier",
+  "original_build_source_snapshot_sha256": "ac421c6743abd808d7561f781117a1e12e155d4487a302fc69ba43a07e2331bf",
+  "original_timing_cache_matches": false,
+  "reproducibility": "Reuse exact serialized engine. Original shared timing-cache file was overwritten by the rejected build; it is not a valid first-engine rebuild cache. Future builds use hash-specific cache filenames. A fresh rebuild is not promised bit-identical."
+}

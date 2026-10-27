@@ -1,0 +1,37 @@
+{
+  "status": "passed_A_side",
+  "verified_at_utc": "2026-10-25T20:32:05.611428+00:00",
+  "scope": "environment/step6-scope-v2.json",
+  "graph": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-i1-scope160.onnx",
+    "sha256": "a94e4ba30d5b6db1bf0b18271da5a7ce713e556e389e8467c7cd931b23337536"
+  },
+  "engine": {
+    "path": "/home/anjanrd/.local/share/lc0-int8/week1/int8/bt3-i1-scope160.plan",
+    "sha256": "3d3c58b87ae6d3cbfe3b861fa0f21fc2ffee92b9fb39f937425fe663973167a0"
+  },
+  "wrapper": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/wrapped/bt3-i1-pilot.pb.gz",
+    "sha256": "e26010766f3e8ae312108306d72074b9577daf1620a74690037d79411677d77f"
+  },
+  "wrapper_embedded_graph_byte_identical": true,
+  "command": [
+    "/home/anjanrd/.local/share/lc0-int8/build/lc0-tools/lc0",
+    "onnx2leela",
+    "--input=/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-i1-scope160.onnx",
+    "--output=/mnt/c/Users/HP/Desktop/LC0/models/wrapped/bt3-i1-pilot.pb.gz",
+    "--input-format=INPUT_CLASSICAL_112_PLANE",
+    "--policy-format=POLICY_ATTENTION",
+    "--value-format=VALUE_WDL",
+    "--moves-left-format=MOVES_LEFT_V1",
+    "--onnx-input=/input/planes",
+    "--onnx-output-policy=/output/policy",
+    "--onnx-output-wdl=/output/wdl",
+    "--onnx-output-mlh=/output/mlh"
+  ],
+  "wrapper_metadata": "\nFormat\n~~~~~~\n                       Input: INPUT_CLASSICAL_112_PLANE\n                     Network: NETWORK_ONNX\n                      Policy: POLICY_ATTENTION\n                       Value: VALUE_WDL\n                         MLH: MOVES_LEFT_V1\n\nONNX interface\n~~~~~~~~~~~~~~\n                   Data type: FLOAT16\n                Input planes: /input/planes\n                  Output WDL: /output/wdl\n               Output Policy: /output/policy\n                  Output MLH: /output/mlh\n\nONNX model\n~~~~~~~~~~\n                  IR version: 9\n               Producer Name: onnx.quantize\n            Producer Version: 0.1.0\n                       Input: /input/planes\n                      Output: /output/policy\n                      Output: /output/wdl\n                      Output: /output/mlh\n                       Opset:  19\nDone.\n\u001b[1m\u001b[31m       _\n|   _ | |\n|_ |_ |_|\u001b[0m v0.33.0-rc0 built Oct 21 2026\n",
+  "native_description": "\nGeneral\n~~~~~~~\n         Minimal Lc0 version: v0.28.0\n\nFormat\n~~~~~~\n                       Input: INPUT_CLASSICAL_112_PLANE\n                     Network: NETWORK_ONNX\n                      Policy: POLICY_ATTENTION\n                       Value: VALUE_WDL\n                         MLH: MOVES_LEFT_V1\n\nONNX interface\n~~~~~~~~~~~~~~\n                   Data type: FLOAT16\n                Input planes: /input/planes\n                  Output WDL: /output/wdl\n               Output Policy: /output/policy\n                  Output MLH: /output/mlh\n\nONNX model\n~~~~~~~~~~\n                  IR version: 9\n               Producer Name: onnx.quantize\n            Producer Version: 0.1.0\n                       Input: /input/planes\n                      Output: /output/policy\n                      Output: /output/wdl\n                      Output: /output/mlh\n                       Opset:  19\n\u001b[1m\u001b[31m       _\n|   _ | |\n|_ |_ |_|\u001b[0m v0.33.0-rc0 built Oct 21 2026\n",
+  "numerical_and_precision_report": "environment/week1-i1-engine-160.json",
+  "lc0_GPU_integration": "UNVERIFIED: current lc0 tool build has Eigen CPU/export/wrapper support only. Actual lc0 onnx-trt execution and resulting engine/precision/parity remain Person B W1-B03 and joint C1. Standalone engine evidence is not substituted for integrated results.",
+  "source_checkpoint": "e3067757d1fc2dfc66947b21d15ace0cedf4c54254fc1de83d77c378a3e8b8e1"
+}

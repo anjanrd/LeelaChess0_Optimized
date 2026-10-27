@@ -1,0 +1,50 @@
+{
+  "verified_at_utc": "2026-10-25T14:46:09.947422+00:00",
+  "status": "passed",
+  "scope_version": "1.0",
+  "step5_frozen_manifest_sha256": "0bb6a3efeabd93647d15b18a3ac54eaa39b03c45d21f4e47e5bbb55fb636dd46",
+  "step5_artifacts_unchanged": true,
+  "checks": [
+    "All 195 named matrix operations accounted for; no missing or duplicate targets",
+    "Both original floating graphs match structurally; model hashes unchanged",
+    "Exact shapes for all batches 1..8; endpoints independently re-inferred",
+    "Broadcast/output and two independent MAC formulas agree",
+    "Installed ModelOpt geometry exclusions match at batches 1/4/8",
+    "127 selected nodes and 68 explicit exclusions partition the matrix graph",
+    "Anchored quantizer patterns select exactly the intended names",
+    "15 encoder blocks have consistent placement; shared smolgen weights accounted for",
+    "Pinned tool source hashes and FP16 Q/DQ schema constraints verified"
+  ],
+  "coverage": {
+    "selected_matrices": 127,
+    "total_matrices": 195,
+    "dynamic_matrices_excluded": 31,
+    "weighted_matrices_excluded": 37,
+    "unique_selected_weight_tensors": 113,
+    "unique_selected_weight_parameters": 63950848,
+    "matrix_macs_per_position": 4539245056,
+    "selected_matrix_macs_per_position": 4403232768,
+    "selected_matrix_mac_fraction": 0.9700363636855829,
+    "interpretation": "Unfused ONNX arithmetic estimate, excludes nonmatrix work; not measured INT8 coverage, runtime share or speedup"
+  },
+  "artifacts": [
+    {
+      "relative_path": "environment/step6-inventory.json",
+      "sha256": "2dc17ea66e3db343532292a5f8f37d9daae6f387a510de8114cc3304d18e22d8"
+    },
+    {
+      "relative_path": "environment/step6-scope.json",
+      "sha256": "ab9ad63d2d4176c31b0a597acf6b84ccf1fca56b2d5ca75054b4cce70e2994d8"
+    },
+    {
+      "relative_path": "docs/quantization-scope.md",
+      "sha256": "0c0f520426cfaa7068fef859b9b2147963dbad60d20fb3f83f1e949526c7a2aa"
+    },
+    {
+      "relative_path": "scripts/inventory_step6.py",
+      "sha256": "3a78628947975a4f70178936edd518b60bfbb5b0c32836121f436368e00de941"
+    }
+  ],
+  "execution_limit": "Intended placement only; no actual INT8 execution or accuracy/performance claim",
+  "step7_started": false
+}

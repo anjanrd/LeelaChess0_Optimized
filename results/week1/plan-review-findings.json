@@ -1,0 +1,41 @@
+{
+  "recorded_at_utc": "2026-10-25T20:49:39.970944+00:00",
+  "findings": [
+    {
+      "id": "BASELINE-DRIFT",
+      "finding": "Full testing revealed F16/R32 WDL component drift up to 23.24 points; native reference checks confirm the larger F16 discrepancy. The earlier 1.96-point observation does not automatically cover it.",
+      "action": "Record explicit user acceptance of the expanded documented drift or reopen baseline engineering. Keep measurements and raw failures intact. Review remains open: True",
+      "evidence": "environment/week1-baseline-drift-review.json"
+    },
+    {
+      "id": "HARD-FLOOR",
+      "finding": "The predefined signed-margin hard subset has 1650 roots and zero accuracy for both baselines. Validation tau is negative, so baseline failure on this subset follows from the rule. Further degradation has a floor effect.",
+      "action": "Preserve the original subset/results. Before Week 2 claims, discuss a separately registered baseline-correct/near-boundary supplemental subset using validation, with joint approval and explicit post-selection safeguards. Do not retroactively replace the current metric or tune from these test results."
+    },
+    {
+      "id": "NAIVE-PTQ",
+      "finding": "The engineering I1 pilot has substantial numerical drift and no latency gain over F16. Expanded coverage was chosen by the preregistered coverage/latency rule, not by accuracy.",
+      "action": "Week 2 uses the registered full-calibration ladder and validation selection. Do not present the pilot as a successful accuracy/speed optimization or final test result."
+    },
+    {
+      "id": "WEIGHT-STORAGE",
+      "finding": "The ModelOpt Q/DQ ONNX pilot stores selected weight source constants in FP16 followed by QuantizeLinear; TensorRT folds constants and executes INT8 operands. 99.9905% is selected matrix-parameter coverage, not a claim that 99.9905% of ONNX-file bytes are INT8.",
+      "action": "Report ONNX and saved-engine sizes separately. If compact INT8 initializers are needed in Week 2, treat canonical constant folding as an explicit serializer change, verify numerical equivalence and re-audit resulting engines."
+    },
+    {
+      "id": "MIXED-RUNTIME",
+      "finding": "INT8 matrix kernels use INT32 accumulation and may output FP32 dequantized intermediates, FP16 or requantized INT8. The four unselected weighted operations use FP16, with FP32 normalization computation requested.",
+      "action": "Use per-layer inspector/kernel evidence. Do not describe all non-INT8 execution as uniformly FP16 or claim all model parameters are INT8."
+    },
+    {
+      "id": "C1-OPEN",
+      "finding": "Actual lc0 GPU backend integration, fixed-node and one-second search, systems/energy evidence, DTZ move ranking and teammate review are unverified.",
+      "action": "A-side Week 1 completion is distinct from joint C1. Resolve B01-B08 and joint review before opening comparable Week 2 studies."
+    },
+    {
+      "id": "REPRODUCIBILITY",
+      "finding": "The accepted F16 engine is device/runtime-specific and has a user-accepted original numerical exception. Engine rebuilds can select different tactics.",
+      "action": "Preserve the exact binary. Rebuilding or integrating a different engine requires fresh parity/precision checks; the old exception is not blanket acceptance."
+    }
+  ]
+}

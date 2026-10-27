@@ -1,0 +1,20 @@
+{
+  "recorded_at_utc": "2026-10-21T11:18:38.040596+00:00",
+  "providers": [
+    "TensorrtExecutionProvider"
+  ],
+  "options": {
+    "trt_fp16_enable": true,
+    "trt_max_workspace_size": 536870912,
+    "trt_engine_cache_enable": true,
+    "trt_engine_cache_path": "/home/anjanrd/.local/share/lc0-int8/step5-diagnostics/trt-cache",
+    "trt_profile_min_shapes": "/input/planes:1x112x8x8",
+    "trt_profile_opt_shapes": "/input/planes:4x112x8x8",
+    "trt_profile_max_shapes": "/input/planes:8x112x8x8",
+    "trt_layer_norm_fp32_fallback": true
+  },
+  "pilot": {
+    "gate_failure": "{'id': 'pilot-031', 'raw_logit_max_abs': 0.019468486309051514, 'wdl_max_abs': 0.020079433917999268, 'q_abs': 0.02008342742919922, 'moves_left_abs': 0.05039334297180176}",
+    "wdl_max_abs": 0.020079433917999268
+  }
+}

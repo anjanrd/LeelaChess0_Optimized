@@ -1,0 +1,71 @@
+{
+  "updated_at_utc": "2026-10-25T14:15:45.706933+00:00",
+  "status": "complete_with_documented_drift",
+  "step6_started": false,
+  "5G_started": true,
+  "two_baseline_choice": "implemented and unchanged",
+  "original_tolerances_sha256": "9f1f32f4d4865c822850a94d20371a83b0d8f7b2d702d684f90f2266f1d04866",
+  "engineering_WDL_limit_percentage_points": 1.5,
+  "candidates": [
+    {
+      "id": "native_accumulation",
+      "engine_sha256": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+      "engine_path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/bt3-f16-4271981b85fb44dd.plan",
+      "evidence_directory": "environment/step5-history/4271981b85fb44dd",
+      "matrix_math": "executed FP16 Tensor Core GEMMs, native accumulation tactics",
+      "reload_and_batch_repeatability": "passed",
+      "development_positions": 86,
+      "development_status": "passed",
+      "development_max_wdl_error": 0.005555331707000732,
+      "fresh_confirmation_positions": 128,
+      "confirmation_status": "failed",
+      "confirmation_max_wdl_error": 0.019593477249145508,
+      "confirmation_failed_position": "export-confirm-073",
+      "confirmation_top_move_agreement": 0.9921875,
+      "recommendation": "Selected by explicit human acceptance; raw confirmation failure retained",
+      "selection": "accepted_with_documented_drift"
+    },
+    {
+      "id": "global_fp32_accumulation",
+      "engine_sha256": "524853bcd0d3ee2d883039e0d64281978505c9e0a5140dd11f6736a95da8fa0f",
+      "engine_path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/bt3-f16-524853bcd0d3ee2d.plan",
+      "matrix_math": "executed FP16 Tensor Core GEMMs with FP32 accumulation",
+      "reload_and_batch_repeatability": "passed",
+      "development_positions": 214,
+      "development_status": "failed",
+      "development_max_wdl_error": 0.12921029329299927,
+      "failed_position": "pilot-031",
+      "fresh_second_confirmation": "not run because development gate failed",
+      "recommendation": "Do not adopt; development numerical checks failed",
+      "selection": "rejected"
+    }
+  ],
+  "verified_work": [
+    "5A baseline definitions",
+    "5B selected-baseline versus diagnostic scope",
+    "5C cache cause, direct serialization and fresh-process reload",
+    "5D actual FP32 CUDA-core SGEMM and FP16 Tensor Core kernel traces",
+    "5E selected-engine development checks",
+    "5F explicit human acceptance of documented confirmation drift",
+    "5G live restored-output integrity, pilot timings and final freeze"
+  ],
+  "remaining": [],
+  "no_changes_to": [
+    "checkpoint",
+    "ONNX graph identities",
+    "numerical limits",
+    "GPU driver",
+    "Python dependency versions"
+  ],
+  "final_test_exclusion_groups": 221,
+  "test_exclusion_files": [
+    "data/pilot/exclusions.json",
+    "data/export-confirmation/exclusions.json"
+  ],
+  "validation": "All preserved/current engine, output, reload, precision-trace hashes checked; Python sources parse; confirmation groups disjoint; original bounds unchanged",
+  "scientific_limit": "WDL prediction differences only; no Syzygy move accuracy, INT8, MCTS, or chess-strength conclusions",
+  "accepted_engine_sha256": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+  "5G_completed": true,
+  "acceptance_record": "environment/step5-acceptance.json",
+  "final_manifest": "environment/step5-final-manifest.json"
+}

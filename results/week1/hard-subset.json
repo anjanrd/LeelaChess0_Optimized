@@ -1,0 +1,14 @@
+{
+  "status": "frozen_before_test_inference",
+  "frozen_at_utc": "2026-10-25T20:36:51.449309+00:00",
+  "tau": -0.09387190192937851,
+  "quantile": 0.2,
+  "numpy_quantile_method": "linear",
+  "decision_sensitive_validation_n": 1732,
+  "validation_outputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1/validation-F16_TRT-outputs.npz",
+    "sha256": "9e9532ace7b0b1dceebd7c863ca08a43aedc61ea472bfcc0c1e04cf4f05fcdfa"
+  },
+  "rule": "Decision sensitive AND max(P_F16 preserving)-max(P_F16 degrading)<=tau",
+  "selection_uses_INT8": false
+}

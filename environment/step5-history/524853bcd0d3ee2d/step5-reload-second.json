@@ -1,0 +1,16 @@
+{
+  "verified_at_utc": "2026-10-25T13:52:31.831159+00:00",
+  "pid": 617,
+  "status": "passed",
+  "engine_sha256": "524853bcd0d3ee2d883039e0d64281978505c9e0a5140dd11f6736a95da8fa0f",
+  "engine_path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/bt3-f16-524853bcd0d3ee2d.plan",
+  "arrays_path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/reload-524853bcd0d3ee2d-second.npz",
+  "arrays_sha256": "d0dea65cbeef0e6afdc18aaac25cf0f8c142cd6b006cc0624110e0174ab0bd71",
+  "batch_sizes": [
+    1,
+    8
+  ],
+  "same_process_repeats": "bit-identical",
+  "finite_shapes_and_wdl_semantics": "passed",
+  "builder_invoked": false
+}

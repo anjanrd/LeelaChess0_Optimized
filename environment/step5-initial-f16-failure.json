@@ -1,0 +1,203 @@
+{
+  "status": "failed",
+  "gates_sha256": "9f1f32f4d4865c822850a94d20371a83b0d8f7b2d702d684f90f2266f1d04866",
+  "wdl_errors_above_0_001": [
+    {
+      "id": "pilot-031",
+      "fen": "6K1/8/8/8/8/r7/5Qk1/8 b - - 0 1",
+      "native_wdl": [
+        0.00022166967391967773,
+        0.548058271408081,
+        0.45172005891799927
+      ],
+      "f16_wdl": [
+        0.00023663043975830078,
+        0.63232421875,
+        0.367431640625
+      ],
+      "wdl_max_abs": 0.08428841829299927
+    },
+    {
+      "id": "pilot-034",
+      "fen": "8/7P/8/8/8/5p2/k1K5/8 w - - 0 1",
+      "native_wdl": [
+        8.718110620975494e-06,
+        0.9807312488555908,
+        0.01926003396511078
+      ],
+      "f16_wdl": [
+        8.881092071533203e-06,
+        0.9794921875,
+        0.0202789306640625
+      ],
+      "wdl_max_abs": 0.0012390613555908203
+    }
+  ],
+  "max_wdl_error": 0.08428841829299927,
+  "runtime": {
+    "onnxruntime_version": "1.22.0",
+    "providers": [
+      "CUDAExecutionProvider",
+      "CPUExecutionProvider"
+    ],
+    "provider_options": {
+      "CPUExecutionProvider": {},
+      "CUDAExecutionProvider": {
+        "sdpa_kernel": "0",
+        "use_tf32": "0",
+        "fuse_conv_bias": "0",
+        "prefer_nhwc": "0",
+        "tunable_op_max_tuning_duration_ms": "0",
+        "enable_skip_layer_norm_strict_mode": "0",
+        "tunable_op_tuning_enable": "0",
+        "tunable_op_enable": "0",
+        "use_ep_level_unified_stream": "0",
+        "device_id": "0",
+        "has_user_compute_stream": "0",
+        "gpu_external_empty_cache": "0",
+        "cudnn_conv_algo_search": "EXHAUSTIVE",
+        "cudnn_conv1d_pad_to_nc1d": "0",
+        "gpu_mem_limit": "18446744073709551615",
+        "gpu_external_alloc": "0",
+        "gpu_external_free": "0",
+        "arena_extend_strategy": "kNextPowerOfTwo",
+        "do_copy_in_default_stream": "1",
+        "enable_cuda_graph": "0",
+        "user_compute_stream": "0",
+        "cudnn_conv_use_max_workspace": "0"
+      }
+    },
+    "executed_kernels": [
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Add",
+        "events": 3136
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Concat",
+        "events": 192
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "FusedMatMul",
+        "events": 1024
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Gather",
+        "events": 64
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Gemm",
+        "events": 8512
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "LayerNormalization",
+        "events": 3968
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "MatMul",
+        "events": 2944
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Mul",
+        "events": 3456
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Relu",
+        "events": 64
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Reshape",
+        "events": 7680
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Slice",
+        "events": 192
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Softmax",
+        "events": 1024
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Softplus",
+        "events": 1408
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Split",
+        "events": 64
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Tanh",
+        "events": 1408
+      },
+      {
+        "provider": "CUDAExecutionProvider",
+        "operator": "Transpose",
+        "events": 3904
+      }
+    ],
+    "batches": [
+      1
+    ],
+    "tf32": false,
+    "note": "CUDA EP validation, not a TensorRT engine or timing/precision benchmark"
+  },
+  "note": "Original direct FP16 export; pilot confirmation failed. No tolerances changed.",
+  "diagnosis": {
+    "position": "pilot-031",
+    "native_wdl": [
+      0.00022166967391967773,
+      0.548058271408081,
+      0.45172005891799927
+    ],
+    "f32_onnx_wdl": [
+      0.00022171056480146945,
+      0.5480760931968689,
+      0.45170217752456665
+    ],
+    "f16_wdl": [
+      0.00023663043975830078,
+      0.63232421875,
+      0.367431640625
+    ],
+    "weight_rounding_only_fp32_compute_wdl": [
+      0.00022417513537220657,
+      0.5604109168052673,
+      0.4393649101257324
+    ],
+    "rejected_stability_probe_wdl": [
+      0.00020051002502441406,
+      0.4501953125,
+      0.54931640625
+    ],
+    "rejected_stability_probe": "FP32 LayerNormalization, Softmax and Add; remaining operations/IO FP16",
+    "rejected_final_block_probe_wdl": [
+      0.00021827220916748047,
+      0.5302734375,
+      0.4697265625
+    ],
+    "rejected_final_block_probe": "FP32 LayerNormalization, Softmax and entire encoder14; remaining operations/IO FP16",
+    "intermediate_max_abs_error": {
+      "encoder0_ln2": 0.012462854385375977,
+      "encoder4_ln2": 0.005762875080108643,
+      "encoder9_ln2": 0.007901430130004883,
+      "encoder14_ln2": 0.6151909828186035,
+      "value_dense2_logits": 0.2027902603149414
+    },
+    "interpretation": "Observed growth near final transformer; FP16 weight rounding and activation arithmetic both contribute. Probes did not meet the unchanged WDL limit and were not adopted.",
+    "candidate_storage": "WSL runtime/step5-diagnostics, outside project; not production artifacts"
+  }
+}

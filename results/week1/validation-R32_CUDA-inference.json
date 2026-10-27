@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "baseline": "R32_CUDA",
+  "created_at_utc": "2026-10-25T20:36:47.696008+00:00",
+  "model_identity": "a518a0bac511a5f66f68041cac5dbb17e6c1e4060d67c8658e7a1851453abed5",
+  "inputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/validation-inputs.npz",
+    "sha256": "5375ddf57230d396e2b9563cd78d081ddbf4eac67c88d803ce500142bfe1d4ef"
+  },
+  "outputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1/validation-R32_CUDA-outputs.npz",
+    "sha256": "a40d0f0db9f251a92eb749b26ea047efb07be0723bdc374f3b5c047f72c62a42"
+  },
+  "batch": 8,
+  "seconds_including_host_io_and_output_serialization": 4.6241057250000495,
+  "provider_options": {
+    "CPUExecutionProvider": {},
+    "CUDAExecutionProvider": {
+      "sdpa_kernel": "0",
+      "use_tf32": "0",
+      "fuse_conv_bias": "0",
+      "prefer_nhwc": "0",
+      "tunable_op_max_tuning_duration_ms": "0",
+      "enable_skip_layer_norm_strict_mode": "0",
+      "tunable_op_tuning_enable": "0",
+      "tunable_op_enable": "0",
+      "use_ep_level_unified_stream": "0",
+      "device_id": "0",
+      "has_user_compute_stream": "0",
+      "gpu_external_empty_cache": "0",
+      "cudnn_conv_algo_search": "EXHAUSTIVE",
+      "cudnn_conv1d_pad_to_nc1d": "0",
+      "gpu_mem_limit": "18446744073709551615",
+      "gpu_external_alloc": "0",
+      "gpu_external_free": "0",
+      "arena_extend_strategy": "kNextPowerOfTwo",
+      "do_copy_in_default_stream": "1",
+      "enable_cuda_graph": "0",
+      "user_compute_stream": "0",
+      "cudnn_conv_use_max_workspace": "0"
+    }
+  },
+  "TF32": false,
+  "scope": "Network inference only; tablebases are external labels, no search",
+  "script_sha256": "41012e9ab96b6fc39b2bd34b93cc2f8e47b062c811842489c9de4f40ef9e582c"
+}

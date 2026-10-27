@@ -1,0 +1,27 @@
+{
+  "recorded_before_development_inference_utc": "2026-10-21T11:10:17.074799+00:00",
+  "development": "all 22 data/pilot/fixtures.jsonl; no pilot inference in develop",
+  "confirmation": "all 64 data/pilot/positions.jsonl; never final experiment test data",
+  "gates": {
+    "f32": {
+      "legal_probability_max_abs": 0.0002,
+      "legal_kl_max": 1e-05,
+      "wdl_max_abs": 0.0005,
+      "q_max_abs": 0.001,
+      "moves_left_atol": 0.02,
+      "moves_left_rtol": 0.0002,
+      "batch_probability_max_abs": 0.0002
+    },
+    "f16": {
+      "legal_probability_max_abs": 0.015,
+      "legal_kl_max": 0.003,
+      "wdl_max_abs": 0.015,
+      "q_max_abs": 0.03,
+      "moves_left_atol": 0.5,
+      "moves_left_rtol": 0.01,
+      "batch_probability_max_abs": 0.005
+    }
+  },
+  "interpretation": "Per-position bounds; raw logit errors diagnostic; top flips only within 2x probability bound",
+  "selection": "Conservative precision-specific starting bounds, confirmed on independent native development outputs; no tuning on pilot"
+}

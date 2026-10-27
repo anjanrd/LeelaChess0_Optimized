@@ -1,0 +1,20 @@
+{
+  "version": "1.0",
+  "registered_at_utc": "2026-10-25T20:34:43.593917+00:00",
+  "seed": 20261021,
+  "counts": {
+    "calibration": 1024,
+    "validation": 2048,
+    "test": 10000
+  },
+  "cells": "Equal four material families x side to move x theoretical W/D (16 cells)",
+  "distribution": "Uniform random placements of both kings and two family pieces, fixed side; reject illegal, terminal, fewer-than-two-move, unwanted-outcome, duplicate symmetry and prior-development groups; rejection sampling within each cell",
+  "history": "standalone FEN; history_fill=no; halfmove=0; fullmove=1; no castling/EP",
+  "exclusions": "All 221 pilot/fixture/numerical-confirmation groups excluded from every new split",
+  "trajectory": "No generated game trajectories; each accepted root forms one independent symmetry group. Future search calibration must originate in training pool and filter visited states against held-out groups.",
+  "hard_subset": "Decision-sensitive roots only; m=max FP16 preserving probability-max FP16 degrading probability; validation 20th percentile tau; freeze tau before test scoring",
+  "dtz": "Root DTZ recorded. No DTZ-optimal move ranking claimed; B04 requires separate validation.",
+  "test_usage": "Baselines scored in A09; INT8 pilot used only prior development data; no test-driven tuning",
+  "root_labels": "theoretical WDL sign, ignoring fifty-move clock; preserve cursed/blessed tags",
+  "feasibility_rule": "Retain original counts unless missing coverage or measured runtime prevents completion; no result-driven adjustment"
+}

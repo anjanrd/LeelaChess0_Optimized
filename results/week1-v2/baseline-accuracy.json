@@ -1,0 +1,832 @@
+{
+  "status": "passed_with_disclosed_FP16_drift",
+  "created_at_utc": "2026-10-27T09:18:44.265373+00:00",
+  "splits": {
+    "calibration": {
+      "R32_CUDA": {
+        "strata": {
+          "all": {
+            "n": 1024,
+            "errors": 5,
+            "accuracy": 0.9951171875,
+            "accuracy_Wilson95": [
+              0.9886208640204845,
+              0.9979126050258262
+            ],
+            "transitions": {
+              "D->D": 509,
+              "W->W": 510,
+              "W->D": 2,
+              "D->L": 3
+            }
+          },
+          "decision_sensitive": {
+            "n": 709,
+            "errors": 5,
+            "accuracy": 0.9929478138222849,
+            "accuracy_Wilson95": [
+              0.9835986211731402,
+              0.99698407551289
+            ],
+            "transitions": {
+              "D->D": 367,
+              "W->W": 337,
+              "W->D": 2,
+              "D->L": 3
+            }
+          },
+          "piece_count:4": {
+            "n": 512,
+            "errors": 1,
+            "accuracy": 0.998046875,
+            "accuracy_Wilson95": [
+              0.9890207217875779,
+              0.9996551422384565
+            ],
+            "transitions": {
+              "D->D": 255,
+              "W->W": 256,
+              "D->L": 1
+            }
+          },
+          "piece_count:5": {
+            "n": 512,
+            "errors": 4,
+            "accuracy": 0.9921875,
+            "accuracy_Wilson95": [
+              0.9800865852024431,
+              0.9969577980703442
+            ],
+            "transitions": {
+              "D->D": 254,
+              "W->W": 254,
+              "W->D": 2,
+              "D->L": 2
+            }
+          },
+          "side_to_move:black": {
+            "n": 512,
+            "errors": 2,
+            "accuracy": 0.99609375,
+            "accuracy_Wilson95": [
+              0.985870592855346,
+              0.9989281109196064
+            ],
+            "transitions": {
+              "D->D": 254,
+              "W->W": 256,
+              "D->L": 2
+            }
+          },
+          "side_to_move:white": {
+            "n": 512,
+            "errors": 3,
+            "accuracy": 0.994140625,
+            "accuracy_Wilson95": [
+              0.9829162193160559,
+              0.998005324207814
+            ],
+            "transitions": {
+              "D->D": 255,
+              "W->W": 254,
+              "W->D": 2,
+              "D->L": 1
+            }
+          },
+          "root_outcome:0": {
+            "n": 512,
+            "errors": 3,
+            "accuracy": 0.994140625,
+            "accuracy_Wilson95": [
+              0.9829162193160559,
+              0.998005324207814
+            ],
+            "transitions": {
+              "D->D": 509,
+              "D->L": 3
+            }
+          },
+          "root_outcome:1": {
+            "n": 512,
+            "errors": 2,
+            "accuracy": 0.99609375,
+            "accuracy_Wilson95": [
+              0.985870592855346,
+              0.9989281109196064
+            ],
+            "transitions": {
+              "W->W": 510,
+              "W->D": 2
+            }
+          }
+        },
+        "predictions": {
+          "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/calibration-R32_CUDA-predictions.jsonl",
+          "sha256": "dd76e70f9ab7e40208f60fe8a411123bbc8c501cef0402a46303d7a93fd70802"
+        }
+      },
+      "F16_TRT": {
+        "strata": {
+          "all": {
+            "n": 1024,
+            "errors": 5,
+            "accuracy": 0.9951171875,
+            "accuracy_Wilson95": [
+              0.9886208640204845,
+              0.9979126050258262
+            ],
+            "transitions": {
+              "D->D": 509,
+              "W->W": 510,
+              "W->D": 2,
+              "D->L": 3
+            }
+          },
+          "decision_sensitive": {
+            "n": 709,
+            "errors": 5,
+            "accuracy": 0.9929478138222849,
+            "accuracy_Wilson95": [
+              0.9835986211731402,
+              0.99698407551289
+            ],
+            "transitions": {
+              "D->D": 367,
+              "W->W": 337,
+              "W->D": 2,
+              "D->L": 3
+            }
+          },
+          "piece_count:4": {
+            "n": 512,
+            "errors": 1,
+            "accuracy": 0.998046875,
+            "accuracy_Wilson95": [
+              0.9890207217875779,
+              0.9996551422384565
+            ],
+            "transitions": {
+              "D->D": 255,
+              "W->W": 256,
+              "D->L": 1
+            }
+          },
+          "piece_count:5": {
+            "n": 512,
+            "errors": 4,
+            "accuracy": 0.9921875,
+            "accuracy_Wilson95": [
+              0.9800865852024431,
+              0.9969577980703442
+            ],
+            "transitions": {
+              "D->D": 254,
+              "W->W": 254,
+              "W->D": 2,
+              "D->L": 2
+            }
+          },
+          "side_to_move:black": {
+            "n": 512,
+            "errors": 2,
+            "accuracy": 0.99609375,
+            "accuracy_Wilson95": [
+              0.985870592855346,
+              0.9989281109196064
+            ],
+            "transitions": {
+              "D->D": 254,
+              "W->W": 256,
+              "D->L": 2
+            }
+          },
+          "side_to_move:white": {
+            "n": 512,
+            "errors": 3,
+            "accuracy": 0.994140625,
+            "accuracy_Wilson95": [
+              0.9829162193160559,
+              0.998005324207814
+            ],
+            "transitions": {
+              "D->D": 255,
+              "W->W": 254,
+              "W->D": 2,
+              "D->L": 1
+            }
+          },
+          "root_outcome:0": {
+            "n": 512,
+            "errors": 3,
+            "accuracy": 0.994140625,
+            "accuracy_Wilson95": [
+              0.9829162193160559,
+              0.998005324207814
+            ],
+            "transitions": {
+              "D->D": 509,
+              "D->L": 3
+            }
+          },
+          "root_outcome:1": {
+            "n": 512,
+            "errors": 2,
+            "accuracy": 0.99609375,
+            "accuracy_Wilson95": [
+              0.985870592855346,
+              0.9989281109196064
+            ],
+            "transitions": {
+              "W->W": 510,
+              "W->D": 2
+            }
+          }
+        },
+        "predictions": {
+          "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/calibration-F16_TRT-predictions.jsonl",
+          "sha256": "9a1670b40076b84c0980f1aae457a0157e8a34cfd6de4817ee9d436f6f7a7d26"
+        }
+      },
+      "paired": {
+        "R32_correct_F16_correct": 1019,
+        "R32_wrong_F16_wrong": 5,
+        "top_move_agreement": 0.990234375
+      },
+      "drift": {
+        "report": {
+          "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/calibration-F16-vs-R32-drift.json",
+          "sha256": "dad68983f12aa0d88f45e01ce40dd346f42bcf27ce0a3b055a422fbf09b4b577"
+        },
+        "summary": {
+          "positions": 1024,
+          "nonterminal_positions": 1024,
+          "raw_logit_max_abs": 0.08235371112823486,
+          "legal_probability_max_abs": 0.01129305362701416,
+          "wdl_max_abs": 0.04286450147628784,
+          "wdl_probability_sum_abs_error": 0.0008931159973144531,
+          "legal_kl_max": 0.00045059913361206985,
+          "legal_kl_mean": 4.7995218697831175e-06,
+          "top_move_agreement": 0.990234375,
+          "q_max_abs": 0.04286468029022217,
+          "moves_left_max_abs": 0.8736114501953125
+        },
+        "failed_position_count_at_historical_limits": 2
+      }
+    },
+    "validation": {
+      "R32_CUDA": {
+        "strata": {
+          "all": {
+            "n": 2048,
+            "errors": 4,
+            "accuracy": 0.998046875,
+            "accuracy_Wilson95": [
+              0.9949886488695355,
+              0.9992402138090165
+            ],
+            "transitions": {
+              "D->D": 1021,
+              "W->W": 1023,
+              "D->L": 3,
+              "W->D": 1
+            }
+          },
+          "decision_sensitive": {
+            "n": 1434,
+            "errors": 4,
+            "accuracy": 0.99721059972106,
+            "accuracy_Wilson95": [
+              0.9928496812578602,
+              0.9989147384227308
+            ],
+            "transitions": {
+              "D->D": 736,
+              "W->W": 694,
+              "D->L": 3,
+              "W->D": 1
+            }
+          },
+          "piece_count:4": {
+            "n": 1024,
+            "errors": 1,
+            "accuracy": 0.9990234375,
+            "accuracy_Wilson95": [
+              0.9944891786428686,
+              0.9998275919343796
+            ],
+            "transitions": {
+              "D->D": 511,
+              "W->W": 512,
+              "D->L": 1
+            }
+          },
+          "piece_count:5": {
+            "n": 1024,
+            "errors": 3,
+            "accuracy": 0.9970703125,
+            "accuracy_Wilson95": [
+              0.9914219673132697,
+              0.9990031524985098
+            ],
+            "transitions": {
+              "D->D": 510,
+              "W->W": 511,
+              "D->L": 2,
+              "W->D": 1
+            }
+          },
+          "side_to_move:black": {
+            "n": 1024,
+            "errors": 3,
+            "accuracy": 0.9970703125,
+            "accuracy_Wilson95": [
+              0.9914219673132697,
+              0.9990031524985098
+            ],
+            "transitions": {
+              "D->D": 510,
+              "W->W": 511,
+              "W->D": 1,
+              "D->L": 2
+            }
+          },
+          "side_to_move:white": {
+            "n": 1024,
+            "errors": 1,
+            "accuracy": 0.9990234375,
+            "accuracy_Wilson95": [
+              0.9944891786428686,
+              0.9998275919343796
+            ],
+            "transitions": {
+              "D->D": 511,
+              "W->W": 512,
+              "D->L": 1
+            }
+          },
+          "root_outcome:0": {
+            "n": 1024,
+            "errors": 3,
+            "accuracy": 0.9970703125,
+            "accuracy_Wilson95": [
+              0.9914219673132697,
+              0.9990031524985098
+            ],
+            "transitions": {
+              "D->D": 1021,
+              "D->L": 3
+            }
+          },
+          "root_outcome:1": {
+            "n": 1024,
+            "errors": 1,
+            "accuracy": 0.9990234375,
+            "accuracy_Wilson95": [
+              0.9944891786428686,
+              0.9998275919343796
+            ],
+            "transitions": {
+              "W->W": 1023,
+              "W->D": 1
+            }
+          }
+        },
+        "predictions": {
+          "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/validation-R32_CUDA-predictions.jsonl",
+          "sha256": "216b6cbdeea55c161015a797e9c0c8e925c48742bb235cd022179c00ca5d5d00"
+        }
+      },
+      "F16_TRT": {
+        "strata": {
+          "all": {
+            "n": 2048,
+            "errors": 4,
+            "accuracy": 0.998046875,
+            "accuracy_Wilson95": [
+              0.9949886488695355,
+              0.9992402138090165
+            ],
+            "transitions": {
+              "D->D": 1021,
+              "W->W": 1023,
+              "D->L": 3,
+              "W->D": 1
+            }
+          },
+          "decision_sensitive": {
+            "n": 1434,
+            "errors": 4,
+            "accuracy": 0.99721059972106,
+            "accuracy_Wilson95": [
+              0.9928496812578602,
+              0.9989147384227308
+            ],
+            "transitions": {
+              "D->D": 736,
+              "W->W": 694,
+              "D->L": 3,
+              "W->D": 1
+            }
+          },
+          "piece_count:4": {
+            "n": 1024,
+            "errors": 1,
+            "accuracy": 0.9990234375,
+            "accuracy_Wilson95": [
+              0.9944891786428686,
+              0.9998275919343796
+            ],
+            "transitions": {
+              "D->D": 511,
+              "W->W": 512,
+              "D->L": 1
+            }
+          },
+          "piece_count:5": {
+            "n": 1024,
+            "errors": 3,
+            "accuracy": 0.9970703125,
+            "accuracy_Wilson95": [
+              0.9914219673132697,
+              0.9990031524985098
+            ],
+            "transitions": {
+              "D->D": 510,
+              "W->W": 511,
+              "D->L": 2,
+              "W->D": 1
+            }
+          },
+          "side_to_move:black": {
+            "n": 1024,
+            "errors": 3,
+            "accuracy": 0.9970703125,
+            "accuracy_Wilson95": [
+              0.9914219673132697,
+              0.9990031524985098
+            ],
+            "transitions": {
+              "D->D": 510,
+              "W->W": 511,
+              "W->D": 1,
+              "D->L": 2
+            }
+          },
+          "side_to_move:white": {
+            "n": 1024,
+            "errors": 1,
+            "accuracy": 0.9990234375,
+            "accuracy_Wilson95": [
+              0.9944891786428686,
+              0.9998275919343796
+            ],
+            "transitions": {
+              "D->D": 511,
+              "W->W": 512,
+              "D->L": 1
+            }
+          },
+          "root_outcome:0": {
+            "n": 1024,
+            "errors": 3,
+            "accuracy": 0.9970703125,
+            "accuracy_Wilson95": [
+              0.9914219673132697,
+              0.9990031524985098
+            ],
+            "transitions": {
+              "D->D": 1021,
+              "D->L": 3
+            }
+          },
+          "root_outcome:1": {
+            "n": 1024,
+            "errors": 1,
+            "accuracy": 0.9990234375,
+            "accuracy_Wilson95": [
+              0.9944891786428686,
+              0.9998275919343796
+            ],
+            "transitions": {
+              "W->W": 1023,
+              "W->D": 1
+            }
+          }
+        },
+        "predictions": {
+          "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/validation-F16_TRT-predictions.jsonl",
+          "sha256": "c93abc96c563891a5380fd9a8ef6e9dc5117739ee86f987c727e34623f9b5b7c"
+        }
+      },
+      "paired": {
+        "R32_correct_F16_correct": 2044,
+        "R32_wrong_F16_wrong": 4,
+        "top_move_agreement": 0.9921875
+      },
+      "drift": {
+        "report": {
+          "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/validation-F16-vs-R32-drift.json",
+          "sha256": "eb5d8c6a8685932a282281e6a95e758374c6de148a8d40b4de3b131a1443e353"
+        },
+        "summary": {
+          "positions": 2048,
+          "nonterminal_positions": 2048,
+          "raw_logit_max_abs": 0.047704100608825684,
+          "legal_probability_max_abs": 0.0069092512130737305,
+          "wdl_max_abs": 0.0357169508934021,
+          "wdl_probability_sum_abs_error": 0.0009069442749023438,
+          "legal_kl_max": 0.00012973736553362246,
+          "legal_kl_mean": 3.896837772994017e-06,
+          "top_move_agreement": 0.9921875,
+          "q_max_abs": 0.03548058867454529,
+          "moves_left_max_abs": 0.9774169921875
+        },
+        "failed_position_count_at_historical_limits": 3
+      }
+    },
+    "test": {
+      "R32_CUDA": {
+        "strata": {
+          "all": {
+            "n": 10000,
+            "errors": 10,
+            "accuracy": 0.999,
+            "accuracy_Wilson95": [
+              0.9981600556125619,
+              0.9994567140135028
+            ],
+            "transitions": {
+              "W->W": 4996,
+              "D->D": 4994,
+              "D->L": 6,
+              "W->D": 4
+            }
+          },
+          "decision_sensitive": {
+            "n": 6967,
+            "errors": 10,
+            "accuracy": 0.9985646619778958,
+            "accuracy_Wilson95": [
+              0.9973596842367538,
+              0.9992201463387178
+            ],
+            "transitions": {
+              "W->W": 3445,
+              "D->D": 3512,
+              "D->L": 6,
+              "W->D": 4
+            }
+          },
+          "piece_count:4": {
+            "n": 5000,
+            "errors": 1,
+            "accuracy": 0.9998,
+            "accuracy_Wilson95": [
+              0.9988679109191605,
+              0.9999646942165608
+            ],
+            "transitions": {
+              "W->W": 2499,
+              "D->D": 2500,
+              "W->D": 1
+            }
+          },
+          "piece_count:5": {
+            "n": 5000,
+            "errors": 9,
+            "accuracy": 0.9982,
+            "accuracy_Wilson95": [
+              0.9965823552896264,
+              0.9990527064923188
+            ],
+            "transitions": {
+              "D->D": 2494,
+              "W->W": 2497,
+              "D->L": 6,
+              "W->D": 3
+            }
+          },
+          "side_to_move:black": {
+            "n": 5000,
+            "errors": 5,
+            "accuracy": 0.999,
+            "accuracy_Wilson95": [
+              0.9976610469499418,
+              0.9995727865088913
+            ],
+            "transitions": {
+              "W->W": 2497,
+              "D->D": 2498,
+              "W->D": 3,
+              "D->L": 2
+            }
+          },
+          "side_to_move:white": {
+            "n": 5000,
+            "errors": 5,
+            "accuracy": 0.999,
+            "accuracy_Wilson95": [
+              0.9976610469499418,
+              0.9995727865088913
+            ],
+            "transitions": {
+              "D->D": 2496,
+              "W->W": 2499,
+              "D->L": 4,
+              "W->D": 1
+            }
+          },
+          "root_outcome:0": {
+            "n": 5000,
+            "errors": 6,
+            "accuracy": 0.9988,
+            "accuracy_Wilson95": [
+              0.9973842237073702,
+              0.9994499168322408
+            ],
+            "transitions": {
+              "D->D": 4994,
+              "D->L": 6
+            }
+          },
+          "root_outcome:1": {
+            "n": 5000,
+            "errors": 4,
+            "accuracy": 0.9992,
+            "accuracy_Wilson95": [
+              0.9979446733541565,
+              0.9996888530238984
+            ],
+            "transitions": {
+              "W->W": 4996,
+              "W->D": 4
+            }
+          }
+        },
+        "predictions": {
+          "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/test-R32_CUDA-predictions.jsonl",
+          "sha256": "3b0be6d7d3d9c18eefe8213169553b0b11bfb019bb0bfa9f520c9536b070ff54"
+        }
+      },
+      "F16_TRT": {
+        "strata": {
+          "all": {
+            "n": 10000,
+            "errors": 10,
+            "accuracy": 0.999,
+            "accuracy_Wilson95": [
+              0.9981600556125619,
+              0.9994567140135028
+            ],
+            "transitions": {
+              "W->W": 4996,
+              "D->D": 4994,
+              "D->L": 6,
+              "W->D": 4
+            }
+          },
+          "decision_sensitive": {
+            "n": 6967,
+            "errors": 10,
+            "accuracy": 0.9985646619778958,
+            "accuracy_Wilson95": [
+              0.9973596842367538,
+              0.9992201463387178
+            ],
+            "transitions": {
+              "W->W": 3445,
+              "D->D": 3512,
+              "D->L": 6,
+              "W->D": 4
+            }
+          },
+          "piece_count:4": {
+            "n": 5000,
+            "errors": 1,
+            "accuracy": 0.9998,
+            "accuracy_Wilson95": [
+              0.9988679109191605,
+              0.9999646942165608
+            ],
+            "transitions": {
+              "W->W": 2499,
+              "D->D": 2500,
+              "W->D": 1
+            }
+          },
+          "piece_count:5": {
+            "n": 5000,
+            "errors": 9,
+            "accuracy": 0.9982,
+            "accuracy_Wilson95": [
+              0.9965823552896264,
+              0.9990527064923188
+            ],
+            "transitions": {
+              "D->D": 2494,
+              "W->W": 2497,
+              "D->L": 6,
+              "W->D": 3
+            }
+          },
+          "side_to_move:black": {
+            "n": 5000,
+            "errors": 5,
+            "accuracy": 0.999,
+            "accuracy_Wilson95": [
+              0.9976610469499418,
+              0.9995727865088913
+            ],
+            "transitions": {
+              "W->W": 2497,
+              "D->D": 2498,
+              "W->D": 3,
+              "D->L": 2
+            }
+          },
+          "side_to_move:white": {
+            "n": 5000,
+            "errors": 5,
+            "accuracy": 0.999,
+            "accuracy_Wilson95": [
+              0.9976610469499418,
+              0.9995727865088913
+            ],
+            "transitions": {
+              "D->D": 2496,
+              "W->W": 2499,
+              "D->L": 4,
+              "W->D": 1
+            }
+          },
+          "root_outcome:0": {
+            "n": 5000,
+            "errors": 6,
+            "accuracy": 0.9988,
+            "accuracy_Wilson95": [
+              0.9973842237073702,
+              0.9994499168322408
+            ],
+            "transitions": {
+              "D->D": 4994,
+              "D->L": 6
+            }
+          },
+          "root_outcome:1": {
+            "n": 5000,
+            "errors": 4,
+            "accuracy": 0.9992,
+            "accuracy_Wilson95": [
+              0.9979446733541565,
+              0.9996888530238984
+            ],
+            "transitions": {
+              "W->W": 4996,
+              "W->D": 4
+            }
+          }
+        },
+        "predictions": {
+          "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/test-F16_TRT-predictions.jsonl",
+          "sha256": "9f4c2755bd0a4fe32a5e18cde9fec0f382df66e37a82d619a47e5004a3d082bf"
+        }
+      },
+      "paired": {
+        "R32_correct_F16_correct": 9990,
+        "R32_wrong_F16_wrong": 10,
+        "top_move_agreement": 0.9902
+      },
+      "drift": {
+        "report": {
+          "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/test-F16-vs-R32-drift.json",
+          "sha256": "e70f43783bcf9c96933121871dec68848d6fb6558748f44c46ef77cd6af521eb"
+        },
+        "summary": {
+          "positions": 10000,
+          "nonterminal_positions": 10000,
+          "raw_logit_max_abs": 0.14185261726379395,
+          "legal_probability_max_abs": 0.0218656063079834,
+          "wdl_max_abs": 0.02793988585472107,
+          "wdl_probability_sum_abs_error": 0.0010576248168945312,
+          "legal_kl_max": 0.0012666953730923079,
+          "legal_kl_mean": 4.299017608898566e-06,
+          "top_move_agreement": 0.9902,
+          "q_max_abs": 0.029679477214813232,
+          "moves_left_max_abs": 2.6324234008789062
+        },
+        "failed_position_count_at_historical_limits": 19
+      }
+    }
+  },
+  "protocol": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/environment/week1-v2-protocol.json",
+    "sha256": "a74ed9fa46dad51aaf489c07445ea5883baac846eb56b84ff27cf5c2bc54ced3"
+  },
+  "native_check": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/native-check.json",
+    "sha256": "723974cb093f94d424dd2ea8a54d3ddf4da0fa44ee2f7267e0319e49cb11b89f"
+  },
+  "scoring": "Highest legal policy move; T=1 stable float32 softmax, lexical UCI ties. W->D/L or D->L is error by external theoretical Syzygy WDL, ignoring fifty-move rule. Not NN WDL argmax.",
+  "limitations": "Stratified published four/five-piece game positions and documented color/rank mirrors, clocks normalized, standalone fen_only; not natural frequency, MCTS or Elo. Both history and corpus differ from historical 55.42%, so no isolated history-effect claim.",
+  "FP16_policy": "Keep exact FP16 engine as independent baseline after correctness checks, report raw numerical failures and drift. Do not require matching predictions or erase old failures. FP32 native fidelity remains required."
+}

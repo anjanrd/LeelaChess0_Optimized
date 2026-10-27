@@ -1,0 +1,18 @@
+{
+  "registered_at_utc": "2026-10-25T20:38:52.733106+00:00",
+  "budget": "45 minutes; one exact-operator port and at most two implementation repairs; FP32 batch 1 backward only",
+  "source": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-r32.onnx",
+    "sha256": "a518a0bac511a5f66f68041cac5dbb17e6c1e4060d67c8658e7a1851453abed5"
+  },
+  "parity_data": "First 16 calibration roots, batches 1 and 4",
+  "parity_limits": {
+    "legal_probability_max_abs": 0.0002,
+    "policy_KL_max": 1e-05,
+    "WDL_max_abs": 0.0005,
+    "moves_left_atol": 0.02,
+    "moves_left_rtol": 0.0002
+  },
+  "gradient": "One differentiability/memory check using policy-logit, WDL and moves-left surrogate terms. No optimizer step, QAT or distillation.",
+  "failure_outcome": "Document precise unsupported/parity/memory limitation after bounded investigation; mandatory PTQ path remains independent"
+}

@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-27T09:16:13.434095+00:00",
+  "name": "F16_TRT",
+  "model_identity": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+  "inputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy-v2/calibration-inputs.npz",
+    "sha256": "9c55e7222d1a981ebbeee6e1670e03b5ae09f0e150c266dc97e7841f4e070695"
+  },
+  "outputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/calibration-F16_TRT-outputs.npz",
+    "sha256": "90d5ac9b624cae8870542e0df23ae0aee61b869a9332096b6673d563171299eb"
+  },
+  "batch": 8,
+  "bulk_run_seconds_including_host_copies": 0.5101992370000019,
+  "provider_options": null,
+  "TF32": false,
+  "script": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/scripts/complete_week1_v2.py",
+    "sha256": "d2b7f0839143da8f59374b80d7105535293321893a4fea7a2a303d32c2434112"
+  }
+}

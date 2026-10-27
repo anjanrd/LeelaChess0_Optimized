@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "baseline": "F16_TRT",
+  "created_at_utc": "2026-10-25T20:36:51.134097+00:00",
+  "model_identity": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+  "inputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/validation-inputs.npz",
+    "sha256": "5375ddf57230d396e2b9563cd78d081ddbf4eac67c88d803ce500142bfe1d4ef"
+  },
+  "outputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1/validation-F16_TRT-outputs.npz",
+    "sha256": "9e9532ace7b0b1dceebd7c863ca08a43aedc61ea472bfcc0c1e04cf4f05fcdfa"
+  },
+  "batch": 8,
+  "seconds_including_host_io_and_output_serialization": 2.851110963999986,
+  "provider_options": null,
+  "TF32": false,
+  "scope": "Network inference only; tablebases are external labels, no search",
+  "script_sha256": "41012e9ab96b6fc39b2bd34b93cc2f8e47b062c811842489c9de4f40ef9e582c"
+}

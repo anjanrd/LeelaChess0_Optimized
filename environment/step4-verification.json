@@ -1,0 +1,138 @@
+{
+  "verified_at_utc": "2026-10-21T10:42:28.501650+00:00",
+  "positions_checked": 86,
+  "pilot_positions": 64,
+  "diagnostic_fixtures": 22,
+  "native_input_plane_max_abs_difference": 0.0,
+  "native_policy_vocabulary_entries_matched": 1858,
+  "legal_move_mappings_checked": 1194,
+  "special_case_coverage": {
+    "promotion_q": 7,
+    "promotion_r": 7,
+    "promotion_b": 7,
+    "promotion_n": 7,
+    "castling_moves": 4,
+    "en_passant_moves": 2,
+    "checkmate": 1,
+    "stalemate": 1,
+    "forced_evasion": 1
+  },
+  "input_shape": [
+    64,
+    112,
+    8,
+    8
+  ],
+  "history_fill": "no",
+  "native_binding_default_mismatch_detected": true,
+  "excluded_symmetry_groups": 93,
+  "symmetry_identity_checks": "passed",
+  "checkpoint_sha256_rechecked": "e3067757d1fc2dfc66947b21d15ace0cedf4c54254fc1de83d77c378a3e8b8e1",
+  "native_bridge_sha256": "b0627e12042bc8555607c737c9ad0a8e397e97efc42e67b7a220f73e61cfebea",
+  "native_binding_fen_only_parity": "passed",
+  "negative_input_guards": "passed",
+  "policy_masking_numerical_stability_and_tie_rule": "passed",
+  "native_reference_positions": 8,
+  "native_reference_backend": "eigen CPU",
+  "native_reference_elapsed_seconds": 1.6474749539999998,
+  "reference_outputs": [
+    {
+      "id": "pilot-000",
+      "top_legal_move": "b7b6",
+      "q_side_to_move": -0.9998301267623901,
+      "draw_probability": 0.00016897704335860908,
+      "wdl": [
+        4.4809712562710047e-07,
+        0.00016897704335860908,
+        0.9998306035995483
+      ],
+      "moves_left": 13.017708778381348
+    },
+    {
+      "id": "pilot-008",
+      "top_legal_move": "a1b2",
+      "q_side_to_move": -0.9998306632041931,
+      "draw_probability": 0.00016896385932341218,
+      "wdl": [
+        1.8646824173629284e-07,
+        0.00016896385932341218,
+        0.9998308420181274
+      ],
+      "moves_left": 14.038894653320312
+    },
+    {
+      "id": "pilot-016",
+      "top_legal_move": "f3e4",
+      "q_side_to_move": -0.0012075284030288458,
+      "draw_probability": 0.9987724423408508,
+      "wdl": [
+        1.0014628060162067e-05,
+        0.9987724423408508,
+        0.0012175430310890079
+      ],
+      "moves_left": 2.791111707687378
+    },
+    {
+      "id": "pilot-024",
+      "top_legal_move": "b6c6",
+      "q_side_to_move": -0.9995293021202087,
+      "draw_probability": 0.0004691534268204123,
+      "wdl": [
+        7.722264854237437e-07,
+        0.0004691534268204123,
+        0.9995300769805908
+      ],
+      "moves_left": 11.51038646697998
+    },
+    {
+      "id": "pilot-032",
+      "top_legal_move": "g8g7",
+      "q_side_to_move": -0.9996748566627502,
+      "draw_probability": 0.00032210847712121904,
+      "wdl": [
+        1.5174300642684102e-06,
+        0.00032210847712121904,
+        0.9996763467788696
+      ],
+      "moves_left": 30.812288284301758
+    },
+    {
+      "id": "pilot-040",
+      "top_legal_move": "f5f4",
+      "q_side_to_move": -1.303548515352304e-06,
+      "draw_probability": 0.9999972581863403,
+      "wdl": [
+        7.191325721578323e-07,
+        0.9999972581863403,
+        2.022681201196974e-06
+      ],
+      "moves_left": 35.33260726928711
+    },
+    {
+      "id": "pilot-048",
+      "top_legal_move": "g2f3",
+      "q_side_to_move": -0.9995883107185364,
+      "draw_probability": 0.0004114261828362942,
+      "wdl": [
+        1.3154931366443634e-07,
+        0.0004114261828362942,
+        0.9995884299278259
+      ],
+      "moves_left": 27.903179168701172
+    },
+    {
+      "id": "pilot-056",
+      "top_legal_move": "g7g1",
+      "q_side_to_move": -0.00020497356308624148,
+      "draw_probability": 0.999786913394928,
+      "wdl": [
+        4.05652099289e-06,
+        0.999786913394928,
+        0.00020903008407913148
+      ],
+      "moves_left": 35.74260711669922
+    }
+  ],
+  "manifest_sha256": "bc6550747280dbadcbb35cd4e0e4b01fc22538c85d5a483363ecfc157af58732",
+  "scope": "Pilot input/output semantics only; no ONNX export, tablebase scoring, or engine-strength claim"
+}

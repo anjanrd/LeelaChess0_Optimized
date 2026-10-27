@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "verified_at_utc": "2026-10-25T20:05:58.476007+00:00",
+  "source": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-f16.onnx",
+    "sha256": "2541ee8be138ca02bd1cdfaed2003b9d784ce015cddba2693f8d3a35f70c9a99"
+  },
+  "bridge": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-f16-opset19.onnx",
+    "sha256": "e5a65e3e09fe917b3a9d8e23b8f65b8ce9a6e89e1e8a7ca0ad069b5571c40d33"
+  },
+  "opsets": [
+    17,
+    19
+  ],
+  "node_and_initializer_serialization_unchanged": true,
+  "comparison": "Bit-identical CUDA FP16 outputs for original versus bridge on 16 legal pilot positions at batches 1 and 8",
+  "baseline_engine": "Exact accepted TensorRT engine retained; original versus bridge graph semantics and parameters unchanged; no replacement FP16 engine built",
+  "script_sha256": "eecbcb4f92c556646db1c813a9369a857f0efd52e5d7dd7807c67c43e6e3372a"
+}

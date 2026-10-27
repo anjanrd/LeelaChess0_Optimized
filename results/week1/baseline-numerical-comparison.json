@@ -1,0 +1,18 @@
+{
+  "status": "measured_not_a_new_acceptance_gate",
+  "F16_against_R32": {
+    "legal_policy_KL_mean": 1.485974557868119e-05,
+    "legal_policy_KL_max": 0.002947040534800993,
+    "legal_probability_max_abs": 0.03340834379196167,
+    "WDL_component_MAE": 0.0005250425892882049,
+    "WDL_component_max_abs": 0.23239879310131073,
+    "scalar_value_MAE": 0.0008581500151194632,
+    "moves_left_MAE": 0.03309790417551994,
+    "moves_left_max_abs": 1.615239143371582
+  },
+  "sanity": {
+    "self_KL": 0.0,
+    "self_value_MAE": 0.0
+  },
+  "interpretation": "Numerical differences between the two already accepted baseline artifacts; independent tablebase accuracy is recorded separately. Large observed differences are disclosed, not silently accepted under a new gate."
+}

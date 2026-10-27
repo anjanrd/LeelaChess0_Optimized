@@ -1,0 +1,34 @@
+{
+  "seed": 20261021,
+  "pilot_positions": 64,
+  "diagnostic_fixtures": 22,
+  "material_side_counts": {
+    "KQkq:white": 8,
+    "KQkq:black": 8,
+    "KQkr:white": 8,
+    "KQkr:black": 8,
+    "KPkp:white": 8,
+    "KPkp:black": 8,
+    "KPkr:white": 8,
+    "KPkr:black": 8
+  },
+  "input_shape": [
+    64,
+    112,
+    8,
+    8
+  ],
+  "dtype": "float32",
+  "history_fill": "no",
+  "input_format": "INPUT_CLASSICAL_112_PLANE",
+  "checkpoint_sha256": "e3067757d1fc2dfc66947b21d15ace0cedf4c54254fc1de83d77c378a3e8b8e1",
+  "pilot_and_fixture_exclusion": "Exclude these positions, replayed states, and valid symmetry equivalents from final test",
+  "tablebase_labels": "not acquired in Step 4; null means unknown, not draw",
+  "files_sha256": {
+    "positions.jsonl": "d1fd2fee62d20d80c077a676991a398b8edafdfe7e4995829ff3af112384ae08",
+    "fixtures.jsonl": "8db87a8d215bd3906cfe7f9119427f89cc0f16c281bdc36cb444bd8d05c60f21",
+    "inputs.npz": "a37a0c829699bbd5885ea9ea752a2e01cb6c16ab709fa73cd3a549030e6737ff",
+    "native_reference.npz": "072c9404c5aef87289af72a94bf92bb7562d663e396bf1985413837bebe69f1b",
+    "exclusions.json": "49cad00eb4a6243be233ef9283cb88814e9d9cecd8b213d2d0ce9f9a0702f5f2"
+  }
+}

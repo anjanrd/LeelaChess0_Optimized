@@ -1,0 +1,108 @@
+{
+  "verified_at_utc": "2026-10-21T09:26:07.671631+00:00",
+  "platform": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "python": "3.10.12",
+  "python_executable": "/home/anjanrd/.local/share/lc0-int8/venv/bin/python",
+  "runtime_root": "/home/anjanrd/.local/share/lc0-int8",
+  "versions": {
+    "pip": "25.3",
+    "meson": "1.9.1",
+    "numpy": "1.26.4",
+    "torch": "2.8.0",
+    "onnx": "1.21.0",
+    "onnxruntime-gpu": "1.22.0",
+    "tensorrt-cu12": "10.9.0.34",
+    "nvidia-modelopt": "0.47.0",
+    "matplotlib": "3.10.7",
+    "python-chess": "1.999",
+    "cupy-cuda12x": "13.6.0",
+    "onnx-graphsurgeon": "0.6.1"
+  },
+  "torch_cuda_runtime": "12.8",
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "nvidia_smi": "NVIDIA GeForce RTX 4060 Laptop GPU, 8188 MiB, 592.82",
+  "pytorch_cuda_calculation": "passed",
+  "onnxruntime_gpu_checks": [
+    {
+      "requested_provider": "CUDAExecutionProvider",
+      "executed_providers": [
+        "CUDAExecutionProvider"
+      ],
+      "max_abs_error": 2.384185791015625e-07
+    },
+    {
+      "requested_provider": "TensorrtExecutionProvider",
+      "executed_providers": [
+        "TensorrtExecutionProvider"
+      ],
+      "max_abs_error": 2.384185791015625e-07
+    }
+  ],
+  "synthetic_graph": {
+    "operator": "MatMul",
+    "opset": 17,
+    "ir_version": 10,
+    "input_shape": [
+      1,
+      16
+    ],
+    "weights_shape": [
+      16,
+      16
+    ]
+  },
+  "modelopt_quantize_signature": "(onnx_path: str, quantize_mode: str = 'int8', calibration_data: numpy.ndarray | dict[str, numpy.ndarray] = None, calibration_method: str | None = None, calibration_cache_path: str | None = None, calibration_data_reader: onnxruntime.quantization.calibrate.CalibrationDataReader | None = None, calibration_shapes: str | None = None, calibration_eps: list[str] = ['cpu', 'cuda:0', 'trt'], override_shapes: str | None = None, op_types_to_quantize: list[str] | None = None, op_types_to_exclude: list[str] | None = None, op_types_to_exclude_fp16: list[str] | None = None, nodes_to_quantize: list[str] | None = None, nodes_to_exclude: list[str] | None = None, use_external_data_format: bool = False, keep_intermediate_files: bool = False, output_path: str | None = None, log_level: str = 'INFO', log_file: str | None = None, trt_plugins: list[str] | None = None, trt_plugins_precision: list[str] | None = None, high_precision_dtype: str = 'fp16', mha_accumulation_dtype: str = 'fp16', disable_mha_qdq: bool = False, dq_only: bool = False, block_size: int | None = None, use_zero_point: bool = False, passes: list[str] = ['concat_elimination'], simplify: bool = False, calibrate_per_node: bool = False, input_shapes_profile: collections.abc.Sequence[dict[str, str]] | None = None, model_id: str | None = None, trust_remote_code: bool = False, direct_io_types: bool = False, opset: int | None = None, target_dla: bool = False, autotune: bool = False, autotune_output_dir: str | None = None, autotune_num_schemes_per_region: int = 50, autotune_pattern_cache_file: str | None = None, autotune_state_file: str | None = None, autotune_qdq_baseline: str | None = None, autotune_node_filter_list: list[str] | None = None, autotune_verbose: bool = False, autotune_use_trtexec: bool = False, autotune_timing_cache: str | None = None, autotune_warmup_runs: int = 50, autotune_timing_runs: int = 100, autotune_trtexec_args: str | None = None, trt_rtx_backend: str = 'legacy', **kwargs: Any) -> None",
+  "checkpoint_sha256_rechecked": "e3067757d1fc2dfc66947b21d15ace0cedf4c54254fc1de83d77c378a3e8b8e1",
+  "lc0_commit": "9f45ea446baf9ce55e299250cde3053b7e93a035",
+  "lc0_version_banner": "\u001b[1m\u001b[31m       _\n|   _ | |\n|_ |_ |_|\u001b[0m v0.33.0-rc0 built Oct 21 2026",
+  "lc0_build_scope": "Eigen CPU reference + export/metadata tools + Python bindings; no GPU engine backend",
+  "checkpoint_metadata": {
+    "General": {
+      "Minimal Lc0 version": "v0.30.0"
+    },
+    "Format": {
+      "Weights encoding": "LINEAR16",
+      "Input": "INPUT_CLASSICAL_112_PLANE",
+      "Network": "NETWORK_ATTENTIONBODY_WITH_MULTIHEADFORMAT",
+      "Policy": "POLICY_ATTENTION",
+      "Value": "VALUE_WDL",
+      "MLH": "MOVES_LEFT_V1",
+      "Default activation": "DEFAULT_ACTIVATION_MISH",
+      "Smolgen activation": "ACTIVATION_NONE",
+      "FFN activation": "ACTIVATION_DEFAULT",
+      "Input embedding": "INPUT_EMBEDDING_PE_DENSE"
+    },
+    "Training Parameters": {
+      "Training steps": "2790000",
+      "Learning rate": "3e-05",
+      "MSE loss": "0.00788636",
+      "Policy loss": "0.167413",
+      "Accuracy": "0.395877"
+    },
+    "Weights": {
+      "Encoders": "15",
+      "Encoder heads": "24",
+      "Embedding size": "768",
+      "Dmodel": "768",
+      "Encoder DFF": "1024",
+      "Policy": "Attention",
+      "Policy activation": "ACTIVATION_DEFAULT",
+      "Policy Dmodel": "0",
+      "Value": "WDL",
+      "MLH": "Present"
+    }
+  },
+  "checkpoint_metadata_text": "General\n~~~~~~~\n         Minimal Lc0 version: v0.30.0\n\nFormat\n~~~~~~\n            Weights encoding: LINEAR16\n                       Input: INPUT_CLASSICAL_112_PLANE\n                     Network: NETWORK_ATTENTIONBODY_WITH_MULTIHEADFORMAT\n                      Policy: POLICY_ATTENTION\n                       Value: VALUE_WDL\n                         MLH: MOVES_LEFT_V1\n          Default activation: DEFAULT_ACTIVATION_MISH\n          Smolgen activation: ACTIVATION_NONE\n              FFN activation: ACTIVATION_DEFAULT\n             Input embedding: INPUT_EMBEDDING_PE_DENSE\n\nTraining Parameters\n~~~~~~~~~~~~~~~~~~~\n              Training steps: 2790000\n               Learning rate: 3e-05\n                    MSE loss: 0.00788636\n                 Policy loss: 0.167413\n                    Accuracy: 0.395877\n\nWeights\n~~~~~~~\n                    Encoders: 15\n               Encoder heads: 24\n              Embedding size: 768\n                      Dmodel: 768\n                 Encoder DFF: 1024\n                      Policy: Attention\n           Policy activation: ACTIVATION_DEFAULT\n               Policy Dmodel: 0\n                       Value: WDL\n                         MLH: Present",
+  "lc0_python_bindings": [
+    "Backend",
+    "BackendCapabilities",
+    "GameState",
+    "Input",
+    "LczeroException",
+    "Output",
+    "Weights"
+  ],
+  "pip_check": "No broken requirements found.",
+  "system_packages": "build-essential\t12.9ubuntu3\ncmake\t3.22.1-1ubuntu1.22.04.2\nlibabsl-dev\t0~20210324.2-2ubuntu0.3\nlibeigen3-dev\t3.4.0-2ubuntu2\nninja-build\t1.10.1-1\npkg-config\t0.29.2-1ubuntu3\npython3-dev\t3.10.6-1~22.04.1\npython3-venv\t3.10.6-1~22.04.1\nzlib1g-dev\t1:1.2.11.dfsg-2ubuntu9.2",
+  "scope_limit": "Synthetic toolchain checks only; BT3 export and numerical parity remain later steps"
+}

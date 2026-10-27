@@ -1,0 +1,26 @@
+{
+  "lc0_commit": "9f45ea446baf9ce55e299250cde3053b7e93a035",
+  "upstream_worktree": "clean",
+  "history_fill": "explicit no or fen_only",
+  "adapter_source_sha256": "bb8342ecfdf0d1ea5894ea7e664c7591cea26ca3e69019c00498ecfedec64a06",
+  "binary_sha256": "b0627e12042bc8555607c737c9ad0a8e397e97efc42e67b7a220f73e61cfebea",
+  "binary": "/home/anjanrd/.local/share/lc0-int8/build/encoder-bridge/encoder_bridge",
+  "compile_command": [
+    "c++",
+    "-std=c++20",
+    "-O2",
+    "-march=native",
+    "-pthread",
+    "-DNO_PEXT",
+    "-DNOMINMAX",
+    "-I/home/anjanrd/.local/share/lc0-int8/build/lc0-tools/lc0.p",
+    "-I/home/anjanrd/.local/share/lc0-int8/build/lc0-tools",
+    "-I/home/anjanrd/.local/share/lc0-int8/source/lc0/src",
+    "-I/home/anjanrd/.local/share/lc0-int8/source/lc0/third_party",
+    "-c",
+    "/mnt/c/Users/HP/Desktop/LC0/src/native/encoder_bridge.cc",
+    "-o",
+    "/home/anjanrd/.local/share/lc0-int8/build/encoder-bridge/encoder_bridge.o"
+  ],
+  "link_recipe": "Reuse lc0's link command, replacing only the main object and output path"
+}

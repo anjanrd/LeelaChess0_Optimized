@@ -1,0 +1,21 @@
+{
+  "registered_at_utc": "2026-10-25T20:02:59.828383+00:00",
+  "engine_sha256": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+  "batches": [
+    1,
+    4,
+    8
+  ],
+  "warmups": 30,
+  "resident_repeats": 40,
+  "host_repeats": 20,
+  "profile_repeats": 20,
+  "scope_candidates": [
+    "v1: 127 weighted MatMuls",
+    "expanded: all fixed-weight MatMuls with K/N >=16 (160), leaving four tiny output matrices floating"
+  ],
+  "probe_budget": "At most these two full naive INT8 candidates; do not select layers using numerical/test accuracy",
+  "trigger": "If excluded-weight associated gemm layers exceed 10% of profiled F16 layer time at batch 1, expanded candidate requires a bounded pilot comparison. Otherwise review memory/storage benefit explicitly.",
+  "criterion": "Prefer broader actual INT8 weight coverage if its warmed host-pipeline median is not more than 10% slower at batch 1 and 8; report all numerical drift without fitting scope to predictions. Invalid/nonfinite output, unsupported actual INT8 or major degeneration requires investigation.",
+  "limits": "Layer times are instrumented; unfused MAC/weight-byte estimates are not measured DRAM traffic. No memory counter permissions assumed."
+}

@@ -1,0 +1,179 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-25T20:35:41.150953+00:00",
+  "protocol": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/protocol.json",
+    "sha256": "ef9d8702dc7c07be211f98031dbac579ac46aff2a75d54c910806711e0689c68"
+  },
+  "splits": {
+    "calibration": {
+      "count": 1024,
+      "cells": {
+        "KQkq:white:W": 64,
+        "KQkq:white:D": 64,
+        "KQkq:black:W": 64,
+        "KQkq:black:D": 64,
+        "KQkr:white:W": 64,
+        "KQkr:white:D": 64,
+        "KQkr:black:W": 64,
+        "KQkr:black:D": 64,
+        "KPkp:white:W": 64,
+        "KPkp:white:D": 64,
+        "KPkp:black:W": 64,
+        "KPkp:black:D": 64,
+        "KPkr:white:W": 64,
+        "KPkr:white:D": 64,
+        "KPkr:black:W": 64,
+        "KPkr:black:D": 64
+      },
+      "sampling_attempts": {
+        "KQkq:white:W": 148,
+        "KQkq:white:D": 107,
+        "KQkq:black:W": 159,
+        "KQkq:black:D": 129,
+        "KQkr:white:W": 64,
+        "KQkr:white:D": 10990,
+        "KQkr:black:W": 239,
+        "KQkr:black:D": 1017,
+        "KPkp:white:W": 157,
+        "KPkp:white:D": 223,
+        "KPkp:black:W": 149,
+        "KPkp:black:D": 176,
+        "KPkr:white:W": 461,
+        "KPkr:white:D": 377,
+        "KPkr:black:W": 73,
+        "KPkr:black:D": 643
+      },
+      "decision_sensitive": 868,
+      "cursed_blessed": 0,
+      "positions": {
+        "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/calibration.jsonl",
+        "sha256": "73a03071362ec2fdb304f267960b4ac12f95d74985d10ce9ae14789d6d40790d"
+      },
+      "inputs": {
+        "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/calibration-inputs.npz",
+        "sha256": "4bc2686a9f82074ecbc35cd3dc25211e8daee2cfc7e15d9d9aa9a54f5f37d7d6"
+      },
+      "seconds": 4.798351675000049,
+      "native_encoder_and_python_planes_all_exact": true,
+      "all_legal_children_labeled_and_root_consistency_checked": true
+    },
+    "validation": {
+      "count": 2048,
+      "cells": {
+        "KQkq:white:W": 128,
+        "KQkq:white:D": 128,
+        "KQkq:black:W": 128,
+        "KQkq:black:D": 128,
+        "KQkr:white:W": 128,
+        "KQkr:white:D": 128,
+        "KQkr:black:W": 128,
+        "KQkr:black:D": 128,
+        "KPkp:white:W": 128,
+        "KPkp:white:D": 128,
+        "KPkp:black:W": 128,
+        "KPkp:black:D": 128,
+        "KPkr:white:W": 128,
+        "KPkr:white:D": 128,
+        "KPkr:black:W": 128,
+        "KPkr:black:D": 128
+      },
+      "sampling_attempts": {
+        "KQkq:white:W": 286,
+        "KQkq:white:D": 225,
+        "KQkq:black:W": 308,
+        "KQkq:black:D": 241,
+        "KQkr:white:W": 128,
+        "KQkr:white:D": 15723,
+        "KQkr:black:W": 422,
+        "KQkr:black:D": 2260,
+        "KPkp:white:W": 300,
+        "KPkp:white:D": 345,
+        "KPkp:black:W": 296,
+        "KPkp:black:D": 342,
+        "KPkr:white:W": 835,
+        "KPkr:white:D": 810,
+        "KPkr:black:W": 136,
+        "KPkr:black:D": 1363
+      },
+      "decision_sensitive": 1732,
+      "cursed_blessed": 0,
+      "positions": {
+        "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/validation.jsonl",
+        "sha256": "f004dffb3ec6e5b5ea8fb418e857f4a5c1efd35e0ab6a34083a3b90f92a584f5"
+      },
+      "inputs": {
+        "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/validation-inputs.npz",
+        "sha256": "5375ddf57230d396e2b9563cd78d081ddbf4eac67c88d803ce500142bfe1d4ef"
+      },
+      "seconds": 8.59656543199992,
+      "native_encoder_and_python_planes_all_exact": true,
+      "all_legal_children_labeled_and_root_consistency_checked": true
+    },
+    "test": {
+      "count": 10000,
+      "cells": {
+        "KQkq:white:W": 625,
+        "KQkq:white:D": 625,
+        "KQkq:black:W": 625,
+        "KQkq:black:D": 625,
+        "KQkr:white:W": 625,
+        "KQkr:white:D": 625,
+        "KQkr:black:W": 625,
+        "KQkr:black:D": 625,
+        "KPkp:white:W": 625,
+        "KPkp:white:D": 625,
+        "KPkp:black:W": 625,
+        "KPkp:black:D": 625,
+        "KPkr:white:W": 625,
+        "KPkr:white:D": 625,
+        "KPkr:black:W": 625,
+        "KPkr:black:D": 625
+      },
+      "sampling_attempts": {
+        "KQkq:white:W": 1578,
+        "KQkq:white:D": 1076,
+        "KQkq:black:W": 1537,
+        "KQkq:black:D": 1067,
+        "KQkr:white:W": 629,
+        "KQkr:white:D": 81255,
+        "KQkr:black:W": 2183,
+        "KQkr:black:D": 10374,
+        "KPkp:white:W": 1415,
+        "KPkp:white:D": 1945,
+        "KPkp:black:W": 1462,
+        "KPkp:black:D": 1817,
+        "KPkr:white:W": 4157,
+        "KPkr:white:D": 3687,
+        "KPkr:black:W": 681,
+        "KPkr:black:D": 7393
+      },
+      "decision_sensitive": 8436,
+      "cursed_blessed": 0,
+      "positions": {
+        "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/test.jsonl",
+        "sha256": "6ca146612c2ae7d872697c780b85dc3aa2b2cf7adf0156846005bc0eb87c3c68"
+      },
+      "inputs": {
+        "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/test-inputs.npz",
+        "sha256": "4e672686fd8c2e5bff515ea6db1a340f613beb4466dc0b3130f84431875f7b9a"
+      },
+      "seconds": 42.878911145000075,
+      "native_encoder_and_python_planes_all_exact": true,
+      "all_legal_children_labeled_and_root_consistency_checked": true
+    }
+  },
+  "excluded_prior_groups": 221,
+  "all_split_symmetry_groups_disjoint": true,
+  "all_root_halfmove_clocks_zero": true,
+  "tablebases": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/environment/week1-tablebases.json",
+    "sha256": "ae6902902c025a1ec6d78341b221a9ecc578823524a58221ee4957d310fc73f1"
+  },
+  "scoring_checks": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/environment/week1-scoring-checks.json",
+    "sha256": "25f7f613f38e0e1943fb7605e8392621f6cd64c7849aa7174ebebee534dc70ed"
+  },
+  "total_seconds": 56.29593271600004,
+  "script_sha256": "e344e747b6fb1c1ea726fb240190f31c113686e2a586bd583796320f03656bb5"
+}

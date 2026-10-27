@@ -1,0 +1,3069 @@
+{
+  "version": "2.0",
+  "seed": 20261027,
+  "counts": {
+    "calibration": 1024,
+    "validation": 2048,
+    "test": 10000
+  },
+  "selection": "Published game/tablebase roots or their color/rank mirrors; 4 and 5 pieces equally; W/D and sides equally; no generated board placements",
+  "interpretation": "Stratified benchmark, not the natural frequency distribution of endgames or a measure of Elo",
+  "source": {
+    "repository": "https://github.com/IgorRigolon/chess.endgames",
+    "source_commit": "2e2f0842c435905940d4bf06c002fa1d463fd859",
+    "object_url": "https://storage.googleapis.com/chess_endgames/chess_endgames_2025-06.parquet?generation=1754704938545033",
+    "object_generation": "1754704938545033",
+    "object_size": 1403288476,
+    "origin": "June 2025 Lichess games, published FENs and Syzygy labels by Igor Rigolon",
+    "license": "MIT; underlying Lichess game data CC0",
+    "license_text": "MIT License\n\nCopyright (c) 2025 IgorRigolon\n\nPermission is hereby granted, free of charge, to any person obtaining a copy\nof this software and associated documentation files (the \"Software\"), to deal\nin the Software without restriction, including without limitation the rights\nto use, copy, modify, merge, publish, distribute, sublicense, and/or sell\ncopies of the Software, and to permit persons to whom the Software is\nfurnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all\ncopies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\nIMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\nFITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\nAUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\nLIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\nOUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\nSOFTWARE.\n",
+    "rows_in_source": 76191941,
+    "row_groups_scanned": [
+      33,
+      22
+    ],
+    "selection": "Seeded row-group order; one accepted root per source game; balanced piece-count/side/W-D cells; no NN outputs used",
+    "symmetry": "Each game deterministically selects identity or color/rank mirror; original FEN retained. No random piece placements.",
+    "source_filter_bias": "Upstream is_tablebase counts piece letters over the whole FEN, so the side-to-move b omits true 5-piece Black roots. Source evaluations converted White -> STM before any mirror.",
+    "candidate_count": 13872,
+    "rejections": {
+      "terminal_or_forced": 2384,
+      "duplicate_or_prior_group": 432
+    },
+    "cached_ranges": [
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/1403222940-65536.bin",
+        "sha256": "cd06a85d6c06ee26ab0d84198ea36d004f1f882df2a5e94369552ae7e0b30c89"
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/1403098938-189530.bin",
+        "sha256": "322e5fb09b4c3a2cb5b47b5b27ae90b5f73d2c6dc1e3c009b47d5752e061f9bf"
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/629420242-1961933.bin",
+        "sha256": "09c0138f566db49319177624e695bb1297fe5f3541ddd00fdc87f40741aa78a9"
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/631606998-17198231.bin",
+        "sha256": "6f9a26cbd3fd02e8105db773882cb79885ef1e1c3954210f6983db47faa0c8e0"
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/648805229-156237.bin",
+        "sha256": "34ef12d9d4c0f44fb15f7c70ed2270ac74066b23dab03a791d9753207fb2a3a7"
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/648961466-106822.bin",
+        "sha256": "57d720b0d635e9fccf6d29d5efecdaf92a3ccec6b528e4795ded7e2f51791300"
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/399952366-2007813.bin",
+        "sha256": "726d02d2bb3de563c4175d99da4f5de20950109db4994ae474f6309bd2f2daca"
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/402206306-16860334.bin",
+        "sha256": "09f3ef204a6bb20bdad160c0e566153a164a9a4bd7b20cc6dd8db0bb3bf89ddb"
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/419066640-232900.bin",
+        "sha256": "72ec57692c6bd3d1f754fa34efc56825f3a801f267e4a35dbdebc38d3cfeb8cf"
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/source-ranges/419299540-98255.bin",
+        "sha256": "0d11d5c2e85a5fd3f99c2ba05eba71da325c655d3cda3cad8a99e1658d98c9a1"
+      }
+    ],
+    "candidate_file": {
+      "path": "/home/anjanrd/.local/share/lc0-int8/week1/step1/candidates.json",
+      "sha256": "67065d0dd01bf8edcd37f4b6c2ebdfc4406c21d9a6263c6e667d086c6520b46b"
+    },
+    "reader": "pyarrow 21.0.0 installed in isolated utility target; model environment unchanged",
+    "integrity_limit": "Selected ranges hashed and immutable GCS generation pinned; full 1.4GB object not downloaded or claimed fully hashed"
+  },
+  "history_fill": "fen_only",
+  "counters": "Effective halfmove=0/fullmove=1; original source FEN preserved; theoretical WDL ignores fifty-move rule",
+  "groups": "One root per source game globally, valid symmetry groups disjoint; exclude all old 13,072 roots plus 221 development groups",
+  "test_usage": "New selected test roots: no project NN outputs inspected before split freeze; old inspected benchmark retained unchanged; use validation for model choices",
+  "labels": "Independent local Syzygy WDL and all legal-child outcomes; verify against published root label; DTZ root diagnostic only",
+  "registered_before_model_inference": true,
+  "tables": {
+    "root_materials": [
+      "KBBvK",
+      "KBBvKB",
+      "KBBvKP",
+      "KBBvKR",
+      "KBNPvK",
+      "KBNvK",
+      "KBNvKB",
+      "KBNvKN",
+      "KBNvKP",
+      "KBNvKQ",
+      "KBNvKR",
+      "KBPPvK",
+      "KBPvK",
+      "KBPvKB",
+      "KBPvKN",
+      "KBPvKP",
+      "KBPvKQ",
+      "KBPvKR",
+      "KBvKBB",
+      "KBvKBN",
+      "KBvKBP",
+      "KBvKNP",
+      "KBvKP",
+      "KBvKPP",
+      "KBvKQ",
+      "KBvKQN",
+      "KBvKQP",
+      "KBvKQR",
+      "KBvKR",
+      "KBvKRB",
+      "KBvKRN",
+      "KBvKRP",
+      "KNNPvK",
+      "KNNvK",
+      "KNNvKB",
+      "KNNvKN",
+      "KNNvKP",
+      "KNNvKR",
+      "KNPPvK",
+      "KNPvK",
+      "KNPvKB",
+      "KNPvKN",
+      "KNPvKP",
+      "KNPvKQ",
+      "KNPvKR",
+      "KNvKBP",
+      "KNvKNN",
+      "KNvKNP",
+      "KNvKP",
+      "KNvKPP",
+      "KNvKQ",
+      "KNvKQB",
+      "KNvKQN",
+      "KNvKQP",
+      "KNvKQR",
+      "KNvKR",
+      "KNvKRB",
+      "KNvKRN",
+      "KNvKRP",
+      "KNvKRR",
+      "KPPPvK",
+      "KPPvK",
+      "KPPvKB",
+      "KPPvKN",
+      "KPPvKP",
+      "KPPvKQ",
+      "KPPvKR",
+      "KPvKB",
+      "KPvKBB",
+      "KPvKBN",
+      "KPvKBP",
+      "KPvKN",
+      "KPvKNN",
+      "KPvKNP",
+      "KPvKP",
+      "KPvKPP",
+      "KPvKQ",
+      "KPvKQB",
+      "KPvKQN",
+      "KPvKQP",
+      "KPvKQQ",
+      "KPvKQR",
+      "KPvKR",
+      "KPvKRB",
+      "KPvKRN",
+      "KPvKRP",
+      "KPvKRR",
+      "KQBPvK",
+      "KQBvK",
+      "KQBvKB",
+      "KQBvKN",
+      "KQBvKP",
+      "KQBvKQ",
+      "KQBvKR",
+      "KQNPvK",
+      "KQNvK",
+      "KQNvKN",
+      "KQNvKP",
+      "KQNvKQ",
+      "KQPPvK",
+      "KQPvK",
+      "KQPvKB",
+      "KQPvKN",
+      "KQPvKP",
+      "KQPvKQ",
+      "KQPvKR",
+      "KQQPvK",
+      "KQQvK",
+      "KQQvKP",
+      "KQQvKQ",
+      "KQQvKR",
+      "KQRBvK",
+      "KQRPvK",
+      "KQRvK",
+      "KQRvKP",
+      "KQRvKQ",
+      "KQRvKR",
+      "KQvKB",
+      "KQvKBP",
+      "KQvKN",
+      "KQvKNP",
+      "KQvKP",
+      "KQvKPP",
+      "KQvKQ",
+      "KQvKQB",
+      "KQvKQN",
+      "KQvKQP",
+      "KQvKQQ",
+      "KQvKQR",
+      "KQvKR",
+      "KQvKRB",
+      "KQvKRN",
+      "KQvKRP",
+      "KQvKRR",
+      "KRBNvK",
+      "KRBPvK",
+      "KRBvK",
+      "KRBvKB",
+      "KRBvKN",
+      "KRBvKP",
+      "KRBvKQ",
+      "KRBvKR",
+      "KRNNvK",
+      "KRNPvK",
+      "KRNvK",
+      "KRNvKN",
+      "KRNvKP",
+      "KRNvKR",
+      "KRPPvK",
+      "KRPvK",
+      "KRPvKB",
+      "KRPvKN",
+      "KRPvKP",
+      "KRPvKQ",
+      "KRPvKR",
+      "KRRBvK",
+      "KRRPvK",
+      "KRRvK",
+      "KRRvKN",
+      "KRRvKP",
+      "KRRvKQ",
+      "KRRvKR",
+      "KRvKB",
+      "KRvKBB",
+      "KRvKBN",
+      "KRvKBP",
+      "KRvKN",
+      "KRvKNP",
+      "KRvKP",
+      "KRvKPP",
+      "KRvKQ",
+      "KRvKQN",
+      "KRvKQP",
+      "KRvKQR",
+      "KRvKR",
+      "KRvKRB",
+      "KRvKRN",
+      "KRvKRP",
+      "KRvKRR",
+      "KvKBB",
+      "KvKBN",
+      "KvKBNN",
+      "KvKBNP",
+      "KvKBP",
+      "KvKBPP",
+      "KvKNN",
+      "KvKNP",
+      "KvKNPP",
+      "KvKPP",
+      "KvKPPP",
+      "KvKQB",
+      "KvKQBP",
+      "KvKQN",
+      "KvKQNP",
+      "KvKQP",
+      "KvKQPP",
+      "KvKQQ",
+      "KvKQQB",
+      "KvKQQN",
+      "KvKQQP",
+      "KvKQR",
+      "KvKQRB",
+      "KvKQRN",
+      "KvKQRP",
+      "KvKRB",
+      "KvKRBP",
+      "KvKRN",
+      "KvKRNP",
+      "KvKRP",
+      "KvKRPP",
+      "KvKRR",
+      "KvKRRP"
+    ],
+    "dependencies": [
+      "KBBBvK",
+      "KBBNvK",
+      "KBBPvK",
+      "KBBvK",
+      "KBBvKB",
+      "KBBvKN",
+      "KBBvKP",
+      "KBBvKQ",
+      "KBBvKR",
+      "KBNNvK",
+      "KBNPvK",
+      "KBNvK",
+      "KBNvKB",
+      "KBNvKN",
+      "KBNvKP",
+      "KBNvKQ",
+      "KBNvKR",
+      "KBPPvK",
+      "KBPvK",
+      "KBPvKB",
+      "KBPvKN",
+      "KBPvKP",
+      "KBPvKQ",
+      "KBPvKR",
+      "KBvK",
+      "KBvKB",
+      "KBvKN",
+      "KBvKP",
+      "KNNNvK",
+      "KNNPvK",
+      "KNNvK",
+      "KNNvKB",
+      "KNNvKN",
+      "KNNvKP",
+      "KNNvKQ",
+      "KNNvKR",
+      "KNPPvK",
+      "KNPvK",
+      "KNPvKB",
+      "KNPvKN",
+      "KNPvKP",
+      "KNPvKQ",
+      "KNPvKR",
+      "KNvK",
+      "KNvKN",
+      "KNvKP",
+      "KPPPvK",
+      "KPPvK",
+      "KPPvKB",
+      "KPPvKN",
+      "KPPvKP",
+      "KPPvKQ",
+      "KPPvKR",
+      "KPvK",
+      "KPvKP",
+      "KQBBvK",
+      "KQBNvK",
+      "KQBPvK",
+      "KQBvK",
+      "KQBvKB",
+      "KQBvKN",
+      "KQBvKP",
+      "KQBvKQ",
+      "KQBvKR",
+      "KQNNvK",
+      "KQNPvK",
+      "KQNvK",
+      "KQNvKB",
+      "KQNvKN",
+      "KQNvKP",
+      "KQNvKQ",
+      "KQNvKR",
+      "KQPPvK",
+      "KQPvK",
+      "KQPvKB",
+      "KQPvKN",
+      "KQPvKP",
+      "KQPvKQ",
+      "KQPvKR",
+      "KQQBvK",
+      "KQQNvK",
+      "KQQPvK",
+      "KQQQvK",
+      "KQQRvK",
+      "KQQvK",
+      "KQQvKB",
+      "KQQvKN",
+      "KQQvKP",
+      "KQQvKQ",
+      "KQQvKR",
+      "KQRBvK",
+      "KQRNvK",
+      "KQRPvK",
+      "KQRRvK",
+      "KQRvK",
+      "KQRvKB",
+      "KQRvKN",
+      "KQRvKP",
+      "KQRvKQ",
+      "KQRvKR",
+      "KQvK",
+      "KQvKB",
+      "KQvKN",
+      "KQvKP",
+      "KQvKQ",
+      "KQvKR",
+      "KRBBvK",
+      "KRBNvK",
+      "KRBPvK",
+      "KRBvK",
+      "KRBvKB",
+      "KRBvKN",
+      "KRBvKP",
+      "KRBvKQ",
+      "KRBvKR",
+      "KRNNvK",
+      "KRNPvK",
+      "KRNvK",
+      "KRNvKB",
+      "KRNvKN",
+      "KRNvKP",
+      "KRNvKQ",
+      "KRNvKR",
+      "KRPPvK",
+      "KRPvK",
+      "KRPvKB",
+      "KRPvKN",
+      "KRPvKP",
+      "KRPvKQ",
+      "KRPvKR",
+      "KRRBvK",
+      "KRRNvK",
+      "KRRPvK",
+      "KRRRvK",
+      "KRRvK",
+      "KRRvKB",
+      "KRRvKN",
+      "KRRvKP",
+      "KRRvKQ",
+      "KRRvKR",
+      "KRvK",
+      "KRvKB",
+      "KRvKN",
+      "KRvKP",
+      "KRvKR"
+    ],
+    "files": [
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBBvK.rtbw",
+        "sha256": "65d71717bfdc1d9c2d57f64266a6c44dcb48814794271903afdc079ed6f54d4b",
+        "filename": "KBBBvK.rtbw",
+        "bytes": 739600,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBBBvK.rtbw",
+        "published_cityhash": "fe211316630db82fd1a355740639b715",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBBvK.rtbz",
+        "sha256": "c883a12aa542dd6f767d19a639d60f8cd2b0d1ec3846ba11bf57c886e46a501c",
+        "filename": "KBBBvK.rtbz",
+        "bytes": 1938576,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBBBvK.rtbz",
+        "published_cityhash": "ca8b529e20b607b3ce74e3c4c43e955e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBNvK.rtbw",
+        "sha256": "0aa24a6c99943d742c3a7fcc958412c7549f5e6f30d49a88786ed55688e72510",
+        "filename": "KBBNvK.rtbw",
+        "bytes": 106832,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBBNvK.rtbw",
+        "published_cityhash": "59bed619025bc69a54d93832f4312e42",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBNvK.rtbz",
+        "sha256": "79b9cb452c43d2a516b6c22ed7a52f9ca1c893d095b254926b21bde73a8d3d08",
+        "filename": "KBBNvK.rtbz",
+        "bytes": 9450128,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBBNvK.rtbz",
+        "published_cityhash": "220568265777e7bb975ce09957b9e98f",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBPvK.rtbw",
+        "sha256": "32460a01873ba6a6f39d8c95f2801263d55e245ebb19e50f18bc8fb9ca033a9c",
+        "filename": "KBBPvK.rtbw",
+        "bytes": 1167824,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBBPvK.rtbw",
+        "published_cityhash": "eeb2a21bb6c52efbc41b8f29590d5f31",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBPvK.rtbz",
+        "sha256": "f0d59b91f77db054d35ca0a6e3c507875720c2e3d2d12fb599f02f6be3cf63fb",
+        "filename": "KBBPvK.rtbz",
+        "bytes": 1075152,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBBPvK.rtbz",
+        "published_cityhash": "cf2cc6ddb965288a320cec3a6c6c53d9",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvK.rtbw",
+        "sha256": "3afa74fcfd6100df851c3b18ca255acd9d68c31c7c74cb02b2d5236ffd610ed6",
+        "filename": "KBBvK.rtbw",
+        "bytes": 58000,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBBvK.rtbw",
+        "published_cityhash": "457a28e5df290b59ef4448bafad18bd3",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvK.rtbz",
+        "sha256": "d3786ba13d73b1ed61b8be4fd301ceed56b9af5e7c4fbf4a252ef77d2ea3d3db",
+        "filename": "KBBvK.rtbz",
+        "bytes": 136272,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBBvK.rtbz",
+        "published_cityhash": "13d29f3861591beb4be3758fb7a9edf1",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKB.rtbw",
+        "sha256": "55a2deeb5ec5c2d2cc0082955ae490726c251d8b3cfe506e044fbae533e20606",
+        "filename": "KBBvKB.rtbw",
+        "bytes": 351824,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBBvKB.rtbw",
+        "published_cityhash": "1d948fff757950a1214668360d56ee74",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKB.rtbz",
+        "sha256": "64040c05703b167c92c31d19bc73f8c00471906c6cc3671f9303df251bb8993e",
+        "filename": "KBBvKB.rtbz",
+        "bytes": 53072,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBBvKB.rtbz",
+        "published_cityhash": "74853ece120149b95227979e66d14d63",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKN.rtbw",
+        "sha256": "54575fbfbdafcbcc265f0e6d06a65f81c3d58a3e0475537406ccba83e38827fd",
+        "filename": "KBBvKN.rtbw",
+        "bytes": 5064400,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBBvKN.rtbw",
+        "published_cityhash": "16cb3dc1a1cb5ce0b9d7bb8978ea8c16",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKN.rtbz",
+        "sha256": "dddb4189eba91e0358b4f753070c30aee04420b29642f71ce8c1c6b970855d97",
+        "filename": "KBBvKN.rtbz",
+        "bytes": 8136912,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBBvKN.rtbz",
+        "published_cityhash": "74ff1d0e462b0559bb86d83c3c3e2e08",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKP.rtbw",
+        "sha256": "74a0fb0d650d6e4de31b9acb9b79798dad22c55adeec8bd51c81548bff14b35f",
+        "filename": "KBBvKP.rtbw",
+        "bytes": 7783952,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBBvKP.rtbw",
+        "published_cityhash": "5e92cd639d1b9fd3fb683d098c87b20e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKP.rtbz",
+        "sha256": "8de92025d0823b4e72ee9341605904bbcfe0146bfee598bef62fb480d986202e",
+        "filename": "KBBvKP.rtbz",
+        "bytes": 6765008,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBBvKP.rtbz",
+        "published_cityhash": "83afa467ed4d5795d8c07eff2177f05f",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKQ.rtbw",
+        "sha256": "58428c9e65dd1e2c80255e998e316b0fd0aabd1ae05831739b5466c69865de53",
+        "filename": "KBBvKQ.rtbw",
+        "bytes": 2217040,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBBvKQ.rtbw",
+        "published_cityhash": "2c2df4bdcbd04ac0d335b47ed5a401f1",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKQ.rtbz",
+        "sha256": "e6312205ca448a3420ae9cdda65afa29e136bb5731017aa8532f70d2b8b42be5",
+        "filename": "KBBvKQ.rtbz",
+        "bytes": 7933776,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBBvKQ.rtbz",
+        "published_cityhash": "c069132ad7de822f5235cbc563e4e3bf",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKR.rtbw",
+        "sha256": "dbaf84c157ae1ac1c4ab04891989b433bc382455680812570d92b69647007efe",
+        "filename": "KBBvKR.rtbw",
+        "bytes": 574864,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBBvKR.rtbw",
+        "published_cityhash": "7d1d28df6cab9dc72d05653f170867c7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBBvKR.rtbz",
+        "sha256": "c2995605d07d88b2bb1844789d01e8afbae71c01c337cd78ddde918bf5859977",
+        "filename": "KBBvKR.rtbz",
+        "bytes": 89360,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBBvKR.rtbz",
+        "published_cityhash": "411ea8c9ff9e1bc99660463d2d999914",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNNvK.rtbw",
+        "sha256": "6f677a21a0654b8698c39af573105fc010bd3b393b2df0b819ad9a36c718c69c",
+        "filename": "KBNNvK.rtbw",
+        "bytes": 92496,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBNNvK.rtbw",
+        "published_cityhash": "3f7a7ec41d472caaab3def5716bac004",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNNvK.rtbz",
+        "sha256": "52769ded6e89b86534e75b46a9ceb38d036dac4f628316a523a5418bc4c0b6f5",
+        "filename": "KBNNvK.rtbz",
+        "bytes": 9450128,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBNNvK.rtbz",
+        "published_cityhash": "1523aaf16b68f0c2027dd26a0ca7a75d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNPvK.rtbw",
+        "sha256": "c1063315cd95cec805278b97ec3469ef78d032acca05d946071ea054ea17d802",
+        "filename": "KBNPvK.rtbw",
+        "bytes": 478800,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBNPvK.rtbw",
+        "published_cityhash": "3a755fd9141e3813a20491aec20daedc",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNPvK.rtbz",
+        "sha256": "ea5e71ef17691eb8899a60cb0d15e48d2ee93d4795a0310ac959297adee7d73c",
+        "filename": "KBNPvK.rtbz",
+        "bytes": 556880,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBNPvK.rtbz",
+        "published_cityhash": "1e6a1395e41d44ec99a5d1448438f065",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvK.rtbw",
+        "sha256": "76958da65bc243f2f0a16ceb83f1c00cbc4fb6d6e2f43d052c2f9d65bf16fee8",
+        "filename": "KBNvK.rtbw",
+        "bytes": 7632,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBNvK.rtbw",
+        "published_cityhash": "046312caaebd34f798e1a112c1a79208",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvK.rtbz",
+        "sha256": "cad874516a2327e63754b3faababc7dece1b949305f2944b2b5a3b137f92ecd3",
+        "filename": "KBNvK.rtbz",
+        "bytes": 461840,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBNvK.rtbz",
+        "published_cityhash": "bf069a4b0e2e0b292f8b3951b7b7e7ee",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKB.rtbw",
+        "sha256": "4312674e5806606972c81c1909cb7a780729880696adb56f8c220cb203755fc0",
+        "filename": "KBNvKB.rtbw",
+        "bytes": 716816,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBNvKB.rtbw",
+        "published_cityhash": "cd1d6adb575089e853b306d110de5173",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKB.rtbz",
+        "sha256": "31facfcb128c933d3107c36c9589f7d973a54f59b0eec46de8114056a31dd0d2",
+        "filename": "KBNvKB.rtbz",
+        "bytes": 114576,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBNvKB.rtbz",
+        "published_cityhash": "7da46a8afb37d66751ccb3128cd796db",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKN.rtbw",
+        "sha256": "8a15bfe82bf77fc8a9146ba92f228dbd3dfe0cded6dd326b1e13208ff674e552",
+        "filename": "KBNvKN.rtbw",
+        "bytes": 3575952,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBNvKN.rtbw",
+        "published_cityhash": "d5020ca24fe16a568b5cf70d69565366",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKN.rtbz",
+        "sha256": "c43d15b2110ea556adbda6ac32c427329b5c6141ba6dbf33e454ccac53bfe7a5",
+        "filename": "KBNvKN.rtbz",
+        "bytes": 1826640,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBNvKN.rtbz",
+        "published_cityhash": "8b12a093be330f366631f4918ff9eaac",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKP.rtbw",
+        "sha256": "c0fa4a0ccb04ff0938fbca18ae4067dfd6c05d92661fc591129efcc5b61def86",
+        "filename": "KBNvKP.rtbw",
+        "bytes": 10146256,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBNvKP.rtbw",
+        "published_cityhash": "f67e12f3d62a5ac094e635d562a9a84d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKP.rtbz",
+        "sha256": "8777b6bbd716497468abe3a2f33f0fb1329b07ef439d9ffa461707fa054cd27f",
+        "filename": "KBNvKP.rtbz",
+        "bytes": 32367120,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBNvKP.rtbz",
+        "published_cityhash": "18f72e15d8579e428026800135699456",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKQ.rtbw",
+        "sha256": "9c4d2570b66eaef4c94c066cbcb230bef9333f3421f07d08758239ba74926d36",
+        "filename": "KBNvKQ.rtbw",
+        "bytes": 1054544,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBNvKQ.rtbw",
+        "published_cityhash": "2ec5a10d3bd99d8d11920b1331df254e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKQ.rtbz",
+        "sha256": "c54e1639202c2be12715b4fbdd30f3d0a60a800f97d0799368c79bde4ec5d3eb",
+        "filename": "KBNvKQ.rtbz",
+        "bytes": 12536144,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBNvKQ.rtbz",
+        "published_cityhash": "bbaa52d915ac58fcfa40ab7addba9be6",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKR.rtbw",
+        "sha256": "8ffe5ce13793feac44caca3dbe6ee4a7d8d333201bd473febfb272562df51b19",
+        "filename": "KBNvKR.rtbw",
+        "bytes": 1328144,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBNvKR.rtbw",
+        "published_cityhash": "e0129148383c5f95e631b7758a22162c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBNvKR.rtbz",
+        "sha256": "c629afff8fefc2768e53c6fe0b958105359b6c087ba24799de41fb8ba96efaeb",
+        "filename": "KBNvKR.rtbz",
+        "bytes": 118480,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBNvKR.rtbz",
+        "published_cityhash": "573c0fc05955cafa850a28035962156d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPPvK.rtbw",
+        "sha256": "b9b391413abdf6cc76b4f9dc3edc06f5d9f59770ea2fef1575d85d9c292a2e75",
+        "filename": "KBPPvK.rtbw",
+        "bytes": 274128,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBPPvK.rtbw",
+        "published_cityhash": "f1a46f13fc1bdc0c4f453bcc996ea811",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPPvK.rtbz",
+        "sha256": "b649dbb65e44a8047bbcf625bcf6ace446ed10b8b6ff70f7cef85a5d62b3ddcb",
+        "filename": "KBPPvK.rtbz",
+        "bytes": 116624,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBPPvK.rtbz",
+        "published_cityhash": "9b8417f7ffcb97285b135f2ac80e2515",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvK.rtbw",
+        "sha256": "4714e6844d18eea21b9e7be3c8b2f5b04739638d74416ae18ab86e1fb4a12e4c",
+        "filename": "KBPvK.rtbw",
+        "bytes": 81424,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBPvK.rtbw",
+        "published_cityhash": "080d6f2484c00d0ae161909f86e49684",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvK.rtbz",
+        "sha256": "0360472b5800b9c5fbecf4717b0ef582e503bcdee16f57ee8e187234a80a5581",
+        "filename": "KBPvK.rtbz",
+        "bytes": 75792,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBPvK.rtbz",
+        "published_cityhash": "d8080286697e3885a71ffc31f821c1f7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKB.rtbw",
+        "sha256": "7d1f4ab59ba9b39491c1478e88d8e23dfbdf1df7b5da70fd6591e57e81b50364",
+        "filename": "KBPvKB.rtbw",
+        "bytes": 15290512,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBPvKB.rtbw",
+        "published_cityhash": "9dab7c4c323d18523e2da51cba30aa49",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKB.rtbz",
+        "sha256": "5536deac99dfce1ecd0fbff0d636f8f6bcc4ab4316d2556593c93843ffeec6f2",
+        "filename": "KBPvKB.rtbz",
+        "bytes": 3497488,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBPvKB.rtbz",
+        "published_cityhash": "cab7048e0076c29f37322b6ecb0dd661",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKN.rtbw",
+        "sha256": "2893e3d3491956365257d0ea2631a0a9d13b6d981e2de77ee80814c4667b8e87",
+        "filename": "KBPvKN.rtbw",
+        "bytes": 20381328,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBPvKN.rtbw",
+        "published_cityhash": "28415af3f800b2857b3edd84542a9922",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKN.rtbz",
+        "sha256": "3bb39bc606eee10ee9ffe6ec38ef48764511f9fe3dc61910459392236cc9801a",
+        "filename": "KBPvKN.rtbz",
+        "bytes": 7242128,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBPvKN.rtbz",
+        "published_cityhash": "9c3628d9a1d01e5c2900d31cbaa76742",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKP.rtbw",
+        "sha256": "34f81c28108c76ca52697e68470747bb2d11893e480d12f33238a9dadc737c0b",
+        "filename": "KBPvKP.rtbw",
+        "bytes": 13821584,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBPvKP.rtbw",
+        "published_cityhash": "9d66971b0a1a598cd65e04268dc622f3",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKP.rtbz",
+        "sha256": "659d3fa341a7d0cf35f7d7c17eaeffbc7de4af0a29daa81a73b1c6a715b97dc5",
+        "filename": "KBPvKP.rtbz",
+        "bytes": 7172304,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBPvKP.rtbz",
+        "published_cityhash": "661e5e970e04bd20d2aac3fab6bf1788",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKQ.rtbw",
+        "sha256": "0ede555bb083cbdef1e037a2d5cb281d58095d1ebfe8fce34d8b385d5d9fa775",
+        "filename": "KBPvKQ.rtbw",
+        "bytes": 7497872,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBPvKQ.rtbw",
+        "published_cityhash": "73800c70a614bfe60f57d18bd1d77808",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKQ.rtbz",
+        "sha256": "019f0a0d0c24204686b3d540836d182018f51f37e6644f3761ef4c77147109ed",
+        "filename": "KBPvKQ.rtbz",
+        "bytes": 23906768,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBPvKQ.rtbz",
+        "published_cityhash": "dad709ca5c1b1f2261d261fc094f56d4",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKR.rtbw",
+        "sha256": "a7a430e780ec661ef2eff65e43804ea4046e362d6c0e84c7bc7d77ba14e97b32",
+        "filename": "KBPvKR.rtbw",
+        "bytes": 14246864,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBPvKR.rtbw",
+        "published_cityhash": "460c6ff0d6a18cdb76586d434460193a",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBPvKR.rtbz",
+        "sha256": "a0135331beb9dd6b05492a299c22076744c93104e61375994d6666af888dede0",
+        "filename": "KBPvKR.rtbz",
+        "bytes": 1573776,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBPvKR.rtbz",
+        "published_cityhash": "d7ec4dc15f46c83990599fd5fd5da950",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBvK.rtbw",
+        "sha256": "bc0d8ab3560de9038460f0e8f61e3b7efd3e3d0327d19ae0387c0da7ddeb244d",
+        "filename": "KBvK.rtbw",
+        "bytes": 80,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBvK.rtbw",
+        "published_cityhash": "4b37ef623e69eadb6756777c16034e6f",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBvK.rtbz",
+        "sha256": "6246c8a5c643eec9d4758d55ed843e31cc28a9b82a6f630c1c950d8b7755975b",
+        "filename": "KBvK.rtbz",
+        "bytes": 80,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBvK.rtbz",
+        "published_cityhash": "338f272b119c02ca67b03a450c375b2e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBvKB.rtbw",
+        "sha256": "f0bfff470a9775c0f6693d7c1b73a0879cfed64f9b50cb56872cc15dbe8336ad",
+        "filename": "KBvKB.rtbw",
+        "bytes": 1232,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBvKB.rtbw",
+        "published_cityhash": "cbcf6c04bc042c6dfb2c2d2ebf1af073",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBvKB.rtbz",
+        "sha256": "104404c12c01bbeef4e9095a65cf1f98da6def2e106880b555371f3a8c7f54b6",
+        "filename": "KBvKB.rtbz",
+        "bytes": 80,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBvKB.rtbz",
+        "published_cityhash": "9ca7bb25b5d2077aa209ceac0bb1d9f7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBvKN.rtbw",
+        "sha256": "1d0c01bfb86b5167103f5e46eaa9cfda8b614424cd7749b5e02539c850594bda",
+        "filename": "KBvKN.rtbw",
+        "bytes": 2256,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBvKN.rtbw",
+        "published_cityhash": "e83441cecee257c97a12b5ad33be16fd",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBvKN.rtbz",
+        "sha256": "268eecbf84f5371a860707ef55a7c53fc55e7c5d29379ec70d6b7ff253d48d2e",
+        "filename": "KBvKN.rtbz",
+        "bytes": 80,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBvKN.rtbz",
+        "published_cityhash": "7fd6ea834cdbc9bcbc46adbb68bb4a2b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBvKP.rtbw",
+        "sha256": "7ea5491c17771a47cb558bf3ac3d6fe6a85e2075daa34f8ec4fa91b4319c1fe5",
+        "filename": "KBvKP.rtbw",
+        "bytes": 107472,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KBvKP.rtbw",
+        "published_cityhash": "47f54e30a61705aab5b2a6cd577c2c1e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KBvKP.rtbz",
+        "sha256": "929287a203a8f371f2418cfcbd4b05638a7dc7d2146b87df07a6259b653aebee",
+        "filename": "KBvKP.rtbz",
+        "bytes": 5968,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KBvKP.rtbz",
+        "published_cityhash": "697bffeddc8ee22d3e01cd12f2cbbbb5",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNNvK.rtbw",
+        "sha256": "7fa838231d78734ea6a1549241b582065e48bebcc3d7ade6292be86f76548854",
+        "filename": "KNNNvK.rtbw",
+        "bytes": 85712,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNNNvK.rtbw",
+        "published_cityhash": "d79465eca6697da78997320da531fabb",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNNvK.rtbz",
+        "sha256": "52e29022919891ee3f513ca8aca4071bec70571d2c6cc60b25ab113db9062c7f",
+        "filename": "KNNNvK.rtbz",
+        "bytes": 3821712,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNNNvK.rtbz",
+        "published_cityhash": "90f9e152a36da76f42236bf0449193cb",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNPvK.rtbw",
+        "sha256": "1eb3e362454d206f72d4b6dd070f948f3b55d98c9661c881635edb483df129f7",
+        "filename": "KNNPvK.rtbw",
+        "bytes": 882576,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNNPvK.rtbw",
+        "published_cityhash": "252f89f33bacc96d51c6bfc951d1157a",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNPvK.rtbz",
+        "sha256": "6f6a9951e9096fcb683af9601a2b2ea715178bf66eb846bbd21e02cbc27ead26",
+        "filename": "KNNPvK.rtbz",
+        "bytes": 1262288,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNNPvK.rtbz",
+        "published_cityhash": "46047bdf0f864591f5ad611e6da2249d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvK.rtbw",
+        "sha256": "8b5195abd7f1d4be7aa4b4dca669e9075d61d1c6b02dec8b71f5e9ea21d9eced",
+        "filename": "KNNvK.rtbw",
+        "bytes": 1360,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNNvK.rtbw",
+        "published_cityhash": "55ace050bca06a89fb262b1471653da3",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvK.rtbz",
+        "sha256": "9b2f7f8046cc7911c82a6d51abfa405dfd1c35f118f9a0705e69bd9f81db12ce",
+        "filename": "KNNvK.rtbz",
+        "bytes": 80,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNNvK.rtbz",
+        "published_cityhash": "9e91f9fe4d7f7f8dfb47484a532430bf",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKB.rtbw",
+        "sha256": "63bcba6745b85ccc6f3d47df2750c9b1771dbf593a58772dcf96f9ea8f1398fa",
+        "filename": "KNNvKB.rtbw",
+        "bytes": 67024,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNNvKB.rtbw",
+        "published_cityhash": "0a98fb4f58b773d1fb6ef8a48cecda89",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKB.rtbz",
+        "sha256": "360d0f17d04487729d27f381f09e5c88faa9db2fe23024f987632b90cea02ddb",
+        "filename": "KNNvKB.rtbz",
+        "bytes": 30544,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNNvKB.rtbz",
+        "published_cityhash": "5ef1e8e6a1adc943a7e81afe13beefe2",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKN.rtbw",
+        "sha256": "4de9dc2ed52b92b70fcfc7b21c8c12461563b90fa5df1650db7d9feba48d8806",
+        "filename": "KNNvKN.rtbw",
+        "bytes": 81360,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNNvKN.rtbw",
+        "published_cityhash": "feaf420ff86398b6049e972c1ed27bf0",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKN.rtbz",
+        "sha256": "a50a83debf1b6f6f26a50f0b9587344dbf1425eddba7fe3006673b2f5ca3623b",
+        "filename": "KNNvKN.rtbz",
+        "bytes": 32912,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNNvKN.rtbz",
+        "published_cityhash": "4b9d6086b75006d778b3818ac7a22d5b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKP.rtbw",
+        "sha256": "ffee4c066be8d25d148a61bfce3bd317bfe2a592a979147cfbe698aeee06a668",
+        "filename": "KNNvKP.rtbw",
+        "bytes": 13729360,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNNvKP.rtbw",
+        "published_cityhash": "b2ad4c6c257cd7f90ac5c2545ec083ec",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKP.rtbz",
+        "sha256": "1f1654eb69dc910e675cb35a0e70d382bf5be4d75c47b70c3bf567a9a823bb3d",
+        "filename": "KNNvKP.rtbz",
+        "bytes": 10331216,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNNvKP.rtbz",
+        "published_cityhash": "b8a98868239ede8aca6913ae921a4f97",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKQ.rtbw",
+        "sha256": "becf001d0bda2271f9abdedea5aefb0f554f40ca53809c117832d64ce7597ee1",
+        "filename": "KNNvKQ.rtbw",
+        "bytes": 3241744,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNNvKQ.rtbw",
+        "published_cityhash": "3d1b6dc34ea6380e9efc18cd13ab752a",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKQ.rtbz",
+        "sha256": "2721dc15e924d15ee2e9a1817b1d4548c526c621fdf7d3489d5e05b70e2fcd56",
+        "filename": "KNNvKQ.rtbz",
+        "bytes": 4940624,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNNvKQ.rtbz",
+        "published_cityhash": "1bc6d65112bd4d5e60f7ffb9a62867c5",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKR.rtbw",
+        "sha256": "43564cbaa6a472786db00dd3dd5405b435ae3955e4238fc6b6fc70a16f9527d3",
+        "filename": "KNNvKR.rtbw",
+        "bytes": 313680,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNNvKR.rtbw",
+        "published_cityhash": "6231eac2d4ddcfce370d384e8bd7af14",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNNvKR.rtbz",
+        "sha256": "a6f3738cfba067ea8adad8a8032924e53d83eafb24d721e3ee21cba5eeef9777",
+        "filename": "KNNvKR.rtbz",
+        "bytes": 62928,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNNvKR.rtbz",
+        "published_cityhash": "df62208af31506e1dd39554361518087",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPPvK.rtbw",
+        "sha256": "0e8a247981cd2f35a5057359538a5e45de3765ff0b95e317c04f03b045fe9612",
+        "filename": "KNPPvK.rtbw",
+        "bytes": 186512,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNPPvK.rtbw",
+        "published_cityhash": "b5600e730d1c243178d635fb0434d174",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPPvK.rtbz",
+        "sha256": "0c0825e09a6312f4c43f025d558e48f63306068bf4239e62fb383ab1d10cc8b9",
+        "filename": "KNPPvK.rtbz",
+        "bytes": 111312,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNPPvK.rtbz",
+        "published_cityhash": "03190582b90c80b273cac2fd4d03c2ab",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvK.rtbw",
+        "sha256": "27ce7e0ea8f585dfbbb29e2cc1e04ac547818d547c17ad9b053b05eca6f5b479",
+        "filename": "KNPvK.rtbw",
+        "bytes": 93200,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNPvK.rtbw",
+        "published_cityhash": "20690936ac6147bd4d8aa0584b5ae570",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvK.rtbz",
+        "sha256": "b2543f1e060eb800cb5f3dc8968c6c57141a87819039d29d681ab3cd2386c57c",
+        "filename": "KNPvK.rtbz",
+        "bytes": 111056,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNPvK.rtbz",
+        "published_cityhash": "e8886f6c52dad3bb43d1c3de0c3f1a8e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKB.rtbw",
+        "sha256": "736e2b45a8916eb88795caf780d9dd1af854fb792867e859376ca814f32946de",
+        "filename": "KNPvKB.rtbw",
+        "bytes": 13148688,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNPvKB.rtbw",
+        "published_cityhash": "bac540b324c49fada2be5b6aa5c8f722",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKB.rtbz",
+        "sha256": "cad29ef3cbd85dced06fc892f5911a06a322259c8e54f43dc02a783b71b6191d",
+        "filename": "KNPvKB.rtbz",
+        "bytes": 4021776,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNPvKB.rtbz",
+        "published_cityhash": "5c4768bc12a048e00eeeedd550a742de",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKN.rtbw",
+        "sha256": "8210ce49dfafc4008251e22117008efd3fc5f7055a0b04c41c98c4c453d5730d",
+        "filename": "KNPvKN.rtbw",
+        "bytes": 14200272,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNPvKN.rtbw",
+        "published_cityhash": "3f57d5be4bab20026be22ed2f3f57296",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKN.rtbz",
+        "sha256": "a1317e2ef28a39aca65e111d43dfd624bbdda7c7528f95f217965f63166817db",
+        "filename": "KNPvKN.rtbz",
+        "bytes": 4930192,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNPvKN.rtbz",
+        "published_cityhash": "722e9889474fe1821eca5151eaada0fa",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKP.rtbw",
+        "sha256": "78380afaa9c7eadcf5f0bee54c83cfc2c5ee78de5472145cb1364f2e620d4139",
+        "filename": "KNPvKP.rtbw",
+        "bytes": 18616208,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNPvKP.rtbw",
+        "published_cityhash": "05d00d8934c19354e449e62180dc83aa",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKP.rtbz",
+        "sha256": "ea09e07c4d3f6b0905167e0ced17032fcd66eebeacb06e2b64a28f8ba3f5e0d4",
+        "filename": "KNPvKP.rtbz",
+        "bytes": 8974160,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNPvKP.rtbz",
+        "published_cityhash": "fe999e2b1611f2477c569c58edff3082",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKQ.rtbw",
+        "sha256": "baf701b6383fc0756439de93102694a18a132c46ff6a5b0213097c2b14e2d71b",
+        "filename": "KNPvKQ.rtbw",
+        "bytes": 10056720,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNPvKQ.rtbw",
+        "published_cityhash": "17da8e4f62c446341883c46a3ee3cdfb",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKQ.rtbz",
+        "sha256": "ae277c317bd7ab6ade1c1c514ac98e8a48af2480e98a26ad988f60d3068240a6",
+        "filename": "KNPvKQ.rtbz",
+        "bytes": 15554128,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNPvKQ.rtbz",
+        "published_cityhash": "a10bcfaad2612c862fcf475b2428fdd4",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKR.rtbw",
+        "sha256": "2d1cfcc72efbf30bbe7b2021d1431268b3cb682ecafd3049d0e888583b186c3d",
+        "filename": "KNPvKR.rtbw",
+        "bytes": 19810256,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNPvKR.rtbw",
+        "published_cityhash": "f2bcbd21959d515559c1bfab9fe6867b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNPvKR.rtbz",
+        "sha256": "5316294b3019464cf27a414b7ca5df689070cbf8222496763b85c04247f8ae00",
+        "filename": "KNPvKR.rtbz",
+        "bytes": 4874960,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNPvKR.rtbz",
+        "published_cityhash": "654a0ef113634a8e2fca9c2d53a13807",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNvK.rtbw",
+        "sha256": "9d3518b12df3d2006441df758bce31e961346e70a11920aaad75c647003bb6e7",
+        "filename": "KNvK.rtbw",
+        "bytes": 80,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNvK.rtbw",
+        "published_cityhash": "b9eccbff19c677158e928b1b641248b7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNvK.rtbz",
+        "sha256": "0e49a0f2810a131c32fc14872e83044aa9810ce2c86df071851512077291fc25",
+        "filename": "KNvK.rtbz",
+        "bytes": 80,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNvK.rtbz",
+        "published_cityhash": "796ab960a6140d5b030f785e91086175",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNvKN.rtbw",
+        "sha256": "290b5d295f531ac680e35a3295ff265e89da864fc0363b5d7aca928c8e38faf6",
+        "filename": "KNvKN.rtbw",
+        "bytes": 1168,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNvKN.rtbw",
+        "published_cityhash": "2c4a1fbe4cc50a112a60628c6092f5b7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNvKN.rtbz",
+        "sha256": "540abbc141be6619646d1ad9cd3080c97e52eb599e3a5832974f93d2d5114f9d",
+        "filename": "KNvKN.rtbz",
+        "bytes": 80,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNvKN.rtbz",
+        "published_cityhash": "2da62bda60bfb92cbd4672db2cd6b6c5",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNvKP.rtbw",
+        "sha256": "f21332cc4b380764847d6c32511dee16cbf56e65604596ca24e784f8e4c13bdb",
+        "filename": "KNvKP.rtbw",
+        "bytes": 148048,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KNvKP.rtbw",
+        "published_cityhash": "083853c1df58dbfa035231fe93f572be",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KNvKP.rtbz",
+        "sha256": "f5540325bc8bb6b2a9c99b9e1f4672aa06291fd2d8a4d2fa1fbd9453c90774b4",
+        "filename": "KNvKP.rtbz",
+        "bytes": 10640,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KNvKP.rtbz",
+        "published_cityhash": "cd4ad308e4d126deae3d33111d990f56",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPPvK.rtbw",
+        "sha256": "fcdf696bd815fa0783c10f5bc9dfa9193a1515b43fc4f3e6db9779a674b20ec0",
+        "filename": "KPPPvK.rtbw",
+        "bytes": 56080,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KPPPvK.rtbw",
+        "published_cityhash": "d8e30143a16cd3358293ba3963df546b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPPvK.rtbz",
+        "sha256": "7765d71e7e62f79071b8b78335cfb33da0729399efb3886ec131ac0799c7cffc",
+        "filename": "KPPPvK.rtbz",
+        "bytes": 22672,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KPPPvK.rtbz",
+        "published_cityhash": "ac2aec5973516d32f8860c7e78d4fff5",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvK.rtbw",
+        "sha256": "55aa91c460bc5eea322b8a6cde4f94d2e0a244b6fc14f6aca17e6ccfb2e56ef6",
+        "filename": "KPPvK.rtbw",
+        "bytes": 25104,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KPPvK.rtbw",
+        "published_cityhash": "d60773ec35afacea512cfef89aab439b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvK.rtbz",
+        "sha256": "a56cb0a0fd1baa54a47f14b383a8bb0e74051832fbd7f12a0a47f09e5e68b370",
+        "filename": "KPPvK.rtbz",
+        "bytes": 8656,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KPPvK.rtbz",
+        "published_cityhash": "09bd75efbaaead72a1e4e4b63fa35224",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKB.rtbw",
+        "sha256": "88e47b338e324125996fbca80101ebb9ca10cd6aae29756c74b5887de00efc5e",
+        "filename": "KPPvKB.rtbw",
+        "bytes": 7269520,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KPPvKB.rtbw",
+        "published_cityhash": "20b644468517fbfe6937e446289c578d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKB.rtbz",
+        "sha256": "02f2b4fde447ff868f1e156460d6ed2c670b57bf6a08d03bca7ecb679ca9272b",
+        "filename": "KPPvKB.rtbz",
+        "bytes": 517520,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KPPvKB.rtbz",
+        "published_cityhash": "d8758cb73538749cc97faecc8f2cd3b6",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKN.rtbw",
+        "sha256": "5a2ded8d63f4439e8144b4c30d1635300e6e931925af59bbedef8cfb28e70455",
+        "filename": "KPPvKN.rtbw",
+        "bytes": 7707472,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KPPvKN.rtbw",
+        "published_cityhash": "1420882e55063ed51b951047229b9105",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKN.rtbz",
+        "sha256": "e41ccb996db3b6582507d14d4d1df6d1760487a18359fa860d5e2c622ebe65ad",
+        "filename": "KPPvKN.rtbz",
+        "bytes": 699472,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KPPvKN.rtbz",
+        "published_cityhash": "c135a90aeba8aaa0e602a5d17308b32e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKP.rtbw",
+        "sha256": "8db3ec7d49f8c79fdc1c4b8f263a347d1f9faffb5cc4ebc2173f02c1448ac55e",
+        "filename": "KPPvKP.rtbw",
+        "bytes": 7499088,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KPPvKP.rtbw",
+        "published_cityhash": "07554169bb42f4aa37779aff765c98da",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKP.rtbz",
+        "sha256": "68d47723f05e5cb658a4c1b2d1de32b9dc72c83b936038cd83c5bb2a70dd10ad",
+        "filename": "KPPvKP.rtbz",
+        "bytes": 669776,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KPPvKP.rtbz",
+        "published_cityhash": "ba1085022fff7fa179ba2fef92131684",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKQ.rtbw",
+        "sha256": "1418cc23f79ebabc918ba6ad581dc1ec3e1da47532227d809cc4cf87b37d706f",
+        "filename": "KPPvKQ.rtbw",
+        "bytes": 3090576,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KPPvKQ.rtbw",
+        "published_cityhash": "767d9d91dbdd47d90426699e56562b79",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKQ.rtbz",
+        "sha256": "7a9333c3b0ba1d6f3c72768e65770b61d331282c03e00266c20a9fcb47b3330d",
+        "filename": "KPPvKQ.rtbz",
+        "bytes": 3358672,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KPPvKQ.rtbz",
+        "published_cityhash": "0f5f4712be067fccfbf1c9e39dbb3219",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKR.rtbw",
+        "sha256": "4d91a2fa43b29e27c6a2eafd87711498c785eb685e66cb8f2a9bd5706ebf427f",
+        "filename": "KPPvKR.rtbw",
+        "bytes": 9068688,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KPPvKR.rtbw",
+        "published_cityhash": "15e1247d764296636faff1c9bcae729b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPPvKR.rtbz",
+        "sha256": "ccbeb5d5558d39192da24672a68a1c682cef49b05eb23e104234bb3680bcb632",
+        "filename": "KPPvKR.rtbz",
+        "bytes": 5114512,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KPPvKR.rtbz",
+        "published_cityhash": "94cd3614a44c9049d7fb7c1c7c2cd493",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPvK.rtbw",
+        "sha256": "02fd2bdcd92821c869458f019f63524def1c9e7a2862ca8d2b16dc7712b16183",
+        "filename": "KPvK.rtbw",
+        "bytes": 7824,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KPvK.rtbw",
+        "published_cityhash": "7e72bcffff0fc0fa6928728e92d3f652",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPvK.rtbz",
+        "sha256": "ad01af2076183c90ccee662ca6c5d74da3222ff1fee47c01b5d4e56ed01938de",
+        "filename": "KPvK.rtbz",
+        "bytes": 4176,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KPvK.rtbz",
+        "published_cityhash": "f72a3a4f9b1b4afb6e8335bed985b891",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPvKP.rtbw",
+        "sha256": "6d21860e47a91d00841ccf63a657dc09b78f602e0ec005f925470e2449e1ae05",
+        "filename": "KPvKP.rtbw",
+        "bytes": 245328,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KPvKP.rtbw",
+        "published_cityhash": "5862ab22bb995b8462651a536c9938e0",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KPvKP.rtbz",
+        "sha256": "2967707c971ec847c5ef3fe6f1934166aeb10c8cc151a1ae9d7c922c5aed1fc3",
+        "filename": "KPvKP.rtbz",
+        "bytes": 54480,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KPvKP.rtbz",
+        "published_cityhash": "77ea7a20bdb4ed4244fff34bc4c99a85",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBBvK.rtbw",
+        "sha256": "078c70e55c3c7d4209a13ff1bf711b5d8d3e15c5b9289ad2f5d74272113610da",
+        "filename": "KQBBvK.rtbw",
+        "bytes": 160464,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQBBvK.rtbw",
+        "published_cityhash": "e0d379b9c3f7acab2357706abdbc1a5d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBBvK.rtbz",
+        "sha256": "8641b461b684ee57d182904e2452f19bfb998d0b2bcd49e8b121f53011b3451d",
+        "filename": "KQBBvK.rtbz",
+        "bytes": 3094096,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQBBvK.rtbz",
+        "published_cityhash": "4bf06892e80a7e9503838d40152926f7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBNvK.rtbw",
+        "sha256": "b6c832250af4d0cc2337ebca7afd995de188b288909f8543225ff2e3db6f6915",
+        "filename": "KQBNvK.rtbw",
+        "bytes": 255888,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQBNvK.rtbw",
+        "published_cityhash": "d271f2e3184f1a208572dce771c6f3dc",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBNvK.rtbz",
+        "sha256": "f3106c2d3bf9890a5b57f72f3b8bedc6cc8063bc5f30f8e018723e65e975e2b0",
+        "filename": "KQBNvK.rtbz",
+        "bytes": 2967312,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQBNvK.rtbz",
+        "published_cityhash": "971ad48c660330c8ab7630f0b7704048",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBPvK.rtbw",
+        "sha256": "287cee729d3c70436c5ca5d350c2e4ce49d89e88a8775bac16778685786175bc",
+        "filename": "KQBPvK.rtbw",
+        "bytes": 824272,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQBPvK.rtbw",
+        "published_cityhash": "0ed9d5f02fca6830dff0e3e5bbcd806d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBPvK.rtbz",
+        "sha256": "d19b401e6f1025d31718d6ee18e079d268f5056b5fae2ec8d90e3a2b0475bd19",
+        "filename": "KQBPvK.rtbz",
+        "bytes": 1347600,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQBPvK.rtbz",
+        "published_cityhash": "3e2d75a713623625b9a8f6b9b4a082aa",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvK.rtbw",
+        "sha256": "55948e960dcdf6b4f02ebae87b1a1a7d14bff085aea17e6e6d4b7f75a2306493",
+        "filename": "KQBvK.rtbw",
+        "bytes": 4944,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQBvK.rtbw",
+        "published_cityhash": "f6286f9cf996cfe4987b28eadbf73cf0",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvK.rtbz",
+        "sha256": "27b12f2c8083962b502704af7fd01d7424bfbe724c2bbfd6962f227c7fe91732",
+        "filename": "KQBvK.rtbz",
+        "bytes": 139088,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQBvK.rtbz",
+        "published_cityhash": "40cca181034afa79be1781b03cc1029e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKB.rtbw",
+        "sha256": "b63308330394a5238196b69b757b89940dded3660ffcab63c4f47d46e0dd5e71",
+        "filename": "KQBvKB.rtbw",
+        "bytes": 232656,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQBvKB.rtbw",
+        "published_cityhash": "e603347f05b5cdd6eb5c72914ab799a9",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKB.rtbz",
+        "sha256": "ffc6e20bb285fb2cc8e14991354babbcaf59730085a26d36270ca86f7f09eeb6",
+        "filename": "KQBvKB.rtbz",
+        "bytes": 6845584,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQBvKB.rtbz",
+        "published_cityhash": "bbede31cd59532ccdacf107e33693abc",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKN.rtbw",
+        "sha256": "704fe006d2d6d8f42b2d308223d03c416fbb615710889873f249111558d59cf6",
+        "filename": "KQBvKN.rtbw",
+        "bytes": 387664,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQBvKN.rtbw",
+        "published_cityhash": "a0096730eab1b5c72270459c423400c9",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKN.rtbz",
+        "sha256": "4090c4c12ca8a569bf9b71025e9d9e4d0d800b88e67217bb64563629847ca743",
+        "filename": "KQBvKN.rtbz",
+        "bytes": 4369104,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQBvKN.rtbz",
+        "published_cityhash": "6a4aa51c635793f74f8fc37bdcdd423b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKP.rtbw",
+        "sha256": "fef5a5a1a91f511ffd8db58de69608708ba6347a93d000a067b488e13abd78cc",
+        "filename": "KQBvKP.rtbw",
+        "bytes": 2925136,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQBvKP.rtbw",
+        "published_cityhash": "5423eb4db831200cd341689a54378476",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKP.rtbz",
+        "sha256": "63ba5b1a4fa68fe1d2b12f268d372fcc9a099303c165b40878fa171654c28be9",
+        "filename": "KQBvKP.rtbz",
+        "bytes": 7444880,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQBvKP.rtbz",
+        "published_cityhash": "f511d9d9e62439bd717d26d6b626e77d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKQ.rtbw",
+        "sha256": "659e1f10a0a3a1502d005b3523d049ecf4849fa25f3841dad546f3ebeda865e6",
+        "filename": "KQBvKQ.rtbw",
+        "bytes": 4092496,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQBvKQ.rtbw",
+        "published_cityhash": "2fdb3d39f55bf2037aaac4d386acf227",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKQ.rtbz",
+        "sha256": "7633590ef9bc79d25fdfcde5c30c6c0bbdc82e815270d7b9476a1667af3116ee",
+        "filename": "KQBvKQ.rtbz",
+        "bytes": 1260112,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQBvKQ.rtbz",
+        "published_cityhash": "94bede5ae0bb048fdecf93ab5965fec2",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKR.rtbw",
+        "sha256": "b2337e52ba7c9a8cf0cdb8806d79b21f5b23db31112b4cbea9901b13343b70ec",
+        "filename": "KQBvKR.rtbw",
+        "bytes": 684048,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQBvKR.rtbw",
+        "published_cityhash": "12683b1470398a8592c713de9c2fd064",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQBvKR.rtbz",
+        "sha256": "4762ed15a705aea092bcb3a37f6f75aa55a0336bc173f0654c950f6b01a0cd40",
+        "filename": "KQBvKR.rtbz",
+        "bytes": 8740752,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQBvKR.rtbz",
+        "published_cityhash": "e8c2f6ad70a5991960a54fa235974bef",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNNvK.rtbw",
+        "sha256": "2a5de2d15191e097ea9f842b5c81bb1dc6cdc0d814ab35f49f0e6b51f7caa4a2",
+        "filename": "KQNNvK.rtbw",
+        "bytes": 113680,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQNNvK.rtbw",
+        "published_cityhash": "47a080d6a4d7c256e97b9924df0c2897",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNNvK.rtbz",
+        "sha256": "169f48a38f7e2b553ed0f32528e59ad6112d6ee2124850c9305b1dce21b54851",
+        "filename": "KQNNvK.rtbz",
+        "bytes": 3680656,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQNNvK.rtbz",
+        "published_cityhash": "d014333bd6e32a92f94e61e5f658caee",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNPvK.rtbw",
+        "sha256": "1f2dae2eecfc73f107ca3521342a06212f340cc6bcb8aa1c12b69472062d9d56",
+        "filename": "KQNPvK.rtbw",
+        "bytes": 648784,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQNPvK.rtbw",
+        "published_cityhash": "07bd200e02fd1b0ed0660f54e6fd77a3",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNPvK.rtbz",
+        "sha256": "f7590fe7c1579bb76b7deec327f50b89bc99fb4576a37f4beaffc64a55205c30",
+        "filename": "KQNPvK.rtbz",
+        "bytes": 1295184,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQNPvK.rtbz",
+        "published_cityhash": "7c817e26d90b1c013f3a1584950e89e4",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvK.rtbw",
+        "sha256": "cd807df1b6f5966ddc9f481e01bd58b4653d67c77d9d450d348c9bca827b51b8",
+        "filename": "KQNvK.rtbw",
+        "bytes": 3600,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQNvK.rtbw",
+        "published_cityhash": "23586c56d3c0936b0907b6c10037c991",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvK.rtbz",
+        "sha256": "a86a0900d84c4c95bb85845b88f3ff77ef50383593fa27383ed2e585e8d8139c",
+        "filename": "KQNvK.rtbz",
+        "bytes": 156432,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQNvK.rtbz",
+        "published_cityhash": "0cf5ab472ed2e50cb396294e18095499",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKB.rtbw",
+        "sha256": "24d7199d0bb42c8e275a06044511939a1bb9ead0be5e52dec2f6f49bea2e5ca7",
+        "filename": "KQNvKB.rtbw",
+        "bytes": 218320,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQNvKB.rtbw",
+        "published_cityhash": "44e7932ad5711f39dd8901da9f8fbece",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKB.rtbz",
+        "sha256": "c594c414100ca0c62b7bdb7ff7f9093beae8c0b4dd4f0bdd9593a03b776838ba",
+        "filename": "KQNvKB.rtbz",
+        "bytes": 8035600,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQNvKB.rtbz",
+        "published_cityhash": "8a521fc65e36e09ab07bcbaebdac7975",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKN.rtbw",
+        "sha256": "ff49a16ae18f6ac1ecaf88d6d11751692e40ea5296cf8ebd3a2b306fb2d32601",
+        "filename": "KQNvKN.rtbw",
+        "bytes": 333456,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQNvKN.rtbw",
+        "published_cityhash": "51ab8a6d96cb49dea6d82f16c6956ffc",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKN.rtbz",
+        "sha256": "9e6279ad07c759a94837504ca1040ea660ac2b855c0af69f1e6f70dfa59bff28",
+        "filename": "KQNvKN.rtbz",
+        "bytes": 5411152,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQNvKN.rtbz",
+        "published_cityhash": "cade7170506b3b4c677ad20c2d8beb28",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKP.rtbw",
+        "sha256": "eed9f945867eefab34757cf2f66fd2eb44ea34bc7bee8c0dfc4b32cafe71b63d",
+        "filename": "KQNvKP.rtbw",
+        "bytes": 2662096,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQNvKP.rtbw",
+        "published_cityhash": "d4b988255b6bac0700e0243526701f69",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKP.rtbz",
+        "sha256": "a8f29c9a0a08755507d5d1fa98b7fd5f2a7e43f222aa4f153bcfd7fdfa3a0280",
+        "filename": "KQNvKP.rtbz",
+        "bytes": 7902992,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQNvKP.rtbz",
+        "published_cityhash": "a3f18e2f2288efadec53890134af6a8b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKQ.rtbw",
+        "sha256": "c0769801dd179962b7303c3c02d216d71823a49c1497b60940c363debd7d56ba",
+        "filename": "KQNvKQ.rtbw",
+        "bytes": 3139152,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQNvKQ.rtbw",
+        "published_cityhash": "b4df34c0cbea62a81d7dd29d71471049",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKQ.rtbz",
+        "sha256": "53a74dec70a55129750d38797cbf8e070aaf7a404fac04ed986cad10083a0ef4",
+        "filename": "KQNvKQ.rtbz",
+        "bytes": 785296,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQNvKQ.rtbz",
+        "published_cityhash": "c7ad85c3a38b4e0ff55fe8852ddca8eb",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKR.rtbw",
+        "sha256": "496e30c3011556f194a56d187e0edeb8be107b92df5b0983cb9187847d3d64f0",
+        "filename": "KQNvKR.rtbw",
+        "bytes": 759824,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQNvKR.rtbw",
+        "published_cityhash": "4927b35fb9291cfd47764e0abb4c8746",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQNvKR.rtbz",
+        "sha256": "43de62c9c02cbcef315e61d9602fe12f2902ef3705f85d066d8636155dea68a3",
+        "filename": "KQNvKR.rtbz",
+        "bytes": 10843024,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQNvKR.rtbz",
+        "published_cityhash": "a0a9fdfa0829ce9455a3b20ad2c9ebd1",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPPvK.rtbw",
+        "sha256": "205400024859e723a1cd28943dcede2026fb851c586e9966a28685b57ed34ced",
+        "filename": "KQPPvK.rtbw",
+        "bytes": 255568,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQPPvK.rtbw",
+        "published_cityhash": "c9c9d802e2493ec59d99789d40a82a1c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPPvK.rtbz",
+        "sha256": "d3c551fe1f252d9e06a0397c6d7a0827610d63a9187aaf19906ee74b83ca5065",
+        "filename": "KQPPvK.rtbz",
+        "bytes": 132240,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQPPvK.rtbz",
+        "published_cityhash": "674f17307a6ab5c31dbdbbbc446399a3",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvK.rtbw",
+        "sha256": "e7cd0729a1b2662f289d423bf788634d60a0fb86e11b0b791da9ab88a36a8e6f",
+        "filename": "KQPvK.rtbw",
+        "bytes": 12496,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQPvK.rtbw",
+        "published_cityhash": "d048a1892d608582fe41910a30aee226",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvK.rtbz",
+        "sha256": "b8a0ddb251a9368c4a97f7add8647b050fb0257ed6bea5cf1dc3a720994082c4",
+        "filename": "KQPvK.rtbz",
+        "bytes": 32208,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQPvK.rtbz",
+        "published_cityhash": "f081fb6c078f7cec6c3a9d457c5a29ef",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKB.rtbw",
+        "sha256": "77f6d6ac922fdbce1b2b9bda2425edbb094d0588debee4d12c77d3326d13aca5",
+        "filename": "KQPvKB.rtbw",
+        "bytes": 785744,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQPvKB.rtbw",
+        "published_cityhash": "8fc1303227589cf4fb3910723ddb5c5a",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKB.rtbz",
+        "sha256": "122d848950e595e296587c0f1c94999794849d6fb72146bb1788bb0fc302565b",
+        "filename": "KQPvKB.rtbz",
+        "bytes": 2151824,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQPvKB.rtbz",
+        "published_cityhash": "a0d00a8834472f21cfea4d4d97ba5aec",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKN.rtbw",
+        "sha256": "f71a1ed3f3811abb5f06c3f9a0f0fb9e395f3ffa264f123ef8caa3d3488f8256",
+        "filename": "KQPvKN.rtbw",
+        "bytes": 1694352,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQPvKN.rtbw",
+        "published_cityhash": "6ba9b28d40d2cd4278231fe8e491369d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKN.rtbz",
+        "sha256": "f10a2f9f11c2062c22380bee222f42810807906fae98ec4015590642cc2ebba0",
+        "filename": "KQPvKN.rtbz",
+        "bytes": 2055632,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQPvKN.rtbz",
+        "published_cityhash": "c16a5d070ad866526f8ffbf2fbd4cbd2",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKP.rtbw",
+        "sha256": "9464ec5db2f8e36a99d10e23f89b4ef65743dcd0210489f0a2e082baa862bbf0",
+        "filename": "KQPvKP.rtbw",
+        "bytes": 2464016,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQPvKP.rtbw",
+        "published_cityhash": "023e995507431d8d4b4297f5d80f5a65",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKP.rtbz",
+        "sha256": "9ca8cb1b1297d01b7e3221bd4495cc30f70ec0affbabdfd9af9085a48a0a6742",
+        "filename": "KQPvKP.rtbz",
+        "bytes": 997904,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQPvKP.rtbz",
+        "published_cityhash": "bd6dec6a6a089051d16ff9c3ec72b1c2",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKQ.rtbw",
+        "sha256": "0a37d62dc9727c655e62322346051e7bcb4a51e5466bc6693c47a330e7bd05c1",
+        "filename": "KQPvKQ.rtbw",
+        "bytes": 20403600,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQPvKQ.rtbw",
+        "published_cityhash": "339bfad60f4f0e3739d40d0db4e216a1",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKQ.rtbz",
+        "sha256": "1f17aeb7b7d5c0ad80a8428ed0ce772629c403ae5935c668f5cd3245b0ec2127",
+        "filename": "KQPvKQ.rtbz",
+        "bytes": 16695824,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQPvKQ.rtbz",
+        "published_cityhash": "2d226cbcba844ae906924d57090e13c8",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKR.rtbw",
+        "sha256": "cb9faa39c56bf6aedd3271c4d200bac66438bee5463a39f5e149f6342b04331b",
+        "filename": "KQPvKR.rtbw",
+        "bytes": 2030736,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQPvKR.rtbw",
+        "published_cityhash": "fc6274cb1a0f40bd241cf1c1b172b9df",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQPvKR.rtbz",
+        "sha256": "35dbc0b95960f5af1165f2467ca35faa6f0daf63d8256675a31415be83c4d784",
+        "filename": "KQPvKR.rtbz",
+        "bytes": 6202512,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQPvKR.rtbz",
+        "published_cityhash": "17bacde708f0e419983705fc132de51d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQBvK.rtbw",
+        "sha256": "d13cbda9651649b8f999c903a805687632f39089cc7cbad1886fb78393d675a8",
+        "filename": "KQQBvK.rtbw",
+        "bytes": 227600,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQBvK.rtbw",
+        "published_cityhash": "8287520ac70067445c7d90532c5c7ce4",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQBvK.rtbz",
+        "sha256": "5c410fd2360640c5b055976d0bdba4d878b15fe468bb179cef78ffc5a8f81c12",
+        "filename": "KQQBvK.rtbz",
+        "bytes": 806160,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQBvK.rtbz",
+        "published_cityhash": "5529f3da5e37089b8e179a6739aa21e5",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQNvK.rtbw",
+        "sha256": "4f6186e88aba0ff518eaa5466904912bafbf1399fbf291ad0ed9f7fa9c6f9565",
+        "filename": "KQQNvK.rtbw",
+        "bytes": 186064,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQNvK.rtbw",
+        "published_cityhash": "46a3727484d2d53355cb0f9c3a4bdb9f",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQNvK.rtbz",
+        "sha256": "9add360ef47bba68254dd5e2796c2e489058d94803f49b92bf12f36da869241d",
+        "filename": "KQQNvK.rtbz",
+        "bytes": 920848,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQNvK.rtbz",
+        "published_cityhash": "fae7e2a2b4940d6a1ff01c4847d2628c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQPvK.rtbw",
+        "sha256": "3611483f113d4ae26801d67badf642d3d23b7c3938c42138854a444427d7cc4f",
+        "filename": "KQQPvK.rtbw",
+        "bytes": 725200,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQPvK.rtbw",
+        "published_cityhash": "d62278816974f77b9cb8c6fc6e2a3a0c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQPvK.rtbz",
+        "sha256": "d53709d958dcc087209b3dec8f483d64ff499e0d49d8092e6a494dda5de5a212",
+        "filename": "KQQPvK.rtbz",
+        "bytes": 583760,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQPvK.rtbz",
+        "published_cityhash": "c07b4c79e8b0b7c725c699a8574d9484",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQQvK.rtbw",
+        "sha256": "88ff04a0d31b18725b64ae13498beb52bef45e103fa815f657af43243dd675a7",
+        "filename": "KQQQvK.rtbw",
+        "bytes": 165648,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQQvK.rtbw",
+        "published_cityhash": "7237e304f79d8c1bfe788fc3fb7342f8",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQQvK.rtbz",
+        "sha256": "7eded31e22b0b692dc2016e8dbf85f7b4a30c2de5334cd8f3eef54b158314c43",
+        "filename": "KQQQvK.rtbz",
+        "bytes": 207248,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQQvK.rtbz",
+        "published_cityhash": "49e50e7dea8e72ba2286cb29dad72a02",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQRvK.rtbw",
+        "sha256": "b8db7730e4c5d57e6ae0f1a2943766b0cff0d28a557f5bab8411e4883fbc5307",
+        "filename": "KQQRvK.rtbw",
+        "bytes": 247696,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQRvK.rtbw",
+        "published_cityhash": "e8a14b36b0569aba2bd338a52eab2f49",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQRvK.rtbz",
+        "sha256": "831938ef5f1974aae7bae78fa215795b57acce652088551057a2e4decc080217",
+        "filename": "KQQRvK.rtbz",
+        "bytes": 610512,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQRvK.rtbz",
+        "published_cityhash": "c564d585b1123312e2bf87051008dbeb",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvK.rtbw",
+        "sha256": "b1c0d3eabf1226440b950fd468c4f30a13ea69ce38194bc65e07bd6b617226e0",
+        "filename": "KQQvK.rtbw",
+        "bytes": 7056,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQvK.rtbw",
+        "published_cityhash": "a76adeac6e2317a1cac7f683f22d5a0b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvK.rtbz",
+        "sha256": "0d8e14a93ba2fd578b904746c5b0d0c93eb7084aff654c72a0476cab00ba6f94",
+        "filename": "KQQvK.rtbz",
+        "bytes": 25936,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQvK.rtbz",
+        "published_cityhash": "29ff276c0dd3e18d72cf33e4fa47d8a9",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKB.rtbw",
+        "sha256": "69dc44d0225d6dcac45ed8894231226b66c58c6d81750658c2abbc1d807645af",
+        "filename": "KQQvKB.rtbw",
+        "bytes": 32976,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQvKB.rtbw",
+        "published_cityhash": "7a8c5dd524ae329375cd28a4d6aac49a",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKB.rtbz",
+        "sha256": "74f75b51638226355cf2add049fa313f9dba241c1013a177bc27c5e0c53e68ba",
+        "filename": "KQQvKB.rtbz",
+        "bytes": 1086480,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQvKB.rtbz",
+        "published_cityhash": "0c83247dbdf060745274dc0243128aa9",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKN.rtbw",
+        "sha256": "c2f58c4c633002adbc2b678034f594f53e1cd962af3bac19f55fed071f08708f",
+        "filename": "KQQvKN.rtbw",
+        "bytes": 63952,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQvKN.rtbw",
+        "published_cityhash": "759f5b2b22cb1b3158ce134f25787ed1",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKN.rtbz",
+        "sha256": "0f60d7fdf0726872c9bf52b62e095ae2ce0bc13bb1c0393ad56141adb77e2739",
+        "filename": "KQQvKN.rtbz",
+        "bytes": 1028688,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQvKN.rtbz",
+        "published_cityhash": "b97def864be70cb96020cd7429ce0ee7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKP.rtbw",
+        "sha256": "9283d9e1976100bea0ba2e69ee876e6557cbf006a45fa5ef718c68e05a757219",
+        "filename": "KQQvKP.rtbw",
+        "bytes": 372240,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQvKP.rtbw",
+        "published_cityhash": "14564d216da2fbcf1512373ab890c2c3",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKP.rtbz",
+        "sha256": "cf99d92ff142232a3390ea2729b92abe0fbaf214bdad4e50721b1d009b458bca",
+        "filename": "KQQvKP.rtbz",
+        "bytes": 1878992,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQvKP.rtbz",
+        "published_cityhash": "1bd8e4258b180c5bb4181af4d8c3cab7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKQ.rtbw",
+        "sha256": "bd880dd7c3d00a6554910afa20fe24455ff08c17f2ef09934dee3ba58c5884c9",
+        "filename": "KQQvKQ.rtbw",
+        "bytes": 666832,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQvKQ.rtbw",
+        "published_cityhash": "5c437d52c07aa3812e3078793baec738",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKQ.rtbz",
+        "sha256": "a9f8681bddf4c6e5d6f66eda13b4c7a10840cf6d37d3320730fbabcdbcc42b11",
+        "filename": "KQQvKQ.rtbz",
+        "bytes": 2793424,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQvKQ.rtbz",
+        "published_cityhash": "956b37275fa6cc0b6c5d0c0632eca421",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKR.rtbw",
+        "sha256": "2db252d946ebee6bc5f4d07e046319c2e0e73df9b6ac876d8441f4065240e983",
+        "filename": "KQQvKR.rtbw",
+        "bytes": 82256,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQQvKR.rtbw",
+        "published_cityhash": "9ea8d8bdfe7bd6ff8c14d9c8193f35d2",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQQvKR.rtbz",
+        "sha256": "eb820d67d0fa1a44e363ca89880b9c4137699852e46b2943067dec0bf5e5a078",
+        "filename": "KQQvKR.rtbz",
+        "bytes": 1261584,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQQvKR.rtbz",
+        "published_cityhash": "671a0ca64b208f0f1066f507357e9d4d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRBvK.rtbw",
+        "sha256": "c52c35f4a15ab23c3601e463713de00380fd8059e2b9c46cb505a4d29921330a",
+        "filename": "KQRBvK.rtbw",
+        "bytes": 280720,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRBvK.rtbw",
+        "published_cityhash": "35daa17904dca38d7c794d6f0461025c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRBvK.rtbz",
+        "sha256": "5a074ecde14b14e04ee4f6347ad22c3e7034881c58dd8f1b91a5f938fd4eb463",
+        "filename": "KQRBvK.rtbz",
+        "bytes": 2226576,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRBvK.rtbz",
+        "published_cityhash": "503cbdbcb3f454dd804669066f92036c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRNvK.rtbw",
+        "sha256": "11b12579d6046e97b70f665afe83435b44c66d08aa63b78ea5966b972512cb4c",
+        "filename": "KQRNvK.rtbw",
+        "bytes": 211920,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRNvK.rtbw",
+        "published_cityhash": "c328e103836246928d6fef2c28bf1aab",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRNvK.rtbz",
+        "sha256": "538cb3654975b2e3d411811d1456d60e4ec592833ed9855afa227755960c6ae4",
+        "filename": "KQRNvK.rtbz",
+        "bytes": 2435344,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRNvK.rtbz",
+        "published_cityhash": "d3f5af2faa5702bb5d65837ef9790eb3",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRPvK.rtbw",
+        "sha256": "be2bf974b76b27eb5285b5aea725011d39962a83e1fd756681e2c996df19b0f8",
+        "filename": "KQRPvK.rtbw",
+        "bytes": 907600,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRPvK.rtbw",
+        "published_cityhash": "04d83759a1026eac3cb3cf8ec899fd36",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRPvK.rtbz",
+        "sha256": "c356d6ce4e0ef3bb31177d2b5318b0405f7f26ec002ce4b72bce799053b61f69",
+        "filename": "KQRPvK.rtbz",
+        "bytes": 1170832,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRPvK.rtbz",
+        "published_cityhash": "f49d0ac91e50596c8090184ca7079243",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRRvK.rtbw",
+        "sha256": "78d3186bf54ff95bbcfcc351b82afb4b8a9eebe98af6298fbbe1a03e8ea42ec5",
+        "filename": "KQRRvK.rtbw",
+        "bytes": 200528,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRRvK.rtbw",
+        "published_cityhash": "10e3e259c09b66b48dce634d6af80832",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRRvK.rtbz",
+        "sha256": "a12828c2fd356d4d29f5a2fb141485e5b485e05d09d254e3bf497499d80b7e56",
+        "filename": "KQRRvK.rtbz",
+        "bytes": 880848,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRRvK.rtbz",
+        "published_cityhash": "6e24af14e5b122e7e203f08b819ed744",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvK.rtbw",
+        "sha256": "b018ece9cc195618981b027268f9cca929a1ed4c0bdd739874b7846640ef479a",
+        "filename": "KQRvK.rtbw",
+        "bytes": 4560,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRvK.rtbw",
+        "published_cityhash": "c44670b6146a4dc2c08acb47e49b2ed1",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvK.rtbz",
+        "sha256": "9766d3e684582297943583e1981154609655034cea2aa78a5494cc01c8c6bcee",
+        "filename": "KQRvK.rtbz",
+        "bytes": 44112,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRvK.rtbz",
+        "published_cityhash": "1aebce5058a9bc16611934662bb04323",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKB.rtbw",
+        "sha256": "ab5023be19f46f11512c662683d33d1558e7f5a952607eb34732ebaa53d96b77",
+        "filename": "KQRvKB.rtbw",
+        "bytes": 159568,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRvKB.rtbw",
+        "published_cityhash": "f586707360fc7ea2a9271990c17d474d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKB.rtbz",
+        "sha256": "3b2746155e587842d0ff4bc912c7ce1a4c5b002065cf4cf5d0dab39a4c38257a",
+        "filename": "KQRvKB.rtbz",
+        "bytes": 2664848,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRvKB.rtbz",
+        "published_cityhash": "6e0544a3d584502cbbeb1b016a1d6c8c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKN.rtbw",
+        "sha256": "058d1767444c0a989b0be56b81045f6a86280c646d360721cd5dcf260f85e612",
+        "filename": "KQRvKN.rtbw",
+        "bytes": 250832,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRvKN.rtbw",
+        "published_cityhash": "b3618e6fd1cdb418a62a88fc722f20b4",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKN.rtbz",
+        "sha256": "2311557047c0bd2e6e0ce7ced73296d7a2c514d4426ac4e36ad09f6ede6d02f4",
+        "filename": "KQRvKN.rtbz",
+        "bytes": 1878608,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRvKN.rtbz",
+        "published_cityhash": "249aac92b94293baf561c05f4b4d857e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKP.rtbw",
+        "sha256": "de4831fe8452ccaee6833bf1fb278f0a1f4a080efc5fc3a5be2e907c3e5ded12",
+        "filename": "KQRvKP.rtbw",
+        "bytes": 984976,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRvKP.rtbw",
+        "published_cityhash": "110fd7b4ad872e96a008ac97bb7c4fe1",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKP.rtbz",
+        "sha256": "e0f50631279f15747258a6eae6d0be3a7a150c019d6917f6a09610a2b5ab2250",
+        "filename": "KQRvKP.rtbz",
+        "bytes": 4687056,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRvKP.rtbz",
+        "published_cityhash": "fb38e6ee887700ebe2d7cefdf2058f85",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKQ.rtbw",
+        "sha256": "3738e2ced259adc3c463a741765bb7f3557e64957225c52c5773be73c8763006",
+        "filename": "KQRvKQ.rtbw",
+        "bytes": 3095888,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRvKQ.rtbw",
+        "published_cityhash": "d84e64e4795cb492ee794127e95ddb93",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKQ.rtbz",
+        "sha256": "04d24dd8afc772d4151e9b4b181d29874e465982871fbc418d07b99f65224899",
+        "filename": "KQRvKQ.rtbz",
+        "bytes": 9245968,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRvKQ.rtbz",
+        "published_cityhash": "67f894380070bf0981f73ccaabf8687e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKR.rtbw",
+        "sha256": "13477ef681468dfb19d09ab8dbeb08d259f9db57a6e5e2c7cdb902880fc2166b",
+        "filename": "KQRvKR.rtbw",
+        "bytes": 279824,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQRvKR.rtbw",
+        "published_cityhash": "c92f6db50c3dae81c8e1c227131e208c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQRvKR.rtbz",
+        "sha256": "6ed2eba7b9d5b7813a30751a0e1dd3561e499c1ffe76b5de98ea7ad5b006fdbd",
+        "filename": "KQRvKR.rtbz",
+        "bytes": 3421968,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQRvKR.rtbz",
+        "published_cityhash": "205ff93e24d8444c330c892eb6025c16",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvK.rtbw",
+        "sha256": "517667dff787162dbb1ed9d5d6484d30ee854e686ee0675c08d99ecf045d2d50",
+        "filename": "KQvK.rtbw",
+        "bytes": 272,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQvK.rtbw",
+        "published_cityhash": "af0d561da4523cb21a8cf05e9bc5cc6e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvK.rtbz",
+        "sha256": "71ea9444fa5bd42897d781a0c356975ea6f23e0f65a4254e470897031c161c8c",
+        "filename": "KQvK.rtbz",
+        "bytes": 5392,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQvK.rtbz",
+        "published_cityhash": "c51fa4b08478f04272ec668ce70d6ca7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKB.rtbw",
+        "sha256": "0c18bbcaec0e7c161d56392ff57a39258dd93acd0321e3bbb32f7c05636abeac",
+        "filename": "KQvKB.rtbw",
+        "bytes": 6672,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQvKB.rtbw",
+        "published_cityhash": "67814033b8dfbb2d1763e477f9e735ce",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKB.rtbz",
+        "sha256": "a63befd64dbd1aab4e8b290da558fa1ccae21d7aebad81966a7cdd6ac8432554",
+        "filename": "KQvKB.rtbz",
+        "bytes": 195216,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQvKB.rtbz",
+        "published_cityhash": "8210ba4ad1615a09696e732a0cd4a025",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKN.rtbw",
+        "sha256": "ba07bd47c6eaa20904b595f43e171c6fc70fcc056cb33696fe12ed254c546100",
+        "filename": "KQvKN.rtbw",
+        "bytes": 10064,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQvKN.rtbw",
+        "published_cityhash": "d70c73199e5966591d673d5a6fea7552",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKN.rtbz",
+        "sha256": "0e99385bbd903975f8511751379079aa3b6663dd093f43b9ac951a97bd938371",
+        "filename": "KQvKN.rtbz",
+        "bytes": 162640,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQvKN.rtbz",
+        "published_cityhash": "93190fa62b5e29f11200670810c92666",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKP.rtbw",
+        "sha256": "2f92788170e8a5c05608f44a47fd42f3f4fff372d0af64633c56bd081039d8f9",
+        "filename": "KQvKP.rtbw",
+        "bytes": 58064,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQvKP.rtbw",
+        "published_cityhash": "7cbb934c70e3ebab255199dc68c96690",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKP.rtbz",
+        "sha256": "faedb2db23be6619a57cd21c1291582bba9ddae30c5a394f5d4a7ab834a3940f",
+        "filename": "KQvKP.rtbz",
+        "bytes": 205776,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQvKP.rtbz",
+        "published_cityhash": "ccb559befcf80b7e63e5e804da5bf33e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKQ.rtbw",
+        "sha256": "571a85d86e635e48567997ea648fd1e90dde39c9b413b2fe968f5e7faeacfbb0",
+        "filename": "KQvKQ.rtbw",
+        "bytes": 16528,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQvKQ.rtbw",
+        "published_cityhash": "bef44c115ac8cc8b1cb8292b021c62dd",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKQ.rtbz",
+        "sha256": "98327247ba50c403199faec4df4a5f21e333c5c51b6ea2649ef9fd71264f8344",
+        "filename": "KQvKQ.rtbz",
+        "bytes": 6736,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQvKQ.rtbz",
+        "published_cityhash": "d3449ba56b4a43aa3532529ae0504e77",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKR.rtbw",
+        "sha256": "8cdbe3c8e098037875de5854c656f8afeadb8327c85b5b7b1cac81719afd3e2c",
+        "filename": "KQvKR.rtbw",
+        "bytes": 20496,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KQvKR.rtbw",
+        "published_cityhash": "a559e2154b6f9d4f21597fc3e20c36b2",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KQvKR.rtbz",
+        "sha256": "0c15a2aaa3bdef39da4c26932006b5d38b55b8e3ad13e8a44815d63f84738618",
+        "filename": "KQvKR.rtbz",
+        "bytes": 309008,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KQvKR.rtbz",
+        "published_cityhash": "9ab3ebd50443b9e9a930358658cfe83f",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBBvK.rtbw",
+        "sha256": "8bbab41bc644ca3dcaffda422760e8fea9eafa17aaac9f308924dcb61e7d9193",
+        "filename": "KRBBvK.rtbw",
+        "bytes": 134416,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRBBvK.rtbw",
+        "published_cityhash": "69f86982b070543d4e5dd3f7721ffc13",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBBvK.rtbz",
+        "sha256": "15c0fd54c4122f76541c841083447485f7f70882cf05e92955e10f25654ffb39",
+        "filename": "KRBBvK.rtbz",
+        "bytes": 6354384,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRBBvK.rtbz",
+        "published_cityhash": "32ca770f2e4e00eb95fb80d3a9c5b2a5",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBNvK.rtbw",
+        "sha256": "ffced73a23f854ea56ff2167dc6587f0e10fd0cdb2ed2326fcded1e722c1b5ad",
+        "filename": "KRBNvK.rtbw",
+        "bytes": 207696,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRBNvK.rtbw",
+        "published_cityhash": "926b5d99bc6987d97dc951a26a8c24bd",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBNvK.rtbz",
+        "sha256": "8b05dbb303d80244780b3d38ea0b553c5c6648d18629dbce23ad2c7c702cbc65",
+        "filename": "KRBNvK.rtbz",
+        "bytes": 9500944,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRBNvK.rtbz",
+        "published_cityhash": "6643520d61e8d83006bde9fcdfdaa086",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBPvK.rtbw",
+        "sha256": "ceccd1fd458329e605fc217cdfce7be5819a11a30b4a5dee691aee88357b5816",
+        "filename": "KRBPvK.rtbw",
+        "bytes": 531600,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRBPvK.rtbw",
+        "published_cityhash": "49733d63b5fbdf90bb0a7d066f6d724e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBPvK.rtbz",
+        "sha256": "a83fed6c6846015ad0bf5b19bc4ea4a2908446b87912e05bf65d94e5affa3e7c",
+        "filename": "KRBPvK.rtbz",
+        "bytes": 951632,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRBPvK.rtbz",
+        "published_cityhash": "a34592083c50eace63563958431d9ed9",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvK.rtbw",
+        "sha256": "9e6eced11a37cad71b4fc1a4f62a15e191e58883b51ce8c4c45f341051c6ae8e",
+        "filename": "KRBvK.rtbw",
+        "bytes": 2832,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRBvK.rtbw",
+        "published_cityhash": "f79e38334bf75a20abbf940ec65ba63c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvK.rtbz",
+        "sha256": "e3bb6fbd54a57a154136ecee763a8e9862d8ab3f57b2f55387df70bdbff1b140",
+        "filename": "KRBvK.rtbz",
+        "bytes": 261776,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRBvK.rtbz",
+        "published_cityhash": "818d893c77de2e6137fec1304ba72cff",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKB.rtbw",
+        "sha256": "9cbffc86819ab7cc80d7f5d7c60c7cdd1065376a34a0c498cd4e651a863db8bb",
+        "filename": "KRBvKB.rtbw",
+        "bytes": 916624,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRBvKB.rtbw",
+        "published_cityhash": "b7b549ab560d0683d6940b31dc2eca06",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKB.rtbz",
+        "sha256": "efd76df66d52813fe3a824a116a07d6ab43c8fa19bbe91d624e4f7a0834d5e04",
+        "filename": "KRBvKB.rtbz",
+        "bytes": 20128272,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRBvKB.rtbz",
+        "published_cityhash": "fb3431aadb257a9a93e6bed124f176fe",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKN.rtbw",
+        "sha256": "869afe56aba617b54e7d07d5a1b7a72cb631211eb91e84dd80cf73bb45118938",
+        "filename": "KRBvKN.rtbw",
+        "bytes": 998224,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRBvKN.rtbw",
+        "published_cityhash": "31eb8255d13db666295a0853fec73f2f",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKN.rtbz",
+        "sha256": "a41dab2e27d469aaf4b84a86ecfa964020720125d7a10dda77451aafa1f1da7d",
+        "filename": "KRBvKN.rtbz",
+        "bytes": 17507152,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRBvKN.rtbz",
+        "published_cityhash": "5c2cc4b345d5e840fc1a3d3c4ab1c1b3",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKP.rtbw",
+        "sha256": "3b9a53fa5b80941dc45811e6d8b435f240217aa8f83aea1832ce5f2a9c92530c",
+        "filename": "KRBvKP.rtbw",
+        "bytes": 5300624,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRBvKP.rtbw",
+        "published_cityhash": "7d7e545b3a3c3728912a5644a60cf801",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKP.rtbz",
+        "sha256": "0aec14e939e2a86f8fe40092a0bd49e6f35bb402a46ea90ab4176b08245a2bd6",
+        "filename": "KRBvKP.rtbz",
+        "bytes": 9324304,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRBvKP.rtbz",
+        "published_cityhash": "afd5fb5f64f87541673658dd062c7316",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKQ.rtbw",
+        "sha256": "541a805030831ecfcaa2d864664c7112eeb580d576095a5c593466bc7d483584",
+        "filename": "KRBvKQ.rtbw",
+        "bytes": 9588688,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRBvKQ.rtbw",
+        "published_cityhash": "a78865b5d54d0f1012de47ba06113090",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKQ.rtbz",
+        "sha256": "58f2aec5536e8caf149428bb49b3d5691e1c6464706231749354b53d3a1eab52",
+        "filename": "KRBvKQ.rtbz",
+        "bytes": 5323152,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRBvKQ.rtbz",
+        "published_cityhash": "65d188cf3b0e536bd5b92bbbc4b4ee7c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKR.rtbw",
+        "sha256": "6343cff1ca9d4026aed57ede37ebd29004d11c9d8ec932351b04b4e8018ce8b9",
+        "filename": "KRBvKR.rtbw",
+        "bytes": 2035280,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRBvKR.rtbw",
+        "published_cityhash": "c94340e54cd7f53125d46fd199fbeac1",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRBvKR.rtbz",
+        "sha256": "e6ee6691bde20eceedd44b26adab5b3328d9ca758153693775b65d3a51ae11cb",
+        "filename": "KRBvKR.rtbz",
+        "bytes": 575440,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRBvKR.rtbz",
+        "published_cityhash": "3747f83c9919d5a8e3406b25ae7e0423",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNNvK.rtbw",
+        "sha256": "afa69a9d9b6eb4e0fc1cced7bc833e7510e931cccf504d0c2239b2e7e0ea7e83",
+        "filename": "KRNNvK.rtbw",
+        "bytes": 98832,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRNNvK.rtbw",
+        "published_cityhash": "3afcabf83c525ab4d664959938108559",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNNvK.rtbz",
+        "sha256": "3f3bd09c45a3e8aa2c38778ca1217d318094a0d53991032729b7ef1b1c22695b",
+        "filename": "KRNNvK.rtbz",
+        "bytes": 6841744,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRNNvK.rtbz",
+        "published_cityhash": "2ddb0d5385eb5042a01c967a6c31bb9e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNPvK.rtbw",
+        "sha256": "12bea6de248953ef1bb5a1439f9038037adf8d55abc075bd304de18d909e5425",
+        "filename": "KRNPvK.rtbw",
+        "bytes": 506960,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRNPvK.rtbw",
+        "published_cityhash": "2b0cc20a4912752e05ff78cf81e2c61c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNPvK.rtbz",
+        "sha256": "ced188d5a049b949a783ae4990dabf201582f618b9f2051a53c7fa5b17f32bad",
+        "filename": "KRNPvK.rtbz",
+        "bytes": 810960,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRNPvK.rtbz",
+        "published_cityhash": "2f05b44c197521fb3925a5151c191cc7",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvK.rtbw",
+        "sha256": "4f96cab9fc0005f2679eacb92cec32edf9c932db7bb29b5dc7659be0012d6c35",
+        "filename": "KRNvK.rtbw",
+        "bytes": 2320,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRNvK.rtbw",
+        "published_cityhash": "db1301ac142efac26d3cffa550325c27",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvK.rtbz",
+        "sha256": "150b85874a78474a38d0f36f1ab39d387f524a1c2092ad92d3d0945d96c17d16",
+        "filename": "KRNvK.rtbz",
+        "bytes": 295632,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRNvK.rtbz",
+        "published_cityhash": "f2ba04ea762c4b8edd91df1095bfd56f",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKB.rtbw",
+        "sha256": "84571b99689863068214a49bf2ed833ed0bdec029ffd5e207932c128b512e3de",
+        "filename": "KRNvKB.rtbw",
+        "bytes": 1607824,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRNvKB.rtbw",
+        "published_cityhash": "068c4a45f71e12a845111816ebf4bfcb",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKB.rtbz",
+        "sha256": "4df72402c57e5a85f8a5b5c10bca2d8c53b5fc21bbc5fae9bd3c7325b6f834ea",
+        "filename": "KRNvKB.rtbz",
+        "bytes": 21521616,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRNvKB.rtbz",
+        "published_cityhash": "27f9f26f3fa909bc266f3b69754b575a",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKN.rtbw",
+        "sha256": "79007b3079c72841fd5b14913a811681e4a504d2aea64d5dd126f8f8af3c25df",
+        "filename": "KRNvKN.rtbw",
+        "bytes": 691728,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRNvKN.rtbw",
+        "published_cityhash": "9828e7cb6355be1c5c0dd534f21d1b61",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKN.rtbz",
+        "sha256": "d0ed1e387c7b9106effd5ef5adcf60dc7cc60429b591f666e5f64adb820fdfa3",
+        "filename": "KRNvKN.rtbz",
+        "bytes": 21964816,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRNvKN.rtbz",
+        "published_cityhash": "86b892caf3c7cbb8909fde610cfc3aef",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKP.rtbw",
+        "sha256": "028e65440f9517174cb6d8780a511cf96a4e9c4fb1d117db2fc47fbb51e51cbc",
+        "filename": "KRNvKP.rtbw",
+        "bytes": 6367376,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRNvKP.rtbw",
+        "published_cityhash": "ea57cc946dbab01c814ac55f3164a97e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKP.rtbz",
+        "sha256": "2927ecb33f952f446998301ae1cd09a886cb7af748d140f298d85483e02ef18f",
+        "filename": "KRNvKP.rtbz",
+        "bytes": 9350416,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRNvKP.rtbz",
+        "published_cityhash": "fd988d55e02a565b8818b6cf569721f8",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKQ.rtbw",
+        "sha256": "ddc1cc6873cc88f0c1f07ec035fe19e971a661281942694e2271cbe2d9b7a173",
+        "filename": "KRNvKQ.rtbw",
+        "bytes": 8863888,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRNvKQ.rtbw",
+        "published_cityhash": "c9cab5c2bb9fd428b8982d091cad9900",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKQ.rtbz",
+        "sha256": "f285654cbf89975760b29af8eb6e55ae0b2f9dba256579e7f659db51af0ed2e2",
+        "filename": "KRNvKQ.rtbz",
+        "bytes": 6803856,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRNvKQ.rtbz",
+        "published_cityhash": "239db89cd3e90c7452af655f28e67c11",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKR.rtbw",
+        "sha256": "163432941d6f625c093c7291d2045453f712435e906e9d91d371105da96f97c4",
+        "filename": "KRNvKR.rtbw",
+        "bytes": 1491856,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRNvKR.rtbw",
+        "published_cityhash": "624257762a14b51847e8c14fd6bbd8f4",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRNvKR.rtbz",
+        "sha256": "4183e43f92e4ea0126028acc59b991b36dabdf944d53a61e9e7367374aebbe06",
+        "filename": "KRNvKR.rtbz",
+        "bytes": 287632,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRNvKR.rtbz",
+        "published_cityhash": "e17c6fe04d71ea6c341aa5df7ec06697",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPPvK.rtbw",
+        "sha256": "561f56f2b6010123b167e49f36be84a2d16037e4609d328ffe84f17e96107c8d",
+        "filename": "KRPPvK.rtbw",
+        "bytes": 165072,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRPPvK.rtbw",
+        "published_cityhash": "7d1112a58006a1256b978a2bb6cb5f68",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPPvK.rtbz",
+        "sha256": "0f003498032136f34585ba1f2a1722497ea1ee9c890b19657256fbb10ecbf843",
+        "filename": "KRPPvK.rtbz",
+        "bytes": 171408,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRPPvK.rtbz",
+        "published_cityhash": "d084c65cc2e91060ee64f5d6195f2e1e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvK.rtbw",
+        "sha256": "6bc2aa9db5ee7fcc287e6c3b006ab6cfc2be4dff4ae7ca4a524a78520eea61db",
+        "filename": "KRPvK.rtbw",
+        "bytes": 5136,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRPvK.rtbw",
+        "published_cityhash": "569ce2d76171513ddaa1f749d081c994",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvK.rtbz",
+        "sha256": "5c89c9ef70c144bb2d6d823a41668ccf2f79b486b6bc128ff01aadb5485c06a9",
+        "filename": "KRPvK.rtbz",
+        "bytes": 12944,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRPvK.rtbz",
+        "published_cityhash": "cdf66f526890d211400e2239ea290f50",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKB.rtbw",
+        "sha256": "ee49cf329f6e27f328e7119955a309432f697c352e2f13a7c222cd40b57d0333",
+        "filename": "KRPvKB.rtbw",
+        "bytes": 9939984,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRPvKB.rtbw",
+        "published_cityhash": "1b33d7fa0204c04198533498fd9a6b30",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKB.rtbz",
+        "sha256": "3bba6cfa701c669a662f2bc47050f3595bab291a1ea451346908e2d840225785",
+        "filename": "KRPvKB.rtbz",
+        "bytes": 15630032,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRPvKB.rtbz",
+        "published_cityhash": "11e7240947019ac69df8503ee75a4898",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKN.rtbw",
+        "sha256": "47bb79218777b0869509fc75e0c1d0f2998b271c5e7ba28cb3d81d200211e88b",
+        "filename": "KRPvKN.rtbw",
+        "bytes": 9449680,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRPvKN.rtbw",
+        "published_cityhash": "f9e616a1ed7857f3e37097f418ff332a",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKN.rtbz",
+        "sha256": "9e1097055226023284c6f12672fb77d52aad9513e83cf42dc5d52260f05b1f55",
+        "filename": "KRPvKN.rtbz",
+        "bytes": 12376144,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRPvKN.rtbz",
+        "published_cityhash": "a302375fea4bc00fb6a43358506ea2ab",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKP.rtbw",
+        "sha256": "6f4b45ecbdc32a6ac9af6cb9e1f414e3acbf0453709367e76ce360c07ac8865c",
+        "filename": "KRPvKP.rtbw",
+        "bytes": 4446224,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRPvKP.rtbw",
+        "published_cityhash": "88acfd00293fa0b585fe95654ac6cb04",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKP.rtbz",
+        "sha256": "5b9083cae4407996537314a08ee25f41589b4f211b8f3133ee53a4defb69ed62",
+        "filename": "KRPvKP.rtbz",
+        "bytes": 1408272,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRPvKP.rtbz",
+        "published_cityhash": "f20d2a5710466b6b90b033f87659062e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKQ.rtbw",
+        "sha256": "b52ff54317b258fcf5184d2eb3d8b98e7b6c380bce8134375e606f92a68b0b79",
+        "filename": "KRPvKQ.rtbw",
+        "bytes": 17606928,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRPvKQ.rtbw",
+        "published_cityhash": "0ab5eb70732dd0a7832372b8e9d8d97d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKQ.rtbz",
+        "sha256": "279795c5cb5552f3fe1add5e61a16fc81162c5fa802eb14ce1873d9cbd51f9cb",
+        "filename": "KRPvKQ.rtbz",
+        "bytes": 31920016,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRPvKQ.rtbz",
+        "published_cityhash": "7d247cad8fd367d4d680e91bcd7948b2",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKR.rtbw",
+        "sha256": "1100e6deaee14ca9a56b69441208462c02ef45b3f56daa3d75f687eb5cf12319",
+        "filename": "KRPvKR.rtbw",
+        "bytes": 16378576,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRPvKR.rtbw",
+        "published_cityhash": "128467234e544d83dd0e3057058e2ea3",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRPvKR.rtbz",
+        "sha256": "184ce33fa4dcfa931f7a3b9955662e166287ec203224ae9681d527d3b8cd9c6f",
+        "filename": "KRPvKR.rtbz",
+        "bytes": 13725456,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRPvKR.rtbz",
+        "published_cityhash": "3ca9b954b05bcdb777877d435fab781a",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRBvK.rtbw",
+        "sha256": "717d76f2e51cbade41438cbd4ef5904363c562db69035bb6f5f9dbc9b210b4b4",
+        "filename": "KRRBvK.rtbw",
+        "bytes": 159504,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRBvK.rtbw",
+        "published_cityhash": "0968f65dcad88c8546d56ba00b49e6e2",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRBvK.rtbz",
+        "sha256": "b5f0c7e58d9b5a3957221257b89437dc3f0681c41266038b10a1dff13bedc12f",
+        "filename": "KRRBvK.rtbz",
+        "bytes": 2703248,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRBvK.rtbz",
+        "published_cityhash": "f2fded97da3604c580e9a422ee2d49f9",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRNvK.rtbw",
+        "sha256": "b50e49e02022bcb5ded7604bce3e092fd47ee80c05462c86c7c9b098061b32a7",
+        "filename": "KRRNvK.rtbw",
+        "bytes": 100624,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRNvK.rtbw",
+        "published_cityhash": "3694eb78451545ebab5c4aab4b5eaf52",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRNvK.rtbz",
+        "sha256": "b85cafc7a794a46ce74441dbdb4090b963622811ea2a7d6652404773f8ead07e",
+        "filename": "KRRNvK.rtbz",
+        "bytes": 2725776,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRNvK.rtbz",
+        "published_cityhash": "a9e5fd560050284900a1d5194039baa1",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRPvK.rtbw",
+        "sha256": "7fd369c1a14fb57437548e5dfcd948c998a7b8f92294349bb1d7083e26a12e52",
+        "filename": "KRRPvK.rtbw",
+        "bytes": 241872,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRPvK.rtbw",
+        "published_cityhash": "9b6a4283f7310eba27f17146f0a1f3cd",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRPvK.rtbz",
+        "sha256": "51474672d81c3139b2d06ba92a418489e4a230b5f7b9ba58ac4d73e3616e9dd0",
+        "filename": "KRRPvK.rtbz",
+        "bytes": 630032,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRPvK.rtbz",
+        "published_cityhash": "f92ee6ff367c396146b55a8e6b9401cf",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRRvK.rtbw",
+        "sha256": "f7eb29254ecf4f2038a78154dad1ad24ac9809215b608e27b8381618301cc515",
+        "filename": "KRRRvK.rtbw",
+        "bytes": 54800,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRRvK.rtbw",
+        "published_cityhash": "623028d0956fa8fbd2dc07618f4e12e6",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRRvK.rtbz",
+        "sha256": "69c374c97c61526bb9bcba2cec53b027aa6c17a7ec89e58e0138a4a5ba31af26",
+        "filename": "KRRRvK.rtbz",
+        "bytes": 561488,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRRvK.rtbz",
+        "published_cityhash": "879c8f84839ebe510ae4d54db522d568",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvK.rtbw",
+        "sha256": "4c05ec32e6e43b690d235307de75432a3ceecdbc3d2659d8101ed15b48b8445d",
+        "filename": "KRRvK.rtbw",
+        "bytes": 1936,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRvK.rtbw",
+        "published_cityhash": "6084d485d555eb716d0fb1b3860d0282",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvK.rtbz",
+        "sha256": "e68314e00bf9f16122005a06f7d42bc0f6c682f30e8ca50532ba44444f3b96ce",
+        "filename": "KRRvK.rtbz",
+        "bytes": 53520,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRvK.rtbz",
+        "published_cityhash": "706fd9c3ba4c539aa413aeb0bd7a9809",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKB.rtbw",
+        "sha256": "a3e15ef75b4a8a1a00bc1678124b464dbe22006e1565a855de2b3b4ad2844c10",
+        "filename": "KRRvKB.rtbw",
+        "bytes": 351376,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRvKB.rtbw",
+        "published_cityhash": "3ea9948843579e8cafcca081865be99a",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKB.rtbz",
+        "sha256": "233342cb87d339b1abbf553952a62e28525faa9bfdfe8a59c14ec5ab8640cdaa",
+        "filename": "KRRvKB.rtbz",
+        "bytes": 4341328,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRvKB.rtbz",
+        "published_cityhash": "1fc169defb6c8e5127336ce99c82023e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKN.rtbw",
+        "sha256": "3715b135ba7e5dcf20d112962a521e16763bf338ede2b9a882191519ac53efaf",
+        "filename": "KRRvKN.rtbw",
+        "bytes": 286288,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRvKN.rtbw",
+        "published_cityhash": "1c5b0736dacf95bc6b920104110261ab",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKN.rtbz",
+        "sha256": "6821905c55f5e810b42109e8230adb61fbae3584f8c430b2981e139a8b4503dc",
+        "filename": "KRRvKN.rtbz",
+        "bytes": 3313680,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRvKN.rtbz",
+        "published_cityhash": "51c0997dda83bc48ba4a7db534e823bf",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKP.rtbw",
+        "sha256": "904401f0e99a5a54e0b48c8a581288633741471905d818db90a5195ace1dcc33",
+        "filename": "KRRvKP.rtbw",
+        "bytes": 1680272,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRvKP.rtbw",
+        "published_cityhash": "6954568f6a22244b5f186f41998be95c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKP.rtbz",
+        "sha256": "7a55a0a5c5a1876e7984a40a787280c2503d478c871f9cf8a6ef63398493bdae",
+        "filename": "KRRvKP.rtbz",
+        "bytes": 1885520,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRvKP.rtbz",
+        "published_cityhash": "d1d3a77d9cfc5b56bfee42dbc3b4483f",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKQ.rtbw",
+        "sha256": "19d0db863f9ca9084566b675e41ef3408df17a7592f79932259034864e343443",
+        "filename": "KRRvKQ.rtbw",
+        "bytes": 4068432,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRvKQ.rtbw",
+        "published_cityhash": "dd8810a987fe4dcbe8456cc72f84eaec",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKQ.rtbz",
+        "sha256": "cdf27463db413413301fad386cb7324998af736ef1888be4e79aceb2d022209d",
+        "filename": "KRRvKQ.rtbz",
+        "bytes": 1127952,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRvKQ.rtbz",
+        "published_cityhash": "adfa646310009e60d45c0b9743d50476",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKR.rtbw",
+        "sha256": "7897a69c7ad337adc93aa39c9d22dcf1a5e215908437b36d92db5e4bebf9217e",
+        "filename": "KRRvKR.rtbw",
+        "bytes": 334224,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRRvKR.rtbw",
+        "published_cityhash": "14428b45668f3bdb7facce3a9d866c74",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRRvKR.rtbz",
+        "sha256": "dd0fe4d32ccbfc390e8d4468fa5a31484e26abdb45d712cdfe1b8b5fe0a05c14",
+        "filename": "KRRvKR.rtbz",
+        "bytes": 7700816,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRRvKR.rtbz",
+        "published_cityhash": "e0d530830a4aa8f7cba0546e01403ddd",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvK.rtbw",
+        "sha256": "386fbde73308e49a4207836922c68b30b664e83c5a37f7fa37305a15cd16f2f1",
+        "filename": "KRvK.rtbw",
+        "bytes": 208,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRvK.rtbw",
+        "published_cityhash": "81da63fe25b9ed66f459001558f83ca5",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvK.rtbz",
+        "sha256": "cab59f42e75c2a25da3939231850a79fa838593fff5c28d7772da92062ed965a",
+        "filename": "KRvK.rtbz",
+        "bytes": 7632,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRvK.rtbz",
+        "published_cityhash": "1df564d7e7056f15d9a1d776e8fe5884",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvKB.rtbw",
+        "sha256": "69b247cb390ffcd729cf5fe5c40f8a24803190bf67b108b8f05b8b08b26a6a72",
+        "filename": "KRvKB.rtbw",
+        "bytes": 32912,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRvKB.rtbw",
+        "published_cityhash": "751112b5b8e4d7a2c1dd8a7e437c9d53",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvKB.rtbz",
+        "sha256": "4fa644478a516e1425b22a740ddefc4d54e51298250b8208d26073df3638630b",
+        "filename": "KRvKB.rtbz",
+        "bytes": 9936,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRvKB.rtbz",
+        "published_cityhash": "a571bf1f5995f512d17843be314767ba",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvKN.rtbw",
+        "sha256": "a8cde902b010bf6c8763c97d19b5430b422e74db9cb8e9d5e67fa07373c13c5b",
+        "filename": "KRvKN.rtbw",
+        "bytes": 100048,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRvKN.rtbw",
+        "published_cityhash": "50aeaaf346a237d8be48b18c186bac1e",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvKN.rtbz",
+        "sha256": "c0df57d0b066cdd7be5bdf9b14745f6ead1fd8e9fba2b77fe0f3cb56ebef7ae0",
+        "filename": "KRvKN.rtbz",
+        "bytes": 93200,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRvKN.rtbz",
+        "published_cityhash": "9993860c9c1422e83a2474e94c38cc9c",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvKP.rtbw",
+        "sha256": "3968c2bfced3a5ecfbb54166ec13d4e7b70f3b03c495af4ae87cad2ec75a0749",
+        "filename": "KRvKP.rtbw",
+        "bytes": 179408,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRvKP.rtbw",
+        "published_cityhash": "ef10001a306b8f226db23b296b2b4d4b",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvKP.rtbz",
+        "sha256": "6d4b1389832854119df815ff89ed2cb0786e8887f000009f0db3484457f7f6ff",
+        "filename": "KRvKP.rtbz",
+        "bytes": 193424,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRvKP.rtbz",
+        "published_cityhash": "3ec7dd03aa7e10846e4a45c4588ad8b4",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvKR.rtbw",
+        "sha256": "797081b5b3fbac20c4baa5453d68bdae1425b63895f5c9a5ac5c68ea63a97712",
+        "filename": "KRvKR.rtbw",
+        "bytes": 12944,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-wdl/KRvKR.rtbw",
+        "published_cityhash": "7d73b0fd3cbd4490510c2c229eee3b8d",
+        "full_checksum_verified": true
+      },
+      {
+        "path": "/home/anjanrd/.local/share/lc0-int8/syzygy/KRvKR.rtbz",
+        "sha256": "c23fa5a0209204b847232ed49e079c099cf603b43d6ace9e27257793b1839850",
+        "filename": "KRvKR.rtbz",
+        "bytes": 3408,
+        "url": "https://tablebase.lichess.ovh/tables/standard/3-4-5-dtz/KRvKR.rtbz",
+        "published_cityhash": "0779bffa326eca37b0e242bc9ec89968",
+        "full_checksum_verified": true
+      }
+    ],
+    "total_bytes": 983957920,
+    "checksum_tool": {
+      "path": "/home/anjanrd/.local/share/lc0-int8/source/syzygy-tb/src/tbcheck",
+      "sha256": "0f15303de5caa067bed7f35aa2a5507ae14daa20bef2d857156f80500f721ce1"
+    },
+    "checksum_source_commit": "0bb8aeee525f364bb750f96df312a1a7c9b54398"
+  }
+}

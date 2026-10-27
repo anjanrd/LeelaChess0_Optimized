@@ -1,0 +1,18 @@
+{
+  "verified_at_utc": "2026-10-25T13:32:04.597327+00:00",
+  "status": "passed",
+  "onnxruntime": "1.22.0",
+  "graph_name": "org.lczero/converted",
+  "observed_cache_files": {
+    "default": [],
+    "safe_prefix": [
+      "step5_cache_probe_7366620638236205553_0_fp16_sm89.engine"
+    ]
+  },
+  "cause": "ORT 1.22 builds its default cache path from a fused node name containing the ONNX graph-name slash; missing intermediate directory makes ofstream writes fail without a success check. A filesystem-safe custom prefix saves the engine.",
+  "sources": [
+    "https://github.com/microsoft/onnxruntime/blob/v1.22.0/onnxruntime/core/providers/tensorrt/tensorrt_execution_provider_utils.h#L453",
+    "https://github.com/microsoft/onnxruntime/blob/v1.22.0/onnxruntime/core/providers/tensorrt/tensorrt_execution_provider.cc#L3221"
+  ],
+  "scope": "Synthetic controlled cache test only, not BT3 precision or speed evidence"
+}

@@ -1,0 +1,133 @@
+{
+  "frozen_at_utc": "2026-10-25T14:15:45.662062+00:00",
+  "status": "complete_with_documented_drift",
+  "engine_sha256": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+  "engine_path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/bt3-f16-4271981b85fb44dd.plan",
+  "baseline_ids": [
+    "R32_CUDA",
+    "F16_TRT"
+  ],
+  "two_baseline_definition": "unchanged",
+  "raw_confirmation_status": "failed",
+  "acceptance": "Explicit human acceptance, engine-specific; original bounds unchanged",
+  "artifacts": [
+    {
+      "relative_path": "environment/step5-baselines.json",
+      "sha256": "2c042207a36e5bd8ccc323b2eaf0fcff0462af5c6297622e639e6e292609b621"
+    },
+    {
+      "relative_path": "environment/step5-acceptance.json",
+      "sha256": "dcea38f581389cba3f692b20384c807fa992ec408a556640f9dfea395f48caac"
+    },
+    {
+      "relative_path": "environment/step5-engine.json",
+      "sha256": "250953e0ce50ee20198917fa06b759267e68eaecd08c0df800fff738c1026c99"
+    },
+    {
+      "relative_path": "environment/step5-precision.json",
+      "sha256": "f5ce3886c3690243e023aa81785ab885c3e5fdf4b714aa6ff76e67f672e5b69c"
+    },
+    {
+      "relative_path": "environment/step5-diagnosis.json",
+      "sha256": "828461e3b59cdcf0e79761f829dc86c11137224f1cc7fb919b23726827da41b0"
+    },
+    {
+      "relative_path": "environment/step5-confirmation.json",
+      "sha256": "6bab0ec51cd1f63ba53a3bf22b13f92d57f3aa7db585dca1c80178d8f8dba214"
+    },
+    {
+      "relative_path": "environment/step5-final-integrity.json",
+      "sha256": "7deb12037e16fc515f29bf0cc1c4e94feef882527f8512392200b7bcf194e34c"
+    },
+    {
+      "relative_path": "environment/step5-timing.json",
+      "sha256": "97f1a98869c8eaed629ab8a87c7cb3e20103dae7de7ed8ab0d334cc07578286a"
+    },
+    {
+      "relative_path": "environment/step5-tolerances.json",
+      "sha256": "9f1f32f4d4865c822850a94d20371a83b0d8f7b2d702d684f90f2266f1d04866"
+    },
+    {
+      "relative_path": "models/onnx/manifest.json",
+      "sha256": "b7a05290b1fbe652f84cc21e98a1c43e2a3a5cb2f7dfc5db769b0d08675b921b"
+    },
+    {
+      "relative_path": "data/pilot/exclusions.json",
+      "sha256": "49cad00eb4a6243be233ef9283cb88814e9d9cecd8b213d2d0ce9f9a0702f5f2"
+    },
+    {
+      "relative_path": "data/export-confirmation/exclusions.json",
+      "sha256": "da1c63e70699f72bbce81c3ca3248c291b1e41cdeafadfb1e9eb30eac378124f"
+    },
+    {
+      "relative_path": "data/export-confirmation/protocol.json",
+      "sha256": "6b905c4398f05da52afbbf8943e7f4314e5be993f0ef1af8bece54c33f410b55"
+    },
+    {
+      "relative_path": "scripts/export_step5.py",
+      "sha256": "baac0917c7b9a3c3b2c3d96977e3e35770f03bb887e200c5aaf5b6186025636c"
+    },
+    {
+      "relative_path": "scripts/step5_engine.py",
+      "sha256": "3cc145cfdb632926ef3e08caa4fe0ab2f1ae9417d903f28c6470fbbf9a900484"
+    },
+    {
+      "relative_path": "scripts/step5_precision.py",
+      "sha256": "373757a34318875d360f4cc1f47ffc80e30e7228222dbfc738f60d078c7daf9d"
+    },
+    {
+      "relative_path": "scripts/step5_numerics.py",
+      "sha256": "68953811e2c358853970157ce49e03654de031da09079dfe1bb3a569d1d33eba"
+    },
+    {
+      "relative_path": "scripts/finalize_step5.py",
+      "sha256": "d8269815818d941c612ad56f9110bab80c19f2734adb5b5e3848218bb12c9e27"
+    },
+    {
+      "relative_path": "scripts/lc0_inputs.py",
+      "sha256": "bdbedbd9e4af90e5f537b6a7b496ea08b6e8fa717e9f9f13b0aee31521089602"
+    },
+    {
+      "relative_path": "docs/experiment-contract.md",
+      "sha256": "c635d178daa3a9777a930db574749938d6d9899f540e94a99bc91da5850dc3a0"
+    },
+    {
+      "relative_path": "docs/onnx-validation.md",
+      "sha256": "bc8c31a03bfccb16e6455e289e8285d7365045ef28f993b616479c503dccd355"
+    },
+    {
+      "relative_path": "docs/environment.md",
+      "sha256": "117379d3d96d8b87719e11d50db58f1d9dd3bc587f39c7806fdf58d9b5138e3c"
+    }
+  ],
+  "runtime_assets": [
+    {
+      "path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/r32-kernels.json",
+      "sha256": "87151f88eda0ebb47c996c1e210dc660a45ec25230e3c3bb5459d5c4c311371c"
+    },
+    {
+      "path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/f16-kernels.json",
+      "sha256": "415321683681964dba8adb2036a95f6ce0969e0e3a7991ec208e2bdfcea1fc80"
+    },
+    {
+      "path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/engine-inspector.json",
+      "sha256": "27a690d69253221067def472000b55f45bdfb2ce864d8835e941b2aa29cbe480"
+    },
+    {
+      "path": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/r32-ort-provider_2026-10-25_19-09-55.json",
+      "sha256": "b2d8927fe80cbc314c5faa524c1f6e9beb3dd72dd20ac01178b58f26da15a9b3"
+    }
+  ],
+  "build_source_snapshot": "/home/anjanrd/.local/share/lc0-int8/step5-preserved/history/4271981b85fb44dd/step5_engine.py",
+  "timing_cache_matches_original_build": false,
+  "reproduce": "Reuse exact engine; python scripts/finalize_step5.py verify. Rebuilding can choose different tactics and invalidates this engine-specific acceptance.",
+  "later_final_test_exclusions": [
+    "data/pilot/exclusions.json",
+    "data/export-confirmation/exclusions.json"
+  ],
+  "limitations": [
+    "Pilot timing only; host/CUDA clock disagreement needs resolution before final absolute timing claims",
+    "No Syzygy accuracy, INT8, or MCTS results",
+    "Step 6 not started"
+  ]
+}

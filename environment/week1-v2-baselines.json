@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "report": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/baseline-accuracy.json",
+    "sha256": "1bbb321f8b344bc5ea581d3d2a035342782247cbae9e33c74947454c407554d7"
+  },
+  "FP16_use": "explicitly accepted with documented drift; raw failures retained",
+  "protocol": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/environment/week1-v2-protocol.json",
+    "sha256": "a74ed9fa46dad51aaf489c07445ea5883baac846eb56b84ff27cf5c2bc54ced3"
+  }
+}

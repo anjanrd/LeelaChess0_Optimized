@@ -1,0 +1,26 @@
+{
+  "declared_before_inference_utc": "2026-10-25T13:43:56.968463+00:00",
+  "seed": 20261025,
+  "positions": 128,
+  "material_side_counts": {
+    "KQkq:white": 16,
+    "KQkq:black": 16,
+    "KQkr:white": 16,
+    "KQkr:black": 16,
+    "KPkp:white": 16,
+    "KPkp:black": 16,
+    "KPkr:white": 16,
+    "KPkr:black": 16
+  },
+  "positions_sha256": "dd7557dbad808752daf67b12f4a1d4e3a83a4d4f18d2085d506eb7a15e702569",
+  "exclusions_sha256": "da1c63e70699f72bbce81c3ca3248c291b1e41cdeafadfb1e9eb30eac378124f",
+  "engine_sha256": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+  "tolerances_sha256": "9f1f32f4d4865c822850a94d20371a83b0d8f7b2d702d684f90f2266f1d04866",
+  "graph_manifest_sha256": "b7a05290b1fbe652f84cc21e98a1c43e2a3a5cb2f7dfc5db769b0d08675b921b",
+  "batches": [
+    1,
+    8
+  ],
+  "final_test": false,
+  "scope": "Fresh numerical confirmation of the frozen build, not statistical strength evidence; never tune on confirmation results"
+}

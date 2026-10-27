@@ -1,0 +1,14 @@
+{
+  "initial_quantization_attempt": {
+    "status": "rejected_by_graph_audit",
+    "issue": "Shared activation Q/DQ reached an unselected matrix input; ModelOpt CUDA-library discovery also fell back during calibration",
+    "fix": "Explicit existing CUDA wheel paths and preserve unselected floating consumer edges; rerun same recipe, no tuning or tolerance change",
+    "raw_graph": "/home/anjanrd/.local/share/lc0-int8/week1/int8/diagnostic-initial-bt3-i1-scope127.onnx",
+    "log": "/home/anjanrd/.local/share/lc0-int8/week1/int8/diagnostic-initial-quantize-127.log"
+  },
+  "high_level_selection": {
+    "status": "rejected_by_exact_target_audit",
+    "missing_targets": "15 Smolgen weight-generation MatMuls were silently omitted by high-level selection",
+    "fix": "Use direct ModelOpt INT8 API with explicit scope and disable GEMV heuristic; preserve shared floating branches; no numerical tuning"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "registered_at_utc": "2026-10-25T20:41:54.051951+00:00",
+  "selection": "Lexically first ID in each of 16 material/side/root-outcome cells, independent of predictions",
+  "ids": [
+    "test-06875",
+    "test-06250",
+    "test-05625",
+    "test-05000",
+    "test-09375",
+    "test-08750",
+    "test-08125",
+    "test-07500",
+    "test-01875",
+    "test-01250",
+    "test-00625",
+    "test-00000",
+    "test-04375",
+    "test-03750",
+    "test-03125",
+    "test-02500"
+  ],
+  "purpose": "Additional final-audit spot check against native Eigen CPU; no tuning or baseline replacement",
+  "limits": {
+    "recorded_before_development_inference_utc": "2026-10-21T11:10:17.074799+00:00",
+    "development": "all 22 data/pilot/fixtures.jsonl; no pilot inference in develop",
+    "confirmation": "all 64 data/pilot/positions.jsonl; never final experiment test data",
+    "gates": {
+      "f32": {
+        "legal_probability_max_abs": 0.0002,
+        "legal_kl_max": 1e-05,
+        "wdl_max_abs": 0.0005,
+        "q_max_abs": 0.001,
+        "moves_left_atol": 0.02,
+        "moves_left_rtol": 0.0002,
+        "batch_probability_max_abs": 0.0002
+      },
+      "f16": {
+        "legal_probability_max_abs": 0.015,
+        "legal_kl_max": 0.003,
+        "wdl_max_abs": 0.015,
+        "q_max_abs": 0.03,
+        "moves_left_atol": 0.5,
+        "moves_left_rtol": 0.01,
+        "batch_probability_max_abs": 0.005
+      }
+    },
+    "interpretation": "Per-position bounds; raw logit errors diagnostic; top flips only within 2x probability bound",
+    "selection": "Conservative precision-specific starting bounds, confirmed on independent native development outputs; no tuning on pilot",
+    "frozen_at_utc": "2026-10-21T11:10:34.693151+00:00",
+    "development_passed": true,
+    "development_report_sha256": "b12bd8c09f2aed8d91fe7f699d78265cfdea3565aad6789c3e19a23637d184b8",
+    "graphs_sha256": {
+      "f32": "a518a0bac511a5f66f68041cac5dbb17e6c1e4060d67c8658e7a1851453abed5",
+      "f16": "2541ee8be138ca02bd1cdfaed2003b9d784ce015cddba2693f8d3a35f70c9a99"
+    },
+    "fixtures_sha256": "8db87a8d215bd3906cfe7f9119427f89cc0f16c281bdc36cb444bd8d05c60f21"
+  }
+}

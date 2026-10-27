@@ -1,0 +1,41 @@
+{
+  "updated_at_utc": "2026-10-25T13:53:22.548972+00:00",
+  "steps": {
+    "5A": {
+      "status": "passed",
+      "evidence": "environment/step5-baselines.json",
+      "verification": "JSON specification, graph manifest and both graph hashes match; exactly two baselines; TF32 disabled; FP16 matrix requirement explicit"
+    },
+    "5B": {
+      "status": "passed",
+      "verification": "Historical FP32 pass and TensorRT failure retained; CUDA-FP16 diagnostic failure cannot veto selected runtimes; absent selected results fail closed; backend TF32 evidence separated; original evidence files preserved",
+      "script_sha256": "baac0917c7b9a3c3b2c3d96977e3e35770f03bb887e200c5aaf5b6186025636c"
+    },
+    "5C": {
+      "status": "passed",
+      "evidence": "environment/step5-engine.json",
+      "engine_sha256": "524853bcd0d3ee2d883039e0d64281978505c9e0a5140dd11f6736a95da8fa0f",
+      "verification": "Direct serialized engine hash checked; two fresh-process deserializations with no builder; bit-identical same-input results at each tested batch; original cache failure independently reproduced and explained"
+    },
+    "5D": {
+      "status": "passed",
+      "evidence": "environment/step5-precision.json",
+      "verification": "Actual FP32 SGEMM traced with TF32 disabled; actual FP16 tensor16x8x16 GEMM kernels traced from the preserved engine; inspected half GEMM interfaces, FP16 constraints, and explicit normalization compute policy"
+    },
+    "5E": {
+      "status": "needs_decision",
+      "evidence": "environment/step5-diagnosis.json",
+      "reason": "Selected baseline still exceeds unchanged numerical bounds; no automatic relaxation"
+    },
+    "5F": {
+      "status": "awaiting_acceptance_decision",
+      "evidence": "environment/step5-resume-summary.json",
+      "reason": "First candidate failed 1/128 confirmation WDL bound; one permitted global accumulation revision failed development; no further engine tuning to confirmation outcomes"
+    },
+    "5G": {
+      "status": "pending",
+      "reason": "Cannot freeze accepted baselines or proceed past unresolved numerical acceptance"
+    }
+  },
+  "step6_started": false
+}

@@ -1,0 +1,634 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-25T20:37:38.622237+00:00",
+  "test_n": 10000,
+  "baselines": {
+    "R32_CUDA": {
+      "all": {
+        "n": 10000,
+        "errors": 4458,
+        "accuracy": 0.5542,
+        "accuracy_Wilson95": [
+          0.5444389626058659,
+          0.5639194119707529
+        ],
+        "transitions": {
+          "D->D": 3151,
+          "D->L": 1849,
+          "W->W": 2391,
+          "W->L": 1906,
+          "W->D": 703
+        },
+        "accuracy_stratified_bootstrap95": [
+          0.546,
+          0.5625
+        ]
+      },
+      "decision_sensitive": {
+        "n": 8436,
+        "errors": 4458,
+        "accuracy": 0.47155049786628733,
+        "accuracy_Wilson95": [
+          0.4609135079275115,
+          0.4822133858249368
+        ],
+        "transitions": {
+          "D->D": 2152,
+          "D->L": 1849,
+          "W->W": 1826,
+          "W->L": 1906,
+          "W->D": 703
+        }
+      },
+      "hard": {
+        "n": 1650,
+        "errors": 1650,
+        "accuracy": 0.0,
+        "accuracy_Wilson95": [
+          0.0,
+          0.002322749136687719
+        ],
+        "transitions": {
+          "W->L": 798,
+          "D->L": 536,
+          "W->D": 316
+        }
+      },
+      "cursed_blessed": {
+        "n": 0,
+        "errors": 0,
+        "accuracy": null,
+        "accuracy_Wilson95": null,
+        "transitions": {}
+      },
+      "material:KQkq": {
+        "n": 2500,
+        "errors": 1212,
+        "accuracy": 0.5152,
+        "accuracy_Wilson95": [
+          0.495601118681488,
+          0.5347522408462339
+        ],
+        "transitions": {
+          "D->D": 1071,
+          "W->W": 217,
+          "W->L": 810,
+          "W->D": 223,
+          "D->L": 179
+        }
+      },
+      "KQkq:D": {
+        "n": 1250,
+        "errors": 179,
+        "accuracy": 0.8568,
+        "accuracy_Wilson95": [
+          0.8362878375458773,
+          0.8751258692867028
+        ],
+        "transitions": {
+          "D->D": 1071,
+          "D->L": 179
+        }
+      },
+      "KQkq:W": {
+        "n": 1250,
+        "errors": 1033,
+        "accuracy": 0.1736,
+        "accuracy_Wilson95": [
+          0.1536110795339643,
+          0.1955889375339892
+        ],
+        "transitions": {
+          "W->W": 217,
+          "W->L": 810,
+          "W->D": 223
+        }
+      },
+      "material:KQkr": {
+        "n": 2500,
+        "errors": 1588,
+        "accuracy": 0.3648,
+        "accuracy_Wilson95": [
+          0.34615125166421246,
+          0.3838636030628936
+        ],
+        "transitions": {
+          "W->L": 586,
+          "W->W": 623,
+          "D->D": 289,
+          "D->L": 961,
+          "W->D": 41
+        }
+      },
+      "KQkr:D": {
+        "n": 1250,
+        "errors": 961,
+        "accuracy": 0.2312,
+        "accuracy_Wilson95": [
+          0.20867295772628466,
+          0.2553741151532064
+        ],
+        "transitions": {
+          "D->D": 289,
+          "D->L": 961
+        }
+      },
+      "KQkr:W": {
+        "n": 1250,
+        "errors": 627,
+        "accuracy": 0.4984,
+        "accuracy_Wilson95": [
+          0.4707294600040695,
+          0.5260803440011654
+        ],
+        "transitions": {
+          "W->L": 586,
+          "W->W": 623,
+          "W->D": 41
+        }
+      },
+      "material:KPkp": {
+        "n": 2500,
+        "errors": 613,
+        "accuracy": 0.7548,
+        "accuracy_Wilson95": [
+          0.7375537324353072,
+          0.7712644259636086
+        ],
+        "transitions": {
+          "D->D": 1003,
+          "W->D": 298,
+          "D->L": 247,
+          "W->W": 884,
+          "W->L": 68
+        }
+      },
+      "KPkp:D": {
+        "n": 1250,
+        "errors": 247,
+        "accuracy": 0.8024,
+        "accuracy_Wilson95": [
+          0.7794138484662478,
+          0.8235331945443245
+        ],
+        "transitions": {
+          "D->D": 1003,
+          "D->L": 247
+        }
+      },
+      "KPkp:W": {
+        "n": 1250,
+        "errors": 366,
+        "accuracy": 0.7072,
+        "accuracy_Wilson95": [
+          0.6813697863806514,
+          0.7317605949414077
+        ],
+        "transitions": {
+          "W->D": 298,
+          "W->W": 884,
+          "W->L": 68
+        }
+      },
+      "material:KPkr": {
+        "n": 2500,
+        "errors": 1045,
+        "accuracy": 0.582,
+        "accuracy_Wilson95": [
+          0.5625543537459238,
+          0.6011940331799438
+        ],
+        "transitions": {
+          "D->L": 462,
+          "W->L": 442,
+          "D->D": 788,
+          "W->W": 667,
+          "W->D": 141
+        }
+      },
+      "KPkr:D": {
+        "n": 1250,
+        "errors": 462,
+        "accuracy": 0.6304,
+        "accuracy_Wilson95": [
+          0.6032796897031429,
+          0.656721283870199
+        ],
+        "transitions": {
+          "D->L": 462,
+          "D->D": 788
+        }
+      },
+      "KPkr:W": {
+        "n": 1250,
+        "errors": 583,
+        "accuracy": 0.5336,
+        "accuracy_Wilson95": [
+          0.5058838427572037,
+          0.5611102731328599
+        ],
+        "transitions": {
+          "W->L": 442,
+          "W->W": 667,
+          "W->D": 141
+        }
+      },
+      "root:D": {
+        "n": 5000,
+        "errors": 1849,
+        "accuracy": 0.6302,
+        "accuracy_Wilson95": [
+          0.6167238961666042,
+          0.6434761942469029
+        ],
+        "transitions": {
+          "D->D": 3151,
+          "D->L": 1849
+        }
+      },
+      "root:W": {
+        "n": 5000,
+        "errors": 2609,
+        "accuracy": 0.4782,
+        "accuracy_Wilson95": [
+          0.46437618231223327,
+          0.4920572894925714
+        ],
+        "transitions": {
+          "W->W": 2391,
+          "W->L": 1906,
+          "W->D": 703
+        }
+      },
+      "side:white": {
+        "n": 5000,
+        "errors": 2196,
+        "accuracy": 0.5608,
+        "accuracy_Wilson95": [
+          0.5470023329493977,
+          0.5745043144940832
+        ],
+        "transitions": {
+          "D->D": 1649,
+          "D->L": 851,
+          "W->W": 1155,
+          "W->L": 962,
+          "W->D": 383
+        }
+      },
+      "side:black": {
+        "n": 5000,
+        "errors": 2262,
+        "accuracy": 0.5476,
+        "accuracy_Wilson95": [
+          0.533772612842291,
+          0.5613543019325395
+        ],
+        "transitions": {
+          "D->D": 1502,
+          "W->D": 320,
+          "W->L": 944,
+          "W->W": 1236,
+          "D->L": 998
+        }
+      }
+    },
+    "F16_TRT": {
+      "all": {
+        "n": 10000,
+        "errors": 4458,
+        "accuracy": 0.5542,
+        "accuracy_Wilson95": [
+          0.5444389626058659,
+          0.5639194119707529
+        ],
+        "transitions": {
+          "D->D": 3149,
+          "D->L": 1851,
+          "W->W": 2393,
+          "W->L": 1905,
+          "W->D": 702
+        },
+        "accuracy_stratified_bootstrap95": [
+          0.546,
+          0.5625
+        ]
+      },
+      "decision_sensitive": {
+        "n": 8436,
+        "errors": 4458,
+        "accuracy": 0.47155049786628733,
+        "accuracy_Wilson95": [
+          0.4609135079275115,
+          0.4822133858249368
+        ],
+        "transitions": {
+          "D->D": 2150,
+          "D->L": 1851,
+          "W->W": 1828,
+          "W->L": 1905,
+          "W->D": 702
+        }
+      },
+      "hard": {
+        "n": 1650,
+        "errors": 1650,
+        "accuracy": 0.0,
+        "accuracy_Wilson95": [
+          0.0,
+          0.002322749136687719
+        ],
+        "transitions": {
+          "W->L": 798,
+          "D->L": 536,
+          "W->D": 316
+        }
+      },
+      "cursed_blessed": {
+        "n": 0,
+        "errors": 0,
+        "accuracy": null,
+        "accuracy_Wilson95": null,
+        "transitions": {}
+      },
+      "material:KQkq": {
+        "n": 2500,
+        "errors": 1211,
+        "accuracy": 0.5156,
+        "accuracy_Wilson95": [
+          0.49600098704360684,
+          0.5351511451032653
+        ],
+        "transitions": {
+          "D->D": 1072,
+          "W->W": 217,
+          "W->L": 809,
+          "W->D": 224,
+          "D->L": 178
+        }
+      },
+      "KQkq:D": {
+        "n": 1250,
+        "errors": 178,
+        "accuracy": 0.8576,
+        "accuracy_Wilson95": [
+          0.8371303851068653,
+          0.8758784197230974
+        ],
+        "transitions": {
+          "D->D": 1072,
+          "D->L": 178
+        }
+      },
+      "KQkq:W": {
+        "n": 1250,
+        "errors": 1033,
+        "accuracy": 0.1736,
+        "accuracy_Wilson95": [
+          0.1536110795339643,
+          0.1955889375339892
+        ],
+        "transitions": {
+          "W->W": 217,
+          "W->L": 809,
+          "W->D": 224
+        }
+      },
+      "material:KQkr": {
+        "n": 2500,
+        "errors": 1589,
+        "accuracy": 0.3644,
+        "accuracy_Wilson95": [
+          0.3457562658164469,
+          0.3834598162915085
+        ],
+        "transitions": {
+          "W->L": 585,
+          "W->W": 624,
+          "D->D": 287,
+          "D->L": 963,
+          "W->D": 41
+        }
+      },
+      "KQkr:D": {
+        "n": 1250,
+        "errors": 963,
+        "accuracy": 0.2296,
+        "accuracy_Wilson95": [
+          0.2071343519733179,
+          0.2537225249114083
+        ],
+        "transitions": {
+          "D->D": 287,
+          "D->L": 963
+        }
+      },
+      "KQkr:W": {
+        "n": 1250,
+        "errors": 626,
+        "accuracy": 0.4992,
+        "accuracy_Wilson95": [
+          0.4715269030537809,
+          0.5268779989488366
+        ],
+        "transitions": {
+          "W->L": 585,
+          "W->W": 624,
+          "W->D": 41
+        }
+      },
+      "material:KPkp": {
+        "n": 2500,
+        "errors": 614,
+        "accuracy": 0.7544,
+        "accuracy_Wilson95": [
+          0.7371450930940989,
+          0.7708742926856661
+        ],
+        "transitions": {
+          "D->D": 1003,
+          "W->D": 299,
+          "D->L": 247,
+          "W->W": 883,
+          "W->L": 68
+        }
+      },
+      "KPkp:D": {
+        "n": 1250,
+        "errors": 247,
+        "accuracy": 0.8024,
+        "accuracy_Wilson95": [
+          0.7794138484662478,
+          0.8235331945443245
+        ],
+        "transitions": {
+          "D->D": 1003,
+          "D->L": 247
+        }
+      },
+      "KPkp:W": {
+        "n": 1250,
+        "errors": 367,
+        "accuracy": 0.7064,
+        "accuracy_Wilson95": [
+          0.6805521895513138,
+          0.7309830937733628
+        ],
+        "transitions": {
+          "W->D": 299,
+          "W->W": 883,
+          "W->L": 68
+        }
+      },
+      "material:KPkr": {
+        "n": 2500,
+        "errors": 1044,
+        "accuracy": 0.5824,
+        "accuracy_Wilson95": [
+          0.5629563472902335,
+          0.6015908122547848
+        ],
+        "transitions": {
+          "D->L": 463,
+          "W->L": 443,
+          "D->D": 787,
+          "W->W": 669,
+          "W->D": 138
+        }
+      },
+      "KPkr:D": {
+        "n": 1250,
+        "errors": 463,
+        "accuracy": 0.6296,
+        "accuracy_Wilson95": [
+          0.602470255455076,
+          0.6559356201208837
+        ],
+        "transitions": {
+          "D->L": 463,
+          "D->D": 787
+        }
+      },
+      "KPkr:W": {
+        "n": 1250,
+        "errors": 581,
+        "accuracy": 0.5352,
+        "accuracy_Wilson95": [
+          0.5074850295344868,
+          0.5626992823503418
+        ],
+        "transitions": {
+          "W->L": 443,
+          "W->W": 669,
+          "W->D": 138
+        }
+      },
+      "root:D": {
+        "n": 5000,
+        "errors": 1851,
+        "accuracy": 0.6298,
+        "accuracy_Wilson95": [
+          0.6163212214169377,
+          0.6430794831581256
+        ],
+        "transitions": {
+          "D->D": 3149,
+          "D->L": 1851
+        }
+      },
+      "root:W": {
+        "n": 5000,
+        "errors": 2607,
+        "accuracy": 0.4786,
+        "accuracy_Wilson95": [
+          0.46477539636780413,
+          0.4924574612754445
+        ],
+        "transitions": {
+          "W->W": 2393,
+          "W->L": 1905,
+          "W->D": 702
+        }
+      },
+      "side:white": {
+        "n": 5000,
+        "errors": 2197,
+        "accuracy": 0.5606,
+        "accuracy_Wilson95": [
+          0.546801809264593,
+          0.5743051452596661
+        ],
+        "transitions": {
+          "D->D": 1648,
+          "D->L": 852,
+          "W->W": 1155,
+          "W->L": 963,
+          "W->D": 382
+        }
+      },
+      "side:black": {
+        "n": 5000,
+        "errors": 2261,
+        "accuracy": 0.5478,
+        "accuracy_Wilson95": [
+          0.5339729899724337,
+          0.5615536177216187
+        ],
+        "transitions": {
+          "D->D": 1501,
+          "W->D": 320,
+          "W->L": 942,
+          "W->W": 1238,
+          "D->L": 999
+        }
+      }
+    }
+  },
+  "paired": {
+    "F16_minus_R32_accuracy": 0.0,
+    "paired_bootstrap95": [
+      -0.0006,
+      0.0006
+    ],
+    "F16_correct_R32_wrong": 5,
+    "R32_correct_F16_wrong": 5,
+    "both_correct": 5537,
+    "both_wrong": 4453,
+    "top_move_agreement": 0.9882,
+    "bootstrap_replicates": 50000,
+    "seed": 20261026,
+    "sampling_unit": "one unique root symmetry group; paired resampling within each of the 16 fixed material/side/outcome cells"
+  },
+  "hard_subset": {
+    "status": "frozen_before_test_inference",
+    "frozen_at_utc": "2026-10-25T20:36:51.449309+00:00",
+    "tau": -0.09387190192937851,
+    "quantile": 0.2,
+    "numpy_quantile_method": "linear",
+    "decision_sensitive_validation_n": 1732,
+    "validation_outputs": {
+      "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1/validation-F16_TRT-outputs.npz",
+      "sha256": "9e9532ace7b0b1dceebd7c863ca08a43aedc61ea472bfcc0c1e04cf4f05fcdfa"
+    },
+    "rule": "Decision sensitive AND max(P_F16 preserving)-max(P_F16 degrading)<=tau",
+    "selection_uses_INT8": false
+  },
+  "dataset_manifest": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy/manifest.json",
+    "sha256": "6502ee12a466fe8217e8360bae7047ec8b46a71396c9a1666cf437206d89b525"
+  },
+  "predictions": [
+    {
+      "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1/test-R32_CUDA-predictions.jsonl",
+      "sha256": "f6c96543b2b038338b0fee9c723cd30e1581167f5e5929829f23c3dc8c6cf743"
+    },
+    {
+      "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1/test-F16_TRT-predictions.jsonl",
+      "sha256": "b3cff33a8f3972aa7790db6ea9a7623e97a69095e9f38032b5116ac08e3682c4"
+    }
+  ],
+  "scoring": "Error is W->D/L or D->L of the selected legal move, from original mover perspective; not predicted NN WDL category",
+  "limitations": "Synthetic balanced four-piece standalone roots with zero halfmove clocks and no actual game history; theoretical WDL ignores fifty-move rule. Network-only results are not MCTS results or game strength. No DTZ-optimal-rate claim.",
+  "F16_acceptance": "Original exact-engine numerical drift acceptance remains recorded; no new tolerance relaxation",
+  "script_sha256": "41012e9ab96b6fc39b2bd34b93cc2f8e47b062c811842489c9de4f40ef9e582c"
+}

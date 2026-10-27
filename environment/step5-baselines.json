@@ -1,0 +1,58 @@
+{
+  "version": "1.0",
+  "decision_date": "2026-10-25",
+  "authority": "User explicitly selected these two baselines, then authorized autonomous execution of 5A through 5G with verification before progression.",
+  "checkpoint_sha256": "e3067757d1fc2dfc66947b21d15ace0cedf4c54254fc1de83d77c378a3e8b8e1",
+  "baselines": {
+    "R32_CUDA": {
+      "graph": "models/onnx/bt3-r32.onnx",
+      "graph_sha256": "a518a0bac511a5f66f68041cac5dbb17e6c1e4060d67c8658e7a1851453abed5",
+      "runtime": "ONNX Runtime 1.22.0 CUDAExecutionProvider",
+      "input_dtype": "float32",
+      "matrix_multiplication": "Full FP32 operands and computation on CUDA cores",
+      "tf32": false,
+      "role": "High-precision numerical reference and separately reported FP32 performance baseline"
+    },
+    "F16_TRT": {
+      "graph": "models/onnx/bt3-f16.onnx",
+      "graph_sha256": "2541ee8be138ca02bd1cdfaed2003b9d784ce015cddba2693f8d3a35f70c9a99",
+      "runtime": "TensorRT 10.9.0.34",
+      "input_dtype": "float16",
+      "matrix_multiplication": "Actual FP16 multiplication, with Tensor Core execution verified for eligible matrix kernels",
+      "fp32_accumulation_allowed": true,
+      "tf32": false,
+      "nonmatrix_fp32": "Permitted for sensitive nonmatrix operations; report precision and conversions explicitly",
+      "fp32_matrix_fallback": "Does not meet the selected baseline definition; never silently accept",
+      "role": "Optimized floating-point baseline for the primary TensorRT INT8 performance comparison"
+    }
+  },
+  "diagnostics_only": ["native lc0 Eigen CPU", "FP16 ONNX through CUDAExecutionProvider"],
+  "comparison_interpretation": {
+    "INT8_TRT_vs_F16_TRT": "Primary practical comparison with runtime held constant",
+    "INT8_TRT_vs_R32_CUDA": "Combined precision/runtime comparison; do not attribute all speedup to quantization"
+  },
+  "shared_conventions": {
+    "history_fill": "no",
+    "input_shape": ["B", 112, 8, 8],
+    "policy_head": "vanilla",
+    "value_head": "winner",
+    "policy": "1858 logits; mask illegal moves; stable float32 softmax; lexical UCI ties",
+    "wdl": "win/draw/loss from side to move",
+    "moves_left": "preserved"
+  },
+  "step5_acceptance": {
+    "limits": "environment/step5-tolerances.json remains unchanged",
+    "selected_baselines_only": true,
+    "execution_evidence_required": true,
+    "saved_engine_reload_required": true,
+    "unresolved_numeric_failure": "Stop at the failed gate and report the evidence; no automatic tolerance relaxation or replacement with FP32 matrix computation"
+  },
+  "later_evaluation": {
+    "levels": ["network only", "MCTS fixed-node sweep", "MCTS fixed wall time"],
+    "node_budgets": "not yet selected",
+    "fixed_time_seconds_per_position": 1,
+    "move_error": "For theoretical W/D roots, count W to D/L or D to L from original mover perspective after selected move",
+    "tablebases_during_search": false,
+    "scope": "Syzygy scoring and MCTS studies are later roadmap work, not Step 5 numerical acceptance"
+  }
+}

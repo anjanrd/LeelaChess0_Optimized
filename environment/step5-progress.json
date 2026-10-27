@@ -1,0 +1,48 @@
+{
+  "updated_at_utc": "2026-10-25T14:15:45.703049+00:00",
+  "steps": {
+    "5A": {
+      "status": "passed",
+      "evidence": "environment/step5-baselines.json",
+      "verification": "JSON specification, graph manifest and both graph hashes match; exactly two baselines; TF32 disabled; FP16 matrix requirement explicit"
+    },
+    "5B": {
+      "status": "passed",
+      "verification": "Historical FP32 pass and TensorRT failure retained; CUDA-FP16 diagnostic failure cannot veto selected runtimes; absent selected results fail closed; backend TF32 evidence separated; original evidence files preserved",
+      "script_sha256": "baac0917c7b9a3c3b2c3d96977e3e35770f03bb887e200c5aaf5b6186025636c"
+    },
+    "5C": {
+      "status": "passed",
+      "engine_sha256": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+      "evidence": "environment/step5-engine.json",
+      "verification": "User-selected first engine restored; prior two fresh-process reload checks retained"
+    },
+    "5D": {
+      "status": "passed",
+      "engine_sha256": "4271981b85fb44dd1171a8b49cd999626cd9662f184d3f347a8f7bc4b08b8363",
+      "evidence": "environment/step5-precision.json",
+      "verification": "Restored first-engine precision evidence: executed FP32 SGEMMs and FP16 Tensor Core GEMMs"
+    },
+    "5E": {
+      "status": "passed",
+      "evidence": "environment/step5-diagnosis.json",
+      "raw_numerical_status": "passed",
+      "verification": "Selected first engine passed original limits on all 86 development positions"
+    },
+    "5F": {
+      "status": "passed",
+      "acceptance": "accepted_with_documented_drift",
+      "raw_numerical_status": "failed",
+      "evidence": "environment/step5-acceptance.json",
+      "verification": "Explicit user acceptance of the exact preserved engine with the known 1/128 WDL exception; raw failure and original limits retained"
+    },
+    "5G": {
+      "status": "passed",
+      "evidence": "environment/step5-final-manifest.json",
+      "verification": "Accepted first-engine identity and outputs reverified; matched-boundary pilot timings recorded; final artifact hashes frozen",
+      "acceptance": "complete_with_documented_drift",
+      "reason": "Explicit acceptance recorded; timing, integrity checks and baseline freeze completed"
+    }
+  },
+  "step6_started": false
+}

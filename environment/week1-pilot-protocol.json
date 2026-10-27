@@ -1,0 +1,13 @@
+{
+  "registered_at_utc": "2026-10-25T20:14:50.758070+00:00",
+  "scope_candidates": [
+    "127",
+    "160"
+  ],
+  "calibration": "64 legal development pilot positions; no final test data",
+  "scope_selection": "Prefer 160 if actual intended INT8 execution is verified and the expanded/original host-pipeline latency ratio is <=1.10 at batches 1 and 8. Normalize each candidate by its contemporaneously paired F16_TRT timing to control between-run clock/temperature drift.",
+  "metric_formula": "(I1_160/F16_paired_160) / (I1_127/F16_paired_127)",
+  "numerical_acceptance": "Require finite outputs, normalized WDL and nonnegative moves-left. Report policy/WDL drift and move agreement without choosing exclusions from prediction errors. A naive precision-loss result is a research measurement, not a reason to silently relax baseline limits.",
+  "candidate_limit": 2,
+  "note": "Comparison clarified before either INT8 execution audit; graph implementation repairs are diagnostic failures, not new tuned scope candidates."
+}
