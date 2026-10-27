@@ -1,0 +1,5846 @@
+{
+  "status": "passed",
+  "created_at_utc": "2026-10-27T10:52:33.073268+00:00",
+  "calibration_positions": 1024,
+  "source": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/models/onnx/bt3-r32.onnx",
+    "sha256": "a518a0bac511a5f66f68041cac5dbb17e6c1e4060d67c8658e7a1851453abed5"
+  },
+  "calibration_inputs": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/data/syzygy-v2/calibration-inputs.npz",
+    "sha256": "9c55e7222d1a981ebbeee6e1670e03b5ae09f0e150c266dc97e7841f4e070695"
+  },
+  "scope": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/environment/step6-scope-v2.json",
+    "sha256": "77223432bfe079bd9602c47e9ec0ba11c13d656c205f6739031ca0a1bc2e8557"
+  },
+  "statistics": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/results/week1-v2/calibration-channel-statistics.npz",
+    "sha256": "05008f230c3dc047ef3bb16933b556b90d020e8c7e2d5bfce43eb22bb9b3236d"
+  },
+  "n_unique_activation_tensors": 113,
+  "n_selected_matrix_consumers": 160,
+  "groups": [
+    {
+      "index": 0,
+      "tensor": "/attn_body/embedding/reshape",
+      "shape_at_batch1": [
+        1,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/attn_body/embedding/preprocess/matmul"
+      ],
+      "all_consumers": [
+        {
+          "node": "/attn_body/embedding/preprocess/matmul",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.0,
+      "channel_max_maximum": 1.0,
+      "largest_over_median_channel_max": 1.0,
+      "channel_max_quantiles": {
+        "0": 0.0,
+        "0.25": 1.0,
+        "0.5": 1.0,
+        "0.75": 1.0,
+        "0.95": 1.0,
+        "0.99": 1.0,
+        "1": 1.0
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 32.0,
+      "largest_channel_indices": [
+        39,
+        35,
+        34,
+        33,
+        32,
+        47,
+        45,
+        44,
+        43,
+        41
+      ]
+    },
+    {
+      "index": 1,
+      "tensor": "/attn_body/embedding/out/reshape",
+      "shape_at_batch1": [
+        64,
+        240
+      ],
+      "channel_axis": 1,
+      "channels": 240,
+      "selected_consumers": [
+        "/attn_body/matmul"
+      ],
+      "all_consumers": [
+        {
+          "node": "/attn_body/matmul",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.1462922096252441,
+      "channel_max_maximum": 2.1777265071868896,
+      "largest_over_median_channel_max": 1.8998004949356246,
+      "channel_max_quantiles": {
+        "0": 0.0,
+        "0.25": 1.0,
+        "0.5": 1.1462922096252441,
+        "0.75": 1.4914924800395966,
+        "0.95": 1.8866990268230432,
+        "0.99": 2.0901563930511475,
+        "1": 2.1777265071868896
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 35.500812558414665,
+      "largest_channel_indices": [
+        219,
+        148,
+        146,
+        228,
+        156,
+        211,
+        159,
+        117,
+        126,
+        234
+      ]
+    },
+    {
+      "index": 2,
+      "tensor": "/attn_body/rehape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/attn_body/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/attn_body/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/attn_body/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.1165558435022831,
+      "channel_max_maximum": 53.17354202270508,
+      "largest_over_median_channel_max": 456.2065738185277,
+      "channel_max_quantiles": {
+        "0": 0.021185170859098434,
+        "0.25": 0.040729330852627754,
+        "0.5": 0.1165558435022831,
+        "0.75": 0.31405408680438995,
+        "0.95": 4.304052758216852,
+        "0.99": 11.544530963897705,
+        "1": 53.17354202270508
+      },
+      "channels_above_10x_median": 145,
+      "largest_channel_peak_over_own_RMS": 14.528634366629339,
+      "largest_channel_indices": [
+        386,
+        647,
+        217,
+        218,
+        177,
+        718,
+        271,
+        754,
+        238,
+        542
+      ]
+    },
+    {
+      "index": 3,
+      "tensor": "/attn_body/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/attn_body/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/attn_body/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.4506208896636963,
+      "channel_max_maximum": 15.05380630493164,
+      "largest_over_median_channel_max": 10.377491743153946,
+      "channel_max_quantiles": {
+        "0": 6.37670818832703e-05,
+        "0.25": 0.3088431879878044,
+        "0.5": 1.4506208896636963,
+        "0.75": 3.8278979659080505,
+        "0.95": 6.544965982437133,
+        "0.99": 9.017868356704708,
+        "1": 15.05380630493164
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 103.09926489060244,
+      "largest_channel_indices": [
+        999,
+        274,
+        561,
+        961,
+        837,
+        126,
+        790,
+        916,
+        85,
+        478
+      ]
+    },
+    {
+      "index": 4,
+      "tensor": "/attn_body/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder0/mha/Q/w",
+        "/encoder0/mha/K/w",
+        "/encoder0/mha/V/w",
+        "/encoder0/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder0/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder0/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder0/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder0/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder0/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.16457367688417435,
+      "channel_max_maximum": 4.57342529296875,
+      "largest_over_median_channel_max": 27.789530984274542,
+      "channel_max_quantiles": {
+        "0": 0.0002497381647117436,
+        "0.25": 0.11567974835634232,
+        "0.5": 0.16457367688417435,
+        "0.75": 0.2786028981208801,
+        "0.95": 1.08937194943428,
+        "0.99": 2.93275428056717,
+        "1": 4.57342529296875
+      },
+      "channels_above_10x_median": 21,
+      "largest_channel_peak_over_own_RMS": 13.115283523611806,
+      "largest_channel_indices": [
+        218,
+        647,
+        271,
+        217,
+        87,
+        238,
+        177,
+        480,
+        542,
+        718
+      ]
+    },
+    {
+      "index": 5,
+      "tensor": "/encoder0/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder0/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder0/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.777143359184265,
+      "channel_max_maximum": 7.567312240600586,
+      "largest_over_median_channel_max": 2.7248547380799764,
+      "channel_max_quantiles": {
+        "0": 0.8696072101593018,
+        "0.25": 2.135472893714905,
+        "0.5": 2.777143359184265,
+        "0.75": 3.498821258544922,
+        "0.95": 5.1185898780822745,
+        "0.99": 6.0675707006454465,
+        "1": 7.567312240600586
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 19.08147714006535,
+      "largest_channel_indices": [
+        1839,
+        1999,
+        1871,
+        1775,
+        1935,
+        1743,
+        271,
+        1711,
+        1615,
+        143
+      ]
+    },
+    {
+      "index": 6,
+      "tensor": "/encoder0/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder0/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder0/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.586334228515625,
+      "channel_max_maximum": 8.43428897857666,
+      "largest_over_median_channel_max": 3.261097844812328,
+      "channel_max_quantiles": {
+        "0": 1.5457426309585571,
+        "0.25": 2.194734573364258,
+        "0.5": 2.586334228515625,
+        "0.75": 3.080487549304962,
+        "0.95": 3.7745214104652405,
+        "0.99": 4.283997583389282,
+        "1": 8.43428897857666
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.152441746247721,
+      "largest_channel_indices": [
+        86,
+        26,
+        173,
+        136,
+        27,
+        183,
+        68,
+        101,
+        175,
+        128
+      ]
+    },
+    {
+      "index": 7,
+      "tensor": "/encoder0/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder0/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder0/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.0192074179649353,
+      "channel_max_maximum": 16.13236427307129,
+      "largest_over_median_channel_max": 15.82834267953327,
+      "channel_max_quantiles": {
+        "0": 0.6020842790603638,
+        "0.25": 0.8436307013034821,
+        "0.5": 1.0192074179649353,
+        "0.75": 1.3598244190216064,
+        "0.95": 2.867360830307007,
+        "0.99": 8.600698995590186,
+        "1": 16.13236427307129
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.312788717132478,
+      "largest_channel_indices": [
+        245,
+        0,
+        50,
+        40,
+        22,
+        105,
+        142,
+        101,
+        56,
+        73
+      ]
+    },
+    {
+      "index": 8,
+      "tensor": "/encoder0/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder0/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder0/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.9730402827262878,
+      "channel_max_maximum": 3.655409574508667,
+      "largest_over_median_channel_max": 3.7566888436179147,
+      "channel_max_quantiles": {
+        "0": 0.25641605257987976,
+        "0.25": 0.6960667818784714,
+        "0.5": 0.9730402827262878,
+        "0.75": 1.3123017251491547,
+        "0.95": 2.1610676407814022,
+        "0.99": 2.936486544609074,
+        "1": 3.655409574508667
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 42.0348713158872,
+      "largest_channel_indices": [
+        429,
+        596,
+        7,
+        762,
+        208,
+        455,
+        145,
+        577,
+        567,
+        329
+      ]
+    },
+    {
+      "index": 9,
+      "tensor": "/encoder0/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder0/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder0/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder0/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.6846539676189423,
+      "channel_max_maximum": 51.089168548583984,
+      "largest_over_median_channel_max": 74.62042281922285,
+      "channel_max_quantiles": {
+        "0": 0.13932159543037415,
+        "0.25": 0.4863361790776253,
+        "0.5": 0.6846539676189423,
+        "0.75": 1.0435568392276764,
+        "0.95": 2.5668631076812742,
+        "0.99": 5.525396695137027,
+        "1": 51.089168548583984
+      },
+      "channels_above_10x_median": 5,
+      "largest_channel_peak_over_own_RMS": 8.950247936607383,
+      "largest_channel_indices": [
+        218,
+        238,
+        647,
+        271,
+        177,
+        217,
+        480,
+        87,
+        718,
+        542
+      ]
+    },
+    {
+      "index": 10,
+      "tensor": "/encoder0/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder0/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder0/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.8816049098968506,
+      "channel_max_maximum": 10.269353866577148,
+      "largest_over_median_channel_max": 3.56376192701058,
+      "channel_max_quantiles": {
+        "0": 0.09825579077005386,
+        "0.25": 1.6796964406967163,
+        "0.5": 2.8816049098968506,
+        "0.75": 3.9976015090942383,
+        "0.95": 5.926855182647704,
+        "0.99": 8.482421512603759,
+        "1": 10.269353866577148
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 190.00192466185734,
+      "largest_channel_indices": [
+        928,
+        394,
+        591,
+        149,
+        81,
+        167,
+        841,
+        854,
+        744,
+        126
+      ]
+    },
+    {
+      "index": 11,
+      "tensor": "/encoder0/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder1/mha/Q/w",
+        "/encoder1/mha/K/w",
+        "/encoder1/mha/V/w",
+        "/encoder1/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder1/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder1/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder1/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder1/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder1/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.4227559417486191,
+      "channel_max_maximum": 3.651689291000366,
+      "largest_over_median_channel_max": 8.637818964521495,
+      "channel_max_quantiles": {
+        "0": 0.18642260134220123,
+        "0.25": 0.34104684740304947,
+        "0.5": 0.4227559417486191,
+        "0.75": 0.5346158593893051,
+        "0.95": 1.0703254520893086,
+        "0.99": 2.5389928126335146,
+        "1": 3.651689291000366
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.640204280754556,
+      "largest_channel_indices": [
+        647,
+        238,
+        218,
+        271,
+        177,
+        542,
+        480,
+        493,
+        701,
+        87
+      ]
+    },
+    {
+      "index": 12,
+      "tensor": "/encoder1/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder1/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder1/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.6547303199768066,
+      "channel_max_maximum": 6.729706287384033,
+      "largest_over_median_channel_max": 2.5349867882033412,
+      "channel_max_quantiles": {
+        "0": 1.2924439907073975,
+        "0.25": 2.2821760177612305,
+        "0.5": 2.6547303199768066,
+        "0.75": 3.1161229014396667,
+        "0.95": 4.1130738019943225,
+        "0.99": 4.963244590759276,
+        "1": 6.729706287384033
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 12.098487478408119,
+      "largest_channel_indices": [
+        1098,
+        842,
+        714,
+        1866,
+        1578,
+        970,
+        1226,
+        1450,
+        1066,
+        1418
+      ]
+    },
+    {
+      "index": 13,
+      "tensor": "/encoder1/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder1/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder1/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.560299873352051,
+      "channel_max_maximum": 6.573959827423096,
+      "largest_over_median_channel_max": 2.567652287861185,
+      "channel_max_quantiles": {
+        "0": 1.4049843549728394,
+        "0.25": 2.2580642104148865,
+        "0.5": 2.560299873352051,
+        "0.75": 3.1720234155654907,
+        "0.95": 4.031156063079834,
+        "0.99": 5.93145792484283,
+        "1": 6.573959827423096
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.095877764133547,
+      "largest_channel_indices": [
+        122,
+        232,
+        154,
+        111,
+        218,
+        65,
+        120,
+        231,
+        249,
+        179
+      ]
+    },
+    {
+      "index": 14,
+      "tensor": "/encoder1/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder1/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder1/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 0.6912005543708801,
+      "channel_max_maximum": 8.123181343078613,
+      "largest_over_median_channel_max": 11.752278396929535,
+      "channel_max_quantiles": {
+        "0": 0.42599186301231384,
+        "0.25": 0.5935909152030945,
+        "0.5": 0.6912005543708801,
+        "0.75": 0.8689378499984741,
+        "0.95": 1.8088940978050232,
+        "0.99": 4.376050543785091,
+        "1": 8.123181343078613
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 5.717125139736739,
+      "largest_channel_indices": [
+        245,
+        0,
+        50,
+        40,
+        242,
+        21,
+        66,
+        142,
+        22,
+        73
+      ]
+    },
+    {
+      "index": 15,
+      "tensor": "/encoder1/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder1/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder1/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.2703713774681091,
+      "channel_max_maximum": 4.049597263336182,
+      "largest_over_median_channel_max": 3.1877270971006593,
+      "channel_max_quantiles": {
+        "0": 0.6594945788383484,
+        "0.25": 1.0545722842216492,
+        "0.5": 1.2703713774681091,
+        "0.75": 1.5542917251586914,
+        "0.95": 2.173211300373077,
+        "0.99": 2.909929547309877,
+        "1": 4.049597263336182
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 17.11326314104435,
+      "largest_channel_indices": [
+        603,
+        96,
+        628,
+        522,
+        95,
+        229,
+        47,
+        168,
+        268,
+        29
+      ]
+    },
+    {
+      "index": 16,
+      "tensor": "/encoder1/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder1/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder1/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder1/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.9666806757450104,
+      "channel_max_maximum": 50.22602844238281,
+      "largest_over_median_channel_max": 51.95720748599236,
+      "channel_max_quantiles": {
+        "0": 0.26157528162002563,
+        "0.25": 0.7852316796779633,
+        "0.5": 0.9666806757450104,
+        "0.75": 1.2693960964679718,
+        "0.95": 2.3304056406021116,
+        "0.99": 5.140922269821174,
+        "1": 50.22602844238281
+      },
+      "channels_above_10x_median": 2,
+      "largest_channel_peak_over_own_RMS": 6.730991658282837,
+      "largest_channel_indices": [
+        218,
+        238,
+        271,
+        647,
+        177,
+        542,
+        493,
+        217,
+        480,
+        701
+      ]
+    },
+    {
+      "index": 17,
+      "tensor": "/encoder1/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder1/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder1/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.2121678590774536,
+      "channel_max_maximum": 12.125646591186523,
+      "largest_over_median_channel_max": 3.774910628322224,
+      "channel_max_quantiles": {
+        "0": 0.30834850668907166,
+        "0.25": 2.3519663214683533,
+        "0.5": 3.2121678590774536,
+        "0.75": 4.301727890968323,
+        "0.95": 6.503175830841057,
+        "0.99": 8.405303421020507,
+        "1": 12.125646591186523
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 127.73132630849224,
+      "largest_channel_indices": [
+        27,
+        143,
+        837,
+        401,
+        72,
+        868,
+        153,
+        618,
+        478,
+        440
+      ]
+    },
+    {
+      "index": 18,
+      "tensor": "/encoder1/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder2/mha/Q/w",
+        "/encoder2/mha/K/w",
+        "/encoder2/mha/V/w",
+        "/encoder2/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder2/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder2/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder2/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder2/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder2/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.4739329665899277,
+      "channel_max_maximum": 3.6912882328033447,
+      "largest_over_median_channel_max": 7.788629390698719,
+      "channel_max_quantiles": {
+        "0": 0.23101706802845,
+        "0.25": 0.39749855548143387,
+        "0.5": 0.4739329665899277,
+        "0.75": 0.5860591679811478,
+        "0.95": 1.1024225413799276,
+        "0.99": 2.55793243169785,
+        "1": 3.6912882328033447
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.866887259862612,
+      "largest_channel_indices": [
+        218,
+        647,
+        271,
+        177,
+        238,
+        542,
+        493,
+        87,
+        480,
+        701
+      ]
+    },
+    {
+      "index": 19,
+      "tensor": "/encoder2/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder2/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder2/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.757566452026367,
+      "channel_max_maximum": 6.726123332977295,
+      "largest_over_median_channel_max": 2.4391518572597506,
+      "channel_max_quantiles": {
+        "0": 1.4223326444625854,
+        "0.25": 2.2837697863578796,
+        "0.5": 2.757566452026367,
+        "0.75": 3.3137230277061462,
+        "0.95": 4.584643173217773,
+        "0.99": 5.674252648353575,
+        "1": 6.726123332977295
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 9.986437413271783,
+      "largest_channel_indices": [
+        759,
+        413,
+        1202,
+        989,
+        477,
+        669,
+        733,
+        1437,
+        1106,
+        1458
+      ]
+    },
+    {
+      "index": 20,
+      "tensor": "/encoder2/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder2/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder2/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.737717866897583,
+      "channel_max_maximum": 5.826055526733398,
+      "largest_over_median_channel_max": 2.128070097060644,
+      "channel_max_quantiles": {
+        "0": 1.7158138751983643,
+        "0.25": 2.4161683917045593,
+        "0.5": 2.737717866897583,
+        "0.75": 3.19182026386261,
+        "0.95": 4.56118106842041,
+        "0.99": 5.6718955039978,
+        "1": 5.826055526733398
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.277404733173663,
+      "largest_channel_indices": [
+        18,
+        215,
+        32,
+        210,
+        71,
+        181,
+        33,
+        246,
+        134,
+        138
+      ]
+    },
+    {
+      "index": 21,
+      "tensor": "/encoder2/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder2/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder2/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 0.717245489358902,
+      "channel_max_maximum": 7.771025657653809,
+      "largest_over_median_channel_max": 10.83454099460397,
+      "channel_max_quantiles": {
+        "0": 0.41293951869010925,
+        "0.25": 0.5985553413629532,
+        "0.5": 0.717245489358902,
+        "0.75": 0.9287824481725693,
+        "0.95": 2.5170238614082336,
+        "0.99": 5.108110904693603,
+        "1": 7.771025657653809
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.5303935711236765,
+      "largest_channel_indices": [
+        245,
+        242,
+        49,
+        50,
+        66,
+        73,
+        0,
+        142,
+        40,
+        21
+      ]
+    },
+    {
+      "index": 22,
+      "tensor": "/encoder2/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder2/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder2/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.2243070006370544,
+      "channel_max_maximum": 4.03758430480957,
+      "largest_over_median_channel_max": 3.2978528283417954,
+      "channel_max_quantiles": {
+        "0": 0.6187552213668823,
+        "0.25": 1.0188721418380737,
+        "0.5": 1.2243070006370544,
+        "0.75": 1.4953044056892395,
+        "0.95": 2.2031159400939937,
+        "0.99": 3.0515334200859145,
+        "1": 4.03758430480957
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 16.17497666346051,
+      "largest_channel_indices": [
+        18,
+        314,
+        291,
+        319,
+        236,
+        249,
+        729,
+        617,
+        378,
+        121
+      ]
+    },
+    {
+      "index": 23,
+      "tensor": "/encoder2/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder2/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder2/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder2/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.132411241531372,
+      "channel_max_maximum": 53.757904052734375,
+      "largest_over_median_channel_max": 47.47206852171211,
+      "channel_max_quantiles": {
+        "0": 0.4100922644138336,
+        "0.25": 0.9327248781919479,
+        "0.5": 1.132411241531372,
+        "0.75": 1.4160695672035217,
+        "0.95": 2.6682033538818355,
+        "0.99": 5.001565093994142,
+        "1": 53.757904052734375
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.474908028612916,
+      "largest_channel_indices": [
+        218,
+        238,
+        271,
+        647,
+        177,
+        493,
+        542,
+        480,
+        87,
+        583
+      ]
+    },
+    {
+      "index": 24,
+      "tensor": "/encoder2/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder2/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder2/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.140557289123535,
+      "channel_max_maximum": 9.271552085876465,
+      "largest_over_median_channel_max": 2.952199636028281,
+      "channel_max_quantiles": {
+        "0": 0.27527785301208496,
+        "0.25": 2.335156559944153,
+        "0.5": 3.140557289123535,
+        "0.75": 3.9819889664649963,
+        "0.95": 5.574279165267937,
+        "0.99": 7.1204096174240075,
+        "1": 9.271552085876465
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 86.80758996186616,
+      "largest_channel_indices": [
+        629,
+        449,
+        1009,
+        796,
+        940,
+        766,
+        478,
+        851,
+        158,
+        882
+      ]
+    },
+    {
+      "index": 25,
+      "tensor": "/encoder2/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder3/mha/Q/w",
+        "/encoder3/mha/K/w",
+        "/encoder3/mha/V/w",
+        "/encoder3/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder3/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder3/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder3/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder3/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder3/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.5621722042560577,
+      "channel_max_maximum": 3.453439950942993,
+      "largest_over_median_channel_max": 6.14302863926375,
+      "channel_max_quantiles": {
+        "0": 0.3000505566596985,
+        "0.25": 0.49313852936029434,
+        "0.5": 0.5621722042560577,
+        "0.75": 0.649349644780159,
+        "0.95": 0.9611765533685681,
+        "0.99": 2.073241629600527,
+        "1": 3.453439950942993
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.772998535597798,
+      "largest_channel_indices": [
+        218,
+        647,
+        238,
+        271,
+        177,
+        542,
+        701,
+        493,
+        418,
+        480
+      ]
+    },
+    {
+      "index": 26,
+      "tensor": "/encoder3/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder3/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder3/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.974586248397827,
+      "channel_max_maximum": 5.86251974105835,
+      "largest_over_median_channel_max": 1.97086897184979,
+      "channel_max_quantiles": {
+        "0": 1.76497220993042,
+        "0.25": 2.624040901660919,
+        "0.5": 2.974586248397827,
+        "0.75": 3.4116663932800293,
+        "0.95": 4.22342445850372,
+        "0.99": 5.0059640502929685,
+        "1": 5.86251974105835
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 7.092661836492947,
+      "largest_channel_indices": [
+        989,
+        1544,
+        1032,
+        1256,
+        1224,
+        1192,
+        1995,
+        459,
+        1704,
+        1512
+      ]
+    },
+    {
+      "index": 27,
+      "tensor": "/encoder3/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder3/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder3/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.883042097091675,
+      "channel_max_maximum": 12.161097526550293,
+      "largest_over_median_channel_max": 4.218147747068293,
+      "channel_max_quantiles": {
+        "0": 1.6978310346603394,
+        "0.25": 2.5966808199882507,
+        "0.5": 2.883042097091675,
+        "0.75": 3.2787344455718994,
+        "0.95": 4.196269750595093,
+        "0.99": 5.678882074356076,
+        "1": 12.161097526550293
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 5.2846858223272415,
+      "largest_channel_indices": [
+        32,
+        48,
+        50,
+        35,
+        91,
+        179,
+        127,
+        173,
+        87,
+        107
+      ]
+    },
+    {
+      "index": 28,
+      "tensor": "/encoder3/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder3/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder3/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.1930056810379028,
+      "channel_max_maximum": 4.953277111053467,
+      "largest_over_median_channel_max": 4.151930866535494,
+      "channel_max_quantiles": {
+        "0": 0.8311386108398438,
+        "0.25": 1.088118851184845,
+        "0.5": 1.1930056810379028,
+        "0.75": 1.3667880296707153,
+        "0.95": 1.8325631618499756,
+        "0.99": 2.8447656512260417,
+        "1": 4.953277111053467
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.145930422737182,
+      "largest_channel_indices": [
+        245,
+        50,
+        0,
+        22,
+        142,
+        40,
+        242,
+        89,
+        122,
+        111
+      ]
+    },
+    {
+      "index": 29,
+      "tensor": "/encoder3/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder3/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder3/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.0483548641204834,
+      "channel_max_maximum": 2.900946855545044,
+      "largest_over_median_channel_max": 2.767142076436867,
+      "channel_max_quantiles": {
+        "0": 0.4959331452846527,
+        "0.25": 0.8792379796504974,
+        "0.5": 1.0483548641204834,
+        "0.75": 1.2309879660606384,
+        "0.95": 1.6694331288337705,
+        "0.99": 2.224018692970276,
+        "1": 2.900946855545044
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 19.870582176455002,
+      "largest_channel_indices": [
+        3,
+        430,
+        690,
+        387,
+        178,
+        478,
+        388,
+        608,
+        366,
+        522
+      ]
+    },
+    {
+      "index": 30,
+      "tensor": "/encoder3/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder3/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder3/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder3/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.3038087487220764,
+      "channel_max_maximum": 53.53471374511719,
+      "largest_over_median_channel_max": 41.06025043748866,
+      "channel_max_quantiles": {
+        "0": 0.6832664608955383,
+        "0.25": 1.1369370520114899,
+        "0.5": 1.3038087487220764,
+        "0.75": 1.5488331615924835,
+        "0.95": 2.4807590484619126,
+        "0.99": 4.911166996955874,
+        "1": 53.53471374511719
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.2811835883004665,
+      "largest_channel_indices": [
+        218,
+        238,
+        271,
+        647,
+        177,
+        542,
+        493,
+        701,
+        480,
+        418
+      ]
+    },
+    {
+      "index": 31,
+      "tensor": "/encoder3/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder3/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder3/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.287017822265625,
+      "channel_max_maximum": 11.52759838104248,
+      "largest_over_median_channel_max": 3.5070081771254027,
+      "channel_max_quantiles": {
+        "0": 0.3088425397872925,
+        "0.25": 2.477996528148651,
+        "0.5": 3.287017822265625,
+        "0.75": 4.125365257263184,
+        "0.95": 5.702309012413022,
+        "0.99": 7.001052389144897,
+        "1": 11.52759838104248
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 158.63965897743938,
+      "largest_channel_indices": [
+        588,
+        881,
+        252,
+        893,
+        712,
+        237,
+        117,
+        889,
+        471,
+        878
+      ]
+    },
+    {
+      "index": 32,
+      "tensor": "/encoder3/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder4/mha/Q/w",
+        "/encoder4/mha/K/w",
+        "/encoder4/mha/V/w",
+        "/encoder4/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder4/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder4/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder4/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder4/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder4/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.593727707862854,
+      "channel_max_maximum": 3.234649419784546,
+      "largest_over_median_channel_max": 5.448035146326238,
+      "channel_max_quantiles": {
+        "0": 0.35003969073295593,
+        "0.25": 0.5223384946584702,
+        "0.5": 0.593727707862854,
+        "0.75": 0.6852515786886215,
+        "0.95": 1.016864150762558,
+        "0.99": 2.09038141965867,
+        "1": 3.234649419784546
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 9.512324266798684,
+      "largest_channel_indices": [
+        238,
+        271,
+        647,
+        218,
+        177,
+        701,
+        542,
+        493,
+        480,
+        0
+      ]
+    },
+    {
+      "index": 33,
+      "tensor": "/encoder4/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder4/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder4/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.0027965307235718,
+      "channel_max_maximum": 7.239270210266113,
+      "largest_over_median_channel_max": 2.4108427381597166,
+      "channel_max_quantiles": {
+        "0": 1.5294674634933472,
+        "0.25": 2.602506935596466,
+        "0.5": 3.0027965307235718,
+        "0.75": 3.5871960520744324,
+        "0.95": 4.685657930374145,
+        "0.99": 5.580123434066771,
+        "1": 7.239270210266113
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.000809736683305,
+      "largest_channel_indices": [
+        1396,
+        1044,
+        1859,
+        1748,
+        796,
+        1268,
+        1684,
+        1850,
+        1827,
+        1812
+      ]
+    },
+    {
+      "index": 34,
+      "tensor": "/encoder4/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder4/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder4/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.9568934440612793,
+      "channel_max_maximum": 8.971770286560059,
+      "largest_over_median_channel_max": 3.0341878922215657,
+      "channel_max_quantiles": {
+        "0": 2.0057601928710938,
+        "0.25": 2.628891944885254,
+        "0.5": 2.9568934440612793,
+        "0.75": 3.3458483815193176,
+        "0.95": 4.415798187255859,
+        "0.99": 6.083631825447083,
+        "1": 8.971770286560059
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.400800207433819,
+      "largest_channel_indices": [
+        219,
+        185,
+        52,
+        171,
+        218,
+        156,
+        112,
+        206,
+        33,
+        242
+      ]
+    },
+    {
+      "index": 35,
+      "tensor": "/encoder4/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder4/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder4/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.1253721117973328,
+      "channel_max_maximum": 4.803561210632324,
+      "largest_over_median_channel_max": 4.268420338727386,
+      "channel_max_quantiles": {
+        "0": 0.8153873085975647,
+        "0.25": 1.0238241851329803,
+        "0.5": 1.1253721117973328,
+        "0.75": 1.3036561012268066,
+        "0.95": 1.9123103618621826,
+        "0.99": 3.187021207809444,
+        "1": 4.803561210632324
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.03004017813594,
+      "largest_channel_indices": [
+        245,
+        142,
+        0,
+        49,
+        40,
+        73,
+        22,
+        186,
+        66,
+        50
+      ]
+    },
+    {
+      "index": 36,
+      "tensor": "/encoder4/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder4/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder4/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.051672637462616,
+      "channel_max_maximum": 2.7156546115875244,
+      "largest_over_median_channel_max": 2.5822242728874443,
+      "channel_max_quantiles": {
+        "0": 0.4316917955875397,
+        "0.25": 0.8778033554553986,
+        "0.5": 1.051672637462616,
+        "0.75": 1.2905527651309967,
+        "0.95": 1.792389154434204,
+        "0.99": 2.243135418891909,
+        "1": 2.7156546115875244
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 18.505293562819364,
+      "largest_channel_indices": [
+        763,
+        598,
+        238,
+        154,
+        697,
+        43,
+        156,
+        153,
+        50,
+        195
+      ]
+    },
+    {
+      "index": 37,
+      "tensor": "/encoder4/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder4/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder4/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder4/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.3612738847732544,
+      "channel_max_maximum": 50.18423843383789,
+      "largest_over_median_channel_max": 36.865644008293756,
+      "channel_max_quantiles": {
+        "0": 0.6472630500793457,
+        "0.25": 1.1992488503456116,
+        "0.5": 1.3612738847732544,
+        "0.75": 1.563876360654831,
+        "0.95": 2.337359488010406,
+        "0.99": 4.906384234428409,
+        "1": 50.18423843383789
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.948486037509092,
+      "largest_channel_indices": [
+        218,
+        238,
+        271,
+        647,
+        177,
+        493,
+        701,
+        480,
+        542,
+        273
+      ]
+    },
+    {
+      "index": 38,
+      "tensor": "/encoder4/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder4/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder4/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.0498307943344116,
+      "channel_max_maximum": 11.398408889770508,
+      "largest_over_median_channel_max": 3.7373905827644682,
+      "channel_max_quantiles": {
+        "0": 0.3088224530220032,
+        "0.25": 2.4228067994117737,
+        "0.5": 3.0498307943344116,
+        "0.75": 4.018133759498596,
+        "0.95": 5.605031394958494,
+        "0.99": 6.853373675346374,
+        "1": 11.398408889770508
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 94.80862232200084,
+      "largest_channel_indices": [
+        157,
+        455,
+        994,
+        491,
+        18,
+        950,
+        375,
+        769,
+        432,
+        27
+      ]
+    },
+    {
+      "index": 39,
+      "tensor": "/encoder4/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder5/mha/Q/w",
+        "/encoder5/mha/K/w",
+        "/encoder5/mha/V/w",
+        "/encoder5/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder5/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder5/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder5/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder5/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder5/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.6741457581520081,
+      "channel_max_maximum": 3.2742390632629395,
+      "largest_over_median_channel_max": 4.85687111973885,
+      "channel_max_quantiles": {
+        "0": 0.374571293592453,
+        "0.25": 0.5910760462284088,
+        "0.5": 0.6741457581520081,
+        "0.75": 0.7863772809505463,
+        "0.95": 1.0844540953636168,
+        "0.99": 2.082710084915169,
+        "1": 3.2742390632629395
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 10.10265225601509,
+      "largest_channel_indices": [
+        238,
+        218,
+        271,
+        493,
+        701,
+        647,
+        542,
+        177,
+        480,
+        194
+      ]
+    },
+    {
+      "index": 40,
+      "tensor": "/encoder5/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder5/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder5/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.14470636844635,
+      "channel_max_maximum": 8.484590530395508,
+      "largest_over_median_channel_max": 2.698054933054796,
+      "channel_max_quantiles": {
+        "0": 1.7895886898040771,
+        "0.25": 2.68499094247818,
+        "0.5": 3.14470636844635,
+        "0.75": 3.7749764919281006,
+        "0.95": 5.003254747390747,
+        "0.99": 6.239806833267211,
+        "1": 8.484590530395508
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 7.846882457780978,
+      "largest_channel_indices": [
+        237,
+        13,
+        1805,
+        2029,
+        248,
+        205,
+        45,
+        1773,
+        1997,
+        1837
+      ]
+    },
+    {
+      "index": 41,
+      "tensor": "/encoder5/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder5/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder5/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.1014515161514282,
+      "channel_max_maximum": 6.47055721282959,
+      "largest_over_median_channel_max": 2.0862996500615503,
+      "channel_max_quantiles": {
+        "0": 1.9430779218673706,
+        "0.25": 2.750435471534729,
+        "0.5": 3.1014515161514282,
+        "0.75": 3.5107796788215637,
+        "0.95": 4.7924511432647705,
+        "0.99": 5.617496275901792,
+        "1": 6.47055721282959
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.365201507035332,
+      "largest_channel_indices": [
+        252,
+        62,
+        199,
+        221,
+        43,
+        34,
+        42,
+        52,
+        23,
+        160
+      ]
+    },
+    {
+      "index": 42,
+      "tensor": "/encoder5/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder5/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder5/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.180436134338379,
+      "channel_max_maximum": 8.212899208068848,
+      "largest_over_median_channel_max": 6.9575125406272695,
+      "channel_max_quantiles": {
+        "0": 0.8183098435401917,
+        "0.25": 1.0289779007434845,
+        "0.5": 1.180436134338379,
+        "0.75": 1.3549464344978333,
+        "0.95": 2.2477261424064636,
+        "0.99": 4.16795247793197,
+        "1": 8.212899208068848
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 9.269579153197643,
+      "largest_channel_indices": [
+        245,
+        0,
+        142,
+        242,
+        22,
+        50,
+        73,
+        66,
+        49,
+        107
+      ]
+    },
+    {
+      "index": 43,
+      "tensor": "/encoder5/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder5/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder5/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.0584111213684082,
+      "channel_max_maximum": 2.9858481884002686,
+      "largest_over_median_channel_max": 2.8210665289872408,
+      "channel_max_quantiles": {
+        "0": 0.48492488265037537,
+        "0.25": 0.9119928330183029,
+        "0.5": 1.0584111213684082,
+        "0.75": 1.2581427097320557,
+        "0.95": 1.634410750865936,
+        "0.99": 2.0804937553405787,
+        "1": 2.9858481884002686
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 26.0334701780765,
+      "largest_channel_indices": [
+        39,
+        747,
+        144,
+        532,
+        602,
+        143,
+        316,
+        734,
+        581,
+        576
+      ]
+    },
+    {
+      "index": 44,
+      "tensor": "/encoder5/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder5/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder5/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder5/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.4683794975280762,
+      "channel_max_maximum": 48.2889404296875,
+      "largest_over_median_channel_max": 32.885872154289046,
+      "channel_max_quantiles": {
+        "0": 0.8451234698295593,
+        "0.25": 1.315860539674759,
+        "0.5": 1.4683794975280762,
+        "0.75": 1.6333099603652954,
+        "0.95": 2.281916522979736,
+        "0.99": 4.541233711242678,
+        "1": 48.2889404296875
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.747765848453813,
+      "largest_channel_indices": [
+        218,
+        238,
+        271,
+        647,
+        177,
+        493,
+        480,
+        738,
+        418,
+        701
+      ]
+    },
+    {
+      "index": 45,
+      "tensor": "/encoder5/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder5/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder5/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.919707775115967,
+      "channel_max_maximum": 10.787360191345215,
+      "largest_over_median_channel_max": 3.694671187056299,
+      "channel_max_quantiles": {
+        "0": 0.3088434040546417,
+        "0.25": 2.2786247730255127,
+        "0.5": 2.919707775115967,
+        "0.75": 3.6812548637390137,
+        "0.95": 5.0516863822937,
+        "0.99": 6.724850234985349,
+        "1": 10.787360191345215
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 69.44767927253683,
+      "largest_channel_indices": [
+        337,
+        874,
+        889,
+        329,
+        556,
+        241,
+        371,
+        896,
+        150,
+        980
+      ]
+    },
+    {
+      "index": 46,
+      "tensor": "/encoder5/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder6/mha/Q/w",
+        "/encoder6/mha/K/w",
+        "/encoder6/mha/V/w",
+        "/encoder6/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder6/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder6/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder6/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder6/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder6/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.7081079483032227,
+      "channel_max_maximum": 3.02375864982605,
+      "largest_over_median_channel_max": 4.27019447680487,
+      "channel_max_quantiles": {
+        "0": 0.39360561966896057,
+        "0.25": 0.63015316426754,
+        "0.5": 0.7081079483032227,
+        "0.75": 0.8175614476203918,
+        "0.95": 1.1048491418361663,
+        "0.99": 1.8575663387775463,
+        "1": 3.02375864982605
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 10.28634055780506,
+      "largest_channel_indices": [
+        218,
+        238,
+        647,
+        271,
+        177,
+        493,
+        701,
+        542,
+        418,
+        480
+      ]
+    },
+    {
+      "index": 47,
+      "tensor": "/encoder6/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder6/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder6/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.441662311553955,
+      "channel_max_maximum": 11.509929656982422,
+      "largest_over_median_channel_max": 3.3442937206078014,
+      "channel_max_quantiles": {
+        "0": 1.799804925918579,
+        "0.25": 2.953963041305542,
+        "0.5": 3.441662311553955,
+        "0.75": 4.061757683753967,
+        "0.95": 5.272091031074523,
+        "0.99": 6.558592143058776,
+        "1": 11.509929656982422
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.599965313230456,
+      "largest_channel_indices": [
+        1816,
+        24,
+        2040,
+        248,
+        216,
+        2036,
+        1848,
+        1281,
+        1560,
+        1784
+      ]
+    },
+    {
+      "index": 48,
+      "tensor": "/encoder6/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder6/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder6/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.158311128616333,
+      "channel_max_maximum": 7.577265739440918,
+      "largest_over_median_channel_max": 2.3991511383365656,
+      "channel_max_quantiles": {
+        "0": 2.2660973072052,
+        "0.25": 2.8528829216957092,
+        "0.5": 3.158311128616333,
+        "0.75": 3.5758479833602905,
+        "0.95": 4.420207858085632,
+        "0.99": 5.1094770669937075,
+        "1": 7.577265739440918
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.74216691002565,
+      "largest_channel_indices": [
+        166,
+        232,
+        179,
+        21,
+        31,
+        247,
+        127,
+        206,
+        182,
+        94
+      ]
+    },
+    {
+      "index": 49,
+      "tensor": "/encoder6/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder6/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder6/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.8358491659164429,
+      "channel_max_maximum": 8.036812782287598,
+      "largest_over_median_channel_max": 4.377708654662638,
+      "channel_max_quantiles": {
+        "0": 1.3734650611877441,
+        "0.25": 1.6897786259651184,
+        "0.5": 1.8358491659164429,
+        "0.75": 2.0701408982276917,
+        "0.95": 3.005641281604767,
+        "0.99": 4.23634444475173,
+        "1": 8.036812782287598
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 11.18422803742272,
+      "largest_channel_indices": [
+        245,
+        142,
+        0,
+        242,
+        89,
+        22,
+        66,
+        82,
+        73,
+        107
+      ]
+    },
+    {
+      "index": 50,
+      "tensor": "/encoder6/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder6/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder6/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.0070430636405945,
+      "channel_max_maximum": 2.6362645626068115,
+      "largest_over_median_channel_max": 2.6178270401628754,
+      "channel_max_quantiles": {
+        "0": 0.555843710899353,
+        "0.25": 0.8496198803186417,
+        "0.5": 1.0070430636405945,
+        "0.75": 1.2168269157409668,
+        "0.95": 1.6574296772480008,
+        "0.99": 2.0456298303604132,
+        "1": 2.6362645626068115
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 19.544360885865146,
+      "largest_channel_indices": [
+        160,
+        613,
+        646,
+        478,
+        45,
+        118,
+        100,
+        246,
+        638,
+        89
+      ]
+    },
+    {
+      "index": 51,
+      "tensor": "/encoder6/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder6/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder6/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder6/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.493270218372345,
+      "channel_max_maximum": 46.669151306152344,
+      "largest_over_median_channel_max": 31.25298471231913,
+      "channel_max_quantiles": {
+        "0": 0.8524361252784729,
+        "0.25": 1.3649489879608154,
+        "0.5": 1.493270218372345,
+        "0.75": 1.683916449546814,
+        "0.95": 2.165610837936401,
+        "0.99": 4.3753590440750125,
+        "1": 46.669151306152344
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.045041360662468,
+      "largest_channel_indices": [
+        218,
+        238,
+        647,
+        271,
+        177,
+        701,
+        542,
+        738,
+        493,
+        418
+      ]
+    },
+    {
+      "index": 52,
+      "tensor": "/encoder6/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder6/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder6/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.8462419509887695,
+      "channel_max_maximum": 9.30111312866211,
+      "largest_over_median_channel_max": 3.2678575078379937,
+      "channel_max_quantiles": {
+        "0": 0.3088434040546417,
+        "0.25": 2.258229434490204,
+        "0.5": 2.8462419509887695,
+        "0.75": 3.549724280834198,
+        "0.95": 4.920993494987487,
+        "0.99": 6.227152457237239,
+        "1": 9.30111312866211
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 49.462316035296844,
+      "largest_channel_indices": [
+        513,
+        680,
+        132,
+        494,
+        884,
+        765,
+        133,
+        2,
+        534,
+        737
+      ]
+    },
+    {
+      "index": 53,
+      "tensor": "/encoder6/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder7/mha/Q/w",
+        "/encoder7/mha/K/w",
+        "/encoder7/mha/V/w",
+        "/encoder7/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder7/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder7/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder7/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder7/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder7/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.7042475640773773,
+      "channel_max_maximum": 3.079698085784912,
+      "largest_over_median_channel_max": 4.373033352013893,
+      "channel_max_quantiles": {
+        "0": 0.47310101985931396,
+        "0.25": 0.6283913105726242,
+        "0.5": 0.7042475640773773,
+        "0.75": 0.8001482635736465,
+        "0.95": 1.1026729583740233,
+        "0.99": 1.8521266150474567,
+        "1": 3.079698085784912
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 10.431276684405116,
+      "largest_channel_indices": [
+        218,
+        238,
+        177,
+        647,
+        271,
+        701,
+        542,
+        493,
+        418,
+        0
+      ]
+    },
+    {
+      "index": 54,
+      "tensor": "/encoder7/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder7/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder7/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.13901424407959,
+      "channel_max_maximum": 7.829309940338135,
+      "largest_over_median_channel_max": 2.494193823779164,
+      "channel_max_quantiles": {
+        "0": 1.632646083831787,
+        "0.25": 2.760332405567169,
+        "0.5": 3.13901424407959,
+        "0.75": 3.664361596107483,
+        "0.95": 4.628466963768005,
+        "0.99": 5.707823095321655,
+        "1": 7.829309940338135
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.161526621020174,
+      "largest_channel_indices": [
+        1253,
+        1509,
+        1765,
+        997,
+        1285,
+        1797,
+        741,
+        965,
+        517,
+        773
+      ]
+    },
+    {
+      "index": 55,
+      "tensor": "/encoder7/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder7/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder7/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.013135552406311,
+      "channel_max_maximum": 9.727959632873535,
+      "largest_over_median_channel_max": 3.2285170924702404,
+      "channel_max_quantiles": {
+        "0": 2.13077449798584,
+        "0.25": 2.690224766731262,
+        "0.5": 3.013135552406311,
+        "0.75": 3.3755953311920166,
+        "0.95": 4.249821066856384,
+        "0.99": 5.493860721588134,
+        "1": 9.727959632873535
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.475842172623171,
+      "largest_channel_indices": [
+        201,
+        221,
+        215,
+        148,
+        182,
+        219,
+        17,
+        236,
+        204,
+        239
+      ]
+    },
+    {
+      "index": 56,
+      "tensor": "/encoder7/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder7/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder7/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.5326697826385498,
+      "channel_max_maximum": 4.828189849853516,
+      "largest_over_median_channel_max": 3.1501827102910593,
+      "channel_max_quantiles": {
+        "0": 1.0377333164215088,
+        "0.25": 1.3394739031791687,
+        "0.5": 1.5326697826385498,
+        "0.75": 1.7593769431114197,
+        "0.95": 2.466583549976349,
+        "0.99": 3.15914990901947,
+        "1": 4.828189849853516
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 10.94307159215686,
+      "largest_channel_indices": [
+        245,
+        242,
+        49,
+        0,
+        50,
+        142,
+        66,
+        73,
+        21,
+        89
+      ]
+    },
+    {
+      "index": 57,
+      "tensor": "/encoder7/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder7/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder7/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.9246644377708435,
+      "channel_max_maximum": 2.7820677757263184,
+      "largest_over_median_channel_max": 3.008732316377662,
+      "channel_max_quantiles": {
+        "0": 0.5586680173873901,
+        "0.25": 0.8119078576564789,
+        "0.5": 0.9246644377708435,
+        "0.75": 1.1107243597507477,
+        "0.95": 1.479474055767059,
+        "0.99": 1.869477477073674,
+        "1": 2.7820677757263184
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 16.268559005381608,
+      "largest_channel_indices": [
+        541,
+        362,
+        602,
+        454,
+        191,
+        598,
+        528,
+        543,
+        638,
+        680
+      ]
+    },
+    {
+      "index": 58,
+      "tensor": "/encoder7/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder7/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder7/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder7/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.5105993747711182,
+      "channel_max_maximum": 44.747371673583984,
+      "largest_over_median_channel_max": 29.622262805691935,
+      "channel_max_quantiles": {
+        "0": 0.9956306219100952,
+        "0.25": 1.381802350282669,
+        "0.5": 1.5105993747711182,
+        "0.75": 1.680729240179062,
+        "0.95": 2.2259343504905695,
+        "0.99": 4.655140285491945,
+        "1": 44.747371673583984
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.526133313650605,
+      "largest_channel_indices": [
+        218,
+        238,
+        177,
+        647,
+        271,
+        542,
+        418,
+        738,
+        701,
+        493
+      ]
+    },
+    {
+      "index": 59,
+      "tensor": "/encoder7/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder7/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder7/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.774621367454529,
+      "channel_max_maximum": 8.773425102233887,
+      "largest_over_median_channel_max": 3.1620260714285253,
+      "channel_max_quantiles": {
+        "0": 0.4806329309940338,
+        "0.25": 2.181248903274536,
+        "0.5": 2.774621367454529,
+        "0.75": 3.4477503895759583,
+        "0.95": 4.966016578674316,
+        "0.99": 6.893778853416443,
+        "1": 8.773425102233887
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 42.58095823000817,
+      "largest_channel_indices": [
+        444,
+        336,
+        77,
+        481,
+        398,
+        246,
+        874,
+        894,
+        34,
+        223
+      ]
+    },
+    {
+      "index": 60,
+      "tensor": "/encoder7/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder8/mha/Q/w",
+        "/encoder8/mha/K/w",
+        "/encoder8/mha/V/w",
+        "/encoder8/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder8/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder8/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder8/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder8/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder8/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.697739452123642,
+      "channel_max_maximum": 3.1267662048339844,
+      "largest_over_median_channel_max": 4.481280505663467,
+      "channel_max_quantiles": {
+        "0": 0.460225909948349,
+        "0.25": 0.624137207865715,
+        "0.5": 0.697739452123642,
+        "0.75": 0.8169786036014557,
+        "0.95": 1.1641120553016662,
+        "0.99": 1.9920826649665866,
+        "1": 3.1267662048339844
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 11.207395860571856,
+      "largest_channel_indices": [
+        218,
+        238,
+        177,
+        647,
+        271,
+        701,
+        542,
+        493,
+        418,
+        0
+      ]
+    },
+    {
+      "index": 61,
+      "tensor": "/encoder8/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder8/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder8/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.910984516143799,
+      "channel_max_maximum": 8.300450325012207,
+      "largest_over_median_channel_max": 2.8514237293188596,
+      "channel_max_quantiles": {
+        "0": 1.396406650543213,
+        "0.25": 2.510246455669403,
+        "0.5": 2.910984516143799,
+        "0.75": 3.478145182132721,
+        "0.95": 4.781789064407349,
+        "0.99": 6.2401252508163445,
+        "1": 8.300450325012207
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.630777090185973,
+      "largest_channel_indices": [
+        16,
+        240,
+        2032,
+        1808,
+        1444,
+        65,
+        2030,
+        14,
+        208,
+        1636
+      ]
+    },
+    {
+      "index": 62,
+      "tensor": "/encoder8/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder8/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder8/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.0843067169189453,
+      "channel_max_maximum": 5.67173433303833,
+      "largest_over_median_channel_max": 1.838900879061757,
+      "channel_max_quantiles": {
+        "0": 2.0875613689422607,
+        "0.25": 2.7572832107543945,
+        "0.5": 3.0843067169189453,
+        "0.75": 3.4532576203346252,
+        "0.95": 4.585196375846863,
+        "0.99": 5.204245471954343,
+        "1": 5.67173433303833
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.368727145051215,
+      "largest_channel_indices": [
+        89,
+        119,
+        88,
+        108,
+        9,
+        204,
+        168,
+        66,
+        97,
+        126
+      ]
+    },
+    {
+      "index": 63,
+      "tensor": "/encoder8/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder8/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder8/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.129846215248108,
+      "channel_max_maximum": 8.232830047607422,
+      "largest_over_median_channel_max": 7.28668197184653,
+      "channel_max_quantiles": {
+        "0": 0.793869137763977,
+        "0.25": 1.0075111985206604,
+        "0.5": 1.129846215248108,
+        "0.75": 1.2833456993103027,
+        "0.95": 2.359591782093048,
+        "0.99": 4.299961972236629,
+        "1": 8.232830047607422
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 10.585382033982729,
+      "largest_channel_indices": [
+        245,
+        0,
+        142,
+        73,
+        49,
+        50,
+        22,
+        40,
+        242,
+        68
+      ]
+    },
+    {
+      "index": 64,
+      "tensor": "/encoder8/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder8/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder8/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.0184689164161682,
+      "channel_max_maximum": 3.0488815307617188,
+      "largest_over_median_channel_max": 2.9935931098322106,
+      "channel_max_quantiles": {
+        "0": 0.489961713552475,
+        "0.25": 0.8635469824075699,
+        "0.5": 1.0184689164161682,
+        "0.75": 1.2284186780452728,
+        "0.95": 1.5878672540187833,
+        "0.99": 2.018002786636354,
+        "1": 3.0488815307617188
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 17.102040007197754,
+      "largest_channel_indices": [
+        350,
+        549,
+        353,
+        102,
+        231,
+        515,
+        482,
+        509,
+        58,
+        666
+      ]
+    },
+    {
+      "index": 65,
+      "tensor": "/encoder8/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder8/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder8/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder8/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.451006531715393,
+      "channel_max_maximum": 45.456539154052734,
+      "largest_over_median_channel_max": 31.32759099320773,
+      "channel_max_quantiles": {
+        "0": 0.9616196155548096,
+        "0.25": 1.3359582424163818,
+        "0.5": 1.451006531715393,
+        "0.75": 1.6339472830295563,
+        "0.95": 2.245281493663787,
+        "0.99": 4.4213673019409185,
+        "1": 45.456539154052734
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 7.632449508212581,
+      "largest_channel_indices": [
+        218,
+        238,
+        177,
+        271,
+        647,
+        542,
+        418,
+        701,
+        493,
+        738
+      ]
+    },
+    {
+      "index": 66,
+      "tensor": "/encoder8/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder8/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder8/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.6518861055374146,
+      "channel_max_maximum": 8.608642578125,
+      "largest_over_median_channel_max": 3.2462339012785115,
+      "channel_max_quantiles": {
+        "0": 0.30884334444999695,
+        "0.25": 2.068625271320343,
+        "0.5": 2.6518861055374146,
+        "0.75": 3.3340324759483337,
+        "0.95": 4.622961044311522,
+        "0.99": 5.927122817039487,
+        "1": 8.608642578125
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 145.69305326230938,
+      "largest_channel_indices": [
+        297,
+        128,
+        908,
+        891,
+        465,
+        252,
+        917,
+        579,
+        455,
+        571
+      ]
+    },
+    {
+      "index": 67,
+      "tensor": "/encoder8/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder9/mha/Q/w",
+        "/encoder9/mha/K/w",
+        "/encoder9/mha/V/w",
+        "/encoder9/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder9/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder9/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder9/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder9/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder9/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.6745906174182892,
+      "channel_max_maximum": 3.4853639602661133,
+      "largest_over_median_channel_max": 5.166635690257408,
+      "channel_max_quantiles": {
+        "0": 0.42121002078056335,
+        "0.25": 0.611725464463234,
+        "0.5": 0.6745906174182892,
+        "0.75": 0.763232633471489,
+        "0.95": 1.051415294408798,
+        "0.99": 2.0209289026260375,
+        "1": 3.4853639602661133
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 9.761633179851927,
+      "largest_channel_indices": [
+        218,
+        238,
+        177,
+        271,
+        418,
+        542,
+        701,
+        647,
+        493,
+        0
+      ]
+    },
+    {
+      "index": 68,
+      "tensor": "/encoder9/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder9/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder9/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.287401556968689,
+      "channel_max_maximum": 7.8134636878967285,
+      "largest_over_median_channel_max": 2.376790164661697,
+      "channel_max_quantiles": {
+        "0": 1.7428585290908813,
+        "0.25": 2.856943964958191,
+        "0.5": 3.287401556968689,
+        "0.75": 3.8619231581687927,
+        "0.95": 4.91235144138336,
+        "0.99": 5.808355183601377,
+        "1": 7.8134636878967285
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 10.998091717224309,
+      "largest_channel_indices": [
+        1457,
+        3,
+        2019,
+        8,
+        1795,
+        227,
+        520,
+        1800,
+        744,
+        15
+      ]
+    },
+    {
+      "index": 69,
+      "tensor": "/encoder9/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder9/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder9/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.185877799987793,
+      "channel_max_maximum": 5.427328586578369,
+      "largest_over_median_channel_max": 1.7035583055317327,
+      "channel_max_quantiles": {
+        "0": 2.1374831199645996,
+        "0.25": 2.858439564704895,
+        "0.5": 3.185877799987793,
+        "0.75": 3.6335918307304382,
+        "0.95": 4.3117358684539795,
+        "0.99": 5.036636471748351,
+        "1": 5.427328586578369
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.931010876573128,
+      "largest_channel_indices": [
+        189,
+        106,
+        59,
+        75,
+        178,
+        119,
+        103,
+        105,
+        195,
+        131
+      ]
+    },
+    {
+      "index": 70,
+      "tensor": "/encoder9/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder9/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder9/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.2345389127731323,
+      "channel_max_maximum": 6.8886260986328125,
+      "largest_over_median_channel_max": 5.579918160018918,
+      "channel_max_quantiles": {
+        "0": 0.8677413463592529,
+        "0.25": 1.1058214604854584,
+        "0.5": 1.2345389127731323,
+        "0.75": 1.4183702170848846,
+        "0.95": 2.6032093167304993,
+        "0.99": 4.92931237220764,
+        "1": 6.8886260986328125
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.970447538387845,
+      "largest_channel_indices": [
+        245,
+        0,
+        66,
+        242,
+        21,
+        50,
+        49,
+        73,
+        40,
+        107
+      ]
+    },
+    {
+      "index": 71,
+      "tensor": "/encoder9/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder9/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder9/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.9964479207992554,
+      "channel_max_maximum": 3.0565378665924072,
+      "largest_over_median_channel_max": 3.067433633802702,
+      "channel_max_quantiles": {
+        "0": 0.5347734093666077,
+        "0.25": 0.8536910563707352,
+        "0.5": 0.9964479207992554,
+        "0.75": 1.1544557809829712,
+        "0.95": 1.6051870882511137,
+        "0.99": 1.9449722611904152,
+        "1": 3.0565378665924072
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 19.004546588403045,
+      "largest_channel_indices": [
+        350,
+        518,
+        66,
+        431,
+        96,
+        599,
+        69,
+        550,
+        351,
+        365
+      ]
+    },
+    {
+      "index": 72,
+      "tensor": "/encoder9/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder9/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder9/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder9/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.4472099542617798,
+      "channel_max_maximum": 44.501461029052734,
+      "largest_over_median_channel_max": 30.749830664171242,
+      "channel_max_quantiles": {
+        "0": 0.957099437713623,
+        "0.25": 1.3272678554058075,
+        "0.5": 1.4472099542617798,
+        "0.75": 1.6082099676132202,
+        "0.95": 2.091507840156555,
+        "0.99": 4.296938486099254,
+        "1": 44.501461029052734
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.742886693863012,
+      "largest_channel_indices": [
+        218,
+        238,
+        177,
+        271,
+        647,
+        542,
+        418,
+        701,
+        0,
+        493
+      ]
+    },
+    {
+      "index": 73,
+      "tensor": "/encoder9/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder9/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder9/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.5447341203689575,
+      "channel_max_maximum": 10.496984481811523,
+      "largest_over_median_channel_max": 4.124982801853413,
+      "channel_max_quantiles": {
+        "0": 0.3088340759277344,
+        "0.25": 2.008106052875519,
+        "0.5": 2.5447341203689575,
+        "0.75": 3.162327468395233,
+        "0.95": 4.516552376747129,
+        "0.99": 5.730768461227416,
+        "1": 10.496984481811523
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 70.58976593407702,
+      "largest_channel_indices": [
+        296,
+        730,
+        390,
+        833,
+        339,
+        958,
+        196,
+        672,
+        334,
+        129
+      ]
+    },
+    {
+      "index": 74,
+      "tensor": "/encoder9/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder10/mha/Q/w",
+        "/encoder10/mha/K/w",
+        "/encoder10/mha/V/w",
+        "/encoder10/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder10/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder10/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder10/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder10/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder10/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.6213673055171967,
+      "channel_max_maximum": 3.1104042530059814,
+      "largest_over_median_channel_max": 5.005741733413265,
+      "channel_max_quantiles": {
+        "0": 0.41532400250434875,
+        "0.25": 0.5607124119997025,
+        "0.5": 0.6213673055171967,
+        "0.75": 0.6957985609769821,
+        "0.95": 0.8749773979187011,
+        "0.99": 1.755448766946797,
+        "1": 3.1104042530059814
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 9.347867202727668,
+      "largest_channel_indices": [
+        238,
+        218,
+        177,
+        418,
+        271,
+        647,
+        542,
+        701,
+        493,
+        738
+      ]
+    },
+    {
+      "index": 75,
+      "tensor": "/encoder10/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder10/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder10/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.894211173057556,
+      "channel_max_maximum": 6.116728782653809,
+      "largest_over_median_channel_max": 2.1134355501059936,
+      "channel_max_quantiles": {
+        "0": 1.6235709190368652,
+        "0.25": 2.5503498315811157,
+        "0.5": 2.894211173057556,
+        "0.75": 3.3419873118400574,
+        "0.95": 4.187980031967163,
+        "0.99": 4.921089015007019,
+        "1": 6.116728782653809
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.615782591611922,
+      "largest_channel_indices": [
+        933,
+        1381,
+        1080,
+        1082,
+        1432,
+        1806,
+        1642,
+        2030,
+        229,
+        30
+      ]
+    },
+    {
+      "index": 76,
+      "tensor": "/encoder10/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder10/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder10/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.156636595726013,
+      "channel_max_maximum": 6.592584609985352,
+      "largest_over_median_channel_max": 2.08848386884683,
+      "channel_max_quantiles": {
+        "0": 2.186720848083496,
+        "0.25": 2.878315269947052,
+        "0.5": 3.156636595726013,
+        "0.75": 3.5196282267570496,
+        "0.95": 4.432347774505615,
+        "0.99": 5.657953071594225,
+        "1": 6.592584609985352
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.50789920832793,
+      "largest_channel_indices": [
+        223,
+        255,
+        128,
+        69,
+        224,
+        85,
+        17,
+        1,
+        25,
+        22
+      ]
+    },
+    {
+      "index": 77,
+      "tensor": "/encoder10/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder10/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder10/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.8419390320777893,
+      "channel_max_maximum": 7.727496147155762,
+      "largest_over_median_channel_max": 4.1953050630773605,
+      "channel_max_quantiles": {
+        "0": 1.292586326599121,
+        "0.25": 1.611219346523285,
+        "0.5": 1.8419390320777893,
+        "0.75": 2.1582852602005005,
+        "0.95": 2.966099977493286,
+        "0.99": 4.590654468536373,
+        "1": 7.727496147155762
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 15.252380768013538,
+      "largest_channel_indices": [
+        142,
+        245,
+        0,
+        186,
+        21,
+        50,
+        242,
+        2,
+        73,
+        111
+      ]
+    },
+    {
+      "index": 78,
+      "tensor": "/encoder10/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder10/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder10/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.8487033545970917,
+      "channel_max_maximum": 2.505936622619629,
+      "largest_over_median_channel_max": 2.9526649200170563,
+      "channel_max_quantiles": {
+        "0": 0.43487322330474854,
+        "0.25": 0.7179324179887772,
+        "0.5": 0.8487033545970917,
+        "0.75": 1.0168360471725464,
+        "0.95": 1.3431819975376127,
+        "0.99": 1.7243449997901918,
+        "1": 2.505936622619629
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 18.384113568992735,
+      "largest_channel_indices": [
+        71,
+        680,
+        685,
+        659,
+        84,
+        657,
+        188,
+        79,
+        75,
+        705
+      ]
+    },
+    {
+      "index": 79,
+      "tensor": "/encoder10/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder10/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder10/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder10/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.4641718864440918,
+      "channel_max_maximum": 40.654624938964844,
+      "largest_over_median_channel_max": 27.766292547591,
+      "channel_max_quantiles": {
+        "0": 0.904992401599884,
+        "0.25": 1.344554364681244,
+        "0.5": 1.4641718864440918,
+        "0.75": 1.6229523718357086,
+        "0.95": 2.101712334156036,
+        "0.99": 4.456211566925074,
+        "1": 40.654624938964844
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 7.460590958783173,
+      "largest_channel_indices": [
+        218,
+        238,
+        177,
+        542,
+        271,
+        647,
+        418,
+        493,
+        738,
+        701
+      ]
+    },
+    {
+      "index": 80,
+      "tensor": "/encoder10/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder10/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder10/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.6190590858459473,
+      "channel_max_maximum": 7.088682174682617,
+      "largest_over_median_channel_max": 2.706575889406862,
+      "channel_max_quantiles": {
+        "0": 0.30884337425231934,
+        "0.25": 2.109578311443329,
+        "0.5": 2.6190590858459473,
+        "0.75": 3.2781932950019836,
+        "0.95": 4.416003561019897,
+        "0.99": 6.143329968452451,
+        "1": 7.088682174682617
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 40.58762268376788,
+      "largest_channel_indices": [
+        153,
+        89,
+        854,
+        706,
+        221,
+        652,
+        659,
+        558,
+        137,
+        223
+      ]
+    },
+    {
+      "index": 81,
+      "tensor": "/encoder10/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder11/mha/Q/w",
+        "/encoder11/mha/K/w",
+        "/encoder11/mha/V/w",
+        "/encoder11/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder11/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder11/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder11/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder11/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder11/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.63015016913414,
+      "channel_max_maximum": 3.213865280151367,
+      "largest_over_median_channel_max": 5.100157768056128,
+      "channel_max_quantiles": {
+        "0": 0.4400722086429596,
+        "0.25": 0.5818058401346207,
+        "0.5": 0.63015016913414,
+        "0.75": 0.6944627463817596,
+        "0.95": 0.8920708030462264,
+        "0.99": 1.7392676663398745,
+        "1": 3.213865280151367
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 9.061596045771818,
+      "largest_channel_indices": [
+        238,
+        177,
+        542,
+        218,
+        418,
+        271,
+        647,
+        493,
+        738,
+        701
+      ]
+    },
+    {
+      "index": 82,
+      "tensor": "/encoder11/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder11/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder11/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.5482804775238037,
+      "channel_max_maximum": 4.670958518981934,
+      "largest_over_median_channel_max": 1.8329844615537623,
+      "channel_max_quantiles": {
+        "0": 1.429956078529358,
+        "0.25": 2.265497922897339,
+        "0.5": 2.5482804775238037,
+        "0.75": 2.893110156059265,
+        "0.95": 3.5866253495216367,
+        "0.99": 4.157175126075745,
+        "1": 4.670958518981934
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 7.238341023129884,
+      "largest_channel_indices": [
+        4,
+        2033,
+        25,
+        897,
+        593,
+        708,
+        964,
+        721,
+        249,
+        1809
+      ]
+    },
+    {
+      "index": 83,
+      "tensor": "/encoder11/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder11/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder11/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.0328850746154785,
+      "channel_max_maximum": 7.210582256317139,
+      "largest_over_median_channel_max": 2.377466365827042,
+      "channel_max_quantiles": {
+        "0": 2.169250726699829,
+        "0.25": 2.7194655537605286,
+        "0.5": 3.0328850746154785,
+        "0.75": 3.472959518432617,
+        "0.95": 4.346529603004456,
+        "0.99": 5.677535104751586,
+        "1": 7.210582256317139
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.794515289636889,
+      "largest_channel_indices": [
+        63,
+        27,
+        250,
+        36,
+        107,
+        111,
+        223,
+        143,
+        74,
+        225
+      ]
+    },
+    {
+      "index": 84,
+      "tensor": "/encoder11/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder11/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder11/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.2120850086212158,
+      "channel_max_maximum": 7.356222152709961,
+      "largest_over_median_channel_max": 6.069064546122793,
+      "channel_max_quantiles": {
+        "0": 0.8636317253112793,
+        "0.25": 1.0985973179340363,
+        "0.5": 1.2120850086212158,
+        "0.75": 1.467663824558258,
+        "0.95": 2.5686657428741455,
+        "0.99": 5.2230829238891605,
+        "1": 7.356222152709961
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 11.957704041718562,
+      "largest_channel_indices": [
+        245,
+        40,
+        142,
+        73,
+        50,
+        49,
+        0,
+        21,
+        22,
+        242
+      ]
+    },
+    {
+      "index": 85,
+      "tensor": "/encoder11/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder11/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder11/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.9515065252780914,
+      "channel_max_maximum": 2.539062976837158,
+      "largest_over_median_channel_max": 2.6684661737817095,
+      "channel_max_quantiles": {
+        "0": 0.42541447281837463,
+        "0.25": 0.812896266579628,
+        "0.5": 0.9515065252780914,
+        "0.75": 1.1327815353870392,
+        "0.95": 1.5324016511440277,
+        "0.99": 1.850688128471379,
+        "1": 2.539062976837158
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 17.67754743661267,
+      "largest_channel_indices": [
+        752,
+        335,
+        749,
+        503,
+        352,
+        350,
+        698,
+        71,
+        275,
+        372
+      ]
+    },
+    {
+      "index": 86,
+      "tensor": "/encoder11/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder11/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder11/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder11/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.417702078819275,
+      "channel_max_maximum": 35.796295166015625,
+      "largest_over_median_channel_max": 25.249518711172637,
+      "channel_max_quantiles": {
+        "0": 0.9838433861732483,
+        "0.25": 1.3062970638275146,
+        "0.5": 1.417702078819275,
+        "0.75": 1.556228756904602,
+        "0.95": 2.045721137523651,
+        "0.99": 4.305125942230232,
+        "1": 35.796295166015625
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 7.694217581902922,
+      "largest_channel_indices": [
+        218,
+        238,
+        542,
+        177,
+        271,
+        647,
+        493,
+        418,
+        701,
+        199
+      ]
+    },
+    {
+      "index": 87,
+      "tensor": "/encoder11/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder11/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder11/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.5624362230300903,
+      "channel_max_maximum": 11.888075828552246,
+      "largest_over_median_channel_max": 4.639364570991957,
+      "channel_max_quantiles": {
+        "0": 0.393293559551239,
+        "0.25": 2.035463035106659,
+        "0.5": 2.5624362230300903,
+        "0.75": 3.2006160020828247,
+        "0.95": 4.396900248527527,
+        "0.99": 6.089258112907408,
+        "1": 11.888075828552246
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 39.325903920308534,
+      "largest_channel_indices": [
+        243,
+        96,
+        20,
+        387,
+        22,
+        128,
+        343,
+        159,
+        294,
+        562
+      ]
+    },
+    {
+      "index": 88,
+      "tensor": "/encoder11/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder12/mha/Q/w",
+        "/encoder12/mha/K/w",
+        "/encoder12/mha/V/w",
+        "/encoder12/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder12/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder12/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder12/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder12/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder12/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.6421900391578674,
+      "channel_max_maximum": 3.7296652793884277,
+      "largest_over_median_channel_max": 5.807728323346941,
+      "channel_max_quantiles": {
+        "0": 0.43415743112564087,
+        "0.25": 0.587157279253006,
+        "0.5": 0.6421900391578674,
+        "0.75": 0.7084911316633224,
+        "0.95": 0.8749761551618574,
+        "0.99": 1.8176703464984896,
+        "1": 3.7296652793884277
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 9.329554302436875,
+      "largest_channel_indices": [
+        238,
+        542,
+        271,
+        177,
+        418,
+        493,
+        701,
+        218,
+        647,
+        199
+      ]
+    },
+    {
+      "index": 89,
+      "tensor": "/encoder12/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder12/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder12/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.8180720806121826,
+      "channel_max_maximum": 8.586221694946289,
+      "largest_over_median_channel_max": 3.046842468657177,
+      "channel_max_quantiles": {
+        "0": 1.6377946138381958,
+        "0.25": 2.479097545146942,
+        "0.5": 2.8180720806121826,
+        "0.75": 3.239823281764984,
+        "0.95": 4.118748521804807,
+        "0.99": 5.142912368774414,
+        "1": 8.586221694946289
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 9.335029712152997,
+      "largest_channel_indices": [
+        1639,
+        1415,
+        679,
+        1642,
+        903,
+        1479,
+        1641,
+        519,
+        1768,
+        697
+      ]
+    },
+    {
+      "index": 90,
+      "tensor": "/encoder12/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder12/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder12/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.0427002906799316,
+      "channel_max_maximum": 5.969635009765625,
+      "largest_over_median_channel_max": 1.9619530152381952,
+      "channel_max_quantiles": {
+        "0": 2.046595335006714,
+        "0.25": 2.6781867146492004,
+        "0.5": 3.0427002906799316,
+        "0.75": 3.5023762583732605,
+        "0.95": 4.612870454788208,
+        "0.99": 5.881021881103514,
+        "1": 5.969635009765625
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.361536481873033,
+      "largest_channel_indices": [
+        32,
+        82,
+        27,
+        229,
+        144,
+        17,
+        231,
+        51,
+        58,
+        250
+      ]
+    },
+    {
+      "index": 91,
+      "tensor": "/encoder12/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder12/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder12/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 1.0155140161514282,
+      "channel_max_maximum": 7.396829128265381,
+      "largest_over_median_channel_max": 7.283827707565981,
+      "channel_max_quantiles": {
+        "0": 0.6325674653053284,
+        "0.25": 0.8807941824197769,
+        "0.5": 1.0155140161514282,
+        "0.75": 1.231585532426834,
+        "0.95": 2.4399588108062744,
+        "0.99": 4.881438350677486,
+        "1": 7.396829128265381
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 10.447629387875441,
+      "largest_channel_indices": [
+        245,
+        0,
+        49,
+        142,
+        242,
+        66,
+        22,
+        50,
+        73,
+        40
+      ]
+    },
+    {
+      "index": 92,
+      "tensor": "/encoder12/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder12/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder12/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.9873083829879761,
+      "channel_max_maximum": 2.9007627964019775,
+      "largest_over_median_channel_max": 2.938051419783503,
+      "channel_max_quantiles": {
+        "0": 0.5076757073402405,
+        "0.25": 0.8406521826982498,
+        "0.5": 0.9873083829879761,
+        "0.75": 1.1790642440319061,
+        "0.95": 1.5874598681926726,
+        "0.99": 2.1839623093605076,
+        "1": 2.9007627964019775
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 21.481973697383797,
+      "largest_channel_indices": [
+        133,
+        736,
+        739,
+        742,
+        640,
+        743,
+        565,
+        748,
+        744,
+        332
+      ]
+    },
+    {
+      "index": 93,
+      "tensor": "/encoder12/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder12/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder12/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder12/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.3271021842956543,
+      "channel_max_maximum": 26.547531127929688,
+      "largest_over_median_channel_max": 20.004134905421406,
+      "channel_max_quantiles": {
+        "0": 0.8881540298461914,
+        "0.25": 1.2161833047866821,
+        "0.5": 1.3271021842956543,
+        "0.75": 1.4751190543174744,
+        "0.95": 1.8242639422416687,
+        "0.99": 4.724573411941531,
+        "1": 26.547531127929688
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.793208056300994,
+      "largest_channel_indices": [
+        218,
+        238,
+        542,
+        177,
+        565,
+        271,
+        647,
+        493,
+        418,
+        701
+      ]
+    },
+    {
+      "index": 94,
+      "tensor": "/encoder12/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder12/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder12/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.6048460006713867,
+      "channel_max_maximum": 11.065584182739258,
+      "largest_over_median_channel_max": 4.248076154938586,
+      "channel_max_quantiles": {
+        "0": 0.3088432848453522,
+        "0.25": 2.0701982378959656,
+        "0.5": 2.6048460006713867,
+        "0.75": 3.240632176399231,
+        "0.95": 4.586175727844237,
+        "0.99": 6.525706567764282,
+        "1": 11.065584182739258
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 52.12957990402392,
+      "largest_channel_indices": [
+        914,
+        137,
+        53,
+        777,
+        458,
+        649,
+        537,
+        824,
+        833,
+        110
+      ]
+    },
+    {
+      "index": 95,
+      "tensor": "/encoder12/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder13/mha/Q/w",
+        "/encoder13/mha/K/w",
+        "/encoder13/mha/V/w",
+        "/encoder13/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder13/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder13/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder13/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder13/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder13/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.6915020942687988,
+      "channel_max_maximum": 5.333132743835449,
+      "largest_over_median_channel_max": 7.712388419408558,
+      "channel_max_quantiles": {
+        "0": 0.344775527715683,
+        "0.25": 0.6283541023731232,
+        "0.5": 0.6915020942687988,
+        "0.75": 0.7716821879148483,
+        "0.95": 1.0022427350282668,
+        "0.99": 2.1804649519920374,
+        "1": 5.333132743835449
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 8.621540465306374,
+      "largest_channel_indices": [
+        565,
+        238,
+        542,
+        177,
+        271,
+        199,
+        14,
+        418,
+        493,
+        647
+      ]
+    },
+    {
+      "index": 96,
+      "tensor": "/encoder13/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder13/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder13/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.10491943359375,
+      "channel_max_maximum": 7.063507556915283,
+      "largest_over_median_channel_max": 2.2749406894399558,
+      "channel_max_quantiles": {
+        "0": 1.6483098268508911,
+        "0.25": 2.7261898517608643,
+        "0.5": 3.10491943359375,
+        "0.75": 3.56177294254303,
+        "0.95": 4.646793246269225,
+        "0.99": 5.729585728645324,
+        "1": 7.063507556915283
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 7.769867652228741,
+      "largest_channel_indices": [
+        1419,
+        852,
+        816,
+        1428,
+        596,
+        944,
+        939,
+        1439,
+        843,
+        1450
+      ]
+    },
+    {
+      "index": 97,
+      "tensor": "/encoder13/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder13/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder13/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.9868017435073853,
+      "channel_max_maximum": 5.83566427230835,
+      "largest_over_median_channel_max": 1.9538170837732136,
+      "channel_max_quantiles": {
+        "0": 2.129091262817383,
+        "0.25": 2.657946467399597,
+        "0.5": 2.9868017435073853,
+        "0.75": 3.4684441685676575,
+        "0.95": 4.380214214324951,
+        "0.99": 5.040895485877989,
+        "1": 5.83566427230835
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 4.586690025273745,
+      "largest_channel_indices": [
+        17,
+        107,
+        48,
+        170,
+        12,
+        22,
+        126,
+        153,
+        88,
+        173
+      ]
+    },
+    {
+      "index": 98,
+      "tensor": "/encoder13/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder13/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder13/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 0.8538999855518341,
+      "channel_max_maximum": 7.0865068435668945,
+      "largest_over_median_channel_max": 8.298989300236641,
+      "channel_max_quantiles": {
+        "0": 0.5698606967926025,
+        "0.25": 0.7450122535228729,
+        "0.5": 0.8538999855518341,
+        "0.75": 1.0195148885250092,
+        "0.95": 2.5775245428085327,
+        "0.99": 5.146548581123348,
+        "1": 7.0865068435668945
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 10.860349397808754,
+      "largest_channel_indices": [
+        142,
+        50,
+        40,
+        245,
+        73,
+        0,
+        49,
+        186,
+        242,
+        2
+      ]
+    },
+    {
+      "index": 99,
+      "tensor": "/encoder13/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder13/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder13/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.2475082278251648,
+      "channel_max_maximum": 3.951864242553711,
+      "largest_over_median_channel_max": 3.1678061550288668,
+      "channel_max_quantiles": {
+        "0": 0.6122350692749023,
+        "0.25": 1.0553753674030304,
+        "0.5": 1.2475082278251648,
+        "0.75": 1.458688735961914,
+        "0.95": 1.955601567029953,
+        "0.99": 2.5306222367286684,
+        "1": 3.951864242553711
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 14.590309144303975,
+      "largest_channel_indices": [
+        185,
+        400,
+        177,
+        578,
+        671,
+        212,
+        432,
+        541,
+        25,
+        676
+      ]
+    },
+    {
+      "index": 100,
+      "tensor": "/encoder13/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder13/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder13/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder13/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.2787976264953613,
+      "channel_max_maximum": 30.612041473388672,
+      "largest_over_median_channel_max": 23.938143799408838,
+      "channel_max_quantiles": {
+        "0": 0.8433773517608643,
+        "0.25": 1.1609128713607788,
+        "0.5": 1.2787976264953613,
+        "0.75": 1.4183174073696136,
+        "0.95": 1.7490766167640686,
+        "0.99": 4.326564178466801,
+        "1": 30.612041473388672
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 6.416134004982658,
+      "largest_channel_indices": [
+        565,
+        238,
+        542,
+        177,
+        199,
+        647,
+        271,
+        493,
+        701,
+        392
+      ]
+    },
+    {
+      "index": 101,
+      "tensor": "/encoder13/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder13/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder13/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.697364926338196,
+      "channel_max_maximum": 10.393899917602539,
+      "largest_over_median_channel_max": 3.853353254545637,
+      "channel_max_quantiles": {
+        "0": 0.3088430166244507,
+        "0.25": 2.171597421169281,
+        "0.5": 2.697364926338196,
+        "0.75": 3.404635965824127,
+        "0.95": 5.005336904525755,
+        "0.99": 7.231960020065308,
+        "1": 10.393899917602539
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 53.166141621876875,
+      "largest_channel_indices": [
+        353,
+        703,
+        123,
+        917,
+        658,
+        916,
+        415,
+        350,
+        829,
+        499
+      ]
+    },
+    {
+      "index": 102,
+      "tensor": "/encoder13/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder14/mha/Q/w",
+        "/encoder14/mha/K/w",
+        "/encoder14/mha/V/w",
+        "/encoder14/smolgen/compress"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder14/mha/Q/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder14/mha/K/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder14/mha/V/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder14/smolgen/compress",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder14/mha/out/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.7151358127593994,
+      "channel_max_maximum": 7.425179958343506,
+      "largest_over_median_channel_max": 10.382894865372428,
+      "channel_max_quantiles": {
+        "0": 0.4700416922569275,
+        "0.25": 0.6518562287092209,
+        "0.5": 0.7151358127593994,
+        "0.75": 0.8195101469755173,
+        "0.95": 1.0721561849117274,
+        "0.99": 2.8028002953529367,
+        "1": 7.425179958343506
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 8.534528160019713,
+      "largest_channel_indices": [
+        238,
+        565,
+        199,
+        177,
+        644,
+        701,
+        542,
+        647,
+        493,
+        271
+      ]
+    },
+    {
+      "index": 103,
+      "tensor": "/encoder14/smolgen/compress/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/encoder14/smolgen/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder14/smolgen/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.9311050176620483,
+      "channel_max_maximum": 12.509511947631836,
+      "largest_over_median_channel_max": 4.267848429944642,
+      "channel_max_quantiles": {
+        "0": 1.6865252256393433,
+        "0.25": 2.5613276958465576,
+        "0.5": 2.9311050176620483,
+        "0.75": 3.603122889995575,
+        "0.95": 5.158820486068724,
+        "0.99": 9.227795677185057,
+        "1": 12.509511947631836
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 11.073736137271514,
+      "largest_channel_indices": [
+        844,
+        1356,
+        1420,
+        1484,
+        1132,
+        652,
+        716,
+        1036,
+        1004,
+        588
+      ]
+    },
+    {
+      "index": 104,
+      "tensor": "/encoder14/smolgen/ln1",
+      "shape_at_batch1": [
+        1,
+        256
+      ],
+      "channel_axis": 1,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder14/smolgen/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder14/smolgen/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 2.736801862716675,
+      "channel_max_maximum": 5.7310614585876465,
+      "largest_over_median_channel_max": 2.0940724780487883,
+      "channel_max_quantiles": {
+        "0": 1.7278475761413574,
+        "0.25": 2.386767566204071,
+        "0.5": 2.736801862716675,
+        "0.75": 3.2776981592178345,
+        "0.95": 4.443542838096619,
+        "0.99": 5.187557220458982,
+        "1": 5.7310614585876465
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 5.401467468800341,
+      "largest_channel_indices": [
+        30,
+        128,
+        194,
+        3,
+        94,
+        60,
+        84,
+        129,
+        37,
+        89
+      ]
+    },
+    {
+      "index": 105,
+      "tensor": "/encoder14/smolgen/gen_from/reshape",
+      "shape_at_batch1": [
+        1,
+        24,
+        256
+      ],
+      "channel_axis": 2,
+      "channels": 256,
+      "selected_consumers": [
+        "/encoder14/smolgen/smol_weight_gen"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder14/smolgen/smol_weight_gen",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [
+        "/const/smolgen_w"
+      ],
+      "channel_max_median": 0.7397828102111816,
+      "channel_max_maximum": 8.947500228881836,
+      "largest_over_median_channel_max": 12.094766335983994,
+      "channel_max_quantiles": {
+        "0": 0.4339156448841095,
+        "0.25": 0.6337818950414658,
+        "0.5": 0.7397828102111816,
+        "0.75": 0.901887834072113,
+        "0.95": 1.8049892783164978,
+        "0.99": 4.414694976806635,
+        "1": 8.947500228881836
+      },
+      "channels_above_10x_median": 1,
+      "largest_channel_peak_over_own_RMS": 11.548507151160425,
+      "largest_channel_indices": [
+        245,
+        0,
+        242,
+        49,
+        66,
+        50,
+        22,
+        73,
+        40,
+        110
+      ]
+    },
+    {
+      "index": 106,
+      "tensor": "/encoder14/mha/out/reshape",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder14/mha/out/dense/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder14/mha/out/dense/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 1.7290597558021545,
+      "channel_max_maximum": 10.224895477294922,
+      "largest_over_median_channel_max": 5.91355818847992,
+      "channel_max_quantiles": {
+        "0": 0.7897787094116211,
+        "0.25": 1.4217152893543243,
+        "0.5": 1.7290597558021545,
+        "0.75": 2.138939619064331,
+        "0.95": 3.294310939311981,
+        "0.99": 4.363628954887401,
+        "1": 10.224895477294922
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 11.980574519325533,
+      "largest_channel_indices": [
+        240,
+        675,
+        505,
+        221,
+        686,
+        245,
+        105,
+        568,
+        100,
+        244
+      ]
+    },
+    {
+      "index": 107,
+      "tensor": "/encoder14/ln1",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/encoder14/ffn/dense1/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder14/ffn/dense1/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/encoder14/ffn/skip",
+          "input_index": 1,
+          "op_type": "Add"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.9026612937450409,
+      "channel_max_maximum": 15.964553833007812,
+      "largest_over_median_channel_max": 17.68609548635088,
+      "channel_max_quantiles": {
+        "0": 0.48492616415023804,
+        "0.25": 0.8080411106348038,
+        "0.5": 0.9026612937450409,
+        "0.75": 1.0633614361286163,
+        "0.95": 1.915952217578887,
+        "0.99": 5.503768696784976,
+        "1": 15.964553833007812
+      },
+      "channels_above_10x_median": 3,
+      "largest_channel_peak_over_own_RMS": 7.1092711851106465,
+      "largest_channel_indices": [
+        565,
+        542,
+        238,
+        177,
+        199,
+        271,
+        644,
+        418,
+        392,
+        647
+      ]
+    },
+    {
+      "index": 108,
+      "tensor": "/encoder14/ffn/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        1024
+      ],
+      "channel_axis": 1,
+      "channels": 1024,
+      "selected_consumers": [
+        "/encoder14/ffn/dense2/w"
+      ],
+      "all_consumers": [
+        {
+          "node": "/encoder14/ffn/dense2/w",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 3.1614091396331787,
+      "channel_max_maximum": 14.307920455932617,
+      "largest_over_median_channel_max": 4.525804735793476,
+      "channel_max_quantiles": {
+        "0": 0.30877405405044556,
+        "0.25": 2.132812201976776,
+        "0.5": 3.1614091396331787,
+        "0.75": 4.5414137840271,
+        "0.95": 7.486853480339048,
+        "0.99": 10.181408786773677,
+        "1": 14.307920455932617
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 163.86306240224027,
+      "largest_channel_indices": [
+        50,
+        384,
+        952,
+        923,
+        753,
+        773,
+        729,
+        894,
+        794,
+        302
+      ]
+    },
+    {
+      "index": 109,
+      "tensor": "/encoder14/ln2",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/policy/dense1/matmul",
+        "/value/embed/matmul"
+      ],
+      "all_consumers": [
+        {
+          "node": "/policy/dense1/matmul",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/value/embed/matmul",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/mlh/embed/matmul",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 8.08159566076938e-05,
+      "channel_max_maximum": 54.483924865722656,
+      "largest_over_median_channel_max": 674172.8632899175,
+      "channel_max_quantiles": {
+        "0": 3.3524287573527545e-05,
+        "0.25": 6.706201384076849e-05,
+        "0.5": 8.08159566076938e-05,
+        "0.75": 0.00011491704026411753,
+        "0.95": 13.414434146881101,
+        "0.99": 23.64304386138918,
+        "1": 54.483924865722656
+      },
+      "channels_above_10x_median": 156,
+      "largest_channel_peak_over_own_RMS": 12.950714043010477,
+      "largest_channel_indices": [
+        420,
+        401,
+        644,
+        240,
+        682,
+        383,
+        238,
+        587,
+        572,
+        605
+      ]
+    },
+    {
+      "index": 110,
+      "tensor": "/policy/dense1/mish",
+      "shape_at_batch1": [
+        64,
+        768
+      ],
+      "channel_axis": 1,
+      "channels": 768,
+      "selected_consumers": [
+        "/policy/Q/matmul",
+        "/policy/K/matmul"
+      ],
+      "all_consumers": [
+        {
+          "node": "/policy/Q/matmul",
+          "input_index": 0,
+          "op_type": "MatMul"
+        },
+        {
+          "node": "/policy/K/matmul",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.11441526934504509,
+      "channel_max_maximum": 5.083748817443848,
+      "largest_over_median_channel_max": 44.43243324553696,
+      "channel_max_quantiles": {
+        "0": 6.910725460329559e-06,
+        "0.25": 0.07738376781344414,
+        "0.5": 0.11441526934504509,
+        "0.75": 0.6825002133846283,
+        "0.95": 2.3463834762573237,
+        "0.99": 4.09218840122223,
+        "1": 5.083748817443848
+      },
+      "channels_above_10x_median": 116,
+      "largest_channel_peak_over_own_RMS": 21.712896663033792,
+      "largest_channel_indices": [
+        34,
+        343,
+        139,
+        70,
+        224,
+        245,
+        451,
+        679,
+        137,
+        717
+      ]
+    },
+    {
+      "index": 111,
+      "tensor": "/value/reshape",
+      "shape_at_batch1": [
+        1,
+        2048
+      ],
+      "channel_axis": 1,
+      "channels": 2048,
+      "selected_consumers": [
+        "/value/dense1/matmul"
+      ],
+      "all_consumers": [
+        {
+          "node": "/value/dense1/matmul",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 0.28212741017341614,
+      "channel_max_maximum": 25.690208435058594,
+      "largest_over_median_channel_max": 91.05888867468607,
+      "channel_max_quantiles": {
+        "0": 1.903569454952958e-06,
+        "0.25": 0.015302518382668495,
+        "0.5": 0.28212741017341614,
+        "0.75": 5.261273503303528,
+        "0.95": 15.882068157196043,
+        "0.99": 21.46571605682373,
+        "1": 25.690208435058594
+      },
+      "channels_above_10x_median": 864,
+      "largest_channel_peak_over_own_RMS": 28.469546584671892,
+      "largest_channel_indices": [
+        1850,
+        1306,
+        986,
+        2010,
+        26,
+        922,
+        1242,
+        602,
+        1594,
+        1946
+      ]
+    },
+    {
+      "index": 112,
+      "tensor": "/mlh/reshape",
+      "shape_at_batch1": [
+        1,
+        512
+      ],
+      "channel_axis": 1,
+      "channels": 512,
+      "selected_consumers": [
+        "/mlh/dense1/matmul"
+      ],
+      "all_consumers": [
+        {
+          "node": "/mlh/dense1/matmul",
+          "input_index": 0,
+          "op_type": "MatMul"
+        }
+      ],
+      "shared_weights": [],
+      "channel_max_median": 9.46816873550415,
+      "channel_max_maximum": 35.14372253417969,
+      "largest_over_median_channel_max": 3.711776111720129,
+      "channel_max_quantiles": {
+        "0": 3.24998140335083,
+        "0.25": 7.189888954162598,
+        "0.5": 9.46816873550415,
+        "0.75": 12.805398941040039,
+        "0.95": 20.435806083679196,
+        "0.99": 26.36682487487792,
+        "1": 35.14372253417969
+      },
+      "channels_above_10x_median": 0,
+      "largest_channel_peak_over_own_RMS": 30.193101823585728,
+      "largest_channel_indices": [
+        393,
+        457,
+        249,
+        113,
+        321,
+        353,
+        1,
+        241,
+        289,
+        473
+      ]
+    }
+  ],
+  "instrumented_outputs_vs_uninstrumented_all1024_max_abs": {
+    "logits": 0.0,
+    "wdl": 0.0,
+    "moves_left": 0.0
+  },
+  "definitions": "Last axis is channel K; reduce all other axes. Exact maxima over all 1024 calibration roots. Mean and RMS are elementwise aggregate statistics. Quantiles are across channel maxima, not elementwise activation percentiles.",
+  "precision": "FP32 source-network instrumented diagnostic; TF32 off. Not fused TRT internal values or production latency.",
+  "shared_consumer_rules": "An explicit branch Div plus compensation of each selected XW weight can preserve untouched residual/unselected branches. Moving a scale into upstream normalization requires compensating every consumer. Shared Smolgen weights require one scale consistent across every use, or explicitly cloned weights with storage changes disclosed. Do not smooth each occurrence of a shared initializer independently.",
+  "training_smoothing_or_Week2_search_performed": false,
+  "seconds": 10.380115392999869,
+  "script": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/scripts/refresh_analysis_week1.py",
+    "sha256": "dfacc7fdb3e578d75c98ace7b4c9807ddc7e73551239a65115f5d1c1eb0ae67b"
+  },
+  "figure": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/docs/figures/week1-v2-channel-outliers.png",
+    "sha256": "5f8d74c58f0004dc1e852cffd10766a45f374051201b72bd7f51127624fac3a4"
+  },
+  "figure_render_note": "Same saved statistics, logarithmic histogram axis to show all tensors despite one extreme max/median ratio; no new model inference or altered statistics.",
+  "figure_renderer": {
+    "path": "/mnt/c/Users/HP/Desktop/LC0/scripts/handoff_week1_v2.py",
+    "sha256": "788244fdcebe9aa9a2f29d3a39116490a21e6ccb159607d77b667cc94e2b916c"
+  }
+}

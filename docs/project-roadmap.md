@@ -1,10 +1,10 @@
 # BT3 INT8 project: active roadmap and progress record
 
-Roadmap version: **1.5 - Step 1 verified; published 4/5-piece dataset active**  
+Roadmap version: **1.6 - Person A Week 1 complete and verified; joint C1 separate**  
 Last updated: **2026-10-27, Asia/Kolkata**  
 Current phase: **Week 1 - complete Person A model/data deliverables; joint C1 tracked separately**  
-Current next task: **Recalibrating fixed 160-operation naive INT8 recipe on all 1024 v2 calibration roots only.**  
-Execution state: **W1-A15 IN_PROGRESS. Approved autonomous A14-A17 block; verify each before advancing. Person B and joint C1 remain separate.**
+Current next task: **Person A Week 1 complete; Person B and joint C1 remain separately unverified**  
+Execution state: **W1-A17 DONE. Approved autonomous A14-A17 block; verify each before advancing. Person B and joint C1 remain separate.**
 
 ## 1. How Codex must use this document
 
@@ -35,9 +35,9 @@ Historical records describe their own freeze date. For example, Step 5's ledger 
 
 ### User workflow
 
-**Current authorization, 2026-10-27:** the user replaced autonomous progression with a mandatory discussion-and-thinking phase for each new Week 1 completion step. Discuss the implementation and revise it together until explicitly agreed; only then implement and verify that step. After reporting its verified outcome, begin the next step's discussion. Approval of the current roadmap opens Step 1 / W1-A13 discussion and does not authorize its implementation. The 2026-10-26 autonomous authorization is historical and does not override this new workflow. This turn authorizes planning/documentation only.
+**Historical discussion authorization, before the subsequently approved block:** the user replaced autonomous progression with a mandatory discussion-and-thinking phase for each new Week 1 completion step. Discuss the implementation and revise it together until explicitly agreed; only then implement and verify that step. After reporting its verified outcome, begin the next step's discussion. Approval of the current roadmap opens Step 1 / W1-A13 discussion and does not authorize its implementation. The 2026-10-26 autonomous authorization is historical and does not override this new workflow. This turn authorizes planning/documentation only.
 
-**Latest steering:** the user approved Step 1 in Codex mode, retaining split sizes but requesting tablebase-backed roots of 4, 5, 6 or 7 pieces rather than our generated four-piece boards. A13 selected published four/five-piece game positions and documented color/rank mirrors; labels and inputs are verified. A narrower 6/7-only tracker note was stale relative to the current explicit user instruction and has been superseded. The agreed history design is implemented. A14-A17 still need their own protocol/mode agreement. Expected numerical drift is reported; existing raw failures/acceptances remain intact and any new acceptance is explicit. No identical-WDL, minimum accuracy or INT8 speed-win requirement is added.
+**Latest steering:** the user approved Step 1 in Codex mode, retaining split sizes but requesting tablebase-backed roots of 4, 5, 6 or 7 pieces rather than our generated four-piece boards. A13 selected published four/five-piece game positions and documented color/rank mirrors; labels and inputs are verified. A narrower 6/7-only tracker note was stale relative to the current explicit user instruction and has been superseded. The agreed history design is implemented. A14-A17 subsequently received combined agreement and autonomous Codex execution authorization; all four are now verified. Expected numerical drift is reported; existing raw failures/acceptances remain intact and any new acceptance is explicit. No identical-WDL, minimum accuracy or INT8 speed-win requirement is added.
 
 **Latest workflow amendment:** the user requested all remaining discussion points together, followed by autonomous Codex execution of A14-A17 once the combined protocol is agreed. Present one compact proposal; wait for agreement before implementation. That agreement will replace separate mode/approval rounds for this named block only. Verify each step before advancing and stop for essential unresolved faults or required human intervention, not solely for negative measurements. A13 remains verified and unchanged.
 
@@ -60,15 +60,15 @@ At each step, agree its scope, configuration, data, resource/diagnostic budget, 
 | Work | Current status | Evidence and practical limit |
 | --- | --- | --- |
 | Person A Steps 1-4 | DONE, with input-convention review | Environment, checkpoint, native encoding and move mapping verified. Matching encoders establishes compatibility, not the suitability of empty history for playing quality. |
-| Person A Step 5A-5G | Historical ACCEPTED_WITH_DRIFT; active reuse REVIEW_REQUIRED | Exact floating artifacts preserved. A13 applies agreed inputs; A14 checks basic correctness and explicitly records how remaining measured drift is handled. No identical-WDL requirement. |
+| Person A Step 5A-5G / A14 | Active two-baseline use verified with disclosed FP16 drift | Exact original engines retained; [current baseline evidence](../environment/week1-v2-baselines.json). Original failed numerical checks remain failures. |
 | Person A Step 6 inventory | DONE | All 195 matrix operations inventoried; shapes checked at batches 1-8. Re-inventory only if an agreed graph change affects it. |
-| Scope review/profile, A06P/A06R | DONE for the historical standalone run | Both coverage candidates tested; v2 selected 160 INT8 targets. Reconfirm active execution after any input-dependent recalibration and inside lc0. |
-| A07 naive INT8 pilot | Historical standalone checks DONE; active reuse REVIEW_REQUIRED | Q/DQ, actual INT8 execution, reload and wrapper checked. Corrected-input calibration and real lc0 integration remain open. |
+| Scope review/profile, A06P/A06R | DONE; active 160-target execution reconfirmed in A15 | Original scope v2 retained; new engine inspector and executed INT8 kernel evidence verified. B03 still owns integration. |
+| A07 naive INT8 pilot / A15 | Active A-side pilot DONE | Recalibrated on all 1,024 active roots; validation, reload, wrapper and broad/refined batch tuning verified. [Evidence](../environment/week1-v2-int8-pilot.json). |
 | A08 historical data / A13 active refresh | DONE and verified | Old data preserved; active v2 has 13,072 published 4/5-piece roots, separate games/symmetry groups, native fen_only inputs and 290 verified table files. B retains DTZ-ranking/hard-subset work. |
-| A09 floating NN accuracy | Historical measurements DONE; active baseline REVIEW_REQUIRED | Both scored 55.42% under empty history. A14 refreshes network metrics with a small native correctness check, not a mandatory full native rerun. |
-| A10 activation analysis | Historical analysis DONE; input-dependent refresh pending | Exact calibration-only statistics exist for old inputs; A16 refreshes affected statistics. |
-| A11 trainable port | Feasibility DONE; targeted new-input parity check pending | Forward/backward feasibility verified. Reuse the port; do not repeat conversion or begin QAT. |
-| A12 audit | Historical technical audit DONE; current closure PENDING | A17 closes current Person A evidence and handoff; joint C1 is a separate checkpoint. |
+| A09 floating NN accuracy / A14 | Active measurements DONE | Both exact floating baselines score 9,990/10,000 test roots (99.90%); native/batch checks and raw drift recorded. No full native-strength claim. |
+| A10 activation analysis / A16 | Active refresh DONE | All 1,024 calibration-only maxima/means/RMS and named plots refreshed; original FP32 outputs checked across every root. |
+| A11 trainable port / A16 | Feasibility reused; active parity DONE | Existing port passes 32 selected calibration cases at batches 1/8. No training, optimizer update or repeated backward run. |
+| A12 audit / A17 | Current Person A audit DONE | Independent selected-move/tablebase checks, identities, historical preservation and [handoff](week1-v2-person-a-handoff.md) verified. Joint C1 remains separate. |
 | Person B implementation and joint checkpoints | UNVERIFIED | B01-B08 retain systems/scoring/search responsibilities. They do not become Person A tasks; joint C1 remains separate. |
 
 ### Fixed experimental choices
@@ -104,9 +104,9 @@ MAC coverage is neither a latency percentage nor a memory-traffic percentage. La
 
 **Active update after A07:** the paragraphs/table above describe preserved scope v1. The measured review selected [scope v2](../environment/step6-scope-v2.json): 160 intended and executed INT8 fixed-weight operations, 99.9905% of unique matrix-weight parameters and 97.8425% of all matrix MACs. The remaining weighted operations are policy promotion, final value projection, moves-left embedding and final moves-left projection (9,728 matrix parameters total). All 31 dynamic products remain floating. Actual TensorRT INT8 kernels can emit FP32 dequantized intermediates, FP16 or requantized INT8; the remainder is not uniformly FP16. The Q/DQ ONNX stores selected weight source constants in FP16 followed by quantization; INT8 operand execution and saved-engine size are separately verified. Do not equate operator coverage with ONNX-file storage composition.
 
-**New acceptance gate:** the full 10,000-root baseline run found 111 positions with a WDL component difference greater than 1.5 points between F16 and R32, with a maximum of 23.2399 points. Native Eigen checks on the eight largest cases confirm R32 within the original gates and reproduce the larger F16 discrepancy at batches 1 and 8. [Evidence and options](../environment/week1-baseline-drift-review.json). Both frozen artifacts scored 55.42% tablebase move preservation; that does not remove the numerical/search concern. The original engine-specific acceptance is preserved and has not been extended to the new observation automatically.
+**Historical raw numerical review (preserved):** the old 10,000-root baseline run found 111 positions with a WDL component difference greater than 1.5 points between F16 and R32, with a maximum of 23.2399 points. Native Eigen checks on the eight largest cases confirm R32 within the original gates and reproduce the larger F16 discrepancy at batches 1 and 8. [Evidence and options](../environment/week1-baseline-drift-review.json). Both frozen artifacts scored 55.42% tablebase move preservation; that does not remove the numerical/search concern. The original engine-specific acceptance is preserved and has not been extended to the new observation automatically.
 
-**Later clarification diagnostic:** on the same 16 roots from the prior native audit, native lc0, R32_CUDA and F16_TRT each scored 9/16 with empty history and 16/16 with `fen_only`. The diagnostic checked that only historical planes changed and that manually encoded `fen_only` matched the native binding on checked examples. This is conversation-level diagnostic evidence, not a new full-set baseline. The history design is now agreed but unimplemented. A13 checks inputs and A14 refreshes measured baseline results. Record remaining FP16 differences after basic correctness checks; no promise is made that changing history removes them.
+**Later clarification diagnostic:** on the same 16 roots from the prior native audit, native lc0, R32_CUDA and F16_TRT each scored 9/16 with empty history and 16/16 with `fen_only`. The diagnostic checked that only historical planes changed and that manually encoded `fen_only` matched the native binding on checked examples. This is conversation-level diagnostic evidence, not a new full-set baseline. The history design was subsequently implemented and verified in A13; A14 refreshed the baselines on the new corpus. Current measurements therefore change both history and roots. Record remaining FP16 differences after basic correctness checks; no promise is made that changing history removes them.
 
 ## 3. Dependency map and checkpoints
 
@@ -114,7 +114,7 @@ The completed A-side path is `W1-A01 -> A02 -> A03 -> A04 -> A05 -> A06 inventor
 
 The historical immediate path was `W1-A06P profile -> A06R scope decision -> A07 INT8 pilot -> A08 data -> A09 baseline scoring -> A10 outliers -> A12 review`. Those outputs are retained, with their current reuse limits recorded above.
 
-The proposed Person A path is `W1-A13 data use and consistent inputs -> A14 floating NN baselines -> A15 naive INT8 refresh -> A16 affected activation/port checks -> A17 Person A handoff`. Each arrow requires verification of the previous step and a fresh discussion/agreement before implementation. Completed export, inventory, scope, tablebase and conversion work is reused. B01-B08 and joint C1 run on their own dependencies; A17 does not require pretending those are complete.
+The proposed Person A path is `W1-A13 data use and consistent inputs -> A14 floating NN baselines -> A15 naive INT8 refresh -> A16 affected activation/port checks -> A17 Person A handoff`. Each arrow requires verification of the previous step. The user approved one combined autonomous A14-A17 block, so those arrows do not require further approval rounds. Completed export, inventory, scope, tablebase and conversion work is reused. B01-B08 and joint C1 run on their own dependencies; A17 does not require pretending those are complete.
 
 W1-A11 PyTorch feasibility is a bounded branch after the floating pipeline; it must report feasibility or a limitation, not hold the mandatory PTQ path indefinitely. W1-B tasks can progress independently when their prerequisites are met. Coordinate GPU access rather than running measurement workloads concurrently.
 
@@ -306,9 +306,9 @@ Shape is still [B,112,8,8] and the NN graph is unchanged. No project NN predicti
 
 **Reproduce:** in the pinned WSL venv with `PYTHONDONTWRITEBYTECODE=1`, run `scripts/refresh_inputs_week1.py` actions `source`, `acquire`, `build`, `verify` sequentially. The reader is isolated pyarrow 21.0.0 under the external runtime tools directory, leaving the model environment unchanged. Source ranges, tables and reader dependencies stay outside the project. Source generation/code identities and range hashes are pinned in the protocol. No NN inference, INT8 recalibration, activation reanalysis or training was run.
 
-### Combined Steps 2-5 discussion proposal (awaiting agreement)
+### Combined Steps 2-5 protocol (agreed and executed; see current evidence below)
 
-The machine-readable full defaults are in [week1-progress.json](../environment/week1-progress.json), under combined_completion_protocol. This proposal authorizes no experiment yet.
+The machine-readable full defaults are in [week1-progress.json](../environment/week1-progress.json), under combined_completion_protocol. The user subsequently agreed the complete block and requested wider batch tuning; execution and verification are recorded below.
 
 - **Step 2:** reuse exact floating artifacts and active data; infer all three splits, separating diagnostic calibration/validation results from main test accuracy. Select 32 balanced calibration roots for native correctness and batch-1/batch-8 spot checks; use batch 8 for bulk inference. Keep the registered highest-legal-policy/tablebase move-error rule. After basic setup checks, retain F16 as a separately measured baseline and report remaining drift/raw numerical failures rather than requiring identical values. This baseline-use decision needs explicit agreement; historical raw failures are not rewritten as passes.
 - **Step 3:** use all 1,024 calibration roots for the existing naive symmetric per-tensor W8A8/max recipe and 160-operation scope. Verify actual precision/coverage, reload and wrapper identity. Use 2,048 validation roots for pilot quality, reserving INT8 final-test inference for later work. Run brief matched timing at batches 1/4/8, primary comparison against F16 and separately labeled R32. Record practical warmups/repetitions before timings. A valid slower/less accurate pilot is reported without starting a tuning campaign.
@@ -319,6 +319,8 @@ Keep data and definitions fixed, make no calibration/method decisions from test 
 
 #### W1-A14 - Step 2: refresh the floating network baselines
 
+- **Status:** DONE / Codex / verified under the approved combined protocol.
+
 - **Depends on:** verified A13. Use active `data/syzygy-v2`; historical scripts/results hardcode old data. History AND root distribution differ, so new accuracy is not a controlled history-only comparison with the old 55.42%.
 - **Objective / intuition:** record what the two real floating baselines do with corrected inputs.
 - **Agree first:** evaluation cohort, highest-legal-policy move scoring, a small native cross-check and how remaining FP16 differences will be reported/accepted. Reuse the existing W-to-D/L or D-to-L rule and existing output conventions unless explicitly changed. Keep raw old tolerance failures and earlier acceptance intact; any decision to retain larger drift is explicit, not an automatically passed numerical check.
@@ -327,6 +329,8 @@ Keep data and definitions fixed, make no calibration/method decisions from test 
 - **Deliverable / mapping:** updated two-baseline NN report and outputs, with a brief native sanity check and explicit treatment of remaining drift; updates A05/A09.
 
 #### W1-A15 - Step 3: refresh the naive INT8 pilot
+
+- **Status:** DONE / Codex / verified under the approved combined protocol.
 
 - **Depends on:** verified A14.
 - **Objective / intuition:** make sure the starting INT8 model was calibrated on the inputs we will actually use.
@@ -337,6 +341,8 @@ Keep data and definitions fixed, make no calibration/method decisions from test 
 
 #### W1-A16 - Step 4: refresh activation analysis and check the existing port
 
+- **Status:** DONE / Codex / verified under the approved combined protocol.
+
 - **Depends on:** verified A15; use A13's agreed calibration inputs.
 - **Objective / intuition:** give Week 2 an activation analysis that reflects the actual inputs, while reusing the completed model reconstruction.
 - **Agree first:** calibration-only statistics/plots and a small forward comparison for the existing PyTorch port.
@@ -345,6 +351,8 @@ Keep data and definitions fixed, make no calibration/method decisions from test 
 - **Deliverable / mapping:** updated activation/outlier analysis and a short port-check result; updates A10/A11. No smoothing application, optimizer step, QAT or distillation.
 
 #### W1-A17 - Step 5: finalize Person A's Week 1 handoff
+
+- **Status:** DONE / Codex / verified under the approved combined protocol.
 
 - **Depends on:** verified A13-A16.
 - **Objective / intuition:** make the model-side work easy to identify, reproduce and hand over.
@@ -568,4 +576,10 @@ The user explicitly agreed A14-A17 and authorized autonomous Codex execution wit
 ### Verified active completion block (2026-10-27)
 
 - **W1-A14: DONE** - Floating baselines and native/batch correctness verified on active data; raw FP16 drift and all-split chosen-move accuracy saved. Next: naive INT8 refresh and broad batch sweep. ([evidence](../environment/week1-v2-baselines.json))
-- **W1-A15: IN_PROGRESS** - Recalibrating fixed 160-operation naive INT8 recipe on all 1024 v2 calibration roots only.
+- **W1-A15: DONE** - Naive INT8 calibration, actual 160-target INT8 execution, validation, reload, wrapper and broad/refined FP16-INT8 batch tuning verified. Next: calibration activation statistics and targeted port check. ([evidence](../environment/week1-v2-int8-pilot.json))
+- **W1-A16: DONE** - All 1024 calibration-only activation statistics, plots and 32-case batch1/8 PyTorch forward parity verified. No training. Next: Person A audit and handoff. ([evidence](../environment/week1-v2-analysis.json))
+- **W1-A17: DONE** - Person A Week 1 complete and verified; current handoff and evidence manifest ready. Person B and joint C1 remain separately unverified; Week 2 not started. ([evidence](../environment/week1-v2-audit.json))
+
+### R1.6 active closure (2026-10-27)
+
+A14-A17 are complete under the explicit combined authorization. The requested wider batch sweep supersedes the earlier brief 1/4/8-only proposal. All intended model/data outputs are versioned, raw drift and negative findings are retained, and historical artifacts remain unchanged except this roadmap and the progress tracker. Current [handoff](week1-v2-person-a-handoff.md), [audit](../environment/week1-v2-audit.json), and [evidence manifest](../environment/week1-v2-evidence-manifest.json) are authoritative for Person A completion. No Person B completion, joint C1 sign-off, Week 2 work, or MCTS-strength gain is inferred.

@@ -337,59 +337,64 @@
     },
     "W1-A15": {
       "title": "Naive INT8 pilot refresh",
-      "status": "IN_PROGRESS",
+      "status": "DONE",
       "depends_on": [
         "W1-A14"
       ],
       "discussion_status": "AGREED",
       "implementation_agreed": true,
       "implementation_started": true,
-      "verification_status": "IN_PROGRESS",
-      "evidence": null,
+      "verification_status": "PASSED",
+      "evidence": "environment/week1-v2-int8-pilot.json",
       "plan_reference": "docs/project-roadmap.md",
       "execution_mode": "CODEX",
       "approved_protocol": "environment/week1-v2-protocol.json",
-      "progress_detail": "Recalibrating fixed 160-operation naive INT8 recipe on all 1024 v2 calibration roots only."
+      "progress_detail": "Naive INT8 calibration, actual 160-target INT8 execution, validation, reload, wrapper and broad/refined FP16-INT8 batch tuning verified. Next: calibration activation statistics and targeted port check.",
+      "completed_at_utc": "2026-10-27T10:51:29.406512+00:00"
     },
     "W1-A16": {
       "title": "Activation analysis and targeted port check",
-      "status": "PROPOSED",
+      "status": "DONE",
       "depends_on": [
         "W1-A15"
       ],
       "discussion_status": "AGREED",
       "implementation_agreed": true,
-      "implementation_started": false,
-      "verification_status": "NOT_STARTED",
-      "evidence": null,
+      "implementation_started": true,
+      "verification_status": "PASSED",
+      "evidence": "environment/week1-v2-analysis.json",
       "plan_reference": "docs/project-roadmap.md",
       "execution_mode": "CODEX",
-      "approved_protocol": "environment/week1-v2-protocol.json"
+      "approved_protocol": "environment/week1-v2-protocol.json",
+      "progress_detail": "All 1024 calibration-only activation statistics, plots and 32-case batch1/8 PyTorch forward parity verified. No training. Next: Person A audit and handoff.",
+      "completed_at_utc": "2026-10-27T10:53:33.806424+00:00"
     },
     "W1-A17": {
       "title": "Person A Week 1 handoff",
-      "status": "PROPOSED",
+      "status": "DONE",
       "depends_on": [
         "W1-A16"
       ],
       "discussion_status": "AGREED",
       "implementation_agreed": true,
-      "implementation_started": false,
-      "verification_status": "NOT_STARTED",
-      "evidence": null,
+      "implementation_started": true,
+      "verification_status": "PASSED",
+      "evidence": "environment/week1-v2-audit.json",
       "plan_reference": "docs/project-roadmap.md",
       "execution_mode": "CODEX",
-      "approved_protocol": "environment/week1-v2-protocol.json"
+      "approved_protocol": "environment/week1-v2-protocol.json",
+      "progress_detail": "Person A Week 1 complete and verified; current handoff and evidence manifest ready. Person B and joint C1 remain separately unverified; Week 2 not started.",
+      "completed_at_utc": "2026-10-27T10:56:14.040465+00:00"
     }
   },
-  "updated_at_utc": "2026-10-27T09:19:38.097235+00:00",
+  "updated_at_utc": "2026-10-27T10:56:14.040503+00:00",
   "historical_authority": "User authorized autonomous completion of remaining Person A Week 1 tasks, verifying each before progression, on 2026-10-26",
   "roadmap": {
     "path": "docs/project-roadmap.md",
-    "version": "1.5",
-    "technical_sequence_status": "W1-A15_IN_PROGRESS",
+    "version": "1.6",
+    "technical_sequence_status": "W1-A17_DONE",
     "workflow_status": "ACTIVE",
-    "next_action": "Recalibrating fixed 160-operation naive INT8 recipe on all 1024 v2 calibration roots only.",
+    "next_action": "Person A Week 1 complete; Person B and joint C1 remain separately unverified",
     "implementation_started": true,
     "joint_C1_complete": false,
     "Week2_started": false,
@@ -400,10 +405,10 @@
       "W1-A16",
       "W1-A17"
     ],
-    "A_side_week1_complete": false
+    "A_side_week1_complete": true
   },
   "workflow": {
-    "mode": "approved_autonomous_completion_block",
+    "mode": "approved_block_completed",
     "one_step_at_a_time": true,
     "agreement_required_before_each_step_implementation": false,
     "failure_returns_to_same_step_discussion": false,
@@ -415,7 +420,14 @@
       "W1-A16",
       "W1-A17"
     ],
-    "block_implementation_agreed": true
+    "block_implementation_agreed": true,
+    "autonomous_block_completed": [
+      "W1-A14",
+      "W1-A15",
+      "W1-A16",
+      "W1-A17"
+    ],
+    "authorization_scope": "Completed named A14-A17 block only; future work needs a new user instruction."
   },
   "active_dataset": {
     "directory": "data/syzygy-v2",
@@ -436,7 +448,7 @@
     "note": "Downstream historical scripts hardcode data/syzygy; adapt to the active version before running A14-A16."
   },
   "combined_completion_protocol": {
-    "status": "AGREED",
+    "status": "COMPLETED_AND_VERIFIED",
     "steps": [
       "W1-A14",
       "W1-A15",
