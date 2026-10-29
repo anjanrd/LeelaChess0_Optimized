@@ -1,0 +1,43 @@
+{
+  "models": [
+    {
+      "model": "s0",
+      "unique_matrices": 150,
+      "unique_matrix_parameters": 102036992,
+      "groups_exceeding_two_nonzeros": 0,
+      "group_axis": "K in [K,N]",
+      "low_calibration_row_weights": [],
+      "sparse_kernels_verified": false
+    },
+    {
+      "model": "s1sp",
+      "unique_matrices": 150,
+      "unique_matrix_parameters": 102036992,
+      "groups_exceeding_two_nonzeros": 0,
+      "group_axis": "K in [K,N]",
+      "low_calibration_row_weights": [
+        "/attn_body/embedding/preprocess/matmul/w",
+        "/encoder0/smolgen/dense1/w/w",
+        "/encoder1/smolgen/dense1/w/w",
+        "/encoder2/smolgen/dense1/w/w",
+        "/encoder3/smolgen/dense1/w/w",
+        "/encoder4/smolgen/dense1/w/w",
+        "/encoder5/smolgen/dense1/w/w",
+        "/encoder6/smolgen/dense1/w/w",
+        "/encoder7/smolgen/dense1/w/w",
+        "/encoder8/smolgen/dense1/w/w",
+        "/encoder9/smolgen/dense1/w/w",
+        "/encoder10/smolgen/dense1/w/w",
+        "/encoder11/smolgen/dense1/w/w",
+        "/encoder12/smolgen/dense1/w/w",
+        "/encoder13/smolgen/dense1/w/w",
+        "/encoder14/smolgen/dense1/w/w",
+        "/value/dense1/matmul/w",
+        "/mlh/dense1/matmul/w"
+      ],
+      "sparse_kernels_verified": false
+    }
+  ],
+  "stages": 98,
+  "scope": "quality/mask audit only; hardware WAIT R1/R2"
+}

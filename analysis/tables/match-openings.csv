@@ -1,0 +1,51 @@
+opening_index,SAN,UCI,final_FEN,pairing
+0,e4 e5 Nf3 Nc6 Bb5 a6,e2e4 e7e5 g1f3 b8c6 f1b5 a7a6,r1bqkbnr/1ppp1ppp/p1n5/1B2p3/4P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 0 4,same opening twice with engine colors reversed
+1,e4 e5 Nf3 Nc6 Bc4 Bc5,e2e4 e7e5 g1f3 b8c6 f1c4 f8c5,r1bqk1nr/pppp1ppp/2n5/2b1p3/2B1P3/5N2/PPPP1PPP/RNBQK2R w KQkq - 4 4,same opening twice with engine colors reversed
+2,e4 e5 Nf3 Nc6 d4 exd4,e2e4 e7e5 g1f3 b8c6 d2d4 e5d4,r1bqkbnr/pppp1ppp/2n5/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4,same opening twice with engine colors reversed
+3,e4 e5 Nf3 Nf6,e2e4 e7e5 g1f3 g8f6,rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3,same opening twice with engine colors reversed
+4,e4 e5 Nc3 Nf6,e2e4 e7e5 b1c3 g8f6,rnbqkb1r/pppp1ppp/5n2/4p3/4P3/2N5/PPPP1PPP/R1BQKBNR w KQkq - 2 3,same opening twice with engine colors reversed
+5,e4 e5 f4 exf4,e2e4 e7e5 f2f4 e5f4,rnbqkbnr/pppp1ppp/8/8/4Pp2/8/PPPP2PP/RNBQKBNR w KQkq - 0 3,same opening twice with engine colors reversed
+6,e4 c5 Nf3 d6 d4 cxd4,e2e4 c7c5 g1f3 d7d6 d2d4 c5d4,rnbqkbnr/pp2pppp/3p4/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4,same opening twice with engine colors reversed
+7,e4 c5 Nf3 Nc6 d4 cxd4,e2e4 c7c5 g1f3 b8c6 d2d4 c5d4,r1bqkbnr/pp1ppppp/2n5/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4,same opening twice with engine colors reversed
+8,e4 c5 Nf3 e6 d4 cxd4,e2e4 c7c5 g1f3 e7e6 d2d4 c5d4,rnbqkbnr/pp1p1ppp/4p3/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4,same opening twice with engine colors reversed
+9,e4 c5 Nc3 Nc6 g3,e2e4 c7c5 b1c3 b8c6 g2g3,r1bqkbnr/pp1ppppp/2n5/2p5/4P3/2N3P1/PPPP1P1P/R1BQKBNR b KQkq - 0 3,same opening twice with engine colors reversed
+10,e4 c5 c3 Nf6,e2e4 c7c5 c2c3 g8f6,rnbqkb1r/pp1ppppp/5n2/2p5/4P3/2P5/PP1P1PPP/RNBQKBNR w KQkq - 1 3,same opening twice with engine colors reversed
+11,e4 c5 Nf3 d6 Bb5+,e2e4 c7c5 g1f3 d7d6 f1b5,rnbqkbnr/pp2pppp/3p4/1Bp5/4P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 1 3,same opening twice with engine colors reversed
+12,e4 e6 d4 d5 Nc3 Nf6,e2e4 e7e6 d2d4 d7d5 b1c3 g8f6,rnbqkb1r/ppp2ppp/4pn2/3p4/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 2 4,same opening twice with engine colors reversed
+13,e4 e6 d4 d5 Nd2 c5,e2e4 e7e6 d2d4 d7d5 b1d2 c7c5,rnbqkbnr/pp3ppp/4p3/2pp4/3PP3/8/PPPN1PPP/R1BQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+14,e4 e6 d4 d5 e5 c5,e2e4 e7e6 d2d4 d7d5 e4e5 c7c5,rnbqkbnr/pp3ppp/4p3/2ppP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+15,e4 c6 d4 d5 Nc3 dxe4,e2e4 c7c6 d2d4 d7d5 b1c3 d5e4,rnbqkbnr/pp2pppp/2p5/8/3Pp3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+16,e4 c6 d4 d5 e5 Bf5,e2e4 c7c6 d2d4 d7d5 e4e5 c8f5,rn1qkbnr/pp2pppp/2p5/3pPb2/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 1 4,same opening twice with engine colors reversed
+17,e4 d5 exd5 Qxd5 Nc3 Qa5,e2e4 d7d5 e4d5 d8d5 b1c3 d5a5,rnb1kbnr/ppp1pppp/8/q7/8/2N5/PPPP1PPP/R1BQKBNR w KQkq - 2 4,same opening twice with engine colors reversed
+18,e4 d6 d4 Nf6 Nc3 g6,e2e4 d7d6 d2d4 g8f6 b1c3 g7g6,rnbqkb1r/ppp1pp1p/3p1np1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+19,e4 g6 d4 Bg7 Nc3 d6,e2e4 g7g6 d2d4 f8g7 b1c3 d7d6,rnbqk1nr/ppp1ppbp/3p2p1/8/3PP3/2N5/PPP2PPP/R1BQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+20,e4 Nf6 e5 Nd5 d4 d6,e2e4 g8f6 e4e5 f6d5 d2d4 d7d6,rnbqkb1r/ppp1pppp/3p4/3nP3/3P4/8/PPP2PPP/RNBQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+21,d4 d5 c4 e6 Nc3 Nf6,d2d4 d7d5 c2c4 e7e6 b1c3 g8f6,rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4,same opening twice with engine colors reversed
+22,d4 d5 c4 c6 Nf3 Nf6,d2d4 d7d5 c2c4 c7c6 g1f3 g8f6,rnbqkb1r/pp2pppp/2p2n2/3p4/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4,same opening twice with engine colors reversed
+23,d4 d5 c4 dxc4 Nf3 Nf6,d2d4 d7d5 c2c4 d5c4 g1f3 g8f6,rnbqkb1r/ppp1pppp/5n2/8/2pP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 2 4,same opening twice with engine colors reversed
+24,d4 Nf6 c4 e6 Nc3 Bb4,d2d4 g8f6 c2c4 e7e6 b1c3 f8b4,rnbqk2r/pppp1ppp/4pn2/8/1bPP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4,same opening twice with engine colors reversed
+25,d4 Nf6 c4 e6 Nf3 b6,d2d4 g8f6 c2c4 e7e6 g1f3 b7b6,rnbqkb1r/p1pp1ppp/1p2pn2/8/2PP4/5N2/PP2PPPP/RNBQKB1R w KQkq - 0 4,same opening twice with engine colors reversed
+26,d4 Nf6 c4 g6 Nc3 Bg7,d2d4 g8f6 c2c4 g7g6 b1c3 f8g7,rnbqk2r/ppppppbp/5np1/8/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4,same opening twice with engine colors reversed
+27,d4 Nf6 c4 g6 Nc3 d5,d2d4 g8f6 c2c4 g7g6 b1c3 d7d5,rnbqkb1r/ppp1pp1p/5np1/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+28,d4 Nf6 c4 c5 d5 b5,d2d4 g8f6 c2c4 c7c5 d4d5 b7b5,rnbqkb1r/p2ppppp/5n2/1ppP4/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+29,d4 Nf6 c4 c5 d5 e6,d2d4 g8f6 c2c4 c7c5 d4d5 e7e6,rnbqkb1r/pp1p1ppp/4pn2/2pP4/2P5/8/PP2PPPP/RNBQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+30,d4 Nf6 Nf3 e6 Bg5 c5,d2d4 g8f6 g1f3 e7e6 c1g5 c7c5,rnbqkb1r/pp1p1ppp/4pn2/2p3B1/3P4/5N2/PPP1PPPP/RN1QKB1R w KQkq - 0 4,same opening twice with engine colors reversed
+31,d4 d5 Bf4 Nf6 e3 c5,d2d4 d7d5 c1f4 g8f6 e2e3 c7c5,rnbqkb1r/pp2pppp/5n2/2pp4/3P1B2/4P3/PPP2PPP/RN1QKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+32,d4 f5 g3 Nf6 Bg2 g6,d2d4 f7f5 g2g3 g8f6 f1g2 g7g6,rnbqkb1r/ppppp2p/5np1/5p2/3P4/6P1/PPP1PPBP/RNBQK1NR w KQkq - 0 4,same opening twice with engine colors reversed
+33,d4 Nf6 c4 e6 g3 d5,d2d4 g8f6 c2c4 e7e6 g2g3 d7d5,rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/6P1/PP2PP1P/RNBQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+34,d4 d5 Nf3 Nf6 e3 e6,d2d4 d7d5 g1f3 g8f6 e2e3 e7e6,rnbqkb1r/ppp2ppp/4pn2/3p4/3P4/4PN2/PPP2PPP/RNBQKB1R w KQkq - 0 4,same opening twice with engine colors reversed
+35,d4 e6 c4 Bb4+ Bd2 Qe7,d2d4 e7e6 c2c4 f8b4 c1d2 d8e7,rnb1k1nr/ppppqppp/4p3/8/1bPP4/8/PP1BPPPP/RN1QKBNR w KQkq - 3 4,same opening twice with engine colors reversed
+36,c4 e5 Nc3 Nf6 Nf3 Nc6,c2c4 e7e5 b1c3 g8f6 g1f3 b8c6,r1bqkb1r/pppp1ppp/2n2n2/4p3/2P5/2N2N2/PP1PPPPP/R1BQKB1R w KQkq - 4 4,same opening twice with engine colors reversed
+37,c4 c5 Nc3 Nc6 g3 g6,c2c4 c7c5 b1c3 b8c6 g2g3 g7g6,r1bqkbnr/pp1ppp1p/2n3p1/2p5/2P5/2N3P1/PP1PPP1P/R1BQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+38,c4 Nf6 Nc3 e6 e4 d5,c2c4 g8f6 b1c3 e7e6 e2e4 d7d5,rnbqkb1r/ppp2ppp/4pn2/3p4/2P1P3/2N5/PP1P1PPP/R1BQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+39,c4 e6 Nf3 d5 g3 Nf6,c2c4 e7e6 g1f3 d7d5 g2g3 g8f6,rnbqkb1r/ppp2ppp/4pn2/3p4/2P5/5NP1/PP1PPP1P/RNBQKB1R w KQkq - 1 4,same opening twice with engine colors reversed
+40,Nf3 d5 g3 Nf6 Bg2 c6,g1f3 d7d5 g2g3 g8f6 f1g2 c7c6,rnbqkb1r/pp2pppp/2p2n2/3p4/8/5NP1/PPPPPPBP/RNBQK2R w KQkq - 0 4,same opening twice with engine colors reversed
+41,Nf3 Nf6 c4 b6 g3 Bb7,g1f3 g8f6 c2c4 b7b6 g2g3 c8b7,rn1qkb1r/pbpppppp/1p3n2/8/2P5/5NP1/PP1PPP1P/RNBQKB1R w KQkq - 1 4,same opening twice with engine colors reversed
+42,Nf3 c5 c4 Nc6 Nc3 e5,g1f3 c7c5 c2c4 b8c6 b1c3 e7e5,r1bqkbnr/pp1p1ppp/2n5/2p1p3/2P5/2N2N2/PP1PPPPP/R1BQKB1R w KQkq - 0 4,same opening twice with engine colors reversed
+43,g3 d5 Bg2 Nf6 Nf3 c6,g2g3 d7d5 f1g2 g8f6 g1f3 c7c6,rnbqkb1r/pp2pppp/2p2n2/3p4/8/5NP1/PPPPPPBP/RNBQK2R w KQkq - 0 4,same opening twice with engine colors reversed
+44,b3 e5 Bb2 Nc6 e3 d5,b2b3 e7e5 c1b2 b8c6 e2e3 d7d5,r1bqkbnr/ppp2ppp/2n5/3pp3/8/1P2P3/PBPP1PPP/RN1QKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+45,e4 e5 Nf3 d6 d4 Nf6,e2e4 e7e5 g1f3 d7d6 d2d4 g8f6,rnbqkb1r/ppp2ppp/3p1n2/4p3/3PP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 1 4,same opening twice with engine colors reversed
+46,e4 c5 Nf3 g6 d4 cxd4,e2e4 c7c5 g1f3 g7g6 d2d4 c5d4,rnbqkbnr/pp1ppp1p/6p1/8/3pP3/5N2/PPP2PPP/RNBQKB1R w KQkq - 0 4,same opening twice with engine colors reversed
+47,d4 c5 d5 e5 e4 d6,d2d4 c7c5 d4d5 e7e5 e2e4 d7d6,rnbqkbnr/pp3ppp/3p4/2pPp3/4P3/8/PPP2PPP/RNBQKBNR w KQkq - 0 4,same opening twice with engine colors reversed
+48,e4 b6 d4 Bb7 Bd3 e6,e2e4 b7b6 d2d4 c8b7 f1d3 e7e6,rn1qkbnr/pbpp1ppp/1p2p3/8/3PP3/3B4/PPP2PPP/RNBQK1NR w KQkq - 0 4,same opening twice with engine colors reversed
+49,d4 Nf6 Bg5 e6 e4 h6,d2d4 g8f6 c1g5 e7e6 e2e4 h7h6,rnbqkb1r/pppp1pp1/4pn1p/6B1/3PP3/8/PPP2PPP/RN1QKBNR w KQkq - 0 4,same opening twice with engine colors reversed

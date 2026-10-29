@@ -1,0 +1,89 @@
+{
+  "checked_date": "2026-10-29",
+  "references": [
+    {
+      "id": 1,
+      "key": "haque2022",
+      "authors": "Rejwana Haque, Ting Han Wei, Martin Müller",
+      "title": "On the Road to Perfection? Evaluating Leela Chess Zero Against Endgame Tablebases",
+      "year": 2022,
+      "venue": "Advances in Computer Games (ACG 2021), LNCS 13262, pp. 142–152",
+      "url": "https://link.springer.com/chapter/10.1007/978-3-031-11488-5_13",
+      "primary_metadata": "https://link.springer.com/book/10.1007/978-3-031-11488-5",
+      "claim_checked": "Raw policy and MCTS decision errors evaluated against exact endgame solutions.",
+      "access": "Publisher book metadata and author-hosted paper search excerpt verified; direct author PDF fetch returned 404. Exact proposal error counts are not asserted."
+    },
+    {
+      "id": 2,
+      "key": "xiao2023smoothquant",
+      "authors": "Guangxuan Xiao, Ji Lin, Mickael Seznec, Hao Wu, Julien Demouth, Song Han",
+      "title": "SmoothQuant: Accurate and Efficient Post-Training Quantization for Large Language Models",
+      "year": 2023,
+      "venue": "ICML, PMLR 202, pp. 38087–38099",
+      "url": "https://proceedings.mlr.press/v202/xiao23c.html",
+      "claim_checked": "Training-free W8A8 PTQ using compensating activation/weight rescaling. No LLM speedup is transferred to BT3.",
+      "access": "Publisher page and abstract/BibTeX verified."
+    },
+    {
+      "id": 3,
+      "key": "frantar2023sparsegpt",
+      "authors": "Elias Frantar, Dan Alistarh",
+      "title": "SparseGPT: Massive Language Models Can be Accurately Pruned in One-Shot",
+      "year": 2023,
+      "venue": "ICML, PMLR 202, pp. 10323–10337",
+      "url": "https://proceedings.mlr.press/v202/frantar23a.html",
+      "claim_checked": "One-shot pruning with support for semi-structured patterns and quantization. Our numerical/chess results come from local evidence.",
+      "access": "Publisher page and abstract/BibTeX verified."
+    },
+    {
+      "id": 4,
+      "key": "frantar2022gptq",
+      "authors": "Elias Frantar, Saleh Ashkboos, Torsten Hoefler, Dan Alistarh",
+      "title": "GPTQ: Accurate Post-Training Quantization for Generative Pre-trained Transformers",
+      "year": 2022,
+      "venue": "arXiv:2210.17323, revised 22 March 2023",
+      "url": "https://arxiv.org/abs/2210.17323",
+      "claim_checked": "Related one-shot weight quantization using approximate second-order information. The current PTQ ladder does not implement GPTQ.",
+      "access": "Primary arXiv record verified."
+    },
+    {
+      "id": 5,
+      "key": "mishra2021sparse",
+      "authors": "Asit Mishra, Jorge Albericio Latorre, Jeff Pool, Darko Stosic, Dusan Stosic, Ganesh Venkatesh, Chong Yu, Paulius Micikevicius",
+      "title": "Accelerating Sparse Deep Neural Networks",
+      "year": 2021,
+      "venue": "arXiv:2104.08378",
+      "url": "https://arxiv.org/abs/2104.08378",
+      "claim_checked": "2:4 sparse arithmetic hardware concept; this does not prove selected sparse tactics or speed on the current laptop.",
+      "access": "Primary arXiv abstract/metadata verified."
+    },
+    {
+      "id": 6,
+      "key": "williams2008roofline",
+      "authors": "Samuel Webb Williams, Andrew Waterman, David A. Patterson",
+      "title": "Roofline: An Insightful Visual Performance Model for Floating-Point Programs and Multicore Architectures",
+      "year": 2008,
+      "venue": "UC Berkeley Technical Report UCB/EECS-2008-134",
+      "url": "https://www2.eecs.berkeley.edu/Pubs/TechRpts/2008/EECS-2008-134.html",
+      "claim_checked": "Visual performance model relating compute and memory traffic; our bytes/precision/fusion assumptions require explicit local review.",
+      "access": "Author-institution technical report record verified; citation uses this 2008 report, not unverified journal metadata."
+    },
+    {
+      "id": 7,
+      "key": "stockfish2020nnue",
+      "authors": "Stockfish developers",
+      "title": "Introducing NNUE Evaluation",
+      "year": 2020,
+      "venue": "Official Stockfish blog, 7 August 2020",
+      "url": "https://stockfishchess.org/blog/2020/introducing-nnue-evaluation/",
+      "claim_checked": "Efficient incremental CPU neural evaluation used with alpha-beta search. Related design context only; no new Stockfish benchmark.",
+      "access": "Official project article verified."
+    }
+  ],
+  "citation_policy": "Primary sources only. No paper performance numbers are reused as BT3 observations.",
+  "haque_numerical_claims": {
+    "status": "not included in this report",
+    "reason": "Original proposal historical counts require the actual source table before reusing; only bibliographic and qualitative study claims are used."
+  },
+  "literature_search_did_not_change_scientific_protocol": true
+}

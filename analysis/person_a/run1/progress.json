@@ -1,0 +1,166 @@
+{
+  "source_commit": "77510149520b3fcf7ea4732055965c656a26cd3d",
+  "branch": "anjan",
+  "steps": {
+    "A1": {
+      "status": "verified",
+      "result": {
+        "roots": 11200,
+        "cohort": 2437,
+        "hard": 43,
+        "cross_split_groups": 7,
+        "affected_test_ids": [
+          611,
+          627,
+          965
+        ]
+      }
+    },
+    "A2": {
+      "status": "verified",
+      "result": {
+        "models": 10,
+        "score_A_exact_match": true,
+        "figure": "F1-ablation"
+      }
+    },
+    "A3": {
+      "status": "verified",
+      "result": {
+        "main_score_B_exact_match": true,
+        "search_rows": 38,
+        "hard_rows": 30,
+        "figures": [
+          "F2-nodes",
+          "F3-node-equivalents",
+          "S1-hard-lowbudget"
+        ]
+      }
+    },
+    "A4": {
+      "status": "verified",
+      "result": {
+        "source_hashes_verified": true,
+        "comparison_rows": 20,
+        "figure": "F4-swaps"
+      }
+    },
+    "A5": {
+      "status": "deferred_user_authorized",
+      "result": {
+        "error": "Saved s4_raw * graph smooth_inverse did not match saved s4_smoothed under rtol=1e-5, atol=1e-12 (or positivity prerequisite failed); cause not investigated after stop.",
+        "check": "np.all(inv>0) and np.allclose(values[\"s4_raw\"]*inv, values[\"s4_smoothed\"], rtol=1e-5, atol=1e-12)",
+        "inputs": [
+          "reports/C2-ln2-channel-maxima.npz",
+          "models/s4.onnx"
+        ],
+        "next_action": "Read-only provenance/representation investigation requires authorization under repository stop rule."
+      }
+    },
+    "A6": {
+      "status": "verified",
+      "result": {
+        "mask_models": 2,
+        "unique_matrices_each": 150,
+        "reconstruction_rows": 150,
+        "error_case_rows": 2706,
+        "hardware": "WAIT R1/R2"
+      }
+    },
+    "A7": {
+      "status": "verified",
+      "result": {
+        "operations": 195,
+        "fixed_weight_operations": 164,
+        "dynamic_operations": 31,
+        "macs_per_position": 4539245056,
+        "arithmetic_ops_per_position": 9078490112,
+        "active_graph_sha256": "937d5ac3d1ce9daafc7858f54166787924680c0c9c4aaab94d438402430db2b9",
+        "geometry_source_sha256": "2dc17ea66e3db343532292a5f8f37d9daae6f387a510de8114cc3304d18e22d8",
+        "geometry_proof": "all operator protobufs and integer shape constants identical; matrix dimensions checked",
+        "graph_io": {
+          "input": [
+            {
+              "name": "/input/planes",
+              "shape": [
+                "batch",
+                112,
+                8,
+                8
+              ]
+            }
+          ],
+          "output": [
+            {
+              "name": "/output/policy",
+              "shape": [
+                "batch",
+                1858
+              ]
+            },
+            {
+              "name": "/output/wdl",
+              "shape": [
+                "batch",
+                3
+              ]
+            },
+            {
+              "name": "/output/mlh",
+              "shape": [
+                "batch",
+                1
+              ]
+            }
+          ]
+        },
+        "s4_graph_targets": 164,
+        "s4aa_graph_targets": 195,
+        "executed_precision_and_measured_roofline": "WAIT R1; no peak/timing supplied"
+      }
+    },
+    "A8": {
+      "status": "verified",
+      "result": {
+        "timed_rows": 4,
+        "timed_positions": 9748,
+        "frontier_quality_rows": 8,
+        "legal_openings": 50,
+        "waiting": [
+          "R1",
+          "R2",
+          "R4",
+          "R5"
+        ],
+        "R3": "final alignment only"
+      }
+    },
+    "A9": {
+      "status": "verified",
+      "result": {
+        "report": "deliverables/report/person_a_sections.md",
+        "claim_rows": 9,
+        "verified_primary_references": 7,
+        "A5": "deferred; no activation claim",
+        "final_shared_report": "WAIT systems evidence and final integration"
+      }
+    },
+    "A10": {
+      "status": "run1_complete_waiting_Ritwik",
+      "result": {
+        "checklist_rows": 25,
+        "slides": "prepared outline",
+        "demo": "prepared recording plan",
+        "reproduction": "prepared FP16 + s4 + sparse-path procedure; not executed",
+        "before_run2": "Address deferred A5 first; then validate Ritwik inputs",
+        "final_delivery": "WAIT A5 handling and R1\u2013R5 integration",
+        "source_integrity_verified": true
+      }
+    }
+  },
+  "run_status": "RUN1_INDEPENDENT_BLOCK_COMPLETE_A5_DEFERRED",
+  "verification_limits": "Five figures visually reviewed; A5/F12 deferred. R1/R2/R4/R5 measured/final delivery inputs wait for Ritwik; R3 needs final alignment. Fresh experimental reproduction/demo not executed.",
+  "A5_deferred_by_user": true,
+  "before_run2_reminder": "Address A5 first; surface analysis/person_a/BEFORE_RUN_2.md before starting Run 2.",
+  "verification_file": "analysis/person_a/run1/verification.json"
+}

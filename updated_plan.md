@@ -1,8 +1,10 @@
 # Unified BT3 INT8 project plan
 
-Version 2.0 — 29 October 2026. Owners: Person A (Anjan, model/analysis) and Person B (Ritwik, systems/experiments).
+Version 2.1 — 29 October 2026. Owners: Person A (Anjan, model/analysis) and Person B (Ritwik, systems/experiments).
 
 This is the current plan for the shared repository. It supersedes the two earlier roadmaps for future work. The original proposal and plan remain under `archive/person-a-week1/`; the imported pipeline documentation remains under `archive/person-b-import/`.
+
+Person A Run 1's independent block is complete. See [person_a_execution_plan.md](person_a_execution_plan.md) and [verification](analysis/person_a/run1/verification.json). **A5/F12 is user-deferred: remind Anjan to address it before Run 2.** Final systems-dependent conclusions and shared delivery remain pending.
 
 ## Objective and interpretation
 
@@ -62,13 +64,13 @@ Status definitions:
 | W2.2 | 2 | **Completed:** Study A metrics and model-side comparison. | **Completed:** main Study B, paired tests and node-equivalent tables. | `results/<model>/study_a.jsonl`, `study_b.jsonl`, `reports/scores_test.*`. |
 | W2.3 | 2 | **Completed:** magnitude 2:4 (`s0`) model and accuracy measurements. | **In progress:** sparse-versus-dense hardware comparison and sparse-tactic verification. | Model and supplemental search results exist; hardware completion depends on W3.5. |
 | W3.1 | 3 | **Completed:** s4aa attention extension, sequential SparseGPT (`s1sp`), both stitched policy/value swaps. | **Completed:** associated network/fixed-node evaluations. | Model sidecars, C2 manifest, swap provenance and score tables. Sparse accuracy loss is a finding, not incomplete implementation. |
-| W3.2 | 3 | **In progress:** consolidate/interpret the completed low-budget hard-subset follow-up and saturation. | **Completed:** six dense models at 10/25/50/100/200 requested nodes. | `results/hard_lowbudget/`; final matched supplemental table still needed. |
-| W3.3 | 3 | **Pending:** interpret time/strength tradeoffs using paired results. | **In progress:** Study C raw runs complete; consolidate exactly the common 2,437 IDs at 200/800 ms, score and document actual elapsed time. | `results/studyc/`; preserve extra historical rows and filter them explicitly. |
-| W3.4 | 3 | **Pending:** document openings and interpret strength results. | **Pending:** runtime estimate, final pair count, complete match and Elo/CI. | `eval/match.py`; final match summary and PGN. Dependency: stable benchmark environment and frozen models. |
-| W3.5 | 3 | **Pending:** operation counts, FLOPs/bytes and roofline interpretation at chosen small/large batch conditions. | **In progress, blocked:** detailed TensorRT profiles, precision/fallback audit, sparse/dense engines, measured compute/bandwidth peaks and roofline timing inputs. | Last run failed loading `nvinfer_plugin_10.dll`. Resolve and verify before resuming this stage. Preserve failure evidence. |
-| W3.6 | 3 | **Pending:** explain model accuracy versus measured speed, including sparse negative findings. | **In progress:** initial speed/GPU energy and four-point batch sweep complete. Obtain comparable speed evidence for every model placed on the frontier; repeat headline measurements and summarize medians/variability. | Frontier model set: fp16,s1,s2,s3,s4,s4aa,s0,s1sp. Separate lc0 speed from standalone sparse-enabled trtexec probes; never mix them on one axis without labelling. |
-| W4.1 | 4 | **In progress:** numerical tables exist. Finish ablation, accuracy/nodes, node-equivalent, swap and matched before/after SmoothQuant figures and interpretation. | **In progress:** reduced batch plot exists. Finish timed, match, hardware/roofline, energy and frontier figures. | Deliverable mapping below; use the frozen cohorts, report uncertainty and avoid claims unsupported by saturated data. |
-| W4.2 | 4 | **Pending:** background, quantization/pruning methods, NN/fixed-node findings and swap/outlier analysis. | **Pending:** harness/runtime, benchmarking, timed/strength and hardware sections. | Final report sources and rendered report. |
+| W3.2 | 3 | **Completed A analysis:** hard-subset consolidation, paired/actual-node tables and descriptive interpretation. B raw runs remain complete. | **Completed:** six dense models at 10/25/50/100/200 requested nodes. | `results/hard_lowbudget/`; final matched supplemental table still needed. |
+| W3.3 | 3 | **In progress:** matched 2,437-ID timed review and provisional A interpretation complete; R3 canonical final alignment pending. | **In progress:** Study C raw runs complete; consolidate exactly the common 2,437 IDs at 200/800 ms, score and document actual elapsed time. | `results/studyc/`; preserve extra historical rows and filter them explicitly. |
+| W3.4 | 3 | **In progress:** existing 50-opening book/pairing/adjudication review documented; actual match interpretation WAIT R4. | **Pending:** runtime estimate, final pair count, complete match and Elo/CI. | `eval/match.py`; final match summary and PGN. Dependency: stable benchmark environment and frozen models. |
+| W3.5 | 3 | **In progress:** active-graph 195-operation geometry, 164/31 fixed/dynamic split and work/traffic method verified; measured contribution WAIT R1. | **In progress, blocked:** detailed TensorRT profiles, precision/fallback audit, sparse/dense engines, measured compute/bandwidth peaks and roofline timing inputs. | Last run failed loading `nvinfer_plugin_10.dll`. Resolve and verify before resuming this stage. Preserve failure evidence. |
+| W3.6 | 3 | **In progress:** eight-model quality coordinates and comparison rules ready; final speed/quality discussion WAIT R1/R2. | **In progress:** initial speed/GPU energy and four-point batch sweep complete. Obtain comparable speed evidence for every model placed on the frontier; repeat headline measurements and summarize medians/variability. | Frontier model set: fp16,s1,s2,s3,s4,s4aa,s0,s1sp. Separate lc0 speed from standalone sparse-enabled trtexec probes; never mix them on one axis without labelling. |
+| W4.1 | 4 | **In progress:** F1–F4 and hard supplement generated/visually checked; F12 deferred by user until A5 is addressed. | **In progress:** reduced batch plot exists. Finish timed, match, hardware/roofline, energy and frontier figures. | Deliverable mapping below; use the frozen cohorts, report uncertainty and avoid claims unsupported by saturated data. |
+| W4.2 | 4 | **In progress:** evidence-linked A report draft and checked reference scope ready; final dependent discussion/shared integration pending. | **Pending:** harness/runtime, benchmarking, timed/strength and hardware sections. | Final report sources and rendered report. |
 | W4.3 | 4 | **Pending, shared:** abstract/introduction, related work, discussion/limitations/conclusion, presentation and playing demo. | **Pending, shared.** | Include accepted scope reductions and distinguish throughput from demonstrated strength. |
 | W4.4 | 4 | **Pending, shared:** final split-integrity closure, model/data identities, report-number/citation audit, artifact packaging and fresh reproduction. | **Pending, shared:** verify usable setup/resume instructions and hardware-specific engine rebuilding. | Resolve/document the known small cross-split symmetry overlap without overwriting history. Validate the revised reproduction package; the consolidation smoke check is not a full experimental reproduction. |
 | W4.5 | 4 | **Pending, shared:** final deliverable-by-deliverable sign-off. | **Pending, shared.** | Every retained item below has a real output file, owner, evidence/configuration and recorded status; every omission is declared. |
@@ -86,20 +88,20 @@ Do not rerun `tbset`, `calib`, selection or all-model builds merely to consolida
 
 Paths below are intended final locations; a pending path does not imply a file already exists. `reports/` retains imported evidence; new publication tables and figures belong in `analysis/tables/` and `analysis/figures/`. Final report/presentation/demo outputs belong in `deliverables/`.
 
-| ID | Retained deliverable | Owner | Status at consolidation | Existing evidence / remaining output |
+| ID | Retained deliverable | Owner | Current status | Existing evidence / remaining output |
 |---|---|---|---|---|
 | D1 | Shared code, setup and reproduction instructions | Shared | **In progress** | Active code at root; README and local configuration. Fresh setup and full reproduction still pending. |
 | D2 | Model artifacts, calibration, recipes and engine identities | A+B | **In progress** | `models/`, `nets/`, `data/`, model/build manifests. Final profile engines/package pending; engine binaries are local/GPU-specific. |
-| D3 | Labelled root lists, splits, hard IDs and scoring scripts | Shared | **In progress** | `data/tbset.jsonl`, `reports/hard/ids.txt`, `tb/`, `eval/`. Generation/scoring complete; final integrity documentation pending. |
+| D3 | Labelled root lists, splits, hard IDs and scoring scripts | Shared | **In progress** | Data/scorer preserved; A-side cohort/symmetry audit complete in analysis/person_a/run1/cohort_audit.json. Shared final integrity/package closure pending. |
 | T1 | Ablation table: Studies A/B, DTZ secondary, paired statistics and node-equivalents | A | **Completed** | `reports/scores_test.md` and `.json`; publication formatting and supplementary low-budget consolidation under W4.1. |
 | T2 | Latency, NN evals/s, nodes/s, precision/sparse coverage and raw-checkpoint reference | B | **In progress** | `reports/c3_hw/bench/` and initial kernel capture; finish coverage, comparable per-model speed, repeats and `analysis/tables/T2-speed.*`. |
 | T3 | GPU energy above idle per node | B | **In progress** | Existing benchmark/sweep JSON; finish `analysis/tables/T3-energy.*`. CPU/whole-machine energy explicitly excluded. |
 | T4 | Paired-match Elo, confidence interval and game count | B | **Pending** | Match results/PGN plus `analysis/tables/T4-matches.*`. |
 | T5 | Magnitude/SparseGPT sparse-enabled versus dense execution, per-layer/end-to-end evidence | B | **Pending** | `analysis/tables/T5-sparsity.*`; include a documented no-sparse-tactics result if that is what the runtime chooses. |
-| F1 | Dense ablation ladder | A | **Pending** | Data ready; `analysis/figures/F1-ablation.*`. |
-| F2 | Accuracy versus requested/actual node budget | A | **Pending** | Main and supplementary data ready; `analysis/figures/F2-nodes.*`. |
-| F3 | Node-equivalents | A | **Pending** | Numerical table ready; `analysis/figures/F3-node-equivalents.*`, with saturation caveat. |
-| F4 | Policy/value swaps | A | **Pending** | Both swaps evaluated; `analysis/figures/F4-swaps.*`, accuracy only. |
+| F1 | Dense ablation ladder | A | **Completed analysis output** | Data ready; `analysis/figures/F1-ablation.*`. |
+| F2 | Accuracy versus requested/actual node budget | A | **Completed analysis output** | Main and supplementary data ready; `analysis/figures/F2-nodes.*`. |
+| F3 | Node-equivalents | A | **Completed analysis output** | Numerical table ready; `analysis/figures/F3-node-equivalents.*`, with saturation caveat. |
+| F4 | Policy/value swaps | A | **Completed analysis output** | Both swaps evaluated; `analysis/figures/F4-swaps.*`, accuracy only. |
 | F5 | Accuracy versus time, with realized nodes and elapsed-time context | B | **In progress** | Raw matched runs ready; `analysis/figures/F5-time.*`. |
 | F6 | Per-layer time breakdown and roofline | A+B | **Pending** | Profiles/peaks blocked; `analysis/figures/F6-profile-roofline.*`. |
 | F7 | GPU joules per node | B | **In progress** | Measurement data ready; `analysis/figures/F7-energy.*`. |
@@ -107,8 +109,8 @@ Paths below are intended final locations; a pending path does not imply a file a
 | F9 | Nodes/s versus four batch settings | B | **Completed** | `reports/c3_hw/batch_sweep/sweep.png`, `.csv`, `.json`; optional publication styling does not require rerunning. |
 | F10 | Fixed-time accuracy versus batch size | — | **Omitted** | Not measured by the reduced speed/energy sweep. |
 | F11 | Headline accuracy-versus-nodes/s frontier for all retained single-body models | A+B | **Pending** | Comparable per-model speed plus `analysis/figures/F11-frontier.*`. State accuracy condition, actual nodes and batch setting explicitly; exclude double-body swaps. |
-| F12 | Matched activation-channel outliers before/after SmoothQuant | A | **In progress** | Text reports and selected channel diagnostics exist. Finish same-input/same-layer comparison and `analysis/figures/F12-outliers.*`; label inserted smoothing correctly. |
-| D4 | Final report with methods, results and limitations | A+B | **Pending** | `deliverables/report/`; explicitly record scope reductions and separate speed, search throughput and strength claims. |
+| F12 | Matched activation-channel outliers before/after SmoothQuant | A | **Deferred by user — A5** | Saved arrays failed the current-model consistency check. Address before Run 2; no F12 generated. |
+| D4 | Final report with methods, results and limitations | A+B | **In progress — A draft ready** | deliverables/report/person_a_sections.md plus checked references; A5 and systems-dependent/shared final integration remain. |
 | D5 | Presentation | Shared | **Pending** | `deliverables/presentation/`. |
 | D6 | Short INT8-lc0 playing demo with visible nodes/s | Shared | **Pending** | `deliverables/demo/`. |
 | D7 | Portable artifact inventory/package and fresh reproduction | Shared | **Pending** | Small metadata in Git; large binaries/logs in a checksum-verified artifact bundle. One fresh reproduction including FP16, best PTQ and sparse outputs or their documented runtime limitation. |
@@ -132,3 +134,4 @@ The main model implementations do not need to be redone. Person A's remaining wo
 | Date | Version | Decision |
 |---|---|---|
 | 2026-10-29 | 2.0 | Adopt LC0-B's conventions/trimmed PTQ pipeline; credit all completed work regardless of producer; incorporate per-model frontier speed, matched SQ figure, final evidence checklist and explicit F8/F10 omissions. Consolidate both repositories without executing new research experiments. |
+| 2026-10-29 | 2.1 | Execute Person A Run 1 independent analysis on anjan; verify tables/figures, sparse masks, geometry, timed/opening review and report/delivery preparation. User explicitly deferred A5/F12; reminder required before Run 2. No scientific protocol/model change or new engine/GPU experiment. |

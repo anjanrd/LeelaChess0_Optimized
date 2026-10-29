@@ -187,3 +187,8 @@ The earlier A frozen evidence manifest may contain LF hashes while files in the 
 ## 10. First continuation point
 
 The model ladder, main accuracy studies, SparseGPT and swaps are already implemented. Start with the current status and the specific next authorized task, not Week 1 setup. Remaining experiment work is the profiling blocker, sparse/comparable/repeated hardware measurements, matched timed/hard reporting and matches. Then produce final figures/report/presentation/demo, package/reproduce and check off every retained deliverable in the updated plan.
+
+
+## 11. Person A Run 1 continuation
+
+The independent Run 1 block was executed on anjan after the consolidation commit. A1–A4 and the independent portions of A6–A10 are verified/prepared; see person_a_execution_plan.md, analysis/person_a/run1/verification.json and deliverables/report/person_a_sections.md. Five figures have PNG/PDF/SVG exports. The user explicitly deferred A5 after its diagnostic consistency failure and authorized the A6 continuation. **Remind Anjan to address A5 before autonomous Run 2**, as enforced by the current AGENTS.md/preflight reminder. The blocker is preserved; F12 is not complete. New model-side work has not changed the original evidence or scientific protocol. R1/R2/R4/R5 remain dependent on Ritwik; R3 raw analysis is ready for final alignment. Final shared delivery/reproduction is still pending. These continuation changes are local and were not committed/pushed by the Run 1 task.

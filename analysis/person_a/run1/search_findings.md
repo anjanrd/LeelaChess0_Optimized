@@ -1,0 +1,3 @@
+# Search finding
+
+Dense variants are close to perfect at the larger requested budgets, limiting evidence for relative superiority. The main table's node-equivalents use the frozen inverse log-node monotone-envelope convention. On a flat reference curve the inverse is an interval; a value near 1 is partly that convention, not proof of identical search quality. Zero means below the reference raw score, not zero actual nodes. Actual search work overshoots requested limits. The hard subset has only 43 viewed-test positions; small, non-monotone differences should not be treated as robust gains or used to select a new recipe. Magnitude's supplemental 100/400 results are kept separate and have no invented 800/1600 points.

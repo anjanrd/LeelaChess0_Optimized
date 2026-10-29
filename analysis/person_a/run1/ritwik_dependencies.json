@@ -1,0 +1,53 @@
+{
+  "R1": {
+    "status": "WAIT",
+    "needed": [
+      "successful FP16/s4 layer info + profile at actual small/large batches",
+      "measured compute/bandwidth peaks",
+      "precision/fallback and sparse/dense audit",
+      "model/runtime/build identities"
+    ]
+  },
+  "R2": {
+    "status": "WAIT",
+    "models": [
+      "fp16",
+      "s1",
+      "s2",
+      "s3",
+      "s4",
+      "s4aa",
+      "s0",
+      "s1sp"
+    ],
+    "needed": [
+      "comparable lc0 benchmark JSONs",
+      "repeated headline FP16/s4 observations",
+      "same conditions/positions and warmup, clock/temperature provenance",
+      "final GPU-energy evidence"
+    ]
+  },
+  "R3": {
+    "status": "READY_FOR_FINAL_ALIGNMENT",
+    "raw_files_already_available": true,
+    "needed": [
+      "canonical final report/model/configuration identity; no new experiment implied"
+    ]
+  },
+  "R4": {
+    "status": "WAIT",
+    "needed": [
+      "completed paired games + PGN",
+      "actual count/time-control/adjudication",
+      "Elo with paired uncertainty and edge-case review"
+    ]
+  },
+  "R5": {
+    "status": "WAIT",
+    "needed": [
+      "final systems runtime/build/configuration identities",
+      "artifact freeze + systems reproduction record",
+      "B report/figure contributions"
+    ]
+  }
+}

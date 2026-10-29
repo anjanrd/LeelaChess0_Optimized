@@ -29,3 +29,8 @@ Before editing/running the pipeline, read `docs/runtime_notes.md`; it retains th
 - Keep code/configuration/datasets/small numerical evidence in Git. Large models, engine caches, traces and raw `.log` files remain local and have checksum inventories/bundle tooling.
 - Fresh clones need both code and the declared artifact bundle, plus machine-specific runtime setup. An ignored artifact is not deleted or automatically uploaded.
 - Fresh-clone Python environments must be created locally; do not copy a virtual environment between machines. Consolidation smoke checks are not full model inference, profiling repair or a fresh experimental reproduction.
+
+## Before autonomous Run 2
+
+- The user deferred A5 while authorizing the remaining Run 1 work. Before starting Run 2, remind Anjan to address it and read `analysis/person_a/BEFORE_RUN_2.md`. Its saved-data consistency failure is not resolved by the deferral.
+- Check `analysis/person_a/run1/progress.json` and Ritwik's required handoffs. Do not start Run 2 until A5 is resolved or the user explicitly decides how to handle it. `analysis/person_a/readiness.py` reports this reminder without launching any experiment.

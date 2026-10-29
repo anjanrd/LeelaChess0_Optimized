@@ -1,0 +1,11 @@
+{
+  "figure_count": 5,
+  "formats": [
+    "png",
+    "pdf",
+    "svg"
+  ],
+  "local_links_checked": 7,
+  "analysis_python_syntax": "passed",
+  "A5": "deferred; no F12"
+}

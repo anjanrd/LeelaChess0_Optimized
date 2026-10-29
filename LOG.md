@@ -10799,3 +10799,86 @@ User explicitly requested add/commit with message `consolidation 1 29th Oct`, pu
 Preflight commands (exit 0): `git fetch origin --prune`, `git branch -a -vv`, `git ls-remote --heads origin main anjan ritwik`. Remote main and both local branches started at 671d72e1ec6ff0eb1183335b874caef67a7d30fa; neither requested remote branch existed. No remote-main changes needed integration. Updated the current consolidation guide to record the authorized publication and teammate branch workflow. Existing scientific evidence and ignored local artifacts remain unchanged.
 
 Publication target: one consolidation commit on main, fast-forward local anjan to it, create ritwik there, then a normal atomic push of main/anjan/ritwik. Git commit history and the remote branch refs provide the final publication evidence; this is the pre-commit authorization/preflight record.
+
+
+## 2026-10-29 — Person A Run 1 A1
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A1`. Exit 0; verified. Output: {"roots": 11200, "cohort": 2437, "hard": 43, "cross_split_groups": 7, "affected_test_ids": [611, 627, 965]}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A2
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A2`. Exit 0; verified. Output: {"models": 10, "score_A_exact_match": true, "figure": "F1-ablation"}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A3
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A3`. Exit 0; BLOCKED. Output: {"error": "fp16"}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A3
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A3`. Exit 0; verified. Output: {"main_score_B_exact_match": true, "search_rows": 38, "hard_rows": 30, "figures": ["F2-nodes", "F3-node-equivalents", "S1-hard-lowbudget"]}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A4
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A4`. Exit 0; verified. Output: {"source_hashes_verified": true, "comparison_rows": 20, "figure": "F4-swaps"}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A5
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A5`. Exit 0; BLOCKED. Output: {"error": ""}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 stopped at A5 verification gate
+
+A1 verified 11200 roots, 2437 primary IDs and 43 hard IDs; seven cross-split symmetry groups affect measured IDs 611,627,965. A2 exactly reproduced all ten saved Study A rows; A3 exactly reproduced Study B after one permitted JSON budget-key representation typo retry (int keys normalized to strings), producing 38 main/supplemental search rows and 30 hard conditions. A4 verified saved swap/source hashes and exported 20 comparison rows. F1/F2/F3/F4 and the hard supplement were generated; final visual QA remains pending.
+
+Command `.venv/Scripts/python.exe -B analysis/person_a/run1.py A5` exited 1. The check `np.all(inv>0) and np.allclose(s4_raw * smooth_inverse, s4_smoothed, rtol=1e-5, atol=1e-12)` failed using frozen `reports/C2-ln2-channel-maxima.npz` and current `models/s4.onnx`. No cause is asserted; the sequence stopped without investigating, altering raw statistics, relaxing tolerance or collecting activations. Detailed failure and frozen identities: analysis/person_a/run1/blocker-A5.json. A6–A10 were not executed.
+
+All research artifacts matched the frozen manifest at run start (328 files). No engine inference, training, search, GPU benchmark, commit, push or teammate message was performed. Quantization/evaluation/tablebase logic and imported evidence remain unchanged. Root STATUS.md and the new run tracker record BLOCKED. The current AGENTS.md failure rule requires authorization before investigating/fixing this new consistency failure.
+
+
+## 2026-10-29 — User-authorized A5 deferral and A6 resume
+
+User explicitly deferred A5 to the end, requested a reminder before autonomous Run 2, and authorized the remaining independent Run 1 work from A6. Original A5 failure record remains unchanged; status is deferred, not resolved. Added analysis/person_a/BEFORE_RUN_2.md and a persistent tracker/status reminder. The runner allows only the explicit A5→A6 bypass; all later prerequisites remain verified gates. No model/scorer/protocol change.
+
+
+## 2026-10-29 — Person A Run 1 A6
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A6`. Exit 0; verified. Output: {"mask_models": 2, "unique_matrices_each": 150, "reconstruction_rows": 150, "error_case_rows": 2706, "hardware": "WAIT R1/R2"}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A7
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A7`. Exit 0; verified. Output: {"operations": 195, "fixed_weight_operations": 164, "dynamic_operations": 31, "macs_per_position": 4539245056, "arithmetic_ops_per_position": 9078490112, "active_graph_sha256": "937d5ac3d1ce9daafc7858f54166787924680c0c9c4aaab94d438402430db2b9", "geometry_source_sha256": "2dc17ea66e3db343532292a5f8f37d9daae6f387a510de8114cc3304d18e22d8", "geometry_proof": "all operator protobufs and integer shape constants identical; matrix dimensions checked", "graph_io": {"input": [{"name": "/input/planes", "shape": ["batch", 112, 8, 8]}], "output": [{"name": "/output/policy", "shape": ["batch", 1858]}, {"name": "/output/wdl", "shape": ["batch", 3]}, {"name": "/output/mlh", "shape": ["batch", 1]}]}, "s4_graph_targets": 164, "s4aa_graph_targets": 195, "executed_precision_and_measured_roofline": "WAIT R1; no peak/timing supplied"}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A8
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A8`. Exit 0; verified. Output: {"timed_rows": 4, "timed_positions": 9748, "frontier_quality_rows": 8, "legal_openings": 50, "waiting": ["R1", "R2", "R4", "R5"], "R3": "final alignment only"}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A9
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A9`. Exit 0; verified. Output: {"report": "deliverables/report/person_a_sections.md", "claim_rows": 9, "verified_primary_references": 7, "A5": "deferred; no activation claim", "final_shared_report": "WAIT systems evidence and final integration"}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A10
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A10`. Exit 0; run1_complete_waiting_Ritwik. Output: {"checklist_rows": 25, "slides": "prepared outline", "demo": "prepared recording plan", "reproduction": "prepared FP16 + s4 + sparse-path procedure; not executed", "before_run2": "Address deferred A5 first; then validate Ritwik inputs", "final_delivery": "WAIT A5 handling and R1\u2013R5 integration"}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 A9
+
+Authorization: full sequential Run 1 on anjan. Command: `.venv/Scripts/python.exe -B analysis/person_a/run1.py A9`. Exit 0; verified. Output: {"report": "deliverables/report/person_a_sections.md", "claim_rows": 9, "verified_primary_references": 7, "A5": "deferred; no activation claim", "final_shared_report": "WAIT systems evidence and final integration"}. Original evidence preserved; no engine inference/training/search or GPU benchmarking.
+
+
+## 2026-10-29 — Person A Run 1 independent block closure
+
+User-authorized A6–A10 continuation on anjan completed. A5 remains explicitly deferred; analysis/person_a/BEFORE_RUN_2.md, readiness.py, STATUS.md and AGENTS.md require a reminder before Run 2. A6 verified both 2:4 sources (150 matrices each), 150 reconstruction rows and 2706 saved sparse error-case rows. A7 verified all 195 matrix operations (164 fixed, 31 dynamic), graph/shape identities and 4539245056 MACs/position; actual precision/timings/peaks remain R1. A8 exported four matched timed summaries, 9748 position-condition records, eight frontier quality rows and 50 legal existing openings. A9 wrote the evidence-linked report and seven checked primary-reference entries (Haque exact historical counts excluded pending source-table verification). A10 prepared 25 retained/omitted checklist rows, slide/demo and FP16+s4+sparse reproduction plans.
+
+Verification commands/results: `.venv/Scripts/python.exe -B -m unittest discover -s tests -p test_person_a_run1.py -v` exited 0: 7 tests passed, including actual frozen-score regression and deferral/readiness guards. Visual view_image review passed F1/F2/F3/F4/hard supplement; PNG/PDF/SVG exports checked. Frozen-source SHA256 audit passed all 350 files with zero mismatches; row counts and finite numerical values checked. `.venv/Scripts/python.exe -B analysis/person_a/readiness.py` exited 0, printing the A5 reminder and not-ready state. See analysis/person_a/run1/verification.json, visual_review.json and progress.json.
+
+No new engine inference, training, search, GPU benchmark, protocol/model/scorer change, commit, push or teammate message. A5 failure history and all original research evidence remain preserved. Full project completion, final systems findings, fresh experimental reproduction, final deck and recording are not claimed.

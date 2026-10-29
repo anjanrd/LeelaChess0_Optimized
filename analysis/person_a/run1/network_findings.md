@@ -1,0 +1,3 @@
+# Network finding
+
+FP16 and s4 each preserve the root result on 2431/2,437 positions. Per-channel weighting alone does not monotonically improve every metric. The selected percentile and smoothing substantially reduce reported policy divergence versus naive PTQ; this is output fidelity, not proof of stronger play. The dynamic-attention extension has the same selected-move score here, but slightly different policy/value drift. Development selection used percentile 99.999 and SmoothQuant alpha 0.7; the test set did not choose that recipe. A near-ceiling move score does not imply identical NN outputs. Full actual precision coverage and performance await B.

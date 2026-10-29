@@ -1,0 +1,51 @@
+{
+  "reviewer": "Codex visual inspection via view_image",
+  "figures": [
+    {
+      "figure": "F1-ablation",
+      "size": [
+        2382,
+        850
+      ],
+      "png_sha256": "65a75b6cb9261c889f984189e9be32de361cd1fe87a55e0272ee3c7691c3739f",
+      "visual_review": "passed: legible labels/captions; no clipping/overlap; source caveats retained"
+    },
+    {
+      "figure": "F2-nodes",
+      "size": [
+        2383,
+        927
+      ],
+      "png_sha256": "135cabe37f582b8c82c99a51bb62c35087a3cf168a9435a10c1d6e462a70bf21",
+      "visual_review": "passed: legible labels/captions; no clipping/overlap; source caveats retained"
+    },
+    {
+      "figure": "F3-node-equivalents",
+      "size": [
+        1494,
+        889
+      ],
+      "png_sha256": "fd286eb99a2d2b49255387e17be9bb8c9b74171dbf5d4348cb58a9dfc8c2ac09",
+      "visual_review": "passed: legible labels/captions; no clipping/overlap; source caveats retained"
+    },
+    {
+      "figure": "F4-swaps",
+      "size": [
+        2185,
+        850
+      ],
+      "png_sha256": "276503a57c1a35829a60f90273dd027ac502a719f8b45e6401aa452a5b02aed6",
+      "visual_review": "passed: legible labels/captions; no clipping/overlap; source caveats retained"
+    },
+    {
+      "figure": "S1-hard-lowbudget",
+      "size": [
+        1580,
+        908
+      ],
+      "png_sha256": "25007db8eebd52946007f682d4f703ee36a25841404446e38ec8a90fc971ba56",
+      "visual_review": "passed: legible labels/captions; no clipping/overlap; source caveats retained"
+    }
+  ],
+  "F12": "not generated; A5 deferred"
+}

@@ -1,0 +1,11 @@
+model,granularity,calibration,percentile,smoothquant_alpha,weighted_targets,dynamic_targets,runtime_options,sidecar
+fp16,floating,runtime FP16,,,0,0,optimize=6,"none: exported FP32 graph, runtime FP16"
+s1,per-tensor,minmax,,,164,0,optimize=8,models/s1.json
+s2,per-channel,minmax,,,164,0,optimize=8,models/s2.json
+s3,per-channel,percentile,99.999,,164,0,optimize=8,models/s3.json
+s4,per-channel,percentile,99.999,0.7,164,0,optimize=8,models/s4.json
+s4aa,per-channel,percentile,99.999,0.7,164,31,optimize=8,models/s4aa.json
+s0,per-channel,percentile,99.999,0.7,164,0,optimize=8,models/s0.json
+s1sp,per-channel,percentile,99.999,0.7,164,0,optimize=8,models/s1sp.json
+swap_pol8,see sidecar,percentile,99.999,0.7,0,0,optimize=8,models/swap_pol8.json
+swap_val8,see sidecar,percentile,99.999,0.7,0,0,optimize=8,models/swap_val8.json

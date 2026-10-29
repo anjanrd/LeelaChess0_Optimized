@@ -4,6 +4,8 @@ This repository is the unified workspace for Person A (model/analysis) and Perso
 
 Start with [updated_plan.md](updated_plan.md) for scope, ownership and deliverables, [STATUS.md](STATUS.md) for the current checkpoint, and [consolidation_context.md](consolidation_context.md) for lineage, paths and safe continuation. Agent instructions are in [AGENTS.md](AGENTS.md); retained technical traps are in [runtime notes](docs/runtime_notes.md).
 
+Person A's independent Run 1 analysis is ready: [execution handoff](person_a_execution_plan.md) and [report draft](deliverables/report/person_a_sections.md). **Address deferred A5 before Run 2**; final systems-dependent outputs remain pending.
+
 ## Current position
 
 The dense INT8 ladder, SmoothQuant, attention extension, magnitude/SparseGPT pruning, policy/value swaps and main network/fixed-node evaluations are complete. Fixed-time FP16/s4 raw runs and the reduced speed/energy batch sweep also exist. Detailed profiling is blocked by the saved TensorRT plugin-loading error; matches, final analyses, writing and reproduction remain. No new research experiment was run to consolidate the repository.

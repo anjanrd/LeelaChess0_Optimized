@@ -1,0 +1,10 @@
+{
+  "main_score_B_exact_match": true,
+  "hard_conditions": 30,
+  "hard_positions_per_condition": 43,
+  "supplemental_s0_budgets": [
+    100,
+    400
+  ],
+  "hard_selection": "FP16 viewed-test errors or correct-policy mass below 0.8; descriptive"
+}

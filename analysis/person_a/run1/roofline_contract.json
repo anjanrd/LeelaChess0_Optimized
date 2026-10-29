@@ -1,0 +1,49 @@
+{
+  "operations": 195,
+  "fixed_weight_operations": 164,
+  "dynamic_operations": 31,
+  "macs_per_position": 4539245056,
+  "arithmetic_ops_per_position": 9078490112,
+  "active_graph_sha256": "937d5ac3d1ce9daafc7858f54166787924680c0c9c4aaab94d438402430db2b9",
+  "geometry_source_sha256": "2dc17ea66e3db343532292a5f8f37d9daae6f387a510de8114cc3304d18e22d8",
+  "geometry_proof": "all operator protobufs and integer shape constants identical; matrix dimensions checked",
+  "graph_io": {
+    "input": [
+      {
+        "name": "/input/planes",
+        "shape": [
+          "batch",
+          112,
+          8,
+          8
+        ]
+      }
+    ],
+    "output": [
+      {
+        "name": "/output/policy",
+        "shape": [
+          "batch",
+          1858
+        ]
+      },
+      {
+        "name": "/output/wdl",
+        "shape": [
+          "batch",
+          3
+        ]
+      },
+      {
+        "name": "/output/mlh",
+        "shape": [
+          "batch",
+          1
+        ]
+      }
+    ]
+  },
+  "s4_graph_targets": 164,
+  "s4aa_graph_targets": 195,
+  "executed_precision_and_measured_roofline": "WAIT R1; no peak/timing supplied"
+}

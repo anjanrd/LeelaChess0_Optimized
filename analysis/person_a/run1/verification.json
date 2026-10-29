@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-29",
+  "status": "passed",
+  "branch": "anjan",
+  "source_commit": "77510149520b3fcf7ea4732055965c656a26cd3d",
+  "source_files_verified": 350,
+  "source_failures": [],
+  "source_bytes": 8588424153,
+  "analysis_row_counts": {
+    "T1-network": 10,
+    "T1-search": 38,
+    "hard-lowbudget": 30,
+    "policy-value-swap": 20,
+    "sparse-reconstruction": 150,
+    "sparse-move-errors": 2706,
+    "roofline-operation-inventory": 195,
+    "timed-matched-review": 4,
+    "timed-matched-positions": 9748,
+    "frontier-quality-ready": 8,
+    "match-openings": 50
+  },
+  "regression_tests_passed": 7,
+  "figure_visual_QA": "5 figures passed; PNG/PDF/SVG each",
+  "figure_QA_record": "analysis/person_a/run1/visual_review.json",
+  "A5": "deferred by user; must be addressed before Run 2",
+  "new_engine_inference_search_or_gpu_benchmarks": 0,
+  "model_scorer_protocol_changes": false,
+  "fresh_experimental_reproduction": "prepared only; WAIT R5",
+  "commit_or_push_performed": false,
+  "final_document_local_links_checked": 27,
+  "completion_state": "independent Run 1 block complete; A5 user-deferred; Run 2 waiting"
+}

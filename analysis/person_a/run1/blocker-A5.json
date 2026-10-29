@@ -1,0 +1,47 @@
+{
+  "status": "BLOCKED",
+  "step": "A5",
+  "failure": {
+    "error": "Saved s4_raw * graph smooth_inverse did not match saved s4_smoothed under rtol=1e-5, atol=1e-12 (or positivity prerequisite failed); cause not investigated after stop.",
+    "check": "np.all(inv>0) and np.allclose(values[\"s4_raw\"]*inv, values[\"s4_smoothed\"], rtol=1e-5, atol=1e-12)",
+    "inputs": [
+      "reports/C2-ln2-channel-maxima.npz",
+      "models/s4.onnx"
+    ],
+    "next_action": "Read-only provenance/representation investigation requires authorization under repository stop rule."
+  },
+  "frozen_input_identities": [
+    {
+      "path": "models/s4.json",
+      "bytes": 50028,
+      "sha256": "b75628f2384aa6e576d26190907fae6b6fde44e0a9b5aaa8b4209b1924249e9d"
+    },
+    {
+      "path": "models/s4.onnx",
+      "bytes": 105829506,
+      "sha256": "24fd9a11bbc755962b98fab08dd49f9a721c797097dfb607183e27b7e76e1904"
+    },
+    {
+      "path": "reports/C2-ln2-channel-maxima.npz",
+      "bytes": 9992,
+      "sha256": "d269a76b0989c2b9efffc4956faab592633141ca259694b057ff8e126af6249c"
+    }
+  ],
+  "raw_evidence_modified": false,
+  "new_inference_runs": 0,
+  "f12_generated": false,
+  "previous_A3_retry": "Comparison normalized integer budget keys to their JSON string form; retry exactly matched saved main B table.",
+  "completed_numerical_stages": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "remaining_stages_not_started": [
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10"
+  ]
+}
