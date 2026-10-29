@@ -1,0 +1,15 @@
+{
+ "name": "s1",
+ "weights": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s1.pb.gz",
+ "backend": "onnx-trt",
+ "backend_opts": "optimize=8",
+ "threads": 1,
+ "minibatch": 256,
+ "split": "test",
+ "n_positions": 43,
+ "move_overhead": 20,
+ "host": "Anjans-Omen",
+ "started": "2026-10-28 12:58:08",
+ "warnings": [],
+ "finished": "2026-10-28 12:58:25"
+}

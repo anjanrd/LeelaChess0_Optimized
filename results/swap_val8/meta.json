@@ -1,0 +1,15 @@
+{
+ "name": "swap_val8",
+ "weights": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\swap_val8.pb.gz",
+ "backend": "onnx-trt",
+ "backend_opts": "optimize=8",
+ "threads": 1,
+ "minibatch": 256,
+ "split": "test",
+ "n_positions": 2437,
+ "move_overhead": 20,
+ "host": "Anjans-Omen",
+ "started": "2026-10-28 09:49:27",
+ "warnings": [],
+ "finished": "2026-10-28 10:55:12"
+}

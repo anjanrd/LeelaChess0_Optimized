@@ -1,0 +1,40 @@
+{
+  "elapsed_seconds": 55.0,
+  "process_exit": null,
+  "models": {
+    "fp16": {
+      "prior_prefix_retained": true,
+      "duplicate_keys": 0,
+      "new_keys": 66,
+      "times": {
+        "200": {
+          "before": 2437,
+          "now": 2437,
+          "remaining": 0
+        },
+        "800": {
+          "before": 1027,
+          "now": 1093,
+          "remaining": 1344
+        }
+      }
+    },
+    "s4": {
+      "prior_prefix_retained": true,
+      "duplicate_keys": 0,
+      "new_keys": 0,
+      "times": {
+        "200": {
+          "before": 0,
+          "now": 0,
+          "remaining": 2437
+        },
+        "800": {
+          "before": 0,
+          "now": 0,
+          "remaining": 2437
+        }
+      }
+    }
+  }
+}

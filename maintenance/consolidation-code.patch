@@ -1,0 +1,81 @@
+diff --git "a/C:\\Users\\HP\\Desktop\\LC0\\archive\\person-b-import\\ladder.py" "b/C:\\Users\\HP\\Desktop\\LC0\\ladder.py"
+index 8250e0b..fda16b6 100644
+--- "a/C:\\Users\\HP\\Desktop\\LC0\\archive\\person-b-import\\ladder.py"
++++ "b/C:\\Users\\HP\\Desktop\\LC0\\ladder.py"
+@@ -60,8 +60,11 @@ DEFAULT = {
+ # ------------------------------------------------------------------ config
+ def load_config(path):
+     cfg = json.loads(json.dumps(DEFAULT))
++    config_dir = ROOT
+     if path and Path(path).exists():
+-        user = json.loads(Path(path).read_text())
++        config_path = Path(path).expanduser().resolve()
++        config_dir = config_path.parent
++        user = json.loads(config_path.read_text(encoding="utf-8-sig"))
+         for k, v in user.items():
+             if isinstance(v, dict) and isinstance(cfg.get(k), dict):
+                 cfg[k].update(v)
+@@ -69,8 +72,23 @@ def load_config(path):
+                 cfg[k] = v
+     elif path:
+         sys.exit(f"config {path} not found (copy config.example.json)")
+-    w = Path(cfg["work"]).resolve()
++    # Resolve local paths independently of the original Desktop/LC0-B checkout.
++    # Scientific settings are unchanged by this portability layer.
++    w = Path(os.path.expandvars(cfg["work"])).expanduser()
++    w = (config_dir / w).resolve() if not w.is_absolute() else w.resolve()
+     cfg["_w"] = w
++    for key in ("lc0", "trtexec", "nsys", "lc0_py", "syzygy", "bt3"):
++        value = cfg.get(key)
++        if not value:
++            continue
++        value = os.path.expandvars(value)
++        # Bare executable names deliberately use PATH on either platform.
++        if key in ("lc0", "trtexec", "nsys") and not any(c in value for c in ("/", "\\")):
++            cfg[key] = value
++            continue
++        local_path = Path(value).expanduser()
++        anchor = w if key == "bt3" else config_dir
++        cfg[key] = str((anchor / local_path).resolve())
+     for d in ("models", "data", "results", "reports", "reports/logs"):
+         (w / d).mkdir(parents=True, exist_ok=True)
+     return cfg
+@@ -456,7 +474,7 @@ def main():
+     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+     ap.add_argument("step", choices=["tbset", "calib", "export", "day1", "select", "build", "study",
+                                      "studyc", "score", "match", "hw"])
+-    ap.add_argument("--config", default="config.json")
++    ap.add_argument("--config", default=str(ROOT / "config.json"))
+     ap.add_argument("--force", action="store_true")
+     ap.add_argument("--only", default=None, help="build: comma list of models")
+     ap.add_argument("--models", default=None, help="study/studyc/score: comma list (BEST = config best)")
+
+diff --git "a/C:\\Users\\HP\\Desktop\\LC0\\archive\\person-b-import\\overnight.py" "b/C:\\Users\\HP\\Desktop\\LC0\\overnight.py"
+index 79cc757..ac4c8c0 100644
+--- "a/C:\\Users\\HP\\Desktop\\LC0\\archive\\person-b-import\\overnight.py"
++++ "b/C:\\Users\\HP\\Desktop\\LC0\\overnight.py"
+@@ -61,13 +61,13 @@ def keep_awake():
+ class Runner:
+     def __init__(self, a):
+         self.a = a
+-        self.base = Path(a.config)
++        self.base = Path(a.config).expanduser().resolve()
+         self.cfg_path = self.base.resolve().with_name("config.run.json")
+         user = json.loads(self.base.read_text()) if self.base.exists() else {}
+         self.user = user
+         self.run_cfg = json.loads(self.cfg_path.read_text()) if self.cfg_path.exists() else json.loads(json.dumps(user))
+         # child processes run inside the work folder, so make it absolute here
+-        self.run_cfg["work"] = str(Path(user.get("work", ".")).resolve())
++        self.run_cfg["work"] = str((self.base.parent / Path(user.get("work", ".")).expanduser()).resolve())
+         self.save_cfg()
+         self.cfg = ladder.load_config(str(self.cfg_path))
+         self.w = self.cfg["_w"]
+@@ -341,7 +341,7 @@ class Runner:
+ 
+ def main():
+     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+-    ap.add_argument("--config", default="config.json")
++    ap.add_argument("--config", default=str(ROOT / "config.json"))
+     ap.add_argument("--study-hours", type=float, default=5.0, help="budget for Studies A+B")
+     ap.add_argument("--studyc-hours", type=float, default=1.0)
+     ap.add_argument("--match-hours", type=float, default=6.0)

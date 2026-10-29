@@ -1,0 +1,13 @@
+{
+  "command": [
+    "C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe",
+    "-u",
+    "ladder.py",
+    "build",
+    "--only",
+    "s1sp,swap_pol8,swap_val8"
+  ],
+  "exit_code": 0,
+  "timing_switch": false,
+  "finished": "2026-10-28T03:38:25+05:30"
+}

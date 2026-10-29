@@ -1,0 +1,920 @@
+{
+ "method": "magnitude 2:4",
+ "skip": null,
+ "layers": {
+  "/attn_body/embedding/preprocess/matmul/w": {
+   "nodes": [
+    "/attn_body/embedding/preprocess/matmul"
+   ],
+   "rel_err": 0.3495514988899231
+  },
+  "/attn_body/matmul/w": {
+   "nodes": [
+    "/attn_body/matmul"
+   ],
+   "rel_err": 0.3623649775981903
+  },
+  "/attn_body/ffn/dense1/w/w": {
+   "nodes": [
+    "/attn_body/ffn/dense1/w"
+   ],
+   "rel_err": 0.32086458802223206
+  },
+  "/attn_body/ffn/dense2/w/w": {
+   "nodes": [
+    "/attn_body/ffn/dense2/w"
+   ],
+   "rel_err": 0.3376252055168152
+  },
+  "/encoder0/mha/Q/w/w": {
+   "nodes": [
+    "/encoder0/mha/Q/w"
+   ],
+   "rel_err": 0.3576352894306183
+  },
+  "/encoder0/mha/K/w/w": {
+   "nodes": [
+    "/encoder0/mha/K/w"
+   ],
+   "rel_err": 0.3537864685058594
+  },
+  "/encoder0/mha/V/w/w": {
+   "nodes": [
+    "/encoder0/mha/V/w"
+   ],
+   "rel_err": 0.35504671931266785
+  },
+  "/encoder0/smolgen/compress/w": {
+   "nodes": [
+    "/encoder0/smolgen/compress"
+   ],
+   "rel_err": 0.35287922620773315
+  },
+  "/encoder0/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder0/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3733161687850952
+  },
+  "/encoder0/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder0/smolgen/dense2/w"
+   ],
+   "rel_err": 0.375038206577301
+  },
+  "/const/smolgen_w": {
+   "nodes": [
+    "/encoder0/smolgen/smol_weight_gen",
+    "/encoder1/smolgen/smol_weight_gen",
+    "/encoder2/smolgen/smol_weight_gen",
+    "/encoder3/smolgen/smol_weight_gen",
+    "/encoder4/smolgen/smol_weight_gen",
+    "/encoder5/smolgen/smol_weight_gen",
+    "/encoder6/smolgen/smol_weight_gen",
+    "/encoder7/smolgen/smol_weight_gen",
+    "/encoder8/smolgen/smol_weight_gen",
+    "/encoder9/smolgen/smol_weight_gen",
+    "/encoder10/smolgen/smol_weight_gen",
+    "/encoder11/smolgen/smol_weight_gen",
+    "/encoder12/smolgen/smol_weight_gen",
+    "/encoder13/smolgen/smol_weight_gen",
+    "/encoder14/smolgen/smol_weight_gen"
+   ],
+   "rel_err": 0.36026325821876526
+  },
+  "/encoder0/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder0/mha/out/dense/w"
+   ],
+   "rel_err": 0.36112841963768005
+  },
+  "/encoder0/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder0/ffn/dense1/w"
+   ],
+   "rel_err": 0.36245620250701904
+  },
+  "/encoder0/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder0/ffn/dense2/w"
+   ],
+   "rel_err": 0.3510574400424957
+  },
+  "/encoder1/mha/Q/w/w": {
+   "nodes": [
+    "/encoder1/mha/Q/w"
+   ],
+   "rel_err": 0.36013633012771606
+  },
+  "/encoder1/mha/K/w/w": {
+   "nodes": [
+    "/encoder1/mha/K/w"
+   ],
+   "rel_err": 0.35816359519958496
+  },
+  "/encoder1/mha/V/w/w": {
+   "nodes": [
+    "/encoder1/mha/V/w"
+   ],
+   "rel_err": 0.3577851951122284
+  },
+  "/encoder1/smolgen/compress/w": {
+   "nodes": [
+    "/encoder1/smolgen/compress"
+   ],
+   "rel_err": 0.35976117849349976
+  },
+  "/encoder1/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder1/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3675546646118164
+  },
+  "/encoder1/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder1/smolgen/dense2/w"
+   ],
+   "rel_err": 0.3710251748561859
+  },
+  "/encoder1/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder1/mha/out/dense/w"
+   ],
+   "rel_err": 0.36358708143234253
+  },
+  "/encoder1/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder1/ffn/dense1/w"
+   ],
+   "rel_err": 0.3624081611633301
+  },
+  "/encoder1/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder1/ffn/dense2/w"
+   ],
+   "rel_err": 0.3546172082424164
+  },
+  "/encoder2/mha/Q/w/w": {
+   "nodes": [
+    "/encoder2/mha/Q/w"
+   ],
+   "rel_err": 0.36176759004592896
+  },
+  "/encoder2/mha/K/w/w": {
+   "nodes": [
+    "/encoder2/mha/K/w"
+   ],
+   "rel_err": 0.35848888754844666
+  },
+  "/encoder2/mha/V/w/w": {
+   "nodes": [
+    "/encoder2/mha/V/w"
+   ],
+   "rel_err": 0.3585720658302307
+  },
+  "/encoder2/smolgen/compress/w": {
+   "nodes": [
+    "/encoder2/smolgen/compress"
+   ],
+   "rel_err": 0.36148589849472046
+  },
+  "/encoder2/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder2/smolgen/dense1/w"
+   ],
+   "rel_err": 0.36947423219680786
+  },
+  "/encoder2/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder2/smolgen/dense2/w"
+   ],
+   "rel_err": 0.37534216046333313
+  },
+  "/encoder2/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder2/mha/out/dense/w"
+   ],
+   "rel_err": 0.36323609948158264
+  },
+  "/encoder2/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder2/ffn/dense1/w"
+   ],
+   "rel_err": 0.36261215806007385
+  },
+  "/encoder2/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder2/ffn/dense2/w"
+   ],
+   "rel_err": 0.35755205154418945
+  },
+  "/encoder3/mha/Q/w/w": {
+   "nodes": [
+    "/encoder3/mha/Q/w"
+   ],
+   "rel_err": 0.362211674451828
+  },
+  "/encoder3/mha/K/w/w": {
+   "nodes": [
+    "/encoder3/mha/K/w"
+   ],
+   "rel_err": 0.36040642857551575
+  },
+  "/encoder3/mha/V/w/w": {
+   "nodes": [
+    "/encoder3/mha/V/w"
+   ],
+   "rel_err": 0.3604012429714203
+  },
+  "/encoder3/smolgen/compress/w": {
+   "nodes": [
+    "/encoder3/smolgen/compress"
+   ],
+   "rel_err": 0.36414217948913574
+  },
+  "/encoder3/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder3/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3657083511352539
+  },
+  "/encoder3/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder3/smolgen/dense2/w"
+   ],
+   "rel_err": 0.348385751247406
+  },
+  "/encoder3/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder3/mha/out/dense/w"
+   ],
+   "rel_err": 0.36402302980422974
+  },
+  "/encoder3/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder3/ffn/dense1/w"
+   ],
+   "rel_err": 0.36142757534980774
+  },
+  "/encoder3/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder3/ffn/dense2/w"
+   ],
+   "rel_err": 0.356341153383255
+  },
+  "/encoder4/mha/Q/w/w": {
+   "nodes": [
+    "/encoder4/mha/Q/w"
+   ],
+   "rel_err": 0.36250072717666626
+  },
+  "/encoder4/mha/K/w/w": {
+   "nodes": [
+    "/encoder4/mha/K/w"
+   ],
+   "rel_err": 0.3610425293445587
+  },
+  "/encoder4/mha/V/w/w": {
+   "nodes": [
+    "/encoder4/mha/V/w"
+   ],
+   "rel_err": 0.36091893911361694
+  },
+  "/encoder4/smolgen/compress/w": {
+   "nodes": [
+    "/encoder4/smolgen/compress"
+   ],
+   "rel_err": 0.36502644419670105
+  },
+  "/encoder4/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder4/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3681001663208008
+  },
+  "/encoder4/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder4/smolgen/dense2/w"
+   ],
+   "rel_err": 0.35694169998168945
+  },
+  "/encoder4/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder4/mha/out/dense/w"
+   ],
+   "rel_err": 0.3635435104370117
+  },
+  "/encoder4/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder4/ffn/dense1/w"
+   ],
+   "rel_err": 0.36140570044517517
+  },
+  "/encoder4/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder4/ffn/dense2/w"
+   ],
+   "rel_err": 0.3566161096096039
+  },
+  "/encoder5/mha/Q/w/w": {
+   "nodes": [
+    "/encoder5/mha/Q/w"
+   ],
+   "rel_err": 0.362662136554718
+  },
+  "/encoder5/mha/K/w/w": {
+   "nodes": [
+    "/encoder5/mha/K/w"
+   ],
+   "rel_err": 0.3610121011734009
+  },
+  "/encoder5/mha/V/w/w": {
+   "nodes": [
+    "/encoder5/mha/V/w"
+   ],
+   "rel_err": 0.36217203736305237
+  },
+  "/encoder5/smolgen/compress/w": {
+   "nodes": [
+    "/encoder5/smolgen/compress"
+   ],
+   "rel_err": 0.3639984130859375
+  },
+  "/encoder5/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder5/smolgen/dense1/w"
+   ],
+   "rel_err": 0.37042558193206787
+  },
+  "/encoder5/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder5/smolgen/dense2/w"
+   ],
+   "rel_err": 0.36889588832855225
+  },
+  "/encoder5/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder5/mha/out/dense/w"
+   ],
+   "rel_err": 0.3635372817516327
+  },
+  "/encoder5/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder5/ffn/dense1/w"
+   ],
+   "rel_err": 0.36221766471862793
+  },
+  "/encoder5/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder5/ffn/dense2/w"
+   ],
+   "rel_err": 0.35723602771759033
+  },
+  "/encoder6/mha/Q/w/w": {
+   "nodes": [
+    "/encoder6/mha/Q/w"
+   ],
+   "rel_err": 0.3621421456336975
+  },
+  "/encoder6/mha/K/w/w": {
+   "nodes": [
+    "/encoder6/mha/K/w"
+   ],
+   "rel_err": 0.3607281744480133
+  },
+  "/encoder6/mha/V/w/w": {
+   "nodes": [
+    "/encoder6/mha/V/w"
+   ],
+   "rel_err": 0.3618716299533844
+  },
+  "/encoder6/smolgen/compress/w": {
+   "nodes": [
+    "/encoder6/smolgen/compress"
+   ],
+   "rel_err": 0.36150485277175903
+  },
+  "/encoder6/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder6/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3653896450996399
+  },
+  "/encoder6/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder6/smolgen/dense2/w"
+   ],
+   "rel_err": 0.3681439757347107
+  },
+  "/encoder6/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder6/mha/out/dense/w"
+   ],
+   "rel_err": 0.36184045672416687
+  },
+  "/encoder6/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder6/ffn/dense1/w"
+   ],
+   "rel_err": 0.3616217076778412
+  },
+  "/encoder6/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder6/ffn/dense2/w"
+   ],
+   "rel_err": 0.35873833298683167
+  },
+  "/encoder7/mha/Q/w/w": {
+   "nodes": [
+    "/encoder7/mha/Q/w"
+   ],
+   "rel_err": 0.36255940794944763
+  },
+  "/encoder7/mha/K/w/w": {
+   "nodes": [
+    "/encoder7/mha/K/w"
+   ],
+   "rel_err": 0.3615536391735077
+  },
+  "/encoder7/mha/V/w/w": {
+   "nodes": [
+    "/encoder7/mha/V/w"
+   ],
+   "rel_err": 0.3623320460319519
+  },
+  "/encoder7/smolgen/compress/w": {
+   "nodes": [
+    "/encoder7/smolgen/compress"
+   ],
+   "rel_err": 0.36119839549064636
+  },
+  "/encoder7/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder7/smolgen/dense1/w"
+   ],
+   "rel_err": 0.36617621779441833
+  },
+  "/encoder7/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder7/smolgen/dense2/w"
+   ],
+   "rel_err": 0.3651823103427887
+  },
+  "/encoder7/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder7/mha/out/dense/w"
+   ],
+   "rel_err": 0.36378464102745056
+  },
+  "/encoder7/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder7/ffn/dense1/w"
+   ],
+   "rel_err": 0.36130237579345703
+  },
+  "/encoder7/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder7/ffn/dense2/w"
+   ],
+   "rel_err": 0.3571106791496277
+  },
+  "/encoder8/mha/Q/w/w": {
+   "nodes": [
+    "/encoder8/mha/Q/w"
+   ],
+   "rel_err": 0.3630296587944031
+  },
+  "/encoder8/mha/K/w/w": {
+   "nodes": [
+    "/encoder8/mha/K/w"
+   ],
+   "rel_err": 0.3610345721244812
+  },
+  "/encoder8/mha/V/w/w": {
+   "nodes": [
+    "/encoder8/mha/V/w"
+   ],
+   "rel_err": 0.3616245985031128
+  },
+  "/encoder8/smolgen/compress/w": {
+   "nodes": [
+    "/encoder8/smolgen/compress"
+   ],
+   "rel_err": 0.36359620094299316
+  },
+  "/encoder8/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder8/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3673444390296936
+  },
+  "/encoder8/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder8/smolgen/dense2/w"
+   ],
+   "rel_err": 0.3682970702648163
+  },
+  "/encoder8/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder8/mha/out/dense/w"
+   ],
+   "rel_err": 0.3631889820098877
+  },
+  "/encoder8/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder8/ffn/dense1/w"
+   ],
+   "rel_err": 0.3618314266204834
+  },
+  "/encoder8/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder8/ffn/dense2/w"
+   ],
+   "rel_err": 0.3560863435268402
+  },
+  "/encoder9/mha/Q/w/w": {
+   "nodes": [
+    "/encoder9/mha/Q/w"
+   ],
+   "rel_err": 0.3633149266242981
+  },
+  "/encoder9/mha/K/w/w": {
+   "nodes": [
+    "/encoder9/mha/K/w"
+   ],
+   "rel_err": 0.3607732355594635
+  },
+  "/encoder9/mha/V/w/w": {
+   "nodes": [
+    "/encoder9/mha/V/w"
+   ],
+   "rel_err": 0.36266735196113586
+  },
+  "/encoder9/smolgen/compress/w": {
+   "nodes": [
+    "/encoder9/smolgen/compress"
+   ],
+   "rel_err": 0.3612252175807953
+  },
+  "/encoder9/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder9/smolgen/dense1/w"
+   ],
+   "rel_err": 0.36904677748680115
+  },
+  "/encoder9/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder9/smolgen/dense2/w"
+   ],
+   "rel_err": 0.3813927173614502
+  },
+  "/encoder9/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder9/mha/out/dense/w"
+   ],
+   "rel_err": 0.36356112360954285
+  },
+  "/encoder9/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder9/ffn/dense1/w"
+   ],
+   "rel_err": 0.3617762327194214
+  },
+  "/encoder9/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder9/ffn/dense2/w"
+   ],
+   "rel_err": 0.3564516603946686
+  },
+  "/encoder10/mha/Q/w/w": {
+   "nodes": [
+    "/encoder10/mha/Q/w"
+   ],
+   "rel_err": 0.3631870448589325
+  },
+  "/encoder10/mha/K/w/w": {
+   "nodes": [
+    "/encoder10/mha/K/w"
+   ],
+   "rel_err": 0.36180350184440613
+  },
+  "/encoder10/mha/V/w/w": {
+   "nodes": [
+    "/encoder10/mha/V/w"
+   ],
+   "rel_err": 0.3620719611644745
+  },
+  "/encoder10/smolgen/compress/w": {
+   "nodes": [
+    "/encoder10/smolgen/compress"
+   ],
+   "rel_err": 0.36271581053733826
+  },
+  "/encoder10/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder10/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3664921522140503
+  },
+  "/encoder10/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder10/smolgen/dense2/w"
+   ],
+   "rel_err": 0.36882248520851135
+  },
+  "/encoder10/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder10/mha/out/dense/w"
+   ],
+   "rel_err": 0.3628491163253784
+  },
+  "/encoder10/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder10/ffn/dense1/w"
+   ],
+   "rel_err": 0.36169859766960144
+  },
+  "/encoder10/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder10/ffn/dense2/w"
+   ],
+   "rel_err": 0.35725873708724976
+  },
+  "/encoder11/mha/Q/w/w": {
+   "nodes": [
+    "/encoder11/mha/Q/w"
+   ],
+   "rel_err": 0.36277782917022705
+  },
+  "/encoder11/mha/K/w/w": {
+   "nodes": [
+    "/encoder11/mha/K/w"
+   ],
+   "rel_err": 0.3612366020679474
+  },
+  "/encoder11/mha/V/w/w": {
+   "nodes": [
+    "/encoder11/mha/V/w"
+   ],
+   "rel_err": 0.36272427439689636
+  },
+  "/encoder11/smolgen/compress/w": {
+   "nodes": [
+    "/encoder11/smolgen/compress"
+   ],
+   "rel_err": 0.3591242730617523
+  },
+  "/encoder11/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder11/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3652535676956177
+  },
+  "/encoder11/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder11/smolgen/dense2/w"
+   ],
+   "rel_err": 0.36439499258995056
+  },
+  "/encoder11/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder11/mha/out/dense/w"
+   ],
+   "rel_err": 0.36269378662109375
+  },
+  "/encoder11/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder11/ffn/dense1/w"
+   ],
+   "rel_err": 0.36200258135795593
+  },
+  "/encoder11/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder11/ffn/dense2/w"
+   ],
+   "rel_err": 0.3565041422843933
+  },
+  "/encoder12/mha/Q/w/w": {
+   "nodes": [
+    "/encoder12/mha/Q/w"
+   ],
+   "rel_err": 0.3620768189430237
+  },
+  "/encoder12/mha/K/w/w": {
+   "nodes": [
+    "/encoder12/mha/K/w"
+   ],
+   "rel_err": 0.3604453206062317
+  },
+  "/encoder12/mha/V/w/w": {
+   "nodes": [
+    "/encoder12/mha/V/w"
+   ],
+   "rel_err": 0.36217522621154785
+  },
+  "/encoder12/smolgen/compress/w": {
+   "nodes": [
+    "/encoder12/smolgen/compress"
+   ],
+   "rel_err": 0.3639914393424988
+  },
+  "/encoder12/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder12/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3663327693939209
+  },
+  "/encoder12/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder12/smolgen/dense2/w"
+   ],
+   "rel_err": 0.3862745761871338
+  },
+  "/encoder12/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder12/mha/out/dense/w"
+   ],
+   "rel_err": 0.3631039261817932
+  },
+  "/encoder12/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder12/ffn/dense1/w"
+   ],
+   "rel_err": 0.36255890130996704
+  },
+  "/encoder12/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder12/ffn/dense2/w"
+   ],
+   "rel_err": 0.35401204228401184
+  },
+  "/encoder13/mha/Q/w/w": {
+   "nodes": [
+    "/encoder13/mha/Q/w"
+   ],
+   "rel_err": 0.3629459738731384
+  },
+  "/encoder13/mha/K/w/w": {
+   "nodes": [
+    "/encoder13/mha/K/w"
+   ],
+   "rel_err": 0.3601146340370178
+  },
+  "/encoder13/mha/V/w/w": {
+   "nodes": [
+    "/encoder13/mha/V/w"
+   ],
+   "rel_err": 0.36249375343322754
+  },
+  "/encoder13/smolgen/compress/w": {
+   "nodes": [
+    "/encoder13/smolgen/compress"
+   ],
+   "rel_err": 0.36506110429763794
+  },
+  "/encoder13/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder13/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3659312129020691
+  },
+  "/encoder13/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder13/smolgen/dense2/w"
+   ],
+   "rel_err": 0.3846510350704193
+  },
+  "/encoder13/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder13/mha/out/dense/w"
+   ],
+   "rel_err": 0.3648150563240051
+  },
+  "/encoder13/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder13/ffn/dense1/w"
+   ],
+   "rel_err": 0.3619609475135803
+  },
+  "/encoder13/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder13/ffn/dense2/w"
+   ],
+   "rel_err": 0.35341835021972656
+  },
+  "/encoder14/mha/Q/w/w": {
+   "nodes": [
+    "/encoder14/mha/Q/w"
+   ],
+   "rel_err": 0.36211928725242615
+  },
+  "/encoder14/mha/K/w/w": {
+   "nodes": [
+    "/encoder14/mha/K/w"
+   ],
+   "rel_err": 0.36024871468544006
+  },
+  "/encoder14/mha/V/w/w": {
+   "nodes": [
+    "/encoder14/mha/V/w"
+   ],
+   "rel_err": 0.3614441752433777
+  },
+  "/encoder14/smolgen/compress/w": {
+   "nodes": [
+    "/encoder14/smolgen/compress"
+   ],
+   "rel_err": 0.3603142499923706
+  },
+  "/encoder14/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder14/smolgen/dense1/w"
+   ],
+   "rel_err": 0.3647124469280243
+  },
+  "/encoder14/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder14/smolgen/dense2/w"
+   ],
+   "rel_err": 0.39459145069122314
+  },
+  "/encoder14/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder14/mha/out/dense/w"
+   ],
+   "rel_err": 0.3626253604888916
+  },
+  "/encoder14/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder14/ffn/dense1/w"
+   ],
+   "rel_err": 0.3614862263202667
+  },
+  "/encoder14/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder14/ffn/dense2/w"
+   ],
+   "rel_err": 0.3440893888473511
+  },
+  "/policy/dense1/matmul/w": {
+   "nodes": [
+    "/policy/dense1/matmul"
+   ],
+   "rel_err": 0.07852699607610703
+  },
+  "/policy/Q/matmul/w": {
+   "nodes": [
+    "/policy/Q/matmul"
+   ],
+   "rel_err": 0.20076362788677216
+  },
+  "/policy/K/matmul/w": {
+   "nodes": [
+    "/policy/K/matmul"
+   ],
+   "rel_err": 0.19223704934120178
+  },
+  "/policy/promotion/matmul/w": {
+   "nodes": [
+    "/policy/promotion/matmul"
+   ],
+   "rel_err": 0.32620832324028015
+  },
+  "/value/embed/matmul/w": {
+   "nodes": [
+    "/value/embed/matmul"
+   ],
+   "rel_err": 0.04936952143907547
+  },
+  "/value/dense1/matmul/w": {
+   "nodes": [
+    "/value/dense1/matmul"
+   ],
+   "rel_err": 0.14373217523097992
+  },
+  "/value/dense2/matmul/w": {
+   "nodes": [
+    "/value/dense2/matmul"
+   ],
+   "rel_err": 0.11521507799625397
+  },
+  "/mlh/embed/matmul/w": {
+   "nodes": [
+    "/mlh/embed/matmul"
+   ],
+   "rel_err": 0.0351007804274559
+  },
+  "/mlh/dense1/matmul/w": {
+   "nodes": [
+    "/mlh/dense1/matmul"
+   ],
+   "rel_err": 0.40121886134147644
+  },
+  "/mlh/dense2/matmul/w": {
+   "nodes": [
+    "/mlh/dense2/matmul"
+   ],
+   "rel_err": 0.20175714790821075
+  }
+ }
+}

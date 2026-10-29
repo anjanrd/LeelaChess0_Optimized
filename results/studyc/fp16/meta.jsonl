@@ -1,0 +1,1 @@
+{"name": "fp16", "weights": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\reports\\c3-part1\\studyc-work\\models\\fp16.pb.gz", "backend": "onnx-trt", "backend_opts": "optimize=6", "threads": 0, "minibatch": 256, "split": "test", "n_positions": 2437, "move_overhead": 20, "host": "Anjans-Omen", "started": "2026-10-28 14:08:01", "warnings": [], "finished": "2026-10-28 14:24:09"}

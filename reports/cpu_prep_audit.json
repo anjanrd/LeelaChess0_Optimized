@@ -1,0 +1,419 @@
+{
+  "timestamp": "2026-10-28T10:57:04+05:30",
+  "selected_full": 2437,
+  "selected_hard": 43,
+  "subprocesses": 0,
+  "engine_launches": 0,
+  "source_and_config_hashes": {
+    "eval\\run_study.py": "af0fc7a5926d2c6a1b1eda3f3356128830e99c065ae4837287783a31d018d41e",
+    "eval\\score.py": "ff716f22808fa8eb91801a65617af7ebf144bce7a3d6f7dd7a8dba9708680c35",
+    "hw\\bench.py": "58fa0a84167fa0a04d2bb790aff5e5c452431e73d0fe2e394aed1aee6f229333",
+    "ladder.py": "d5e9eb17ee679231345a914415f23b97ccd52b768a2869fa8618d2d8d12156ab",
+    "config.json": "2edd33d646ac8defe7f731850d568ea1b9396a612b51eaaa7aefc364342320dd"
+  },
+  "finished_A": [
+    "fp16",
+    "s1",
+    "s2",
+    "s3",
+    "s4",
+    "s4aa",
+    "swap_pol8",
+    "swap_val8"
+  ],
+  "pending_A": {
+    "s1sp": 1215,
+    "s0": 0,
+    "native": 0
+  },
+  "tables": {
+    "Full selected test set": [
+      {
+        "model": "fp16",
+        "n": 2437,
+        "correct": 2431,
+        "ref_correct": 2431,
+        "worse": 0,
+        "better": 0,
+        "p": 1.0
+      },
+      {
+        "model": "s1",
+        "n": 2437,
+        "correct": 2424,
+        "ref_correct": 2431,
+        "worse": 7,
+        "better": 0,
+        "p": 0.015625
+      },
+      {
+        "model": "s2",
+        "n": 2437,
+        "correct": 2427,
+        "ref_correct": 2431,
+        "worse": 6,
+        "better": 2,
+        "p": 0.2890625
+      },
+      {
+        "model": "s3",
+        "n": 2437,
+        "correct": 2431,
+        "ref_correct": 2431,
+        "worse": 1,
+        "better": 1,
+        "p": 1.0
+      },
+      {
+        "model": "s4",
+        "n": 2437,
+        "correct": 2431,
+        "ref_correct": 2431,
+        "worse": 1,
+        "better": 1,
+        "p": 1.0
+      },
+      {
+        "model": "s4aa",
+        "n": 2437,
+        "correct": 2431,
+        "ref_correct": 2431,
+        "worse": 1,
+        "better": 1,
+        "p": 1.0
+      },
+      {
+        "model": "swap_pol8",
+        "n": 2437,
+        "correct": 2431,
+        "ref_correct": 2431,
+        "worse": 1,
+        "better": 1,
+        "p": 1.0
+      },
+      {
+        "model": "swap_val8",
+        "n": 2437,
+        "correct": 2431,
+        "ref_correct": 2431,
+        "worse": 0,
+        "better": 0,
+        "p": 1.0
+      }
+    ],
+    "Existing hard IDs": [
+      {
+        "model": "fp16",
+        "n": 43,
+        "correct": 37,
+        "ref_correct": 37,
+        "worse": 0,
+        "better": 0,
+        "p": 1.0
+      },
+      {
+        "model": "s1",
+        "n": 43,
+        "correct": 32,
+        "ref_correct": 37,
+        "worse": 5,
+        "better": 0,
+        "p": 0.0625
+      },
+      {
+        "model": "s2",
+        "n": 43,
+        "correct": 34,
+        "ref_correct": 37,
+        "worse": 5,
+        "better": 2,
+        "p": 0.453125
+      },
+      {
+        "model": "s3",
+        "n": 43,
+        "correct": 37,
+        "ref_correct": 37,
+        "worse": 1,
+        "better": 1,
+        "p": 1.0
+      },
+      {
+        "model": "s4",
+        "n": 43,
+        "correct": 37,
+        "ref_correct": 37,
+        "worse": 1,
+        "better": 1,
+        "p": 1.0
+      },
+      {
+        "model": "s4aa",
+        "n": 43,
+        "correct": 37,
+        "ref_correct": 37,
+        "worse": 1,
+        "better": 1,
+        "p": 1.0
+      },
+      {
+        "model": "swap_pol8",
+        "n": 43,
+        "correct": 37,
+        "ref_correct": 37,
+        "worse": 1,
+        "better": 1,
+        "p": 1.0
+      },
+      {
+        "model": "swap_val8",
+        "n": 43,
+        "correct": 37,
+        "ref_correct": 37,
+        "worse": 0,
+        "better": 0,
+        "p": 1.0
+      }
+    ]
+  },
+  "runtime": [
+    {
+      "model": "fp16",
+      "A": 2437,
+      "B_positions": 2437,
+      "A_final": null,
+      "B_final": {
+        "count": 2054,
+        "total": 2054,
+        "seconds": "0.94",
+        "line": "[fp16 B] 2054/2054  0.94s/item  eta 0.0 min"
+      },
+      "latest_B": {
+        "count": 2054,
+        "total": 2054,
+        "seconds": "0.94",
+        "line": "[fp16 B] 2054/2054  0.94s/item  eta 0.0 min"
+      }
+    },
+    {
+      "model": "s1",
+      "A": 2437,
+      "B_positions": 2437,
+      "A_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.14",
+        "line": "[s1 A] 2437/2437  0.14s/item  eta 0.0 min"
+      },
+      "B_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.66",
+        "line": "[s1 B] 2437/2437  0.66s/item  eta 0.0 min"
+      },
+      "latest_B": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.66",
+        "line": "[s1 B] 2437/2437  0.66s/item  eta 0.0 min"
+      }
+    },
+    {
+      "model": "s2",
+      "A": 2437,
+      "B_positions": 2437,
+      "A_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.01",
+        "line": "[s2 A] 2437/2437  0.01s/item  eta 0.0 min"
+      },
+      "B_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.64",
+        "line": "[s2 B] 2437/2437  0.64s/item  eta 0.0 min"
+      },
+      "latest_B": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.64",
+        "line": "[s2 B] 2437/2437  0.64s/item  eta 0.0 min"
+      }
+    },
+    {
+      "model": "s3",
+      "A": 2437,
+      "B_positions": 2437,
+      "A_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.06",
+        "line": "[s3 A] 2437/2437  0.06s/item  eta 0.0 min"
+      },
+      "B_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.64",
+        "line": "[s3 B] 2437/2437  0.64s/item  eta 0.0 min"
+      },
+      "latest_B": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.64",
+        "line": "[s3 B] 2437/2437  0.64s/item  eta 0.0 min"
+      }
+    },
+    {
+      "model": "s4",
+      "A": 2437,
+      "B_positions": 2437,
+      "A_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.05",
+        "line": "[s4 A] 2437/2437  0.05s/item  eta 0.0 min"
+      },
+      "B_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.69",
+        "line": "[s4 B] 2437/2437  0.69s/item  eta 0.0 min"
+      },
+      "latest_B": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.69",
+        "line": "[s4 B] 2437/2437  0.69s/item  eta 0.0 min"
+      }
+    },
+    {
+      "model": "s4aa",
+      "A": 2437,
+      "B_positions": 2437,
+      "A_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.06",
+        "line": "[s4aa A] 2437/2437  0.06s/item  eta 0.0 min"
+      },
+      "B_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.73",
+        "line": "[s4aa B] 2437/2437  0.73s/item  eta 0.0 min"
+      },
+      "latest_B": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.73",
+        "line": "[s4aa B] 2437/2437  0.73s/item  eta 0.0 min"
+      }
+    },
+    {
+      "model": "swap_pol8",
+      "A": 2437,
+      "B_positions": 2437,
+      "A_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.20",
+        "line": "[swap_pol8 A] 2437/2437  0.20s/item  eta 0.0 min"
+      },
+      "B_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "1.51",
+        "line": "[swap_pol8 B] 2437/2437  1.51s/item  eta 0.0 min"
+      },
+      "latest_B": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "1.51",
+        "line": "[swap_pol8 B] 2437/2437  1.51s/item  eta 0.0 min"
+      }
+    },
+    {
+      "model": "swap_val8",
+      "A": 2437,
+      "B_positions": 2437,
+      "A_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "0.11",
+        "line": "[swap_val8 A] 2437/2437  0.11s/item  eta 0.0 min"
+      },
+      "B_final": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "1.50",
+        "line": "[swap_val8 B] 2437/2437  1.50s/item  eta 0.0 min"
+      },
+      "latest_B": {
+        "count": 2437,
+        "total": 2437,
+        "seconds": "1.50",
+        "line": "[swap_val8 B] 2437/2437  1.50s/item  eta 0.0 min"
+      }
+    },
+    {
+      "model": "s1sp",
+      "A": 1215,
+      "B_positions": 0,
+      "A_final": null,
+      "B_final": null,
+      "latest_B": null
+    },
+    {
+      "model": "s0",
+      "A": 0,
+      "B_positions": 0,
+      "A_final": null,
+      "B_final": null,
+      "latest_B": null
+    },
+    {
+      "model": "native",
+      "A": 0,
+      "B_positions": 0,
+      "A_final": null,
+      "B_final": null,
+      "latest_B": null
+    }
+  ],
+  "snapshot_notes": [],
+  "commands": [
+    {
+      "step": "hard-lowbudget fp16",
+      "command": "& 'C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe' '-u' 'eval/run_study.py' '--lc0' 'C:/Users/HP/Desktop/LC0-B/tools/lc0/lc0.exe' '--name' 'fp16' '--weights' 'models/fp16.pb.gz' '--backend' 'onnx-trt' '--backend-opts' 'optimize=6' '--tbset' 'data/tbset.jsonl' '--split' 'test' '--ids' 'reports/hard/ids.txt' '--limit' '0' '--budgets' '10,25,50,100,200' '--threads' '1' '--minibatch' '256' '--out-dir' 'results/hard_lowbudget'"
+    },
+    {
+      "step": "hard-lowbudget s1",
+      "command": "& 'C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe' '-u' 'eval/run_study.py' '--lc0' 'C:/Users/HP/Desktop/LC0-B/tools/lc0/lc0.exe' '--name' 's1' '--weights' 'models/s1.pb.gz' '--backend' 'onnx-trt' '--backend-opts' 'optimize=8' '--tbset' 'data/tbset.jsonl' '--split' 'test' '--ids' 'reports/hard/ids.txt' '--limit' '0' '--budgets' '10,25,50,100,200' '--threads' '1' '--minibatch' '256' '--out-dir' 'results/hard_lowbudget'"
+    },
+    {
+      "step": "hard-lowbudget s2",
+      "command": "& 'C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe' '-u' 'eval/run_study.py' '--lc0' 'C:/Users/HP/Desktop/LC0-B/tools/lc0/lc0.exe' '--name' 's2' '--weights' 'models/s2.pb.gz' '--backend' 'onnx-trt' '--backend-opts' 'optimize=8' '--tbset' 'data/tbset.jsonl' '--split' 'test' '--ids' 'reports/hard/ids.txt' '--limit' '0' '--budgets' '10,25,50,100,200' '--threads' '1' '--minibatch' '256' '--out-dir' 'results/hard_lowbudget'"
+    },
+    {
+      "step": "hard-lowbudget s3",
+      "command": "& 'C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe' '-u' 'eval/run_study.py' '--lc0' 'C:/Users/HP/Desktop/LC0-B/tools/lc0/lc0.exe' '--name' 's3' '--weights' 'models/s3.pb.gz' '--backend' 'onnx-trt' '--backend-opts' 'optimize=8' '--tbset' 'data/tbset.jsonl' '--split' 'test' '--ids' 'reports/hard/ids.txt' '--limit' '0' '--budgets' '10,25,50,100,200' '--threads' '1' '--minibatch' '256' '--out-dir' 'results/hard_lowbudget'"
+    },
+    {
+      "step": "hard-lowbudget s4",
+      "command": "& 'C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe' '-u' 'eval/run_study.py' '--lc0' 'C:/Users/HP/Desktop/LC0-B/tools/lc0/lc0.exe' '--name' 's4' '--weights' 'models/s4.pb.gz' '--backend' 'onnx-trt' '--backend-opts' 'optimize=8' '--tbset' 'data/tbset.jsonl' '--split' 'test' '--ids' 'reports/hard/ids.txt' '--limit' '0' '--budgets' '10,25,50,100,200' '--threads' '1' '--minibatch' '256' '--out-dir' 'results/hard_lowbudget'"
+    },
+    {
+      "step": "hard-lowbudget s4aa",
+      "command": "& 'C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe' '-u' 'eval/run_study.py' '--lc0' 'C:/Users/HP/Desktop/LC0-B/tools/lc0/lc0.exe' '--name' 's4aa' '--weights' 'models/s4aa.pb.gz' '--backend' 'onnx-trt' '--backend-opts' 'optimize=8' '--tbset' 'data/tbset.jsonl' '--split' 'test' '--ids' 'reports/hard/ids.txt' '--limit' '0' '--budgets' '10,25,50,100,200' '--threads' '1' '--minibatch' '256' '--out-dir' 'results/hard_lowbudget'"
+    },
+    {
+      "step": "studyc",
+      "command": "& 'C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe' '-u' 'ladder.py' 'studyc'"
+    },
+    {
+      "step": "hw",
+      "command": "& 'C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe' '-u' 'ladder.py' 'hw'"
+    }
+  ]
+}

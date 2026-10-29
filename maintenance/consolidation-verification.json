@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-29",
+  "status": "passed",
+  "files_verified": 10722,
+  "bytes_verified": 23406412244,
+  "failures": [],
+  "artifact_files_verified": 328,
+  "artifact_bytes_verified": 8588237031,
+  "artifact_failures": [],
+  "original_files_deleted": 0,
+  "research_experiments_started": 0,
+  "source_git_head_unchanged": "671d72e",
+  "checks": {
+    "repository_regression_tests": 6,
+    "python_syntax_files": 28,
+    "dependency_check": "passed",
+    "configured_local_paths_exist": true,
+    "activation_and_console_launchers_relocated": true,
+    "main_and_hard_score_outputs_reproduced": 5,
+    "prior_tracked_A_files_preserved_in_git_visible_archive": 217,
+    "standalone_checkout_outside_workspace_modified": false,
+    "external_WSL_runtime_modified": false,
+    "current_documentation_local_links": 10,
+    "original_log_prefix_preserved": true
+  },
+  "initial_preservation_check": {
+    "date": "2026-10-29",
+    "files_verified": 10722,
+    "bytes_verified": 23406412244,
+    "failures": [
+      {
+        "path": ".runtime/imported-cache/reports/__pycache__/c2_continue.cpython-311.pyc",
+        "reason": "missing"
+      },
+      {
+        "path": ".runtime/imported-cache/reports/__pycache__/c2_resume.cpython-311.pyc",
+        "reason": "missing"
+      },
+      {
+        "path": ".runtime/imported-cache/reports/__pycache__/c3_cpu_errors.cpython-311.pyc",
+        "reason": "missing"
+      },
+      {
+        "path": ".runtime/imported-cache/reports/__pycache__/c3_hw_guard.cpython-311.pyc",
+        "reason": "missing"
+      },
+      {
+        "path": ".runtime/imported-cache/reports/__pycache__/c3_part1_run.cpython-311.pyc",
+        "reason": "missing"
+      },
+      {
+        "path": ".runtime/imported-cache/reports/__pycache__/studyc_resize_prep.cpython-311.pyc",
+        "reason": "missing"
+      },
+      {
+        "path": ".runtime/imported-cache/reports/__pycache__/studyc_resize_resume.cpython-311.pyc",
+        "reason": "missing"
+      }
+    ],
+    "original_files_deleted": 0,
+    "research_experiments_started": 0
+  },
+  "initial_check_resolution": "Relocated reports/__pycache__ to its declared preservation destination; all seven cache files retained. Preserved original environment scripts before refreshing local launchers."
+}

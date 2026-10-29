@@ -1,0 +1,21 @@
+* text=auto
+.gitignore text eol=lf
+.gitattributes text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.sh text eol=lf
+*.npz binary
+*.onnx binary
+*.pb.gz binary
+*.pdf binary
+*.png binary
+# Byte-frozen evidence must not acquire platform-specific line endings.
+archive/** -text
+data/** -text
+models/** -text
+nets/** -text
+results/** -text
+reports/** -text
+maintenance/consolidation-manifest.json -text

@@ -1,0 +1,50 @@
+diff --git a/meson.build b/meson.build
+index b954824..46c4911 100644
+--- a/meson.build
++++ b/meson.build
+@@ -1021,7 +1021,7 @@ if get_option('python_bindings')
+ 
+   py_files = [ gen_py_bindings ]
+ 
+-  cpython = dependency('python3')
++  cpython = python.dependency()
+   python.extension_module('backends',
+     [py_files + files],
+     include_directories: [includes],
+diff --git a/src/python/weights.h b/src/python/weights.h
+index c986d6a..303bccd 100644
+--- a/src/python/weights.h
++++ b/src/python/weights.h
+@@ -262,10 +262,14 @@ class GameState {
+ 
+   std::unique_ptr<Input> as_input(const Backend& backend) const {
+     int tmp;
+-    return std::make_unique<Input>(
++    auto in = std::make_unique<Input>(
+         EncodePositionForNN(static_cast<pblczero::NetworkFormat::InputFormat>(
+                                 backend.capabilities().input_format()),
+                             history_, 8, FillEmptyHistory::FEN_ONLY, &tmp));
++    // Canonical input formats flip/mirror/transpose the board; the policy
++    // indices must use the same transform (call as_input first).
++    transform_ = tmp;
++    return in;
+   }
+ 
+   std::vector<std::string> moves() const {
+@@ -283,7 +287,7 @@ class GameState {
+     auto ms = history_.Last().GetBoard().GenerateLegalMoves();
+     std::vector<int> result;
+     for (auto m : ms) {
+-      result.push_back(MoveToNNIndex(m, /* transform= */ 0));
++      result.push_back(MoveToNNIndex(m, transform_));
+     }
+     return result;
+   }
+@@ -297,6 +301,7 @@ class GameState {
+  private:
+   PositionHistory history_;
+   bool is_c960_;
++  mutable int transform_ = 0;
+ };
+ 
+ }  // namespace python

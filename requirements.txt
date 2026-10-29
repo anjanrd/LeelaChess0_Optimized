@@ -1,0 +1,7 @@
+numpy>=1.26
+onnx>=1.16
+onnxruntime>=1.20          # or onnxruntime-gpu: faster quick_compare / sparsegpt on the GPU box
+python-chess>=1.10
+matplotlib>=3.8
+nvidia-ml-py>=12           # NVML energy and clocks (imported as pynvml)
+# tests only: grpcio-tools (protoc for tests/make_toy_bt.py), scipy

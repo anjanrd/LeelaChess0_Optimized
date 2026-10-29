@@ -1,0 +1,162 @@
+{
+ "name": "fp16",
+ "weights": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\reports\\c3-part1\\hw-work\\models\\fp16.pb.gz",
+ "backend": "onnx-trt",
+ "backend_opts": "optimize=6",
+ "env": {
+  "nvml": true,
+  "nvml_energy_counter": true,
+  "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "rapl": false,
+  "platform": "win32",
+  "pid": 2612
+ },
+ "time": "2026-10-28 15:02:05",
+ "warnings": [],
+ "idle": {
+  "seconds": 10.030599117279053,
+  "gpu_w": 3.8345665647969445,
+  "sm_mhz_mean": 213.6180904522613,
+  "temp_c_mean": 50.29145728643216
+ },
+ "backendbench": {
+  "rows": [
+   {
+    "batch": 32,
+    "nps": 3582.0,
+    "ms": 8.934
+   },
+   {
+    "batch": 64,
+    "nps": 3652.0,
+    "ms": 17.52
+   },
+   {
+    "batch": 96,
+    "nps": 3504.0,
+    "ms": 27.4
+   },
+   {
+    "batch": 128,
+    "nps": 3430.0,
+    "ms": 37.32
+   },
+   {
+    "batch": 160,
+    "nps": 3317.0,
+    "ms": 48.24
+   },
+   {
+    "batch": 192,
+    "nps": 3186.0,
+    "ms": 60.27
+   },
+   {
+    "batch": 224,
+    "nps": 3128.0,
+    "ms": 71.61
+   },
+   {
+    "batch": 256,
+    "nps": 3212.0,
+    "ms": 79.7
+   },
+   {
+    "batch": 288,
+    "nps": 3119.0,
+    "ms": 92.34
+   },
+   {
+    "batch": 320,
+    "nps": 3126.0,
+    "ms": 102.4
+   },
+   {
+    "batch": 352,
+    "nps": 2461.0,
+    "ms": 143.0
+   },
+   {
+    "batch": 384,
+    "nps": 3178.0,
+    "ms": 120.8
+   },
+   {
+    "batch": 416,
+    "nps": 3074.0,
+    "ms": 135.3
+   },
+   {
+    "batch": 448,
+    "nps": 3148.0,
+    "ms": 142.3
+   },
+   {
+    "batch": 480,
+    "nps": 3136.0,
+    "ms": 153.1
+   },
+   {
+    "batch": 512,
+    "nps": 3121.0,
+    "ms": 164.1
+   }
+  ],
+  "energy": {
+   "seconds": 287.938809633255,
+   "gpu_j": 24032.39,
+   "gpu_j_source": "nvml_counter",
+   "power_w_mean": 83.35111097496889,
+   "power_w_min": 1.723,
+   "power_w_max": 102.879,
+   "sm_mhz_mean": 2140.2975669525645,
+   "sm_mhz_min": 210,
+   "sm_mhz_max": 2520,
+   "mem_mhz_mean": 7743.730614388237,
+   "mem_mhz_min": 405,
+   "mem_mhz_max": 8001,
+   "temp_c_mean": 83.00262559075792,
+   "temp_c_min": 49,
+   "temp_c_max": 89,
+   "util_mean": 96.87152109224576,
+   "util_min": 0,
+   "util_max": 100,
+   "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+   "gpu_j_above_idle": 22928.269467872888
+  }
+ },
+ "search": [
+  {
+   "nodes": 262945,
+   "time_ms": 57248,
+   "positions": 10,
+   "movetime": 10000,
+   "nps": 4593,
+   "energy": {
+    "seconds": 58.288917541503906,
+    "gpu_j": 5153.834,
+    "gpu_j_source": "nvml_counter",
+    "power_w_mean": 88.50154969749373,
+    "power_w_min": 81.836,
+    "power_w_max": 99.357,
+    "sm_mhz_mean": 2252.981849611063,
+    "sm_mhz_min": 1950,
+    "sm_mhz_max": 2505,
+    "mem_mhz_mean": 8001.0,
+    "mem_mhz_min": 8001,
+    "mem_mhz_max": 8001,
+    "temp_c_mean": 85.50821089023336,
+    "temp_c_min": 82,
+    "temp_c_max": 88,
+    "util_mean": 99.43993085566119,
+    "util_min": 95,
+    "util_max": 100,
+    "gpu": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "gpu_j_above_idle": 4930.321265697143
+   },
+   "warnings": [],
+   "gpu_j_per_node": 0.018750389875058063,
+   "gpu_j_per_node_total": 0.019600425944589172
+  }
+ ]
+}

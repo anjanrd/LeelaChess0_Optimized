@@ -1,0 +1,10 @@
+{
+  "exit_code": 0,
+  "finished": "2026-10-28T11:26:29+05:30",
+  "command": [
+    "C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe",
+    "-u",
+    "ladder.py",
+    "study"
+  ]
+}

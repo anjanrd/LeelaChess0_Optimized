@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe",
+    "-u",
+    "quant/sparsegpt24.py",
+    "--onnx",
+    "models/bt3_fp32.onnx",
+    "--calib",
+    "data/calib.npz",
+    "--out",
+    "models/s1sp_fp32.onnx"
+  ],
+  "exit_code": 0,
+  "timing_switch": false,
+  "finished": "2026-10-28T03:31:13+05:30"
+}

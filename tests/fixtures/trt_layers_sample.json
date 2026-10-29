@@ -1,0 +1,6 @@
+{"Layers": [
+ {"Name": "/encoder0/mha/Q/w_quantize_scale_node", "LayerType": "Scale", "Inputs": [{"Name": "/attn_body/ln2", "Format/Datatype": "Row major linear FP16 format"}], "Outputs": [{"Name": "q", "Format/Datatype": "Row major linear Int8 format"}], "TacticName": ""},
+ {"Name": "/encoder0/mha/Q/w + /encoder0/mha/Q/b", "LayerType": "CaskGemmConvolution", "Inputs": [{"Name": "q", "Format/Datatype": "Row major linear Int8 format"}], "Outputs": [{"Name": "o", "Format/Datatype": "Row major linear FP16 format"}], "TacticName": "sm89_xmma_gemm_i8f16_i8i32_f32_tn_n_tilesize128x128x64_stage3_warpsize2x2x1_tensor16x8x32"},
+ {"Name": "/encoder0/mha/QK/matmul", "LayerType": "MatrixMultiply", "Inputs": [{"Name": "a", "Format/Datatype": "Row major linear FP16 format"}, {"Name": "b", "Format/Datatype": "Row major linear FP16 format"}], "Outputs": [{"Name": "c", "Format/Datatype": "Row major linear FP16 format"}], "TacticName": "sm80_xmma_gemm_f16f16_f16f32_f32_nn_n_tilesize64x64x32"},
+ {"Name": "{ForeignNode[/encoder0/mha/QK/scale.../encoder0/ln1]}", "LayerType": "Myelin", "Inputs": [{"Name": "c", "Format/Datatype": "Row major linear FP16 format"}], "Outputs": [], "TacticName": ""}
+]}

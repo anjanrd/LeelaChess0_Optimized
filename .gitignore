@@ -1,4 +1,38 @@
-/models/source/*.pb.gz
-/models/onnx/*.onnx
-/models/wrapped/*.pb.gz
+# Local installations and machine configuration; rebuild on another machine.
+/.venv/
+/.runtime/
+/config.json
+/config.run.json
+*.local.json
 __pycache__/
+*.py[cod]
+
+# Large/GPU-specific artifacts stay on disk; share through maintenance/artifacts.py.
+/models/**/*.onnx
+/models/**/*.onnx.data
+/models/**/*.pb.gz
+/models/**/*.engine
+/models/**/*.plan
+/nets/*.pb.gz
+/trt_cache/
+/reports/**/*.onnx
+/reports/**/*.onnx.data
+/reports/**/*.pb.gz
+/reports/**/*.engine
+/reports/**/*.plan
+/reports/**/*.nsys-rep
+/reports/**/*.sqlite
+/reports/**/*.log
+/reports/**/*.exitcode
+/reports/**/*-backup/
+/reports/**/study-backup/
+/reports/**/studyc-backup/
+/results/**/*.log
+/day1.log
+/send_back.zip
+/archive/person-a-week1/models/source/*.pb.gz
+/archive/person-a-week1/models/onnx/*.onnx
+/archive/person-a-week1/models/wrapped/*.pb.gz
+
+# Keep temporary work outside the project.
+/tmp/

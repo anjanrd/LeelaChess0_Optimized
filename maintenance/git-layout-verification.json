@@ -1,0 +1,19 @@
+{
+  "prior_tracked_files_preserved": 217,
+  "new_git_visible_files": 451,
+  "preexisting_large_arrays": [
+    {
+      "path": "archive/person-a-week1/results/week1-v2/test-R32_CUDA-outputs.npz",
+      "bytes": 67515478,
+      "relocated_prior_tracked": true
+    },
+    {
+      "path": "archive/person-a-week1/results/week1/test-R32_CUDA-outputs.npz",
+      "bytes": 66804204,
+      "relocated_prior_tracked": true
+    }
+  ],
+  "files_over_100MB_unignored": 0,
+  "local_links_checked": 9,
+  "git_head_unchanged": "671d72e"
+}

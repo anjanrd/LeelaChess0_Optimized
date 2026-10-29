@@ -1,0 +1,190 @@
+{
+  "prepared": "2026-10-28T05:37:04+05:30",
+  "backup_folder": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\reports\\study-backup\\2026-10-28T053703_0530",
+  "files": [
+    {
+      "file": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\results\\fp16\\study_a.jsonl",
+      "bytes": 919000,
+      "sha256": "a2a77665c40506f86a911cc2f26904bab7f3e739496838b0b3d5cf16ed08e353"
+    },
+    {
+      "file": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\results\\fp16\\study_b.jsonl",
+      "bytes": 185157,
+      "sha256": "39114b10282f257ad330a4bf4b26acf2523277c248cf07f1fd6548ff230279f9"
+    },
+    {
+      "file": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\results\\native\\study_a.jsonl",
+      "bytes": 71373,
+      "sha256": "e3f44b9efecb1f5670cf8fa36b31af7c932453734b584ee8e36dc8aa32aa6ffe"
+    },
+    {
+      "file": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\results\\s2\\study_a.jsonl",
+      "bytes": 70919,
+      "sha256": "3bfc8361402ab1c8ec9b33d7603cc0ec12641139e50c3e601a38009b48713ba8"
+    }
+  ],
+  "counts": {
+    "fp16": {
+      "A": 2437,
+      "B_all_budgets": 383,
+      "B_by_budget": {
+        "100": 384,
+        "400": 384,
+        "800": 384,
+        "1600": 383
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 2637,
+        "b": 1535
+      },
+      "B_required": true
+    },
+    "s1": {
+      "A": 0,
+      "B_all_budgets": 0,
+      "B_by_budget": {
+        "100": 0,
+        "400": 0,
+        "800": 0,
+        "1600": 0
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 0,
+        "b": 0
+      },
+      "B_required": true
+    },
+    "s2": {
+      "A": 0,
+      "B_all_budgets": 0,
+      "B_by_budget": {
+        "100": 0,
+        "400": 0,
+        "800": 0,
+        "1600": 0
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 200,
+        "b": 0
+      },
+      "B_required": true
+    },
+    "s3": {
+      "A": 0,
+      "B_all_budgets": 0,
+      "B_by_budget": {
+        "100": 0,
+        "400": 0,
+        "800": 0,
+        "1600": 0
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 0,
+        "b": 0
+      },
+      "B_required": true
+    },
+    "s4": {
+      "A": 0,
+      "B_all_budgets": 0,
+      "B_by_budget": {
+        "100": 0,
+        "400": 0,
+        "800": 0,
+        "1600": 0
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 0,
+        "b": 0
+      },
+      "B_required": true
+    },
+    "s4aa": {
+      "A": 0,
+      "B_all_budgets": 0,
+      "B_by_budget": {
+        "100": 0,
+        "400": 0,
+        "800": 0,
+        "1600": 0
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 0,
+        "b": 0
+      },
+      "B_required": true
+    },
+    "swap_pol8": {
+      "A": 0,
+      "B_all_budgets": 0,
+      "B_by_budget": {
+        "100": 0,
+        "400": 0,
+        "800": 0,
+        "1600": 0
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 0,
+        "b": 0
+      },
+      "B_required": true
+    },
+    "swap_val8": {
+      "A": 0,
+      "B_all_budgets": 0,
+      "B_by_budget": {
+        "100": 0,
+        "400": 0,
+        "800": 0,
+        "1600": 0
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 0,
+        "b": 0
+      },
+      "B_required": true
+    },
+    "s1sp": {
+      "A": 0,
+      "B_all_budgets": 0,
+      "B_by_budget": {
+        "100": 0,
+        "400": 0,
+        "800": 0,
+        "1600": 0
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 0,
+        "b": 0
+      },
+      "B_required": true
+    },
+    "s0": {
+      "A": 0,
+      "B_all_budgets": 0,
+      "B_by_budget": {
+        "100": 0,
+        "400": 0,
+        "800": 0,
+        "1600": 0
+      },
+      "duplicate_selected_keys": 0,
+      "total_rows_including_other_splits": {
+        "a": 0,
+        "b": 0
+      },
+      "B_required": false
+    }
+  },
+  "study_limit": 2437,
+  "resume_command": "C:\\Users\\HP\\Desktop\\LC0-B\\.venv\\Scripts\\python.exe -u ladder.py study"
+}

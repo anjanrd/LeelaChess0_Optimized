@@ -1,0 +1,1376 @@
+{
+ "method": "sparsegpt 2:4",
+ "one_shot": false,
+ "stages": 98,
+ "n_calib": 512,
+ "blocksize": 128,
+ "damp": 0.01,
+ "skip": null,
+ "layers": {
+  "/const/smolgen_w": {
+   "nodes": [
+    "/encoder0/smolgen/smol_weight_gen",
+    "/encoder1/smolgen/smol_weight_gen",
+    "/encoder2/smolgen/smol_weight_gen",
+    "/encoder3/smolgen/smol_weight_gen",
+    "/encoder4/smolgen/smol_weight_gen",
+    "/encoder5/smolgen/smol_weight_gen",
+    "/encoder6/smolgen/smol_weight_gen",
+    "/encoder7/smolgen/smol_weight_gen",
+    "/encoder8/smolgen/smol_weight_gen",
+    "/encoder9/smolgen/smol_weight_gen",
+    "/encoder10/smolgen/smol_weight_gen",
+    "/encoder11/smolgen/smol_weight_gen",
+    "/encoder12/smolgen/smol_weight_gen",
+    "/encoder13/smolgen/smol_weight_gen",
+    "/encoder14/smolgen/smol_weight_gen"
+   ],
+   "method": "sparsegpt",
+   "rows": 184320,
+   "recon_err": 0.007312710370813739,
+   "recon_err_magnitude": 0.030786313124265465
+  },
+  "/attn_body/embedding/preprocess/matmul/w": {
+   "nodes": [
+    "/attn_body/embedding/preprocess/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.03750548961345063,
+   "recon_err_magnitude": 0.17139986590771034
+  },
+  "/attn_body/matmul/w": {
+   "nodes": [
+    "/attn_body/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.03229628318974,
+   "recon_err_magnitude": 0.06247899657482665
+  },
+  "/attn_body/ffn/dense1/w/w": {
+   "nodes": [
+    "/attn_body/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0003164985651344527,
+   "recon_err_magnitude": 0.13220602326294228
+  },
+  "/attn_body/ffn/dense2/w/w": {
+   "nodes": [
+    "/attn_body/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.00808067303710681,
+   "recon_err_magnitude": 0.06158215758697471
+  },
+  "/encoder0/mha/Q/w/w": {
+   "nodes": [
+    "/encoder0/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.004545879225216377,
+   "recon_err_magnitude": 0.13453445108835277
+  },
+  "/encoder0/mha/K/w/w": {
+   "nodes": [
+    "/encoder0/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.002632991019855675,
+   "recon_err_magnitude": 0.11801115976212824
+  },
+  "/encoder0/mha/V/w/w": {
+   "nodes": [
+    "/encoder0/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.005271443433143337,
+   "recon_err_magnitude": 0.12688525494367534
+  },
+  "/encoder0/smolgen/compress/w": {
+   "nodes": [
+    "/encoder0/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.004641718618646574,
+   "recon_err_magnitude": 0.14434472518907773
+  },
+  "/encoder0/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder0/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0016672999469766144,
+   "recon_err_magnitude": 0.0497173691195101
+  },
+  "/encoder0/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder0/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0014841678983740377,
+   "recon_err_magnitude": 0.02261811499321648
+  },
+  "/encoder0/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder0/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.01488812972150259,
+   "recon_err_magnitude": 0.06625204212612569
+  },
+  "/encoder0/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder0/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0014950994484323444,
+   "recon_err_magnitude": 0.3423248931937219
+  },
+  "/encoder0/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder0/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.02728576001424686,
+   "recon_err_magnitude": 0.12801861760505237
+  },
+  "/encoder1/mha/Q/w/w": {
+   "nodes": [
+    "/encoder1/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.012764410397598975,
+   "recon_err_magnitude": 0.11992829716644532
+  },
+  "/encoder1/mha/K/w/w": {
+   "nodes": [
+    "/encoder1/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.004921500591534223,
+   "recon_err_magnitude": 0.04856957858510514
+  },
+  "/encoder1/mha/V/w/w": {
+   "nodes": [
+    "/encoder1/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.016850382503757665,
+   "recon_err_magnitude": 0.1258665185204503
+  },
+  "/encoder1/smolgen/compress/w": {
+   "nodes": [
+    "/encoder1/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.01671788449856883,
+   "recon_err_magnitude": 0.11711600803990983
+  },
+  "/encoder1/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder1/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.003300640165925393,
+   "recon_err_magnitude": 0.05698173910069051
+  },
+  "/encoder1/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder1/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0013725174165719932,
+   "recon_err_magnitude": 0.017651785006265932
+  },
+  "/encoder1/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder1/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.01636232223231651,
+   "recon_err_magnitude": 0.0679633692398132
+  },
+  "/encoder1/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder1/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0023849492988521404,
+   "recon_err_magnitude": 0.38959644943915034
+  },
+  "/encoder1/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder1/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.018607298604990958,
+   "recon_err_magnitude": 0.11949311689413986
+  },
+  "/encoder2/mha/Q/w/w": {
+   "nodes": [
+    "/encoder2/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.015114623336646824,
+   "recon_err_magnitude": 0.11900699274148514
+  },
+  "/encoder2/mha/K/w/w": {
+   "nodes": [
+    "/encoder2/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.004472851736191784,
+   "recon_err_magnitude": 0.03520852535134825
+  },
+  "/encoder2/mha/V/w/w": {
+   "nodes": [
+    "/encoder2/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.019763248395604584,
+   "recon_err_magnitude": 0.12171765363374443
+  },
+  "/encoder2/smolgen/compress/w": {
+   "nodes": [
+    "/encoder2/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.017246264010495584,
+   "recon_err_magnitude": 0.12073437229353318
+  },
+  "/encoder2/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder2/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0023459106844524132,
+   "recon_err_magnitude": 0.05106408701590047
+  },
+  "/encoder2/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder2/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0013462444124200284,
+   "recon_err_magnitude": 0.01816573725117064
+  },
+  "/encoder2/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder2/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.023400868735848335,
+   "recon_err_magnitude": 0.08168680810950191
+  },
+  "/encoder2/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder2/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0028693085360233825,
+   "recon_err_magnitude": 0.40508894613537855
+  },
+  "/encoder2/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder2/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.02521404621605932,
+   "recon_err_magnitude": 0.09883837616758542
+  },
+  "/encoder3/mha/Q/w/w": {
+   "nodes": [
+    "/encoder3/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.021218674361450262,
+   "recon_err_magnitude": 0.1144774482069812
+  },
+  "/encoder3/mha/K/w/w": {
+   "nodes": [
+    "/encoder3/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.00593604770029496,
+   "recon_err_magnitude": 0.031956337667240826
+  },
+  "/encoder3/mha/V/w/w": {
+   "nodes": [
+    "/encoder3/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.029122073465509844,
+   "recon_err_magnitude": 0.12050526610720348
+  },
+  "/encoder3/smolgen/compress/w": {
+   "nodes": [
+    "/encoder3/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.022410592746636947,
+   "recon_err_magnitude": 0.09230935129652831
+  },
+  "/encoder3/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder3/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.003479869922311211,
+   "recon_err_magnitude": 0.05193837730979283
+  },
+  "/encoder3/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder3/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0014635769374285923,
+   "recon_err_magnitude": 0.0100930614641728
+  },
+  "/encoder3/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder3/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.025474233676479656,
+   "recon_err_magnitude": 0.0865246693577667
+  },
+  "/encoder3/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder3/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.004045121697072815,
+   "recon_err_magnitude": 0.4639743804444188
+  },
+  "/encoder3/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder3/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.01639963675077452,
+   "recon_err_magnitude": 0.09108837735381338
+  },
+  "/encoder4/mha/Q/w/w": {
+   "nodes": [
+    "/encoder4/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.020146452966854436,
+   "recon_err_magnitude": 0.11664057459789097
+  },
+  "/encoder4/mha/K/w/w": {
+   "nodes": [
+    "/encoder4/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.006608795788601432,
+   "recon_err_magnitude": 0.037908155584479464
+  },
+  "/encoder4/mha/V/w/w": {
+   "nodes": [
+    "/encoder4/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.028466065624693015,
+   "recon_err_magnitude": 0.1232405775913987
+  },
+  "/encoder4/smolgen/compress/w": {
+   "nodes": [
+    "/encoder4/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.020401823725668032,
+   "recon_err_magnitude": 0.08981086497867541
+  },
+  "/encoder4/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder4/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.003803609780001489,
+   "recon_err_magnitude": 0.05681389213616833
+  },
+  "/encoder4/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder4/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0020467634585214097,
+   "recon_err_magnitude": 0.014126567854053546
+  },
+  "/encoder4/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder4/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.02109432251238266,
+   "recon_err_magnitude": 0.078696725666493
+  },
+  "/encoder4/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder4/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.004170125253838347,
+   "recon_err_magnitude": 0.43645141091834067
+  },
+  "/encoder4/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder4/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.01390503173407873,
+   "recon_err_magnitude": 0.09234661227898301
+  },
+  "/encoder5/mha/Q/w/w": {
+   "nodes": [
+    "/encoder5/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.019531204672592676,
+   "recon_err_magnitude": 0.10698778006976112
+  },
+  "/encoder5/mha/K/w/w": {
+   "nodes": [
+    "/encoder5/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.005183708275753542,
+   "recon_err_magnitude": 0.02996226981830059
+  },
+  "/encoder5/mha/V/w/w": {
+   "nodes": [
+    "/encoder5/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.028518727858457556,
+   "recon_err_magnitude": 0.1159732563858146
+  },
+  "/encoder5/smolgen/compress/w": {
+   "nodes": [
+    "/encoder5/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.022748361072391855,
+   "recon_err_magnitude": 0.12084515080557306
+  },
+  "/encoder5/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder5/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0035430635985004497,
+   "recon_err_magnitude": 0.05827831616542185
+  },
+  "/encoder5/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder5/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.001726056457344239,
+   "recon_err_magnitude": 0.017298986050869814
+  },
+  "/encoder5/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder5/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.025406706635775825,
+   "recon_err_magnitude": 0.08469992571565128
+  },
+  "/encoder5/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder5/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.004635677183908427,
+   "recon_err_magnitude": 0.4166957085631218
+  },
+  "/encoder5/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder5/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.00705825960110835,
+   "recon_err_magnitude": 0.06327888222328555
+  },
+  "/encoder6/mha/Q/w/w": {
+   "nodes": [
+    "/encoder6/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.023822250259620308,
+   "recon_err_magnitude": 0.11443804108220758
+  },
+  "/encoder6/mha/K/w/w": {
+   "nodes": [
+    "/encoder6/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0069368851791440445,
+   "recon_err_magnitude": 0.0333889015125548
+  },
+  "/encoder6/mha/V/w/w": {
+   "nodes": [
+    "/encoder6/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.033876313601566316,
+   "recon_err_magnitude": 0.12623442253718198
+  },
+  "/encoder6/smolgen/compress/w": {
+   "nodes": [
+    "/encoder6/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.02401811347633328,
+   "recon_err_magnitude": 0.1012212731969926
+  },
+  "/encoder6/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder6/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0049001579111647596,
+   "recon_err_magnitude": 0.061014859562945056
+  },
+  "/encoder6/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder6/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0025588725081378645,
+   "recon_err_magnitude": 0.01930644494711435
+  },
+  "/encoder6/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder6/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.026617788332997924,
+   "recon_err_magnitude": 0.08925255092286268
+  },
+  "/encoder6/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder6/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.005114936096399299,
+   "recon_err_magnitude": 0.4231130678952432
+  },
+  "/encoder6/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder6/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.005733545810946214,
+   "recon_err_magnitude": 0.056920755707733216
+  },
+  "/encoder7/mha/Q/w/w": {
+   "nodes": [
+    "/encoder7/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.02648731784390109,
+   "recon_err_magnitude": 0.11885605744436549
+  },
+  "/encoder7/mha/K/w/w": {
+   "nodes": [
+    "/encoder7/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.006903644603017239,
+   "recon_err_magnitude": 0.030535898290580784
+  },
+  "/encoder7/mha/V/w/w": {
+   "nodes": [
+    "/encoder7/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.03813926486842557,
+   "recon_err_magnitude": 0.12680825022489572
+  },
+  "/encoder7/smolgen/compress/w": {
+   "nodes": [
+    "/encoder7/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.028503911799803924,
+   "recon_err_magnitude": 0.1007410738284706
+  },
+  "/encoder7/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder7/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.004992021971446492,
+   "recon_err_magnitude": 0.06280442397899937
+  },
+  "/encoder7/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder7/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0019684888392969345,
+   "recon_err_magnitude": 0.017481847859734504
+  },
+  "/encoder7/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder7/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.027026158418086137,
+   "recon_err_magnitude": 0.09927960484976796
+  },
+  "/encoder7/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder7/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.00538862642533272,
+   "recon_err_magnitude": 0.4324401057666233
+  },
+  "/encoder7/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder7/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0048440593757949225,
+   "recon_err_magnitude": 0.06026471673764014
+  },
+  "/encoder8/mha/Q/w/w": {
+   "nodes": [
+    "/encoder8/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.024846245211334536,
+   "recon_err_magnitude": 0.12261881497130875
+  },
+  "/encoder8/mha/K/w/w": {
+   "nodes": [
+    "/encoder8/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.006018187033548734,
+   "recon_err_magnitude": 0.030043498570427003
+  },
+  "/encoder8/mha/V/w/w": {
+   "nodes": [
+    "/encoder8/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0363046239834074,
+   "recon_err_magnitude": 0.12764487771415858
+  },
+  "/encoder8/smolgen/compress/w": {
+   "nodes": [
+    "/encoder8/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.025987608994451482,
+   "recon_err_magnitude": 0.10615458585042574
+  },
+  "/encoder8/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder8/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.00413177398285353,
+   "recon_err_magnitude": 0.059683532137309016
+  },
+  "/encoder8/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder8/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0024123625788906094,
+   "recon_err_magnitude": 0.020003943085684428
+  },
+  "/encoder8/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder8/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.024124894918147385,
+   "recon_err_magnitude": 0.08903907800054603
+  },
+  "/encoder8/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder8/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.004730535482945057,
+   "recon_err_magnitude": 0.42969335847865436
+  },
+  "/encoder8/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder8/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0070996508270099,
+   "recon_err_magnitude": 0.06064412645075298
+  },
+  "/encoder9/mha/Q/w/w": {
+   "nodes": [
+    "/encoder9/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.024686393886442073,
+   "recon_err_magnitude": 0.13398799117570928
+  },
+  "/encoder9/mha/K/w/w": {
+   "nodes": [
+    "/encoder9/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.005022907735087813,
+   "recon_err_magnitude": 0.021969518425009306
+  },
+  "/encoder9/mha/V/w/w": {
+   "nodes": [
+    "/encoder9/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.038821868910231074,
+   "recon_err_magnitude": 0.13455818812543038
+  },
+  "/encoder9/smolgen/compress/w": {
+   "nodes": [
+    "/encoder9/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.026950129529049145,
+   "recon_err_magnitude": 0.1070622040005601
+  },
+  "/encoder9/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder9/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.004141263607675136,
+   "recon_err_magnitude": 0.06368407237582452
+  },
+  "/encoder9/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder9/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0024459012902567734,
+   "recon_err_magnitude": 0.023817259099299052
+  },
+  "/encoder9/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder9/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.02622253453936502,
+   "recon_err_magnitude": 0.09193459221535999
+  },
+  "/encoder9/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder9/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.004723579950623699,
+   "recon_err_magnitude": 0.38598312254812606
+  },
+  "/encoder9/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder9/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0034949470181232086,
+   "recon_err_magnitude": 0.05203112914803108
+  },
+  "/encoder10/mha/Q/w/w": {
+   "nodes": [
+    "/encoder10/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.026233184129913066,
+   "recon_err_magnitude": 0.12105241625304566
+  },
+  "/encoder10/mha/K/w/w": {
+   "nodes": [
+    "/encoder10/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.006660275582352975,
+   "recon_err_magnitude": 0.029362701863563337
+  },
+  "/encoder10/mha/V/w/w": {
+   "nodes": [
+    "/encoder10/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.03810538472243391,
+   "recon_err_magnitude": 0.1253508871616202
+  },
+  "/encoder10/smolgen/compress/w": {
+   "nodes": [
+    "/encoder10/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.02808157045445505,
+   "recon_err_magnitude": 0.10167121460625034
+  },
+  "/encoder10/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder10/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.004845863724092815,
+   "recon_err_magnitude": 0.0651450249656229
+  },
+  "/encoder10/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder10/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0020535544921182615,
+   "recon_err_magnitude": 0.018695699934859658
+  },
+  "/encoder10/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder10/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.026784721679078992,
+   "recon_err_magnitude": 0.09940740183644835
+  },
+  "/encoder10/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder10/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.005484173728819381,
+   "recon_err_magnitude": 0.38908770802179093
+  },
+  "/encoder10/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder10/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0038587423975954263,
+   "recon_err_magnitude": 0.04962289156898579
+  },
+  "/encoder11/mha/Q/w/w": {
+   "nodes": [
+    "/encoder11/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.029068234975470314,
+   "recon_err_magnitude": 0.12058599828760891
+  },
+  "/encoder11/mha/K/w/w": {
+   "nodes": [
+    "/encoder11/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.00845735399345711,
+   "recon_err_magnitude": 0.03239379560456457
+  },
+  "/encoder11/mha/V/w/w": {
+   "nodes": [
+    "/encoder11/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.04246313462707898,
+   "recon_err_magnitude": 0.13763827687239605
+  },
+  "/encoder11/smolgen/compress/w": {
+   "nodes": [
+    "/encoder11/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.029997130526589373,
+   "recon_err_magnitude": 0.09736623878522453
+  },
+  "/encoder11/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder11/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.004647894351386652,
+   "recon_err_magnitude": 0.06735860796010743
+  },
+  "/encoder11/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder11/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0019465762613802755,
+   "recon_err_magnitude": 0.016386028417720567
+  },
+  "/encoder11/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder11/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.012950311945403947,
+   "recon_err_magnitude": 0.05917259743693869
+  },
+  "/encoder11/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder11/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.00536210544898679,
+   "recon_err_magnitude": 0.3682488570852181
+  },
+  "/encoder11/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder11/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.003689444811041937,
+   "recon_err_magnitude": 0.0471218248708236
+  },
+  "/encoder12/mha/Q/w/w": {
+   "nodes": [
+    "/encoder12/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.02956489330944689,
+   "recon_err_magnitude": 0.11569011054076411
+  },
+  "/encoder12/mha/K/w/w": {
+   "nodes": [
+    "/encoder12/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.01233642408461028,
+   "recon_err_magnitude": 0.04401241918887502
+  },
+  "/encoder12/mha/V/w/w": {
+   "nodes": [
+    "/encoder12/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.04105569607045308,
+   "recon_err_magnitude": 0.13591510829303
+  },
+  "/encoder12/smolgen/compress/w": {
+   "nodes": [
+    "/encoder12/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.03228518880955129,
+   "recon_err_magnitude": 0.10718442657864208
+  },
+  "/encoder12/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder12/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0037986484228637878,
+   "recon_err_magnitude": 0.06051707428337127
+  },
+  "/encoder12/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder12/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0019517521736148737,
+   "recon_err_magnitude": 0.0339008652937576
+  },
+  "/encoder12/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder12/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.010825228724132614,
+   "recon_err_magnitude": 0.0523461409112376
+  },
+  "/encoder12/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder12/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.005315068634013613,
+   "recon_err_magnitude": 0.2803695312608866
+  },
+  "/encoder12/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder12/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0049243034384658215,
+   "recon_err_magnitude": 0.069474787139675
+  },
+  "/encoder13/mha/Q/w/w": {
+   "nodes": [
+    "/encoder13/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.025414688287158142,
+   "recon_err_magnitude": 0.13954126723301427
+  },
+  "/encoder13/mha/K/w/w": {
+   "nodes": [
+    "/encoder13/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.024673747435439004,
+   "recon_err_magnitude": 0.14725265185173847
+  },
+  "/encoder13/mha/V/w/w": {
+   "nodes": [
+    "/encoder13/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.03613175779583276,
+   "recon_err_magnitude": 0.15286170790897638
+  },
+  "/encoder13/smolgen/compress/w": {
+   "nodes": [
+    "/encoder13/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.030522213088101897,
+   "recon_err_magnitude": 0.174542580261471
+  },
+  "/encoder13/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder13/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.004355985112196984,
+   "recon_err_magnitude": 0.07049242579968461
+  },
+  "/encoder13/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder13/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0020676605038371073,
+   "recon_err_magnitude": 0.02946180478544617
+  },
+  "/encoder13/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder13/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.011932917152309201,
+   "recon_err_magnitude": 0.07630913378186986
+  },
+  "/encoder13/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder13/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.005139650850369805,
+   "recon_err_magnitude": 0.3192159233668743
+  },
+  "/encoder13/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder13/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.00972376822852212,
+   "recon_err_magnitude": 0.1177608730224583
+  },
+  "/encoder14/mha/Q/w/w": {
+   "nodes": [
+    "/encoder14/mha/Q/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.01530911002900395,
+   "recon_err_magnitude": 0.12554036621374554
+  },
+  "/encoder14/mha/K/w/w": {
+   "nodes": [
+    "/encoder14/mha/K/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.007878579160796496,
+   "recon_err_magnitude": 0.07999838467153604
+  },
+  "/encoder14/mha/V/w/w": {
+   "nodes": [
+    "/encoder14/mha/V/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.024292379638816308,
+   "recon_err_magnitude": 0.14828374355032928
+  },
+  "/encoder14/smolgen/compress/w": {
+   "nodes": [
+    "/encoder14/smolgen/compress"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.01782296855172879,
+   "recon_err_magnitude": 0.12489884037183946
+  },
+  "/encoder14/smolgen/dense1/w/w": {
+   "nodes": [
+    "/encoder14/smolgen/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.002807697657223976,
+   "recon_err_magnitude": 0.07097497804767276
+  },
+  "/encoder14/smolgen/dense2/w/w": {
+   "nodes": [
+    "/encoder14/smolgen/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.0012230295293383696,
+   "recon_err_magnitude": 0.02976892418147849
+  },
+  "/encoder14/mha/out/dense/w/w": {
+   "nodes": [
+    "/encoder14/mha/out/dense/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.007749938602966558,
+   "recon_err_magnitude": 0.08576884525648308
+  },
+  "/encoder14/ffn/dense1/w/w": {
+   "nodes": [
+    "/encoder14/ffn/dense1/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.002501145120969335,
+   "recon_err_magnitude": 0.15417704016131586
+  },
+  "/encoder14/ffn/dense2/w/w": {
+   "nodes": [
+    "/encoder14/ffn/dense2/w"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.006912462064344366,
+   "recon_err_magnitude": 0.18027837835683197
+  },
+  "/policy/dense1/matmul/w": {
+   "nodes": [
+    "/policy/dense1/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0001984247063864641,
+   "recon_err_magnitude": 0.003498390211563357
+  },
+  "/value/embed/matmul/w": {
+   "nodes": [
+    "/value/embed/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 1.6347170287853332e-05,
+   "recon_err_magnitude": 0.00023734759416490004
+  },
+  "/mlh/embed/matmul/w": {
+   "nodes": [
+    "/mlh/embed/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 9.236400127357956e-06,
+   "recon_err_magnitude": 0.0002593374152418235
+  },
+  "/policy/Q/matmul/w": {
+   "nodes": [
+    "/policy/Q/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0004449090313727162,
+   "recon_err_magnitude": 0.0450784976757379
+  },
+  "/policy/K/matmul/w": {
+   "nodes": [
+    "/policy/K/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 32768,
+   "recon_err": 0.0005308289881305197,
+   "recon_err_magnitude": 0.045188040548534696
+  },
+  "/value/dense1/matmul/w": {
+   "nodes": [
+    "/value/dense1/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 8.330859417628239e-06,
+   "recon_err_magnitude": 0.008639568734236564
+  },
+  "/mlh/dense1/matmul/w": {
+   "nodes": [
+    "/mlh/dense1/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 0.00024282896417259623,
+   "recon_err_magnitude": 0.07004274464924116
+  },
+  "/policy/promotion/matmul/w": {
+   "nodes": [
+    "/policy/promotion/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 4096,
+   "recon_err": 0.0008344294563842823,
+   "recon_err_magnitude": 0.11456818534147424
+  },
+  "/value/dense2/matmul/w": {
+   "nodes": [
+    "/value/dense2/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 6.471949582041899e-06,
+   "recon_err_magnitude": 0.0009247199184446512
+  },
+  "/mlh/dense2/matmul/w": {
+   "nodes": [
+    "/mlh/dense2/matmul"
+   ],
+   "method": "sparsegpt",
+   "rows": 512,
+   "recon_err": 7.162444893316182e-07,
+   "recon_err_magnitude": 0.003343826463555445
+  }
+ },
+ "seconds": 1624.6
+}

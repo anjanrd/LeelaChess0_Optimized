@@ -1,0 +1,222 @@
+# outlier_ratio = worst input channel |x|max / median channel |x|max
+# tens-to-hundreds on attention/FFN inputs: SmoothQuant has work to do
+    ratio        max     median  tensor -> consumers
+ 665019.9      52.76  7.933e-05  /encoder14/ln2 -> /policy/dense1/matmul,/value/embed/matmul,/mlh/embed/matmul
+  27631.9      42.34   0.001532  /mlh/dense1/mish -> /mlh/dense2/matmul
+    489.0         57     0.1166  /attn_body/rehape -> /attn_body/ffn/dense1/w
+     91.9      28.37     0.3088  /value/dense1/mish -> /value/dense2/matmul
+     69.0      50.65     0.7338  /encoder0/ln1 -> /encoder0/ffn/dense1/w
+     53.8      5.782     0.1075  /policy/dense1/mish -> /policy/Q/matmul,/policy/K/matmul
+     51.9      50.74     0.9774  /encoder1/ln1 -> /encoder1/ffn/dense1/w
+     48.9      54.65      1.119  /encoder2/ln1 -> /encoder2/ffn/dense1/w
+     44.4      54.92      1.236  /encoder3/ln1 -> /encoder3/ffn/dense1/w
+     40.4      50.52      1.252  /encoder4/ln1 -> /encoder4/ffn/dense1/w
+     40.2      23.15     0.5763  /value/reshape -> /value/dense1/matmul
+     36.6      49.09       1.34  /encoder5/ln1 -> /encoder5/ffn/dense1/w
+     33.8      45.88      1.356  /encoder8/ln1 -> /encoder8/ffn/dense1/w
+     33.7      47.34      1.403  /encoder6/ln1 -> /encoder6/ffn/dense1/w
+     32.8      45.54      1.389  /encoder7/ln1 -> /encoder7/ffn/dense1/w
+     32.7      44.58      1.364  /encoder9/ln1 -> /encoder9/ffn/dense1/w
+     30.1      41.16      1.369  /encoder10/ln1 -> /encoder10/ffn/dense1/w
+     28.3      36.72      1.298  /encoder11/ln1 -> /encoder11/ffn/dense1/w
+     26.1       31.1       1.19  /encoder13/ln1 -> /encoder13/ffn/dense1/w
+     21.9      26.97      1.231  /encoder12/ln1 -> /encoder12/ffn/dense1/w
+     20.4      4.901     0.2399  /attn_body/ln2 -> /encoder0/mha/Q/w,/encoder0/mha/K/w,/encoder0/mha/V/w,/encoder0/smolgen/compress
+     20.0      16.62     0.8291  /encoder14/ln1 -> /encoder14/ffn/dense1/w
+     11.6      6.917     0.5944  policy/promotion/slice -> /policy/promotion/matmul
+     11.3      7.739     0.6846  /encoder13/ln2 -> /encoder14/mha/Q/w,/encoder14/mha/K/w,/encoder14/mha/V/w,/encoder14/smolgen/compress
+     10.8         20      1.846  /attn_body/embedding/out/reshape -> /attn_body/matmul
+      8.9      8.587     0.9613  /encoder14/smolgen/gen_from/reshape -> /encoder14/smolgen/smol_weight_gen
+      8.6      4.054      0.472  /encoder0/ln2 -> /encoder1/mha/Q/w,/encoder1/mha/K/w,/encoder1/mha/V/w,/encoder1/smolgen/compress
+      8.5      5.549     0.6521  /encoder12/ln2 -> /encoder13/mha/Q/w,/encoder13/mha/K/w,/encoder13/mha/V/w,/encoder13/smolgen/compress
+      8.1      8.289      1.022  /encoder8/smolgen/gen_from/reshape -> /encoder8/smolgen/smol_weight_gen
+      8.0      4.035      0.506  /encoder1/ln2 -> /encoder2/mha/Q/w,/encoder2/mha/K/w,/encoder2/mha/V/w,/encoder2/smolgen/compress
+      7.5      16.16      2.159  /encoder0/smolgen/gen_from/reshape -> /encoder0/smolgen/smol_weight_gen
+      7.1       7.84      1.097  /encoder5/smolgen/gen_from/reshape -> /encoder5/smolgen/smol_weight_gen
+      6.9      7.824      1.126  /encoder10/smolgen/gen_from/reshape -> /encoder10/smolgen/smol_weight_gen
+      6.7       10.7        1.6  /encoder14/mha/out/reshape -> /encoder14/mha/out/dense/w
+      6.6      8.311      1.259  /encoder13/smolgen/gen_from/reshape -> /encoder13/smolgen/smol_weight_gen
+      6.5      3.941     0.6098  /encoder11/ln2 -> /encoder12/mha/Q/w,/encoder12/mha/K/w,/encoder12/mha/V/w,/encoder12/smolgen/compress
+      6.4      7.131       1.11  /encoder11/smolgen/gen_from/reshape -> /encoder11/smolgen/smol_weight_gen
+      6.4      7.966      1.241  /encoder2/smolgen/gen_from/reshape -> /encoder2/smolgen/smol_weight_gen
+      6.2      3.462     0.5543  /encoder2/ln2 -> /encoder3/mha/Q/w,/encoder3/mha/K/w,/encoder3/mha/V/w,/encoder3/smolgen/compress
+      6.2      6.698      1.073  /encoder12/smolgen/gen_from/reshape -> /encoder12/smolgen/smol_weight_gen
+      5.9      3.371     0.5744  /encoder9/ln2 -> /encoder10/mha/Q/w,/encoder10/mha/K/w,/encoder10/mha/V/w,/encoder10/smolgen/compress
+      5.9      7.565       1.29  /encoder6/smolgen/gen_from/reshape -> /encoder6/smolgen/smol_weight_gen
+      5.8      3.415     0.5872  /encoder10/ln2 -> /encoder11/mha/Q/w,/encoder11/mha/K/w,/encoder11/mha/V/w,/encoder11/smolgen/compress
+      5.8      6.444      1.113  /encoder9/smolgen/gen_from/reshape -> /encoder9/smolgen/smol_weight_gen
+      5.7       3.49     0.6131  /encoder8/ln2 -> /encoder9/mha/Q/w,/encoder9/mha/K/w,/encoder9/mha/V/w,/encoder9/smolgen/compress
+      5.6      3.103     0.5586  /encoder3/ln2 -> /encoder4/mha/Q/w,/encoder4/mha/K/w,/encoder4/mha/V/w,/encoder4/smolgen/compress
+      5.5      17.09       3.13  /encoder14/ffn/dense1/mish -> /encoder14/ffn/dense2/w
+      5.4      14.94      2.744  /encoder3/smolgen/ln1 -> /encoder3/smolgen/dense2/w
+      5.2      3.257     0.6274  /encoder4/ln2 -> /encoder5/mha/Q/w,/encoder5/mha/K/w,/encoder5/mha/V/w,/encoder5/smolgen/compress
+      5.1      8.107      1.587  /encoder1/smolgen/gen_from/reshape -> /encoder1/smolgen/smol_weight_gen
+      5.1      14.88      2.935  /encoder14/smolgen/compress/reshape -> /encoder14/smolgen/dense1/w
+      5.0      14.39      2.863  /encoder4/smolgen/ln1 -> /encoder4/smolgen/dense2/w
+      4.9      3.135     0.6407  /encoder7/ln2 -> /encoder8/mha/Q/w,/encoder8/mha/K/w,/encoder8/mha/V/w,/encoder8/smolgen/compress
+      4.8      3.084     0.6377  /encoder6/ln2 -> /encoder7/mha/Q/w,/encoder7/mha/K/w,/encoder7/mha/V/w,/encoder7/smolgen/compress
+      4.6      11.52      2.496  /encoder11/ffn/dense1/mish -> /encoder11/ffn/dense2/w
+      4.6      4.884      1.065  /encoder3/smolgen/gen_from/reshape -> /encoder3/smolgen/smol_weight_gen
+      4.6       3.03     0.6638  /encoder5/ln2 -> /encoder6/mha/Q/w,/encoder6/mha/K/w,/encoder6/mha/V/w,/encoder6/smolgen/compress
+      4.2      4.262      1.012  /encoder4/smolgen/gen_from/reshape -> /encoder4/smolgen/smol_weight_gen
+      4.2      39.26      9.411  /mlh/reshape -> /mlh/dense1/matmul
+      4.0      4.327      1.081  /encoder7/smolgen/gen_from/reshape -> /encoder7/smolgen/smol_weight_gen
+      3.9      10.61      2.718  /encoder13/ffn/dense1/mish -> /encoder13/ffn/dense2/w
+      3.9      9.883      2.547  /encoder12/ffn/dense1/mish -> /encoder12/ffn/dense2/w
+      3.8      11.16      2.921  /encoder5/ffn/dense1/mish -> /encoder5/ffn/dense2/w
+      3.7      5.191      1.412  /encoder1/mha/out/reshape -> /encoder1/mha/out/dense/w
+      3.6      10.36      2.862  /encoder7/smolgen/ln1 -> /encoder7/smolgen/dense2/w
+      3.6      14.35      4.031  /encoder1/ffn/dense1/mish -> /encoder1/ffn/dense2/w
+      3.5      3.311     0.9415  /encoder12/mha/out/reshape -> /encoder12/mha/out/dense/w
+      3.3      11.46      3.433  /encoder3/ffn/dense1/mish -> /encoder3/ffn/dense2/w
+      3.3      9.328      2.832  /encoder12/smolgen/compress/reshape -> /encoder12/smolgen/dense1/w
+      3.3      9.224      2.833  /encoder6/ffn/dense1/mish -> /encoder6/ffn/dense2/w
+      3.3      3.044      0.936  /encoder5/mha/out/reshape -> /encoder5/mha/out/dense/w
+      3.2      8.944      2.773  /encoder7/ffn/dense1/mish -> /encoder7/ffn/dense2/w
+      3.2      10.37      3.239  /encoder4/ffn/dense1/mish -> /encoder4/ffn/dense2/w
+      3.2      2.839     0.8885  /encoder6/mha/out/reshape -> /encoder6/mha/out/dense/w
+      3.1      2.453     0.7874  /encoder10/mha/out/reshape -> /encoder10/mha/out/dense/w
+      3.1      7.971      2.566  /encoder9/ffn/dense1/mish -> /encoder9/ffn/dense2/w
+      3.1      16.15      5.259  /attn_body/ffn/dense1/mish -> /attn_body/ffn/dense2/w
+      3.1      2.428     0.7924  /encoder7/mha/out/reshape -> /encoder7/mha/out/dense/w
+      3.0      2.722     0.9138  /encoder9/mha/out/reshape -> /encoder9/mha/out/dense/w
+      2.9      8.756      2.983  /encoder5/smolgen/ln1 -> /encoder5/smolgen/dense2/w
+      2.9      10.49      3.615  /encoder2/ffn/dense1/mish -> /encoder2/ffn/dense2/w
+      2.9      2.935      1.019  /encoder3/mha/out/reshape -> /encoder3/mha/out/dense/w
+      2.9      8.529       2.98  /encoder6/smolgen/ln1 -> /encoder6/smolgen/dense2/w
+      2.9       8.29      2.902  /encoder11/smolgen/ln1 -> /encoder11/smolgen/dense2/w
+      2.8      7.593      2.665  /encoder10/ffn/dense1/mish -> /encoder10/ffn/dense2/w
+      2.8      8.939      3.145  /encoder9/smolgen/compress/reshape -> /encoder9/smolgen/dense1/w
+      2.8      2.529     0.8958  /encoder11/mha/out/reshape -> /encoder11/mha/out/dense/w
+      2.8      8.812      3.137  /encoder6/smolgen/compress/reshape -> /encoder6/smolgen/dense1/w
+      2.8      3.254      1.162  /encoder13/mha/out/reshape -> /encoder13/mha/out/dense/w
+      2.8      7.888      2.868  /encoder7/smolgen/compress/reshape -> /encoder7/smolgen/dense1/w
+      2.7      7.495      2.727  /encoder8/ffn/dense1/mish -> /encoder8/ffn/dense2/w
+      2.7      2.453     0.8948  /encoder8/mha/out/reshape -> /encoder8/mha/out/dense/w
+      2.7       8.38      3.069  /encoder2/smolgen/compress/reshape -> /encoder2/smolgen/dense1/w
+      2.7      3.573      1.316  /encoder2/mha/out/reshape -> /encoder2/mha/out/dense/w
+      2.7      8.037      2.981  /encoder1/smolgen/compress/reshape -> /encoder1/smolgen/dense1/w
+      2.7      8.976      3.382  /encoder0/smolgen/compress/reshape -> /encoder0/smolgen/dense1/w
+      2.6      7.785      2.973  /encoder0/smolgen/ln1 -> /encoder0/smolgen/dense2/w
+      2.6      8.108      3.111  /encoder5/smolgen/compress/reshape -> /encoder5/smolgen/dense1/w
+      2.6      2.563     0.9834  /encoder4/mha/out/reshape -> /encoder4/mha/out/dense/w
+      2.6      7.567      2.954  /encoder2/smolgen/ln1 -> /encoder2/smolgen/dense2/w
+      2.5      7.022      2.788  /encoder10/smolgen/compress/reshape -> /encoder10/smolgen/dense1/w
+      2.5      7.473      2.967  /encoder8/smolgen/ln1 -> /encoder8/smolgen/dense2/w
+      2.5      7.692      3.063  /encoder12/smolgen/ln1 -> /encoder12/smolgen/dense2/w
+      2.5      7.667      3.066  /encoder10/smolgen/ln1 -> /encoder10/smolgen/dense2/w
+      2.5        7.9      3.166  /encoder13/smolgen/compress/reshape -> /encoder13/smolgen/dense1/w
+      2.5       10.4      4.205  /encoder0/ffn/dense1/mish -> /encoder0/ffn/dense2/w
+      2.5      7.489      3.046  /encoder9/smolgen/ln1 -> /encoder9/smolgen/dense2/w
+      2.4      3.662        1.5  /encoder0/mha/out/reshape -> /encoder0/mha/out/dense/w
+      2.4      6.538      2.747  /encoder8/smolgen/compress/reshape -> /encoder8/smolgen/dense1/w
+      2.2      5.498       2.51  /encoder11/smolgen/compress/reshape -> /encoder11/smolgen/dense1/w
+      2.2      6.427      2.949  /encoder1/smolgen/ln1 -> /encoder1/smolgen/dense2/w
+      2.2      6.483      3.006  /encoder4/smolgen/compress/reshape -> /encoder4/smolgen/dense1/w
+      2.1      6.419      3.086  /encoder13/smolgen/ln1 -> /encoder13/smolgen/dense2/w
+      2.1       6.06      2.938  /encoder14/smolgen/ln1 -> /encoder14/smolgen/dense2/w
+      1.8      5.273      2.889  /encoder3/smolgen/compress/reshape -> /encoder3/smolgen/dense1/w
+      1.0          1          1  /attn_body/embedding/reshape -> /attn_body/embedding/preprocess/matmul
+
+# after SmoothQuant (per group)
+ 665019.9 ->  1141.4  /encoder14/ln2
+  27631.9 ->   732.2  /mlh/dense1/mish
+    489.0 ->     5.5  /attn_body/rehape
+     91.9 ->    10.4  /value/dense1/mish
+     69.0 ->     2.5  /encoder0/ln1
+     53.8 ->     7.8  /policy/dense1/mish
+     51.9 ->     2.7  /encoder1/ln1
+     48.9 ->     2.5  /encoder2/ln1
+     44.4 ->     2.5  /encoder3/ln1
+     40.4 ->     2.4  /encoder4/ln1
+     40.2 ->     5.5  /value/reshape
+     36.6 ->     2.3  /encoder5/ln1
+     33.8 ->     2.4  /encoder8/ln1
+     33.7 ->     2.3  /encoder6/ln1
+     32.8 ->     2.2  /encoder7/ln1
+     32.7 ->     2.2  /encoder9/ln1
+     30.1 ->     2.3  /encoder10/ln1
+     28.3 ->     2.1  /encoder11/ln1
+     26.1 ->     2.0  /encoder13/ln1
+     21.9 ->     2.4  /encoder12/ln1
+     20.4 ->     2.4  /attn_body/ln2
+     20.0 ->     2.1  /encoder14/ln1
+     11.6 ->     3.2  policy/promotion/slice
+     11.3 ->     2.1  /encoder13/ln2
+     10.9 ->     1.7  /attn_body/embedding/out/reshape
+      8.6 ->     2.4  /encoder0/ln2
+      8.5 ->     2.1  /encoder12/ln2
+      8.0 ->     2.3  /encoder1/ln2
+      6.7 ->     2.0  /encoder14/mha/out/reshape
+      6.5 ->     2.1  /encoder11/ln2
+      6.2 ->     2.4  /encoder2/ln2
+      5.9 ->     2.2  /encoder9/ln2
+      5.8 ->     2.1  /encoder10/ln2
+      5.7 ->     2.3  /encoder8/ln2
+      5.6 ->     2.4  /encoder3/ln2
+      5.5 ->     2.1  /encoder14/ffn/dense1/mish
+      5.4 ->     2.7  /encoder3/smolgen/ln1
+      5.2 ->     2.3  /encoder4/ln2
+      5.1 ->     1.7  /encoder14/smolgen/compress/reshape
+      5.0 ->     2.5  /encoder4/smolgen/ln1
+      4.9 ->     2.2  /encoder7/ln2
+      4.8 ->     2.4  /encoder6/ln2
+      4.6 ->     3.1  /encoder11/ffn/dense1/mish
+      4.6 ->     2.2  /encoder5/ln2
+      4.2 ->     1.7  /mlh/reshape
+      3.9 ->     1.9  /encoder13/ffn/dense1/mish
+      3.9 ->     2.1  /encoder12/ffn/dense1/mish
+      3.8 ->     1.9  /encoder5/ffn/dense1/mish
+      3.7 ->     1.7  /encoder1/mha/out/reshape
+      3.6 ->     2.2  /encoder7/smolgen/ln1
+      3.6 ->     2.0  /encoder1/ffn/dense1/mish
+      3.5 ->     2.5  /encoder12/mha/out/reshape
+      3.3 ->     1.7  /encoder3/ffn/dense1/mish
+      3.3 ->     1.4  /encoder12/smolgen/compress/reshape
+      3.3 ->     2.3  /encoder6/ffn/dense1/mish
+      3.3 ->     1.8  /encoder5/mha/out/reshape
+      3.2 ->     2.1  /encoder7/ffn/dense1/mish
+      3.2 ->     2.0  /encoder4/ffn/dense1/mish
+      3.2 ->     1.8  /encoder6/mha/out/reshape
+      3.1 ->     2.0  /encoder10/mha/out/reshape
+      3.1 ->     2.3  /encoder9/ffn/dense1/mish
+      3.1 ->     1.6  /attn_body/ffn/dense1/mish
+      3.1 ->     1.9  /encoder7/mha/out/reshape
+      3.0 ->     1.8  /encoder9/mha/out/reshape
+      2.9 ->     1.9  /encoder5/smolgen/ln1
+      2.9 ->     1.8  /encoder2/ffn/dense1/mish
+      2.9 ->     1.8  /encoder3/mha/out/reshape
+      2.9 ->     1.9  /encoder6/smolgen/ln1
+      2.9 ->     1.9  /encoder11/smolgen/ln1
+      2.8 ->     2.7  /encoder10/ffn/dense1/mish
+      2.8 ->     1.4  /encoder9/smolgen/compress/reshape
+      2.8 ->     1.9  /encoder11/mha/out/reshape
+      2.8 ->     1.4  /encoder6/smolgen/compress/reshape
+      2.8 ->     1.9  /encoder13/mha/out/reshape
+      2.8 ->     1.4  /encoder7/smolgen/compress/reshape
+      2.7 ->     2.0  /encoder8/ffn/dense1/mish
+      2.7 ->     1.7  /encoder8/mha/out/reshape
+      2.7 ->     1.4  /encoder2/smolgen/compress/reshape
+      2.7 ->     1.8  /encoder2/mha/out/reshape
+      2.7 ->     1.5  /encoder1/smolgen/compress/reshape
+      2.7 ->     1.5  /encoder0/smolgen/compress/reshape
+      2.6 ->     1.8  /encoder0/smolgen/ln1
+      2.6 ->     1.4  /encoder5/smolgen/compress/reshape
+      2.6 ->     1.8  /encoder4/mha/out/reshape
+      2.6 ->     1.8  /encoder2/smolgen/ln1
+      2.5 ->     1.4  /encoder10/smolgen/compress/reshape
+      2.5 ->     1.9  /encoder8/smolgen/ln1
+      2.5 ->     1.8  /encoder12/smolgen/ln1
+      2.5 ->     1.8  /encoder10/smolgen/ln1
+      2.5 ->     1.4  /encoder13/smolgen/compress/reshape
+      2.5 ->     1.8  /encoder0/ffn/dense1/mish
+      2.5 ->     1.8  /encoder9/smolgen/ln1
+      2.4 ->     1.9  /encoder0/mha/out/reshape
+      2.4 ->     1.4  /encoder8/smolgen/compress/reshape
+      2.2 ->     1.4  /encoder11/smolgen/compress/reshape
+      2.2 ->     1.7  /encoder1/smolgen/ln1
+      2.2 ->     1.3  /encoder4/smolgen/compress/reshape
+      2.1 ->     1.6  /encoder13/smolgen/ln1
+      2.1 ->     1.7  /encoder14/smolgen/ln1
+      1.8 ->     1.3  /encoder3/smolgen/compress/reshape
+      1.0 ->     1.2  /attn_body/embedding/reshape

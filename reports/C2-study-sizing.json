@@ -1,0 +1,18 @@
+{
+  "models": {
+    "fp16": 1,
+    "s1": 1,
+    "s2": 1,
+    "s3": 1,
+    "s4": 1,
+    "s4aa": 1,
+    "swap_pol8": 2,
+    "swap_val8": 2,
+    "s1sp": 1
+  },
+  "weighted_models": 11,
+  "seconds_per_position_all_budgets": "0.94",
+  "target_seconds": "25200",
+  "study_limit": 2437,
+  "formula_seconds": "25198.58"
+}

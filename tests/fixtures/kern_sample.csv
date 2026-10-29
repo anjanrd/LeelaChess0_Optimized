@@ -1,0 +1,5 @@
+Generating SQLite file
+"Time (%)","Total Time (ns)","Instances","Avg (ns)","Med (ns)","Min (ns)","Max (ns)","StdDev (ns)","Name"
+"60.0","6000","100","60","60","50","70","5","sm89_xmma_gemm_i8f16_i8i32_f32_tn_n_tilesize128x128x64"
+"25.0","2500","100","25","25","20","30","2","sm80_xmma_gemm_f16f16_f16f32_f32_nn_n_tilesize64x64x32"
+"15.0","1500","300","5","5","4","6","1","__myl_bb0_3_ResTraMulAdd"

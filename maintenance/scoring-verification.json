@@ -1,0 +1,13 @@
+{
+  "exit_code": 0,
+  "compared_outputs": {
+    "scores_test.json": true,
+    "scores_test.md": true,
+    "hard/scores_test.json": true,
+    "hard/scores_test.md": true,
+    "hard/ids.txt": true
+  },
+  "inference_runs": 0,
+  "temporary_output_outside_checkout": true,
+  "models": "fp16,s1,s2,s3,s4,s4aa,s0,s1sp,swap_pol8,swap_val8"
+}

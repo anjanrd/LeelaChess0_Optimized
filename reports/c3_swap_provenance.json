@@ -1,0 +1,70 @@
+{
+  "swap_pol8": {
+    "pb_gz_sha256": "82d2f082d33c41fd3bd06280d99a6f35850e94f3fd4dc314d7fe234c60c24319",
+    "onnx_sha256": "92da35c3df1ef37d66aac0909f2337b1a91685d289d10797d777e8fb16d94c51",
+    "policy": {
+      "model": "s4",
+      "onnx": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s4.onnx",
+      "sha256": "24fd9a11bbc755962b98fab08dd49f9a721c797097dfb607183e27b7e76e1904",
+      "verified_sha256": "24fd9a11bbc755962b98fab08dd49f9a721c797097dfb607183e27b7e76e1904"
+    },
+    "value_mlh": {
+      "model": "fp16",
+      "onnx": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\bt3_fp32.onnx",
+      "sha256": "937d5ac3d1ce9daafc7858f54166787924680c0c9c4aaab94d438402430db2b9",
+      "verified_sha256": "937d5ac3d1ce9daafc7858f54166787924680c0c9c4aaab94d438402430db2b9"
+    },
+    "shared_graph_inputs": [
+      "/input/planes"
+    ],
+    "quantize_nodes_by_branch": {
+      "P": 270,
+      "V": 0
+    },
+    "output_routes": {
+      "/swap/policy": [
+        "P/output/policy"
+      ],
+      "/swap/output/wdl": [
+        "V/output/wdl"
+      ],
+      "/swap/output/mlh": [
+        "V/output/mlh"
+      ]
+    }
+  },
+  "swap_val8": {
+    "pb_gz_sha256": "f59515059aa106615ba0cfc188cff8317a7ca6b1e6eebbfa2a2367a41f210fe5",
+    "onnx_sha256": "40bd6f0aae177df4225ce4048302ba76f267dc5a16f001593ba31227f266b56d",
+    "policy": {
+      "model": "fp16",
+      "onnx": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\bt3_fp32.onnx",
+      "sha256": "937d5ac3d1ce9daafc7858f54166787924680c0c9c4aaab94d438402430db2b9",
+      "verified_sha256": "937d5ac3d1ce9daafc7858f54166787924680c0c9c4aaab94d438402430db2b9"
+    },
+    "value_mlh": {
+      "model": "s4",
+      "onnx": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s4.onnx",
+      "sha256": "24fd9a11bbc755962b98fab08dd49f9a721c797097dfb607183e27b7e76e1904",
+      "verified_sha256": "24fd9a11bbc755962b98fab08dd49f9a721c797097dfb607183e27b7e76e1904"
+    },
+    "shared_graph_inputs": [
+      "/input/planes"
+    ],
+    "quantize_nodes_by_branch": {
+      "P": 0,
+      "V": 274
+    },
+    "output_routes": {
+      "/swap/policy": [
+        "P/output/policy"
+      ],
+      "/swap/output/wdl": [
+        "V/output/wdl"
+      ],
+      "/swap/output/mlh": [
+        "V/output/mlh"
+      ]
+    }
+  }
+}

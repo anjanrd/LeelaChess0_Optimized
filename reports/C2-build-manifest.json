@@ -1,0 +1,227 @@
+[
+  {
+    "model": "s1",
+    "recipe": {
+      "method": "minmax",
+      "percentile": null,
+      "smoothquant": null
+    },
+    "files": [
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s1.onnx",
+        "bytes": 104487495,
+        "sha256": "3fb946f7df05d6079e9c5225fa17a358900a2debce462753f6d421796d25578a"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s1.pb.gz",
+        "bytes": 71716055,
+        "sha256": "9d714319f799ae8a19b0809d6380f3ec819e02704af52587dbbdc1fdc3e08b1f"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s1.json",
+        "bytes": 458,
+        "sha256": "ce22366ecf146039190c098494fb0ed42bbe33ad6bac1872bff9103aa61f1900"
+      }
+    ]
+  },
+  {
+    "model": "s2",
+    "recipe": {
+      "method": "minmax",
+      "percentile": null,
+      "smoothquant": null
+    },
+    "files": [
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s2.onnx",
+        "bytes": 105424621,
+        "sha256": "02c5ac09362f62b80ab0f18a279a38f1e2d2c60db778b936fbda34ab753f1b54"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s2.pb.gz",
+        "bytes": 95037093,
+        "sha256": "b99af74303433a86d15ae39b6a805a2b8f156e2c59edf906bed70e7ad6bc97ab"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s2.json",
+        "bytes": 459,
+        "sha256": "953c354802798befc954ac27e4bf26bd6bf2236554ef1bb0f4cdc2d2939ef57e"
+      }
+    ]
+  },
+  {
+    "model": "s3",
+    "recipe": {
+      "method": "percentile",
+      "percentile": 99.999,
+      "smoothquant": null
+    },
+    "files": [
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s3.onnx",
+        "bytes": 105424621,
+        "sha256": "60c283e77f04ace1b71873c6ecbddd601d6d22a1ad01b5156dbd2677b3fb70ff"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s3.pb.gz",
+        "bytes": 95037368,
+        "sha256": "d43dba92a9ac11da200b823ac8eb8ba9fb9ce3ecb31ada99d5561b100bd78364"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s3.json",
+        "bytes": 30062,
+        "sha256": "029176200387abe1cbbd99b87ce6ba6ebee9461824411cee367d81acbe11b54d"
+      }
+    ]
+  },
+  {
+    "model": "s4",
+    "recipe": {
+      "method": "percentile",
+      "percentile": 99.999,
+      "smoothquant": 0.7
+    },
+    "files": [
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s4.onnx",
+        "bytes": 105829506,
+        "sha256": "24fd9a11bbc755962b98fab08dd49f9a721c797097dfb607183e27b7e76e1904"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s4.pb.gz",
+        "bytes": 90915493,
+        "sha256": "b556b45cab302ecf893c4afcd932c3df51358004a14f6e1ec9ef99fb21f75abb"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s4.json",
+        "bytes": 50028,
+        "sha256": "b75628f2384aa6e576d26190907fae6b6fde44e0a9b5aaa8b4209b1924249e9d"
+      }
+    ]
+  },
+  {
+    "model": "s4aa",
+    "recipe": {
+      "method": "percentile",
+      "percentile": 99.999,
+      "smoothquant": 0.7
+    },
+    "files": [
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s4aa.onnx",
+        "bytes": 105880615,
+        "sha256": "f7992eba5dda26b64d1a5ebd57d756aec8c053bc0e08f95de5a78a54e98f7b82"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s4aa.pb.gz",
+        "bytes": 90921041,
+        "sha256": "6445a8bdf4fde85121c2c1dcef3babd9e62b23858444be3ac9c9d6b36b9bb284"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s4aa.json",
+        "bytes": 60010,
+        "sha256": "ef5d36ce1d2d25406b381ca196d9b17f6c7c64de72dba90191ececd5d1faa937"
+      }
+    ]
+  },
+  {
+    "model": "s0",
+    "recipe": {
+      "method": "percentile",
+      "percentile": 99.999,
+      "smoothquant": 0.7
+    },
+    "files": [
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s0.onnx",
+        "bytes": 105829506,
+        "sha256": "8871c0bd6cb9101b02271643dd06bd3b3b78ce0b9372103d9e2e7b2e1b4d5170"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s0.pb.gz",
+        "bytes": 69978207,
+        "sha256": "01976840b4de5de2a9299ecfda97fc9c56c626eb7e6a79c48f64aaf526d3afd4"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s0.json",
+        "bytes": 50083,
+        "sha256": "f80ca884cfde80a33b804fbc20ba3e8f15b414251567ad1409e5b75a290c70c7"
+      }
+    ]
+  },
+  {
+    "model": "s1sp",
+    "recipe": {
+      "method": "percentile",
+      "percentile": 99.999,
+      "smoothquant": 0.7
+    },
+    "files": [
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s1sp.onnx",
+        "bytes": 105829506,
+        "sha256": "6cee555e1c6199bf2960e6862ffe24c45d346fe88ad4321277a6da055dce348a"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s1sp.pb.gz",
+        "bytes": 69089577,
+        "sha256": "b3a020e0fda20925744f35b2540872f54deeec31dcb9f7229c67db80399d5ec9"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\s1sp.json",
+        "bytes": 49979,
+        "sha256": "686060e0bce1604e3d8cf4f4a54b2ab2b04a4d64426cfc008d8770e342d6e64e"
+      }
+    ]
+  },
+  {
+    "model": "swap_pol8",
+    "recipe": {
+      "method": "percentile",
+      "percentile": 99.999,
+      "smoothquant": 0.7
+    },
+    "files": [
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\swap_pol8.onnx",
+        "bytes": 508700407,
+        "sha256": "92da35c3df1ef37d66aac0909f2337b1a91685d289d10797d777e8fb16d94c51"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\swap_pol8.pb.gz",
+        "bytes": 381896136,
+        "sha256": "82d2f082d33c41fd3bd06280d99a6f35850e94f3fd4dc314d7fe234c60c24319"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\swap_pol8.json",
+        "bytes": 719,
+        "sha256": "3b4d75ef7cb031f1b16e5c4d291898926db8f6558ca9765c0e222c61a399baed"
+      }
+    ]
+  },
+  {
+    "model": "swap_val8",
+    "recipe": {
+      "method": "percentile",
+      "percentile": 99.999,
+      "smoothquant": 0.7
+    },
+    "files": [
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\swap_val8.onnx",
+        "bytes": 512938981,
+        "sha256": "40bd6f0aae177df4225ce4048302ba76f267dc5a16f001593ba31227f266b56d"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\swap_val8.pb.gz",
+        "bytes": 384327326,
+        "sha256": "f59515059aa106615ba0cfc188cff8317a7ca6b1e6eebbfa2a2367a41f210fe5"
+      },
+      {
+        "path": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\models\\swap_val8.json",
+        "bytes": 719,
+        "sha256": "714be9d4e3178423bc0931dc3a4111961d1e73c1d3cb8a2d4b4574d19a98bf0b"
+      }
+    ]
+  }
+]

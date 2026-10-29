@@ -1,0 +1,81 @@
+{
+  "s3": {
+    "name": "s3_p99999.onnx",
+    "kl": 0.022,
+    "top1": 0.844,
+    "dv": 0.0128,
+    "tb_acc": 0.997
+  },
+  "alpha": {
+    "name": "s4_a0.7.onnx",
+    "kl": 0.00413,
+    "top1": 0.891,
+    "dv": 0.0045,
+    "tb_acc": 0.997,
+    "alpha": 0.7,
+    "qualifies": true
+  },
+  "alpha_rows": [
+    {
+      "name": "s4_a0.3.onnx",
+      "kl": 0.00525,
+      "top1": 0.871,
+      "dv": 0.0061,
+      "tb_acc": 0.998,
+      "alpha": 0.3,
+      "qualifies": true
+    },
+    {
+      "name": "s4_a0.4.onnx",
+      "kl": 0.00483,
+      "top1": 0.884,
+      "dv": 0.0049,
+      "tb_acc": 0.998,
+      "alpha": 0.4,
+      "qualifies": true
+    },
+    {
+      "name": "s4_a0.5.onnx",
+      "kl": 0.0045,
+      "top1": 0.9,
+      "dv": 0.005,
+      "tb_acc": 0.998,
+      "alpha": 0.5,
+      "qualifies": true
+    },
+    {
+      "name": "s4_a0.6.onnx",
+      "kl": 0.00445,
+      "top1": 0.891,
+      "dv": 0.0051,
+      "tb_acc": 0.999,
+      "alpha": 0.6,
+      "qualifies": true
+    },
+    {
+      "name": "s4_a0.7.onnx",
+      "kl": 0.00413,
+      "top1": 0.891,
+      "dv": 0.0045,
+      "tb_acc": 0.997,
+      "alpha": 0.7,
+      "qualifies": true
+    },
+    {
+      "name": "s4_a0.8.onnx",
+      "kl": 0.00414,
+      "top1": 0.894,
+      "dv": 0.0066,
+      "tb_acc": 0.998,
+      "alpha": 0.8,
+      "qualifies": true
+    }
+  ],
+  "recipe": {
+    "s3_method": "percentile",
+    "s3_percentile": 99.999,
+    "s4_alpha": 0.7
+  },
+  "best": "s4",
+  "reason": "s3 s3_p99999.onnx: lowest finite dev KL 2.20e-02, top-1 0.844; s3 ties use higher top-1. Alpha 0.7: lowest eligible dev KL 4.13e-03, top-1 0.891 >= s3 0.844. best=s4. KL ties favor unsmoothed s3; equal alpha rows use smaller alpha deterministically."
+}

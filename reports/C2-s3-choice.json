@@ -1,0 +1,41 @@
+{
+  "chosen": {
+    "name": "s3_p99999.onnx",
+    "kl": 0.022,
+    "top1": 0.844,
+    "dv": 0.0128,
+    "tb_acc": 0.997
+  },
+  "all": [
+    {
+      "name": "s3_p999.onnx",
+      "kl": 0.216,
+      "top1": 0.707,
+      "dv": 0.1532,
+      "tb_acc": 0.984
+    },
+    {
+      "name": "s3_p9999.onnx",
+      "kl": 0.0403,
+      "top1": 0.839,
+      "dv": 0.0217,
+      "tb_acc": 0.996
+    },
+    {
+      "name": "s3_p99999.onnx",
+      "kl": 0.022,
+      "top1": 0.844,
+      "dv": 0.0128,
+      "tb_acc": 0.997
+    },
+    {
+      "name": "s3_entropy.onnx",
+      "kl": 1.01,
+      "top1": 0.214,
+      "dv": 0.5925,
+      "tb_acc": 0.552
+    }
+  ],
+  "decision": "Lowest reported KL and highest candidate tb_acc; scales positive and finite; clip metadata finite",
+  "entropy_warning": "NumPy invalid divide warning during threshold scan; command exited 0; emitted entropy scales and clip metadata passed finite checks"
+}

@@ -1,0 +1,9 @@
+{
+ "onnx": "C:\\Users\\HP\\Desktop\\LC0-B\\leela-int8\\reports\\c3-part1\\hw-work\\models\\bt3_fp32.onnx",
+ "int8": false,
+ "sparsity": false,
+ "batch": 256,
+ "returncode": 1,
+ "qps": null,
+ "gpu_ms_mean": null
+}
