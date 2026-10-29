@@ -1,0 +1,73 @@
+{
+  "date": "2026-10-30",
+  "status": "passed",
+  "branch": "anjan",
+  "head_unchanged": "7f9bacc12b896ef6ad9421509fd0049f6ccf4051",
+  "scope": "New normal takeover Run 1 only; prepared code/procedures, not measured GPU results",
+  "frozen_original_files_verified": 350,
+  "frozen_original_bytes": 8588424153,
+  "original_source_failures": [],
+  "prior_A5_config_records_preserved": 8,
+  "original_LOG_prefix_unchanged": true,
+  "prepared_execution_source_identities_verified": 69,
+  "prepared_manifest": {
+    "path": "reports/takeover/run1/run2_jobs.json",
+    "bytes": 55570,
+    "sha256": "2f07407db23b3108478d6f791c1fb2d6f6d260e50a4a432980c5206b4900138a"
+  },
+  "prepared_manifest_fingerprint": "9300e77242ed09d7a3f7fbd270512a6a2d24830ae39bb783139ce213ac4a1fea",
+  "job_counts": {
+    "probe": 1,
+    "profile": 6,
+    "peaks": 1,
+    "capture": 8,
+    "benchmark": 28,
+    "pilot": 1
+  },
+  "total_prepared_jobs": 45,
+  "GPU_jobs_executed": 0,
+  "new_model_inference": 0,
+  "tests": {
+    "command": ".venv/Scripts/python.exe -B -m unittest discover -s tests -p test_*.py -v",
+    "exit_code": 0,
+    "passed": 40,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "17 existing regressions + 23 takeover safeguards; fake commands/engines and real CPU-only Windows/PE observations"
+  },
+  "dry_plan": {
+    "command": ".venv/Scripts/python.exe -B -m execution.run_jobs --plan",
+    "exit_code": 0,
+    "GPU_workloads_started": 0
+  },
+  "runtime_preflight": "reports/takeover/run1/runtime_preflight.json",
+  "runtime_versions": "reports/takeover/run1/runtime_versions.json",
+  "scoped_PATH_CPU_check": "passed; global PATH unmodified; actual GPU loader unverified",
+  "original_quant_eval_hw_scoring_code_changed": false,
+  "procedural_note": "docs/takeover_protocol_note.md",
+  "python_files_parsed": 9,
+  "local_links_checked": 34,
+  "diff_whitespace_check": "passed",
+  "power_mode_changed": false,
+  "processes_terminated": false,
+  "native_engine_or_profiler_launched": false,
+  "commit_push_or_teammate_message_performed": false,
+  "next_run": {
+    "number": 2,
+    "mode": "exclusive",
+    "status": "awaiting user start and fresh quiet-session preflight",
+    "estimated_hours": [
+      3,
+      7
+    ],
+    "reserve_hours": 8,
+    "production_matches_in_this_run": false,
+    "handoff": "reports/takeover/run1/EXCLUSIVE_RUN_2.md"
+  },
+  "limits": [
+    "GPU PATH/profiler/capture compatibility must be verified in exclusive Run 2",
+    "R1-R5 scientific evidence and final deliverables remain pending; preparation tests do not close them",
+    "Output/source/resource checks do not replace Run 3 scientific validity review"
+  ],
+  "current_output_inventory": "reports/takeover/run1/output_manifest.json"
+}

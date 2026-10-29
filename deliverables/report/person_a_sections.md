@@ -1,10 +1,10 @@
 # Person A model-side report draft
 
-Status: verified draft from frozen evidence, not the final shared report. A5/F12 is explicitly deferred. Systems conclusions and final report alignment await Ritwik. Tables/figures are derived analysis; no new model inference or search was performed.
+Status: verified draft, not the final shared report. A5/F12 is complete, including a version-matched CPU activation diagnostic on the unchanged model and calibration inputs. Systems conclusions and final report alignment await Ritwik. No new chess/search or GPU performance experiment was performed for this analysis.
 
 ## Abstract — provisional shared text
 
-We study a BT3 chess transformer deployed inside lc0 using FP16 and a cumulative W8A8 post-training quantization ladder. We separate changes in neural outputs, preservation of tablebase move results, search at requested node budgets, and performance at fixed time. Percentile calibration and SmoothQuant improve output fidelity relative to naive quantization on the evaluated endgames, while the dense search scores saturate. SparseGPT preserves quality better than magnitude pruning but retains search errors. These observations establish model-side tradeoffs; final throughput, hardware and full-game strength conclusions will be inserted after systems evidence is reviewed. The activation illustration remains deferred until its saved-data consistency issue is resolved.
+We study a BT3 chess transformer deployed inside lc0 using FP16 and a cumulative W8A8 post-training quantization ladder. We separate changes in neural outputs, preservation of tablebase move results, search at requested node budgets, and performance at fixed time. Percentile calibration and SmoothQuant improve output fidelity relative to naive quantization on the evaluated endgames, while the dense search scores saturate. SparseGPT preserves quality better than magnitude pruning but retains search errors. These observations establish model-side tradeoffs; final throughput, hardware and full-game strength conclusions will be inserted after systems evidence is reviewed. A verified activation illustration explains the selected model's compensated rescaling.
 
 ## Introduction and research questions
 
@@ -34,7 +34,13 @@ Seven symmetry-equivalence groups cross pool splits, affecting measured IDs 611,
 
 The ladder is s1 per-tensor signed symmetric minmax W8A8; s2 adds per-channel weight scales; s3 uses selected percentile 99.999; s4 adds SmoothQuant alpha 0.7. The attention extension s4aa additionally quantizes dynamic matrix products. The active graphs request QDQ on 164 fixed-weight matmuls in s4 and all 195 matmuls in s4aa. Biases, normalization, softmax and other floating work are not described as uniformly INT8. Calibration and recipe selection use their prescribed pools; final test plots are not used to choose a new recipe.
 
-SmoothQuant transfers range imbalance between activations and weights [2]. For positive scales, `XW = (X/s)(sW)` before rounding. This implementation inserts explicit branch Mul nodes instead of unrestricted LayerNorm folding because residual/shared consumers must remain correct; shared global Smolgen weights constrain per-block smoothing. The saved activation arrays did not pass their current-model consistency check. **A5 is deferred by the user: F12 and any claims based on that example remain unfinished.** The algebraic mechanism and saved quality metrics can be described independently of that plot.
+SmoothQuant transfers range imbalance between activations and weights [2]. For positive scales, `XW = (X/s)(sW)` before rounding. This implementation inserts explicit branch Mul nodes instead of unrestricted LayerNorm folding because residual/shared consumers must remain correct; shared global Smolgen weights constrain per-block smoothing.
+
+F12 separates the selected alpha-0.7 model's 101 build-time group summaries (original activations with algebraically derived rescaling) from a measured before/after pair at `/encoder14/ln2`. Of the 101 groups, 100 reduce the peak/median channel-maximum ratio; `/attn_body/embedding/reshape` instead increases from 1 to 1.2492. The measured 768-channel example uses the same 512 calibration inputs on CPU. Its peak/median ratio falls from 676,662.01 to 1,131.17, and all channels satisfy the original scaling tolerance (maximum observed difference zero). A channel maximum spans all calibration inputs and board tokens; this ratio describes range imbalance, not WDL or chess accuracy. This diagnostic does not verify GPU runtime precision or acceleration.
+
+The original A5 check paired C1 measurements (alpha 0.5, percentile 99.99) with the final C2 model (alpha 0.7, percentile 99.999). Collection-log/backup hashes and an exact 768-channel scaling match identify that earlier model. We preserve the historical arrays and failed check; F12 uses newly collected final-model arrays instead. Provenance, CPU execution context and checks are in `analysis/person_a/a5/` and `analysis/person_a/run1/smoothquant_verification.json`. Quantization, models, calibration and scoring were unchanged.
+
+![F12: selected-model SmoothQuant group summary and matched channel example](../../analysis/figures/F12-outliers.png)
 
 Magnitude pruning retains the largest two values per group of four along the reduction dimension. SparseGPT uses calibration-dependent compensation [3]; the imported implementation is sequential across 98 dependency stages with 512 calibration inputs. Both pruned source graphs were checked: all 150 unique targeted matrices satisfy at most two nonzeros per K-group of four. The sparse branch is pruned before best-recipe quantization. This experiment is not GPTQ weight quantization, though GPTQ provides related second-order compression context [4].
 
@@ -110,7 +116,7 @@ Both models already have the required raw runs. Extra historical FP16 rows are e
 
 ## Limitations and provisional conclusion
 
-The study uses one checkpoint/device, synthetic decision-sensitive endgames, limited accuracy headroom, printed-output approximations and requested budgets with overshoot. Cross-split symmetry overlap, test-defined hard analysis and sparse calibration coverage constrain generalization. The finite repeated opening book and match uncertainty need review after actual games arrive. A5/F12 remains deferred, not repaired or waived.
+The study uses one checkpoint/device, synthetic decision-sensitive endgames, limited accuracy headroom, printed-output approximations and requested budgets with overshoot. Cross-split symmetry overlap, test-defined hard analysis and sparse calibration coverage constrain generalization. The finite repeated opening book and match uncertainty need review after actual games arrive. F12 is a calibration-input illustration at one layer, not a network-wide distribution or independent performance/accuracy result.
 
 The current evidence supports model fidelity/quality tradeoffs and substantial masking of dense-model errors by search on this corpus. It does not yet establish a full-game playing-strength gain. Final conclusions require the independent hardware/time/match evidence and shared review; a negative or inconclusive result remains a valid answer.
 
@@ -118,7 +124,7 @@ Accepted scope omissions are search-visited calibration, partial INT8, QAT/KD/re
 
 ## Final integration checklist
 
-- Address A5 before autonomous Run 2; resolve the diagnostic example/F12 or obtain an explicit handling decision.
+- A5/F12 is verified; retain its model/statistics identities when reproducing the illustration.
 - Integrate R1/R2/R4 measured findings and align R3 with B's canonical report; audit paired conditions and uncertainty.
 - Combine A/B contributions to the abstract, introduction, related work, discussion, limitations and conclusion.
 - Complete the shared report/presentation/demo and verify the final package/reproduction (R5).

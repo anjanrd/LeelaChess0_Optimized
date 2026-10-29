@@ -24,6 +24,7 @@ __pycache__/
 /reports/**/*.sqlite
 /reports/**/*.log
 /reports/**/*.exitcode
+/reports/takeover/**/*.cache
 /reports/**/*-backup/
 /reports/**/study-backup/
 /reports/**/studyc-backup/

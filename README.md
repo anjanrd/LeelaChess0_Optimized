@@ -4,7 +4,9 @@ This repository is the unified workspace for Person A (model/analysis) and Perso
 
 Start with [updated_plan.md](updated_plan.md) for scope, ownership and deliverables, [STATUS.md](STATUS.md) for the current checkpoint, and [consolidation_context.md](consolidation_context.md) for lineage, paths and safe continuation. Agent instructions are in [AGENTS.md](AGENTS.md); retained technical traps are in [runtime notes](docs/runtime_notes.md).
 
-Person A's independent Run 1 analysis is ready: [execution handoff](person_a_execution_plan.md) and [report draft](deliverables/report/person_a_sections.md). **Address deferred A5 before Run 2**; final systems-dependent outputs remain pending.
+Person A's independent Run 1 analysis is ready: [execution handoff](person_a_execution_plan.md) and [report draft](deliverables/report/person_a_sections.md). **A5/F12 is resolved and verified**; [resolution evidence](analysis/person_a/a5/closure.json). Final systems-dependent outputs remain pending; review [Run 2 prerequisites](analysis/person_a/BEFORE_RUN_2.md).
+
+Anjan is now completing the remaining B-side work too. The [five-run takeover](docs/takeover_runs.md) includes the former A-side Run 2. New Run 1 preparation is complete; [verification](reports/takeover/run1/verification.json). The next run is exclusive GPU work; read its [preparation and duration handoff](reports/takeover/run1/EXCLUSIVE_RUN_2.md). Existing code/evidence remains authoritative; `execution/` provides checked continuation wrappers.
 
 ## Current position
 

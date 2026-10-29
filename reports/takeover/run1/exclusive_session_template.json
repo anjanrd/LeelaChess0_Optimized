@@ -1,0 +1,11 @@
+{
+  "root": "C:\\Users\\HP\\Desktop\\LC0",
+  "created_unix": 0,
+  "exclusive_authorized": false,
+  "work_saved": false,
+  "ac_power_confirmed": false,
+  "other_work_paused": false,
+  "resource_preflight_passed": false,
+  "runtime": {},
+  "note": "Template only. During exclusive Run 2, record actual GPU UUID/driver/power scheme, inspect activity, save observations and confirm these fields. Never use this template as proof of quiet conditions."
+}

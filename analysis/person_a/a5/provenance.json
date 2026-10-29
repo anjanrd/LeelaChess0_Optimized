@@ -1,0 +1,57 @@
+{
+  "status": "verified provenance mismatch",
+  "saved_statistics": {
+    "path": "reports/C2-ln2-channel-maxima.npz",
+    "bytes": 9992,
+    "sha256": "d269a76b0989c2b9efffc4956faab592633141ca259694b057ff8e126af6249c"
+  },
+  "historical_model": {
+    "path": "reports/c1-s4-backup/s4.onnx",
+    "bytes": 105829506,
+    "sha256": "574f555e5aa2d6b49e319e268a2d572c640d802399246767f1ac58c7161893ec"
+  },
+  "selected_model": {
+    "path": "models/s4.onnx",
+    "bytes": 105829506,
+    "sha256": "24fd9a11bbc755962b98fab08dd49f9a721c797097dfb607183e27b7e76e1904"
+  },
+  "historical_recipe": {
+    "smoothquant": 0.5,
+    "percentile": 99.99,
+    "method": "percentile",
+    "granularity": "per-channel",
+    "n_calib": 512
+  },
+  "selected_recipe": {
+    "smoothquant": 0.7,
+    "percentile": 99.999,
+    "method": "percentile",
+    "granularity": "per-channel",
+    "n_calib": 512
+  },
+  "collection_log_witness": "Graph unchanged SHA256: models/s4.onnx 574f555e5aa2d6b49e319e268a2d572c640d802399246767f1ac58c7161893ec",
+  "backup_manifest": {
+    "path": "reports/c1-s4-backup/manifest.json",
+    "bytes": 863,
+    "sha256": "cec8f86c365e06e2f128f610c63e205cb7cd3d445aedad769507b31ea5302c48"
+  },
+  "historical_pair_check": {
+    "agrees": true,
+    "channels": 768,
+    "failed_channels": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0,
+    "rtol": 1e-05,
+    "atol": 1e-12
+  },
+  "wrong_current_pair_check": {
+    "agrees": false,
+    "channels": 768,
+    "failed_channels": 768,
+    "max_absolute_error": 1.6912038326263428,
+    "max_relative_error": 91.48397420238837,
+    "rtol": 1e-05,
+    "atol": 1e-12
+  },
+  "resolution": "Preserve historical pair; collect selected model on the same frozen calibration inputs."
+}

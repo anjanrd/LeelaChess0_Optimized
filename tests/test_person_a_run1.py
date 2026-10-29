@@ -1,10 +1,13 @@
 """Analysis regression checks; no engine, model inference or source mutation."""
 import importlib.util
 import json
+import copy
 from pathlib import Path
 import unittest
+from unittest.mock import patch
 
 import chess
+import numpy as np
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -16,6 +19,7 @@ def load(name,relative):
 
 RUN=load('person_a_run1','analysis/person_a/run1.py')
 READY=load('person_a_readiness','analysis/person_a/readiness.py')
+SMOOTH=load('person_a_smoothquant','analysis/person_a/smoothquant_diagnostic.py')
 
 
 class PersonARegression(unittest.TestCase):
@@ -67,6 +71,37 @@ class PersonARegression(unittest.TestCase):
         self.assertEqual({r['model'] for r in records},set(RUN.FRONTIER))
         self.assertTrue(all(int(r['n'])==2437 for r in records))
         self.assertNotIn('nps',records[0])
+
+    def test_historical_channels_belong_to_preserved_model_not_selected_model(self):
+        a=SMOOTH.load_arrays(SMOOTH.SAVED)
+        old=SMOOTH.pair_check(a['s4_raw'],a['s4_smoothed'],SMOOTH.inverse(SMOOTH.HISTORICAL))
+        wrong=SMOOTH.pair_check(a['s4_raw'],a['s4_smoothed'],SMOOTH.inverse(SMOOTH.CURRENT))
+        self.assertTrue(old['agrees'])
+        self.assertEqual(old['max_absolute_error'],0)
+        self.assertFalse(wrong['agrees'])
+        self.assertEqual(wrong['failed_channels'],768)
+
+    def test_current_collection_rejects_wrong_model_identity(self):
+        record=copy.deepcopy(SMOOTH.read(SMOOTH.OUT/'collection.json'))
+        record['sources'][0]['sha256']='0'*64
+        with patch.object(SMOOTH,'read',return_value=record):
+            with self.assertRaisesRegex(AssertionError,'identity changed'):
+                SMOOTH.validate_current()
+
+    def test_current_collection_requires_the_exact_recorded_multiplier(self):
+        a=SMOOTH.load_arrays(SMOOTH.COLLECTED)
+        a['smooth_inverse']*=2
+        with patch.object(SMOOTH,'load_arrays',return_value=a):
+            with self.assertRaisesRegex(AssertionError,"another model's multiplier"):
+                SMOOTH.validate_current()
+
+    def test_selected_channel_pair_passes_and_nonpositive_scale_is_rejected(self):
+        a,record=SMOOTH.validate_current()
+        self.assertEqual(record['pair_check']['failed_channels'],0)
+        self.assertEqual(record['calibration_positions'],512)
+        self.assertEqual(record['providers'],['CPUExecutionProvider'])
+        with self.assertRaisesRegex(AssertionError,'Invalid ranges/scales'):
+            SMOOTH.pair_check(a['s4_raw'],a['s4_smoothed'],np.zeros(768,dtype=np.float32))
 
 
 if __name__=='__main__':

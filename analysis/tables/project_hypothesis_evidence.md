@@ -5,7 +5,7 @@
 | Dense network fidelity and move correctness | verified for this cohort | T1-network.csv; F1; scores_test.json | printed priors/value and ceiling accuracy |
 | Search masks dense errors | verified descriptive finding | T1-search.csv; F2/F3; hard-lowbudget.csv | requested-node overshoot; saturated reference |
 | Swap head importance | inconclusive | policy-value-swap.csv; F4; swap_provenance.md | ties, two bodies, moves-left co-swap and numeric differences |
-| SmoothQuant activation illustration | DEFERRED A5 | blocker-A5.json | address before Run 2; no F12 result |
+| SmoothQuant activation illustration | verified selected-model example | F12; smoothquant_verification.json; a5/provenance.json; a5/collection.json | 101 build-time groups; one measured CPU layer on calibration inputs; no speed/accuracy claim |
 | 2:4 masks and sparse quality | verified masks/quality | sparse_audit.json; sparse-reconstruction.csv; sparse-move-errors.csv | hardware acceleration WAIT R1/R2 |
 | Measured model performance/roofline | static work ready; WAIT R1/R2 | roofline-operation-inventory.csv; roofline_contract.json | no measured peaks/timings supplied |
 | Fixed-time accuracy | existing matched data reviewed; R3 final alignment | timed-matched-review.csv; timed-matched-positions.csv | one discordance at 200ms; ceiling at 800ms; early stopping |

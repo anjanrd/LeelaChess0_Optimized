@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-30",
+  "branch": "anjan",
+  "workflow": "five-run takeover of remaining A+B work",
+  "scope_reference": "docs/takeover_runs.md",
+  "current_run": 1,
+  "authorized_execution": "new Run 1 only; no exclusive Run 2 start yet",
+  "runs": {
+    "1": {
+      "mode": "normal",
+      "status": "verified_preparation",
+      "verification": "reports/takeover/run1/verification.json"
+    },
+    "2": {
+      "mode": "exclusive",
+      "status": "awaiting_user_start_and_quiet_preflight",
+      "depends_on": [
+        "1"
+      ],
+      "estimated_hours": [
+        3,
+        7
+      ],
+      "reserve_hours": 8,
+      "manifest": "reports/takeover/run1/run2_jobs.json",
+      "handoff": "reports/takeover/run1/EXCLUSIVE_RUN_2.md"
+    },
+    "3": {
+      "mode": "normal",
+      "status": "pending_Run2_collected_evidence",
+      "depends_on": [
+        "2"
+      ],
+      "note": "Available analysis can proceed if known standalone profiling branch is explicitly deferred"
+    },
+    "4": {
+      "mode": "exclusive",
+      "status": "pending_Run3_frozen_match_size_and_reproduction_workspace",
+      "depends_on": [
+        "3"
+      ],
+      "estimate": "Use Run2 two-game pilot; provide duration and preparation reminder at Run3 handoff"
+    },
+    "5": {
+      "mode": "normal",
+      "status": "pending_Run4_and_all_retained_required_evidence",
+      "depends_on": [
+        "4"
+      ],
+      "note": "If required profiling remains deferred, insert exclusive repair/profiling before final sign-off"
+    }
+  },
+  "internal_handoffs": {
+    "R1": "imported profiling blocker; scoped PATH prepared, actual GPU validation pending",
+    "R2": "historical preliminary data preserved; new 28-trial measurement pending",
+    "R3": "existing matched timed review ready; canonical final alignment in Run3",
+    "R4": "pilot pending Run2; sizing Run3; production Run4; statistics Run5",
+    "R5": "systems/source preparation ready; fresh setup Run3, GPU reproduction Run4, final writing/package Run5"
+  },
+  "new_GPU_workloads_started": 0,
+  "global_PATH_or_power_settings_changed": false,
+  "process_termination_performed": false,
+  "commit_push_or_teammate_message_performed": false
+}

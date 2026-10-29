@@ -1,0 +1,141 @@
+{
+  "status": "passed",
+  "links": [
+    {
+      "document": "README.md",
+      "target": "updated_plan.md"
+    },
+    {
+      "document": "README.md",
+      "target": "STATUS.md"
+    },
+    {
+      "document": "README.md",
+      "target": "consolidation_context.md"
+    },
+    {
+      "document": "README.md",
+      "target": "AGENTS.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/runtime_notes.md"
+    },
+    {
+      "document": "README.md",
+      "target": "person_a_execution_plan.md"
+    },
+    {
+      "document": "README.md",
+      "target": "deliverables/report/person_a_sections.md"
+    },
+    {
+      "document": "README.md",
+      "target": "analysis/person_a/a5/closure.json"
+    },
+    {
+      "document": "README.md",
+      "target": "analysis/person_a/BEFORE_RUN_2.md"
+    },
+    {
+      "document": "README.md",
+      "target": "docs/takeover_runs.md"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/takeover/run1/verification.json"
+    },
+    {
+      "document": "README.md",
+      "target": "reports/takeover/run1/EXCLUSIVE_RUN_2.md"
+    },
+    {
+      "document": "README.md",
+      "target": "RUN_4060.md"
+    },
+    {
+      "document": "updated_plan.md",
+      "target": "person_a_execution_plan.md"
+    },
+    {
+      "document": "updated_plan.md",
+      "target": "analysis/person_a/run1/verification.json"
+    },
+    {
+      "document": "updated_plan.md",
+      "target": "analysis/person_a/a5/closure.json"
+    },
+    {
+      "document": "updated_plan.md",
+      "target": "docs/takeover_runs.md"
+    },
+    {
+      "document": "updated_plan.md",
+      "target": "reports/takeover/progress.json"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "docs/takeover_runs.md"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "updated_plan.md"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "analysis/person_a/run1/verification.json"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "analysis/person_a/a5/closure.json"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "analysis/person_a/run1/evidence_index.md"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "analysis/person_a/run1/claim_register.md"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "deliverables/report/person_a_sections.md"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "deliverables/completion-checklist.md"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "deliverables/reproduction_plan.md"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "deliverables/presentation/person_a_slides.md"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "deliverables/demo/recording_plan.md"
+    },
+    {
+      "document": "person_a_execution_plan.md",
+      "target": "analysis/person_a/BEFORE_RUN_2.md"
+    },
+    {
+      "document": "consolidation_context.md",
+      "target": "updated_plan.md"
+    },
+    {
+      "document": "consolidation_context.md",
+      "target": "README.md"
+    },
+    {
+      "document": "consolidation_context.md",
+      "target": "STATUS.md"
+    },
+    {
+      "document": "consolidation_context.md",
+      "target": "AGENTS.md"
+    }
+  ]
+}

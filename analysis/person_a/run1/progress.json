@@ -46,15 +46,63 @@
       }
     },
     "A5": {
-      "status": "deferred_user_authorized",
+      "status": "verified",
       "result": {
-        "error": "Saved s4_raw * graph smooth_inverse did not match saved s4_smoothed under rtol=1e-5, atol=1e-12 (or positivity prerequisite failed); cause not investigated after stop.",
-        "check": "np.all(inv>0) and np.allclose(values[\"s4_raw\"]*inv, values[\"s4_smoothed\"], rtol=1e-5, atol=1e-12)",
-        "inputs": [
-          "reports/C2-ln2-channel-maxima.npz",
-          "models/s4.onnx"
+        "groups": 101,
+        "groups_improved": 100,
+        "groups_not_improved": 1,
+        "channels": 768,
+        "groups_not_improved_details": [
+          {
+            "tensor": "/attn_body/embedding/reshape",
+            "ratio_before": 1.0,
+            "ratio_after": 1.2492252983716854,
+            "after_over_before": 1.2492252983716854,
+            "improved": false,
+            "consumers": "/attn_body/embedding/preprocess/matmul"
+          }
         ],
-        "next_action": "Read-only provenance/representation investigation requires authorization under repository stop rule."
+        "saved_mul_pair_agrees_with_graph": true,
+        "selected_recipe": {
+          "smoothquant": 0.7,
+          "percentile": 99.999,
+          "method": "percentile",
+          "granularity": "per-channel",
+          "n_calib": 512
+        },
+        "measured_example": {
+          "s4_raw": {
+            "max": 53.507041931152344,
+            "median": 7.907499093562365e-05,
+            "max_over_median": 676662.0052440269,
+            "live_channels": 768
+          },
+          "s4_smoothed": {
+            "max": 2.270639419555664,
+            "median": 0.0020073330961167812,
+            "max_over_median": 1131.1722124983905,
+            "live_channels": 768
+          }
+        },
+        "pair_check": {
+          "agrees": true,
+          "channels": 768,
+          "failed_channels": 0,
+          "max_absolute_error": 0.0,
+          "max_relative_error": 0.0,
+          "rtol": 1e-05,
+          "atol": 1e-12
+        },
+        "provenance": "analysis/person_a/a5/provenance.json",
+        "collection": "analysis/person_a/a5/collection.json",
+        "diagnosis": "Historical alpha-0.5 arrays were paired with the selected alpha-0.7 graph; historical pair verifies exactly against its preserved graph. New selected-model measurements now verify independently.",
+        "ratio_definitions": {
+          "groups": "original-build amax / max(median(all channel amax),1e-12); after derived from smoothing",
+          "saved_example": "selected s4 alpha=0.7, CPU, 512 calibration inputs; channel amax over positions/tokens before/after one Mul; median over all 768 channels"
+        },
+        "collection_elapsed_seconds": 8.22917010000674,
+        "quantized_upstream_differs_from_original": true,
+        "new_chess_search_or_gpu_performance_measurements": false
       }
     },
     "A6": {
@@ -141,7 +189,7 @@
         "report": "deliverables/report/person_a_sections.md",
         "claim_rows": 9,
         "verified_primary_references": 7,
-        "A5": "deferred; no activation claim",
+        "A5": "verified selected-model F12",
         "final_shared_report": "WAIT systems evidence and final integration"
       }
     },
@@ -152,15 +200,17 @@
         "slides": "prepared outline",
         "demo": "prepared recording plan",
         "reproduction": "prepared FP16 + s4 + sparse-path procedure; not executed",
-        "before_run2": "Address deferred A5 first; then validate Ritwik inputs",
-        "final_delivery": "WAIT A5 handling and R1\u2013R5 integration",
+        "before_run2": "A5 verified; validate Ritwik inputs",
+        "final_delivery": "WAIT R1\u2013R5 integration",
         "source_integrity_verified": true
       }
     }
   },
-  "run_status": "RUN1_INDEPENDENT_BLOCK_COMPLETE_A5_DEFERRED",
-  "verification_limits": "Five figures visually reviewed; A5/F12 deferred. R1/R2/R4/R5 measured/final delivery inputs wait for Ritwik; R3 needs final alignment. Fresh experimental reproduction/demo not executed.",
-  "A5_deferred_by_user": true,
-  "before_run2_reminder": "Address A5 first; surface analysis/person_a/BEFORE_RUN_2.md before starting Run 2.",
-  "verification_file": "analysis/person_a/run1/verification.json"
+  "run_status": "RUN1_INDEPENDENT_BLOCK_COMPLETE_A5_VERIFIED",
+  "verification_limits": "Six figures visually reviewed including F12; A5 uses a bounded CPU diagnostic on frozen calibration inputs. R1/R2/R4/R5 final evidence awaits Ritwik; R3 needs final alignment. Fresh experimental reproduction/demo not executed.",
+  "A5_deferred_by_user": false,
+  "before_run2_reminder": "A5 verified. Review Ritwik R1/R2/R4/R5 handoffs and R3 final alignment before Run 2.",
+  "verification_file": "analysis/person_a/a5/closure.json",
+  "A5_resolution_authorized_by_user": true,
+  "original_run1_verification_file": "analysis/person_a/run1/verification.json"
 }

@@ -1,0 +1,96 @@
+{
+  "branch": "anjan",
+  "tools": {
+    "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe": {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+      "bytes": 1796096,
+      "sha256": "3a437bdcb353fc264df317b9308ba589d29294695521909b459fbb72e918af50",
+      "architecture": "AMD64",
+      "imports": [
+        "onnxruntime.dll",
+        "cudart64_12.dll",
+        "KERNEL32.dll",
+        "MSVCP140.dll",
+        "MSVCP140_ATOMIC_WAIT.dll",
+        "VCRUNTIME140_1.dll",
+        "VCRUNTIME140.dll",
+        "api-ms-win-crt-runtime-l1-1-0.dll",
+        "api-ms-win-crt-heap-l1-1-0.dll",
+        "api-ms-win-crt-stdio-l1-1-0.dll",
+        "api-ms-win-crt-filesystem-l1-1-0.dll",
+        "api-ms-win-crt-string-l1-1-0.dll",
+        "api-ms-win-crt-convert-l1-1-0.dll",
+        "api-ms-win-crt-math-l1-1-0.dll",
+        "api-ms-win-crt-time-l1-1-0.dll",
+        "api-ms-win-crt-locale-l1-1-0.dll"
+      ]
+    },
+    "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe": {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+      "bytes": 1066016,
+      "sha256": "3365b7638aa9046ac19fe9fe917d092d69561368f2ee3d045f8da86e000caf93",
+      "architecture": "AMD64",
+      "imports": [
+        "KERNEL32.dll"
+      ]
+    },
+    "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_10.dll": {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_10.dll",
+      "bytes": 471953952,
+      "sha256": "324727055c3698c875de5462f0a3bb2f45a739903ae65ab4480c92e98935587f",
+      "architecture": "AMD64",
+      "imports": [
+        "USER32.dll",
+        "SHELL32.dll",
+        "ADVAPI32.dll",
+        "ole32.dll",
+        "KERNEL32.dll"
+      ]
+    },
+    "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_plugin_10.dll": {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_plugin_10.dll",
+      "bytes": 52735520,
+      "sha256": "db63b4f6be909c27929f36f93eae91a999ddacea4fba761e70d4465a4d8d87a5",
+      "architecture": "AMD64",
+      "imports": [
+        "nvinfer_10.dll",
+        "KERNEL32.dll"
+      ]
+    },
+    "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvonnxparser_10.dll": {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvonnxparser_10.dll",
+      "bytes": 2960928,
+      "sha256": "ba0f2387e2ffa2a54d609161ddd676bb9ded97ca498798dfc311abfb89b9889e",
+      "architecture": "AMD64",
+      "imports": [
+        "api-ms-win-core-errorhandling-l1-1-0.dll",
+        "api-ms-win-core-libraryloader-l1-2-0.dll",
+        "api-ms-win-core-processenvironment-l1-1-0.dll",
+        "api-ms-win-core-file-l1-1-0.dll",
+        "api-ms-win-core-string-l1-1-0.dll",
+        "api-ms-win-core-debug-l1-1-0.dll",
+        "api-ms-win-core-synch-l1-1-0.dll",
+        "api-ms-win-core-synch-l1-2-0.dll",
+        "api-ms-win-core-processthreads-l1-1-0.dll",
+        "api-ms-win-core-sysinfo-l1-1-0.dll",
+        "dbghelp.dll",
+        "KERNEL32.dll",
+        "api-ms-win-core-rtlsupport-l1-1-0.dll",
+        "api-ms-win-core-interlocked-l1-1-0.dll",
+        "api-ms-win-core-namedpipe-l1-1-0.dll",
+        "api-ms-win-core-timezone-l1-1-0.dll",
+        "api-ms-win-core-console-l1-1-0.dll",
+        "api-ms-win-core-heap-l1-1-0.dll",
+        "api-ms-win-core-localization-l1-2-0.dll"
+      ]
+    }
+  },
+  "scoped_child_PATH_membership_check_exit_code": 0,
+  "global_PATH_unchanged": true,
+  "GPU_validation": "PENDING exclusive Run 2",
+  "DLL_loaded_or_engine_started": false,
+  "disk_free_bytes": 543897034752,
+  "os_temp_outside_checkout": true,
+  "syzygy_files": 145,
+  "prior_A5_verified": true
+}

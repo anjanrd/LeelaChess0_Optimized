@@ -1,0 +1,16 @@
+{
+  "reviewer": "Codex final visual inspection via view_image",
+  "figure": "F12-outliers",
+  "size": [
+    2279,
+    927
+  ],
+  "formats": [
+    "png",
+    "pdf",
+    "svg"
+  ],
+  "png_sha256": "40fa831937a8ae22d3fac82e352dc0d731fdcc8400459119f4cdc74fe8604483",
+  "status": "passed: legible axes/legend/caption; no clipping or overlap; distinct derived/measured contexts; one worsening group retained",
+  "earlier_five_figure_hashes_unchanged": true
+}

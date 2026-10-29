@@ -1,0 +1,91 @@
+{
+  "date": "2026-10-30",
+  "branch": "anjan",
+  "head": "7f9bacc12b896ef6ad9421509fd0049f6ccf4051",
+  "starting_status": [
+    " M AGENTS.md",
+    " M LOG.md",
+    " M README.md",
+    " M STATUS.md",
+    " M analysis/person_a/BEFORE_RUN_2.md",
+    " M analysis/person_a/README.md",
+    " M analysis/person_a/documents_run1.py",
+    " M analysis/person_a/plotting.py",
+    " M analysis/person_a/run1.py",
+    " M analysis/person_a/run1/claim_register.md",
+    " M analysis/person_a/run1/progress.json",
+    " M analysis/tables/project_hypothesis_evidence.md",
+    " M consolidation_context.md",
+    " M deliverables/completion-checklist.md",
+    " M deliverables/demo/recording_plan.md",
+    " M deliverables/presentation/person_a_slides.md",
+    " M deliverables/report/person_a_sections.md",
+    " M deliverables/reproduction_plan.md",
+    " M person_a_execution_plan.md",
+    " M tests/test_person_a_run1.py",
+    " M updated_plan.md",
+    "?? analysis/figures/F12-outliers.pdf",
+    "?? analysis/figures/F12-outliers.png",
+    "?? analysis/figures/F12-outliers.svg",
+    "?? analysis/person_a/A5_resolution_plan.md",
+    "?? analysis/person_a/a5/",
+    "?? analysis/person_a/run1/smoothquant_findings.md",
+    "?? analysis/person_a/run1/smoothquant_verification.json",
+    "?? analysis/person_a/smoothquant_diagnostic.py",
+    "?? analysis/tables/smoothquant-channels.csv",
+    "?? analysis/tables/smoothquant-groups.csv"
+  ],
+  "frozen_source_files": 350,
+  "frozen_source_bytes": 8588424153,
+  "source_failures": [],
+  "preserved_prior_records": [
+    {
+      "path": "analysis/person_a/run1/source_manifest.json",
+      "bytes": 59510,
+      "sha256": "8e9261f5878d1a570aee30d7b30a676c414e075b876e77537065379418218bb7"
+    },
+    {
+      "path": "analysis/person_a/run1/blocker-A5.json",
+      "bytes": 1522,
+      "sha256": "c25e0ee518635df24a1c6fff66ed16ef477f3228bd44a8712b2c00770fd21d89"
+    },
+    {
+      "path": "analysis/person_a/a5/collection.json",
+      "bytes": 2051,
+      "sha256": "c7ca4e13636e87a491cf82a944e63f3e840e22944f2f5a67d883bf4e7f7b5407"
+    },
+    {
+      "path": "analysis/person_a/a5/closure.json",
+      "bytes": 4275,
+      "sha256": "5b730366db8a8991d535a91649113a6016a7425bb698e3ae000c3cdec5afb38e"
+    },
+    {
+      "path": "analysis/person_a/a5/current-channel-maxima.npz",
+      "bytes": 9996,
+      "sha256": "73c2ba365772de2a8f46fdeaff7693e4e55b9ccdde80fce6e6b0e1a47734982e"
+    },
+    {
+      "path": "analysis/person_a/a5/output_manifest.json",
+      "bytes": 16760,
+      "sha256": "cc15969fcf2a5d828f32b8192a9453db61e17e0c874f27f7dda1b6a5d3ff0c7c"
+    },
+    {
+      "path": "config.json",
+      "bytes": 1029,
+      "sha256": "99d8401ee4e35244cfad4bd5f0985036ea09723e6e0b70de6255f71fc8c84327"
+    },
+    {
+      "path": "config.example.json",
+      "bytes": 1029,
+      "sha256": "99d8401ee4e35244cfad4bd5f0985036ea09723e6e0b70de6255f71fc8c84327"
+    }
+  ],
+  "disk": {
+    "total": 1023319994368,
+    "used": 478472081408,
+    "free": 544847912960
+  },
+  "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26200-SP0",
+  "new_GPU_workloads": 0
+}

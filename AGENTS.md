@@ -30,7 +30,15 @@ Before editing/running the pipeline, read `docs/runtime_notes.md`; it retains th
 - Fresh clones need both code and the declared artifact bundle, plus machine-specific runtime setup. An ignored artifact is not deleted or automatically uploaded.
 - Fresh-clone Python environments must be created locally; do not copy a virtual environment between machines. Consolidation smoke checks are not full model inference, profiling repair or a fresh experimental reproduction.
 
-## Before autonomous Run 2
+## Before the original Person A autonomous Run 2
 
-- The user deferred A5 while authorizing the remaining Run 1 work. Before starting Run 2, remind Anjan to address it and read `analysis/person_a/BEFORE_RUN_2.md`. Its saved-data consistency failure is not resolved by the deferral.
+- The user initially deferred A5, then authorized its resolution. A5/F12 is verified; read `analysis/person_a/BEFORE_RUN_2.md` and `analysis/person_a/a5/closure.json` for the model-version diagnosis and completion evidence. Preserve the original failure history. A5 needs a reminder again only if its verified status/evidence is no longer valid.
 - Check `analysis/person_a/run1/progress.json` and Ritwik's required handoffs. Do not start Run 2 until A5 is resolved or the user explicitly decides how to handle it. `analysis/person_a/readiness.py` reports this reminder without launching any experiment.
+
+## Current five-run takeover (30 October 2026)
+
+- The user now wants Codex to perform the remaining Person B work too, under the accepted five-run plan in `docs/takeover_runs.md`. It absorbs the former A-side Run 2; R1–R5 become internal evidence checkpoints, rather than an external wait for Ritwik. The old A readiness command still describes final integration and does not gate the new measurement-collection Run 2.
+- Only new Run 1 was authorized/executed so far. New Runs 2 and 4 require exclusive laptop use and an explicit start from the user. Stop after the authorized run. At every handoff whose next run is exclusive, repeat save/AC/power/cooling/pause-other-work preparations and give an updated duration estimate. Read `reports/takeover/run1/EXCLUSIVE_RUN_2.md` before the next run.
+- Work on `anjan`, preserve existing uncommitted A5 work, and consult `reports/takeover/progress.json`. `execution/` adds checked wrappers around the unchanged imported pipeline; settings/diff note: `execution/protocol.json` and `docs/takeover_protocol_note.md`.
+- The first exclusive GPU probe may use the scoped TensorRT lib PATH fix. Only the exact known plugin-open error can defer its profiling branch while independent lc0 jobs continue under the approved plan. Required profiling deliverables stay pending. Every other new failure follows the stop/log rule.
+- Normal runs allow the user's other work and must not launch GPU workloads or terminate applications. In exclusive runs, close only identified nonessential user jobs after work is saved; retain OS/security/drivers/Codex. Do not infer a quiet machine from session flags alone; inspect and log real conditions.

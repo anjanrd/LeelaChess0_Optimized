@@ -106,13 +106,15 @@ def outliers(groups,channels):
     axes[0].plot(bounds,bounds,'--',color='gray',linewidth=1)
     axes[0].set_xscale('log');axes[0].set_yscale('log');axes[0].set_xlim(bounds);axes[0].set_ylim(bounds)
     axes[0].set_xlabel('Before: max / median channel maximum');axes[0].set_ylabel('After: max / median channel maximum')
-    axes[0].set_title(f'Build-time rescaling summary: all {len(groups)} groups')
+    axes[0].set_title(f'Selected alpha 0.7: all {len(groups)} build-time groups')
+    axes[0].text(.04,.96,f'{int((after<before).sum())} improve; {int((after>=before).sum())} worsens',
+                 transform=axes[0].transAxes,va='top',fontsize=9)
     order=np.argsort([-r['s4_raw'] for r in channels])
     for key,label,color in [('s4_raw','s4 before explicit Mul','#172b4d'),('s4_smoothed','s4 after explicit Mul','#198754')]:
         axes[1].plot(range(len(channels)),[channels[i][key] for i in order],label=label,color=color,linewidth=1.2)
     axes[1].set_yscale('log');axes[1].set_xlabel('Channel rank by before-Mul maximum');axes[1].set_ylabel('Maximum absolute activation')
-    axes[1].set_title('Saved matched 768-channel example: encoder14/ln2');axes[1].legend(fontsize=8)
+    axes[1].set_title('Selected s4: measured encoder14/ln2, 768 channels');axes[1].legend(fontsize=8)
     for ax in axes:ax.grid(alpha=.2)
     fig.suptitle('F12 · SmoothQuant rescaling: group summary and matched channel example')
-    save(fig,'F12-outliers','Sources: smoothquant-groups.csv, smoothquant-channels.csv. Left: original-build statistics and derived rescaling;\n'
-         'right: saved within-s4 measurements. Upstream quantization differs from original FP32; contexts are not pooled.')
+    save(fig,'F12-outliers','Sources: smoothquant-groups.csv, smoothquant-channels.csv; alpha 0.7 / percentile 99.999. Left: build-time derived ratios.\n'
+         'Right: matched CPU measurements on 512 unchanged calibration inputs. Contexts are distinct; no speed/accuracy claim.')

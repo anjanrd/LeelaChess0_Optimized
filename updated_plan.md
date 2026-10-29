@@ -1,10 +1,12 @@
 # Unified BT3 INT8 project plan
 
-Version 2.1 — 29 October 2026. Owners: Person A (Anjan, model/analysis) and Person B (Ritwik, systems/experiments).
+Version 2.3 — 30 October 2026. Original roles: Person A (Anjan, model/analysis) and Person B (Ritwik, systems/experiments). Anjan/Codex now executes the remaining work of both roles.
 
 This is the current plan for the shared repository. It supersedes the two earlier roadmaps for future work. The original proposal and plan remain under `archive/person-a-week1/`; the imported pipeline documentation remains under `archive/person-b-import/`.
 
-Person A Run 1's independent block is complete. See [person_a_execution_plan.md](person_a_execution_plan.md) and [verification](analysis/person_a/run1/verification.json). **A5/F12 is user-deferred: remind Anjan to address it before Run 2.** Final systems-dependent conclusions and shared delivery remain pending.
+Person A Run 1's independent block is complete. See [person_a_execution_plan.md](person_a_execution_plan.md), [original Run 1 verification](analysis/person_a/run1/verification.json) and [subsequent A5 closure](analysis/person_a/a5/closure.json). **A5/F12 is resolved and verified.** Final systems-dependent conclusions and shared delivery remain pending.
+
+The accepted [five-run takeover](docs/takeover_runs.md) replaces the external wait for Ritwik and includes the former Person A autonomous Run 2. New Run 1 normal preparation is complete; GPU experiments are not yet run. Week-wise responsibilities below remain the deliverable mapping; completed work is not repeated. Current takeover checkpoint: [progress](reports/takeover/progress.json).
 
 ## Objective and interpretation
 
@@ -69,7 +71,7 @@ Status definitions:
 | W3.4 | 3 | **In progress:** existing 50-opening book/pairing/adjudication review documented; actual match interpretation WAIT R4. | **Pending:** runtime estimate, final pair count, complete match and Elo/CI. | `eval/match.py`; final match summary and PGN. Dependency: stable benchmark environment and frozen models. |
 | W3.5 | 3 | **In progress:** active-graph 195-operation geometry, 164/31 fixed/dynamic split and work/traffic method verified; measured contribution WAIT R1. | **In progress, blocked:** detailed TensorRT profiles, precision/fallback audit, sparse/dense engines, measured compute/bandwidth peaks and roofline timing inputs. | Last run failed loading `nvinfer_plugin_10.dll`. Resolve and verify before resuming this stage. Preserve failure evidence. |
 | W3.6 | 3 | **In progress:** eight-model quality coordinates and comparison rules ready; final speed/quality discussion WAIT R1/R2. | **In progress:** initial speed/GPU energy and four-point batch sweep complete. Obtain comparable speed evidence for every model placed on the frontier; repeat headline measurements and summarize medians/variability. | Frontier model set: fp16,s1,s2,s3,s4,s4aa,s0,s1sp. Separate lc0 speed from standalone sparse-enabled trtexec probes; never mix them on one axis without labelling. |
-| W4.1 | 4 | **In progress:** F1–F4 and hard supplement generated/visually checked; F12 deferred by user until A5 is addressed. | **In progress:** reduced batch plot exists. Finish timed, match, hardware/roofline, energy and frontier figures. | Deliverable mapping below; use the frozen cohorts, report uncertainty and avoid claims unsupported by saturated data. |
+| W4.1 | 4 | **In progress:** F1–F4, F12 and hard supplement generated/visually checked; frontier quality ready, measured speeds await B. | **In progress:** reduced batch plot exists. Finish timed, match, hardware/roofline, energy and frontier figures. | Deliverable mapping below; use the frozen cohorts, report uncertainty and avoid claims unsupported by saturated data. |
 | W4.2 | 4 | **In progress:** evidence-linked A report draft and checked reference scope ready; final dependent discussion/shared integration pending. | **Pending:** harness/runtime, benchmarking, timed/strength and hardware sections. | Final report sources and rendered report. |
 | W4.3 | 4 | **Pending, shared:** abstract/introduction, related work, discussion/limitations/conclusion, presentation and playing demo. | **Pending, shared.** | Include accepted scope reductions and distinguish throughput from demonstrated strength. |
 | W4.4 | 4 | **Pending, shared:** final split-integrity closure, model/data identities, report-number/citation audit, artifact packaging and fresh reproduction. | **Pending, shared:** verify usable setup/resume instructions and hardware-specific engine rebuilding. | Resolve/document the known small cross-split symmetry overlap without overwriting history. Validate the revised reproduction package; the consolidation smoke check is not a full experimental reproduction. |
@@ -83,6 +85,18 @@ Status definitions:
 4. Freeze the final experimental inputs/results (C3). Then complete figures, writing, reproducibility, package, presentation/demo and the C4 checklist.
 
 Do not rerun `tbset`, `calib`, selection or all-model builds merely to consolidate. A changed recipe, cohort or search protocol is a new version and must be agreed/documented before execution.
+
+## Current autonomous execution sequence
+
+| New run | Mode | Output / dependency gate |
+|---|---|---|
+| 1 | Normal — completed preparation | Original evidence verified; checked wrappers, session/resource rules, manifest and offline tests ready. Actual GPU PATH fix unverified. |
+| 2 | Exclusive — pending | Scoped PATH probe; profiles/sparse/ceilings (R1), eight-model repeated benchmarks/captures (R2), two-game match estimate. Known DLL failure may defer only profiling; do not mark those deliverables complete. |
+| 3 | Normal — pending | Audit R1/R2; finish available A6/A7/frontier, canonical existing timed report (R3); freeze match size before production; prepare fresh environment/subset. |
+| 4 | Exclusive — pending | Fresh FP16/s4/sparse GPU checks, paired production match (R4), demo after measurements and runtime/reproduction evidence (R5). |
+| 5 | Normal — pending | Final paired statistics, both roles' writing/figures/report/deck, package/restore/reproduction audit and C4. Requires every retained item; unresolved profiling needs a later exclusive repair block first. |
+
+Before each exclusive run, remind Anjan to save/pause work, use AC and consistent power/cooling, close competing jobs, and state an updated duration estimate. New Run 2's initial planning range is3–7hours; reserve up to8hours because engine compilation is unmeasured. No production match size is fixed by this estimate. Details and procedural differences: `docs/takeover_runs.md`, `docs/takeover_protocol_note.md` and `execution/protocol.json`.
 
 ## Updated deliverable register
 
@@ -109,8 +123,8 @@ Paths below are intended final locations; a pending path does not imply a file a
 | F9 | Nodes/s versus four batch settings | B | **Completed** | `reports/c3_hw/batch_sweep/sweep.png`, `.csv`, `.json`; optional publication styling does not require rerunning. |
 | F10 | Fixed-time accuracy versus batch size | — | **Omitted** | Not measured by the reduced speed/energy sweep. |
 | F11 | Headline accuracy-versus-nodes/s frontier for all retained single-body models | A+B | **Pending** | Comparable per-model speed plus `analysis/figures/F11-frontier.*`. State accuracy condition, actual nodes and batch setting explicitly; exclude double-body swaps. |
-| F12 | Matched activation-channel outliers before/after SmoothQuant | A | **Deferred by user — A5** | Saved arrays failed the current-model consistency check. Address before Run 2; no F12 generated. |
-| D4 | Final report with methods, results and limitations | A+B | **In progress — A draft ready** | deliverables/report/person_a_sections.md plus checked references; A5 and systems-dependent/shared final integration remain. |
+| F12 | Matched activation-channel outliers before/after SmoothQuant | A | **Completed** | analysis/figures/F12-outliers.{png,pdf,svg}; final alpha-0.7 model, matched CPU measurements on 512 frozen inputs; 101-group build summary kept separate. Provenance and original mismatch preserved. |
+| D4 | Final report with methods, results and limitations | A+B | **In progress — A draft ready** | deliverables/report/person_a_sections.md plus checked references and F12; systems-dependent/shared final integration remains. |
 | D5 | Presentation | Shared | **Pending** | `deliverables/presentation/`. |
 | D6 | Short INT8-lc0 playing demo with visible nodes/s | Shared | **Pending** | `deliverables/demo/`. |
 | D7 | Portable artifact inventory/package and fresh reproduction | Shared | **Pending** | Small metadata in Git; large binaries/logs in a checksum-verified artifact bundle. One fresh reproduction including FP16, best PTQ and sparse outputs or their documented runtime limitation. |
@@ -135,3 +149,5 @@ The main model implementations do not need to be redone. Person A's remaining wo
 |---|---|---|
 | 2026-10-29 | 2.0 | Adopt LC0-B's conventions/trimmed PTQ pipeline; credit all completed work regardless of producer; incorporate per-model frontier speed, matched SQ figure, final evidence checklist and explicit F8/F10 omissions. Consolidate both repositories without executing new research experiments. |
 | 2026-10-29 | 2.1 | Execute Person A Run 1 independent analysis on anjan; verify tables/figures, sparse masks, geometry, timed/opening review and report/delivery preparation. User explicitly deferred A5/F12; reminder required before Run 2. No scientific protocol/model change or new engine/GPU experiment. |
+| 2026-10-29 | 2.2 | User authorized A5 resolution. Established C1/C2 model-version mismatch; collected matched final-model activations on CPU using the unchanged 512 calibration inputs; verified scaling, completed F12 and refreshed report/status. No quantizer, scorer, model, calibration or scientific protocol change; no new chess/search/GPU performance experiment. Run 2 still awaits reviewed B inputs. |
+| 2026-10-30 | 2.3 | User takes over remaining B work through five autonomous runs, including old A Run2. Execute only new normal Run1: preserve originals, prepare scoped DLL PATH, declared repeated operating points, checked/resumable wrappers and resource controls; 40 offline tests. No imported quant/eval/hw edits, model/scorer/cohort changes, GPU experiment, global PATH/power change or process termination. Exclusive Run2 awaits user start. |

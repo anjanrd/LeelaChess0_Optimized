@@ -1,0 +1,57 @@
+{
+  "groups": 101,
+  "groups_improved": 100,
+  "groups_not_improved": 1,
+  "channels": 768,
+  "groups_not_improved_details": [
+    {
+      "tensor": "/attn_body/embedding/reshape",
+      "ratio_before": 1.0,
+      "ratio_after": 1.2492252983716854,
+      "after_over_before": 1.2492252983716854,
+      "improved": false,
+      "consumers": "/attn_body/embedding/preprocess/matmul"
+    }
+  ],
+  "saved_mul_pair_agrees_with_graph": true,
+  "selected_recipe": {
+    "smoothquant": 0.7,
+    "percentile": 99.999,
+    "method": "percentile",
+    "granularity": "per-channel",
+    "n_calib": 512
+  },
+  "measured_example": {
+    "s4_raw": {
+      "max": 53.507041931152344,
+      "median": 7.907499093562365e-05,
+      "max_over_median": 676662.0052440269,
+      "live_channels": 768
+    },
+    "s4_smoothed": {
+      "max": 2.270639419555664,
+      "median": 0.0020073330961167812,
+      "max_over_median": 1131.1722124983905,
+      "live_channels": 768
+    }
+  },
+  "pair_check": {
+    "agrees": true,
+    "channels": 768,
+    "failed_channels": 0,
+    "max_absolute_error": 0.0,
+    "max_relative_error": 0.0,
+    "rtol": 1e-05,
+    "atol": 1e-12
+  },
+  "provenance": "analysis/person_a/a5/provenance.json",
+  "collection": "analysis/person_a/a5/collection.json",
+  "diagnosis": "Historical alpha-0.5 arrays were paired with the selected alpha-0.7 graph; historical pair verifies exactly against its preserved graph. New selected-model measurements now verify independently.",
+  "ratio_definitions": {
+    "groups": "original-build amax / max(median(all channel amax),1e-12); after derived from smoothing",
+    "saved_example": "selected s4 alpha=0.7, CPU, 512 calibration inputs; channel amax over positions/tokens before/after one Mul; median over all 768 channels"
+  },
+  "collection_elapsed_seconds": 8.22917010000674,
+  "quantized_upstream_differs_from_original": true,
+  "new_chess_search_or_gpu_performance_measurements": false
+}

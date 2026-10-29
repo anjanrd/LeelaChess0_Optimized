@@ -1,0 +1,1974 @@
+{
+  "schema_version": 1,
+  "output": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2",
+  "tools": {
+    "lc0": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+    "trtexec": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+    "nsys": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe"
+  },
+  "sources": [
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\cublas64_12.dll",
+      "bytes": 102518272,
+      "sha256": "90052a83efd1b57a8e3616a6590b335855f81b814a4f16eecb7b5bf6d1b1d4eb"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\cublasLt64_12.dll",
+      "bytes": 668669952,
+      "sha256": "c3a05ea244c937314afec09f87b91f814c7e27977681f6c67eb51bb06ced3a4a"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\cudart64_12.dll",
+      "bytes": 583680,
+      "sha256": "760c38928bbe5759f7b31ed6692599eb7ec83cedd5702e84c2b72028a89837e1"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\cudnn64_9.dll",
+      "bytes": 266352,
+      "sha256": "98461c2e24270b75c6d4767ff469c244d7f7c91cb3d9c9ac76d497510d7d9c5f"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\cudnn_graph64_9.dll",
+      "bytes": 2441248,
+      "sha256": "41f57d2b475bbe5bd10095c9529bbd58711c71cca984bf13bfe813ee89d9b949"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+      "bytes": 1796096,
+      "sha256": "3a437bdcb353fc264df317b9308ba589d29294695521909b459fbb72e918af50"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\nvinfer_10.dll",
+      "bytes": 471953952,
+      "sha256": "324727055c3698c875de5462f0a3bb2f45a739903ae65ab4480c92e98935587f"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\nvinfer_builder_resource_10.dll",
+      "bytes": 1791236128,
+      "sha256": "1afb85570dc76408b08dbaf774243e0d8d90558fa302242ccbfb714c23348b92"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\nvinfer_plugin_10.dll",
+      "bytes": 52735520,
+      "sha256": "db63b4f6be909c27929f36f93eae91a999ddacea4fba761e70d4465a4d8d87a5"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\nvonnxparser_10.dll",
+      "bytes": 2960928,
+      "sha256": "ba0f2387e2ffa2a54d609161ddd676bb9ded97ca498798dfc311abfb89b9889e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\onnxruntime.dll",
+      "bytes": 16468024,
+      "sha256": "f722dd91a311b9fa4b7f2341d22c379a72fb7bc5b639df18b64821f23cdde14b"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\onnxruntime_providers_cuda.dll",
+      "bytes": 322615840,
+      "sha256": "2baf389c51fb3996bee2eb94126a7b0f36a6871053501fe8b38222504560c0f8"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\onnxruntime_providers_shared.dll",
+      "bytes": 22048,
+      "sha256": "7de6659e55a0e02a8e7ca94ab2864d0e6ea59add87c3e947e8990229ae7f5e3a"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\onnxruntime_providers_tensorrt.dll",
+      "bytes": 799792,
+      "sha256": "eef5eb5fd81a0397dc09281623fc8c77906e8d6dd6d6a9bcb2db5d1afd7042c7"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+      "bytes": 46842432,
+      "sha256": "e6111cf28f0e001caded782c4bc189ec58dc6cb75c7923fa5606eb3bd550e825"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+      "bytes": 1066016,
+      "sha256": "3365b7638aa9046ac19fe9fe917d092d69561368f2ee3d045f8da86e000caf93"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_10.dll",
+      "bytes": 471953952,
+      "sha256": "324727055c3698c875de5462f0a3bb2f45a739903ae65ab4480c92e98935587f"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_builder_resource_10.dll",
+      "bytes": 1791236128,
+      "sha256": "1afb85570dc76408b08dbaf774243e0d8d90558fa302242ccbfb714c23348b92"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_dispatch_10.dll",
+      "bytes": 630816,
+      "sha256": "81231daae1e0205f8636f9634ac6ab70f9855ee5d349016d99f1a7fa2cbbf5b5"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_lean_10.dll",
+      "bytes": 46701600,
+      "sha256": "9ceb01914d74ec43dc6533a5fff90dcdbaa8620e1ded8d088dd494cb83b67fe7"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_plugin_10.dll",
+      "bytes": 52735520,
+      "sha256": "db63b4f6be909c27929f36f93eae91a999ddacea4fba761e70d4465a4d8d87a5"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_vc_plugin_10.dll",
+      "bytes": 578592,
+      "sha256": "4f1085ec4412f8a67673d85b38f14760c4b59584744880a8eef3babc93e0a784"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvonnxparser_10.dll",
+      "bytes": 2960928,
+      "sha256": "ba0f2387e2ffa2a54d609161ddd676bb9ded97ca498798dfc311abfb89b9889e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+      "bytes": 274712,
+      "sha256": "21bb438c0d4a6f1f164b9a646f6ee000340185e5871180aec06db8d3f07c0082"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\common.py",
+      "bytes": 5314,
+      "sha256": "3371debc4cfcab5656c7cdfcd18ffcab2c7bbd2f94fbaf57f3b545ec81b71a4b"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\config.json",
+      "bytes": 1029,
+      "sha256": "99d8401ee4e35244cfad4bd5f0985036ea09723e6e0b70de6255f71fc8c84327"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\data\\calib.npz",
+      "bytes": 235353,
+      "sha256": "e8f923b57d9d3131c7de6a569f55edc09eafff6aa62ff2f6c2f1518675bb6522"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\eval\\lc0uci.py",
+      "bytes": 8619,
+      "sha256": "160265fc12d2e8219a2c89ce0de937c99fcca58362989cf6855174942aaf7ccd"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\eval\\match.py",
+      "bytes": 13921,
+      "sha256": "4a8e209bf47d8663a5db0ef10d88e11b4f4f03ecfc1539bf3c813a788b6d0cf3"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\eval\\quick_compare.py",
+      "bytes": 3428,
+      "sha256": "9799c17e71fe0531c1c43954b7b45c49ed68586972506fb5e672a8114fe0e887"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\eval\\run_study.py",
+      "bytes": 9360,
+      "sha256": "651650030b856d7ebb4a383ef84ecbc87bf6af9ad3121810cb9df0bdf76ea1e3"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\eval\\score.py",
+      "bytes": 13125,
+      "sha256": "ff716f22808fa8eb91801a65617af7ebf144bce7a3d6f7dd7a8dba9708680c35"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\__init__.py",
+      "bytes": 79,
+      "sha256": "f28ffe0dab6290d2a39a2984cadf9c4c0003da840db527a109c1c876eec58ee1"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\benchmark.py",
+      "bytes": 6362,
+      "sha256": "9b411a2218cdef0d7c7bef3b0becde78d3bcf9d91af611effd38f425080f2279"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\gpu_job.py",
+      "bytes": 6389,
+      "sha256": "a1a70ca1071307d4d274a2980b490e68622e6bd8b6ae316b6ce50c849b5cacfe"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\match_runner.py",
+      "bytes": 11226,
+      "sha256": "02ce3da62773dad82ae464ff1ad4e9849ca010b2a8dab80026fae5b1a22e7c82"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\prepare.py",
+      "bytes": 9776,
+      "sha256": "258e68af9f418b8e480c81c1f41897b98bee0d9cef52bbeb17240bc410a819be"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\protocol.json",
+      "bytes": 2774,
+      "sha256": "cce98655e5b53a954e6e4ac7603908d0ee8a33ff35e04667338f80fe70bc62cd"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\resources.py",
+      "bytes": 6535,
+      "sha256": "f9f38c5ab4e97e14375ef39f8cb203ba4090d993312a3858c0f5d8b4c7b4c2fc"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\run_jobs.py",
+      "bytes": 8006,
+      "sha256": "29fc83b00b6a7b16535d1d7abfd88ed7d062cd1d64d2e4c9e22c681913372ac6"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\support.py",
+      "bytes": 4915,
+      "sha256": "feabad3f52a6ac2ac84327fd0b2ea74cb047d3525e20b003c24d0f52740b1b61"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\hw\\batch_sweep.py",
+      "bytes": 4589,
+      "sha256": "5ecfb3649cec9852049a986ead8798b252261a1a1e76a5815a498b145d710428"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\hw\\bench.py",
+      "bytes": 8501,
+      "sha256": "58fa0a84167fa0a04d2bb790aff5e5c452431e73d0fe2e394aed1aee6f229333"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\hw\\energy.py",
+      "bytes": 5603,
+      "sha256": "fd3cf8ba572f5238736093edf1ccc5936c597f00dadba4beb848b9b33fc6efc0"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\hw\\roofline.py",
+      "bytes": 13131,
+      "sha256": "134cd1a8da596ab36b24066ca540120a7072db369d87b0364b1096d998aa59cf"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\hw\\trt_layers.py",
+      "bytes": 11706,
+      "sha256": "220cde28889d261a528d37f80b80bbb03cd47f01edb5c3f7f60ccd9d7e0a14b7"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\bt3_fp32.onnx",
+      "bytes": 410354293,
+      "sha256": "937d5ac3d1ce9daafc7858f54166787924680c0c9c4aaab94d438402430db2b9"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz",
+      "bytes": 294605128,
+      "sha256": "83d01b5bff0891e6e7be18b23ef16193a90c5d7969ddcd053fd11cb3a4542135"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s0.json",
+      "bytes": 50083,
+      "sha256": "f80ca884cfde80a33b804fbc20ba3e8f15b414251567ad1409e5b75a290c70c7"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s0.onnx",
+      "bytes": 105829506,
+      "sha256": "8871c0bd6cb9101b02271643dd06bd3b3b78ce0b9372103d9e2e7b2e1b4d5170"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s0.pb.gz",
+      "bytes": 69978207,
+      "sha256": "01976840b4de5de2a9299ecfda97fc9c56c626eb7e6a79c48f64aaf526d3afd4"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s1.json",
+      "bytes": 458,
+      "sha256": "ce22366ecf146039190c098494fb0ed42bbe33ad6bac1872bff9103aa61f1900"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s1.onnx",
+      "bytes": 104487495,
+      "sha256": "3fb946f7df05d6079e9c5225fa17a358900a2debce462753f6d421796d25578a"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s1.pb.gz",
+      "bytes": 71716055,
+      "sha256": "9d714319f799ae8a19b0809d6380f3ec819e02704af52587dbbdc1fdc3e08b1f"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.json",
+      "bytes": 49979,
+      "sha256": "686060e0bce1604e3d8cf4f4a54b2ab2b04a4d64426cfc008d8770e342d6e64e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.onnx",
+      "bytes": 105829506,
+      "sha256": "6cee555e1c6199bf2960e6862ffe24c45d346fe88ad4321277a6da055dce348a"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.pb.gz",
+      "bytes": 69089577,
+      "sha256": "b3a020e0fda20925744f35b2540872f54deeec31dcb9f7229c67db80399d5ec9"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s2.json",
+      "bytes": 459,
+      "sha256": "953c354802798befc954ac27e4bf26bd6bf2236554ef1bb0f4cdc2d2939ef57e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s2.onnx",
+      "bytes": 105424621,
+      "sha256": "02c5ac09362f62b80ab0f18a279a38f1e2d2c60db778b936fbda34ab753f1b54"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s2.pb.gz",
+      "bytes": 95037093,
+      "sha256": "b99af74303433a86d15ae39b6a805a2b8f156e2c59edf906bed70e7ad6bc97ab"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s3.json",
+      "bytes": 30062,
+      "sha256": "029176200387abe1cbbd99b87ce6ba6ebee9461824411cee367d81acbe11b54d"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s3.onnx",
+      "bytes": 105424621,
+      "sha256": "60c283e77f04ace1b71873c6ecbddd601d6d22a1ad01b5156dbd2677b3fb70ff"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s3.pb.gz",
+      "bytes": 95037368,
+      "sha256": "d43dba92a9ac11da200b823ac8eb8ba9fb9ce3ecb31ada99d5561b100bd78364"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.json",
+      "bytes": 50028,
+      "sha256": "b75628f2384aa6e576d26190907fae6b6fde44e0a9b5aaa8b4209b1924249e9d"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.onnx",
+      "bytes": 105829506,
+      "sha256": "24fd9a11bbc755962b98fab08dd49f9a721c797097dfb607183e27b7e76e1904"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz",
+      "bytes": 90915493,
+      "sha256": "b556b45cab302ecf893c4afcd932c3df51358004a14f6e1ec9ef99fb21f75abb"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s4aa.json",
+      "bytes": 60010,
+      "sha256": "ef5d36ce1d2d25406b381ca196d9b17f6c7c64de72dba90191ececd5d1faa937"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s4aa.onnx",
+      "bytes": 105880615,
+      "sha256": "f7992eba5dda26b64d1a5ebd57d756aec8c053bc0e08f95de5a78a54e98f7b82"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s4aa.pb.gz",
+      "bytes": 90921041,
+      "sha256": "6445a8bdf4fde85121c2c1dcef3babd9e62b23858444be3ac9c9d6b36b9bb284"
+    }
+  ],
+  "jobs": [
+    {
+      "id": "trt-probe",
+      "kind": "probe",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "probe",
+        "--trtexec",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "profile-fp16",
+      "kind": "profile",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "profile",
+        "--onnx",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\bt3_fp32.onnx",
+        "--trtexec",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": true,
+      "depends_on": [
+        "trt-probe"
+      ]
+    },
+    {
+      "id": "profile-s4",
+      "kind": "profile",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "profile",
+        "--onnx",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.onnx",
+        "--trtexec",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+        "--int8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": true,
+      "depends_on": [
+        "trt-probe"
+      ]
+    },
+    {
+      "id": "profile-s0-dense",
+      "kind": "profile",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "profile",
+        "--onnx",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s0.onnx",
+        "--trtexec",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+        "--int8",
+        "--large-only",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": true,
+      "depends_on": [
+        "trt-probe"
+      ]
+    },
+    {
+      "id": "profile-s0-sparse",
+      "kind": "profile",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "profile",
+        "--onnx",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s0.onnx",
+        "--trtexec",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+        "--int8",
+        "--large-only",
+        "--sparsity",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": true,
+      "depends_on": [
+        "trt-probe"
+      ]
+    },
+    {
+      "id": "profile-s1sp-dense",
+      "kind": "profile",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "profile",
+        "--onnx",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.onnx",
+        "--trtexec",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+        "--int8",
+        "--large-only",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": true,
+      "depends_on": [
+        "trt-probe"
+      ]
+    },
+    {
+      "id": "profile-s1sp-sparse",
+      "kind": "profile",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "profile",
+        "--onnx",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.onnx",
+        "--trtexec",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+        "--int8",
+        "--large-only",
+        "--sparsity",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": true,
+      "depends_on": [
+        "trt-probe"
+      ]
+    },
+    {
+      "id": "measured-ceilings",
+      "kind": "peaks",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "peaks",
+        "--trtexec",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": true,
+      "depends_on": [
+        "trt-probe"
+      ]
+    },
+    {
+      "id": "capture-fp16",
+      "kind": "capture",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "-o",
+        "{attempt}/trace",
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "capture",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz",
+        "--backend-opts",
+        "optimize=6",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json",
+        "trace.nsys-rep"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "capture-s1",
+      "kind": "capture",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "-o",
+        "{attempt}/trace",
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "capture",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json",
+        "trace.nsys-rep"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "capture-s2",
+      "kind": "capture",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "-o",
+        "{attempt}/trace",
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "capture",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s2.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json",
+        "trace.nsys-rep"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "capture-s3",
+      "kind": "capture",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "-o",
+        "{attempt}/trace",
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "capture",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s3.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json",
+        "trace.nsys-rep"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "capture-s4",
+      "kind": "capture",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "-o",
+        "{attempt}/trace",
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "capture",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json",
+        "trace.nsys-rep"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "capture-s4aa",
+      "kind": "capture",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "-o",
+        "{attempt}/trace",
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "capture",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4aa.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json",
+        "trace.nsys-rep"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "capture-s0",
+      "kind": "capture",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "-o",
+        "{attempt}/trace",
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "capture",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s0.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json",
+        "trace.nsys-rep"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "capture-s1sp",
+      "kind": "capture",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+        "profile",
+        "--trace=cuda,nvtx",
+        "--sample=none",
+        "-o",
+        "{attempt}/trace",
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.gpu_job",
+        "capture",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/result.json",
+        "trace.nsys-rep"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-fp16-r1",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "fp16",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz",
+        "--backend-opts",
+        "optimize=6",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s4-r1",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s4",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s1-r1",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s1",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s2-r1",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s2",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s2.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s3-r1",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s3",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s3.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s4aa-r1",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s4aa",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4aa.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s0-r1",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s0",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s0.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s1sp-r1",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s1sp",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s4-r2",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s4",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-fp16-r2",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "fp16",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz",
+        "--backend-opts",
+        "optimize=6",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s3-r2",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s3",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s3.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s4aa-r2",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s4aa",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4aa.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s0-r2",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s0",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s0.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s1sp-r2",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s1sp",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s1-r2",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s1",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s2-r2",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s2",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s2.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-fp16-r3",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "fp16",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz",
+        "--backend-opts",
+        "optimize=6",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s4-r3",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s4",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s0-r3",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s0",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s0.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s1sp-r3",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s1sp",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s1-r3",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s1",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s1.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s2-r3",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s2",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s2.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s3-r3",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s3",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s3.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s4aa-r3",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s4aa",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4aa.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s4-r4",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s4",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-fp16-r4",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "fp16",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz",
+        "--backend-opts",
+        "optimize=6",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-fp16-r5",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "fp16",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz",
+        "--backend-opts",
+        "optimize=6",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "bench-s4-r5",
+      "kind": "benchmark",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.benchmark",
+        "--name",
+        "s4",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--weights",
+        "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz",
+        "--backend-opts",
+        "optimize=8",
+        "--session",
+        "{session}",
+        "--out",
+        "{attempt}/work",
+        "--positions",
+        "10",
+        "--movetime",
+        "10000",
+        "--threads",
+        "0",
+        "--minibatch",
+        "64",
+        "--batches",
+        "200",
+        "--conditioning-seconds",
+        "30"
+      ],
+      "outputs": [
+        "work/result.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": []
+    },
+    {
+      "id": "match-estimate-2",
+      "kind": "pilot",
+      "command": [
+        "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "execution.match_runner",
+        "--name",
+        "fp16_vs_s4_pilot",
+        "--lc0",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+        "--a",
+        "fp16=C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz:optimize=6",
+        "--b",
+        "s4=C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz:optimize=8",
+        "--syzygy",
+        "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\syzygy",
+        "--tc",
+        "10+0.1",
+        "--pairs",
+        "250",
+        "--estimate",
+        "2",
+        "--session",
+        "{session}",
+        "--out-dir",
+        "{attempt}/work"
+      ],
+      "outputs": [
+        "work/pilot/estimate.json",
+        "work/pilot/contract.json",
+        "work/pilot/summary.json"
+      ],
+      "profiling_branch": false,
+      "depends_on": [
+        "bench-fp16-r1",
+        "bench-s4-r1"
+      ]
+    }
+  ],
+  "scientific_acceptance": "Run 3 reviews environmental validity and actual precision; job hashes/exit codes alone are not scientific sign-off",
+  "estimated_hours": [
+    3,
+    7
+  ],
+  "recommended_exclusive_reservation_hours": 8,
+  "estimate_basis": "28 benchmark trials, 8 lc0 captures, 6 profile builds plus same-engine reloads, 3 ceiling microbenchmarks and a two-game pilot. Compilation time unmeasured; no GPU timing performed in Run 1."
+}

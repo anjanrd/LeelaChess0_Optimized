@@ -33,7 +33,9 @@ def write_report():
     audit=read(RUN/'cohort_audit.json')
     references=read('deliverables/report/reference_audit.json')
     assert len(references['references'])>=6
-    assert read(RUN/'progress.json')['steps']['A5']['status']=='deferred_user_authorized'
+    assert read(RUN/'progress.json')['steps']['A5']['status']=='verified'
+    smooth=read(RUN/'smoothquant_verification.json')
+    assert smooth['saved_mul_pair_agrees_with_graph']
     compact=[{'model':r['model'],'correct/n':f"{r['correct']}/{r['n']}",
               'accuracy %':f"{100*float(r['accuracy']):.4f}",
               'approx KL':f"{float(r['policy_KL_approx']):.6g}",
@@ -43,11 +45,11 @@ def write_report():
     b1600={r['model']:r for r in search if r['requested_nodes']=='1600' and r['series']=='main'}
     body='''# Person A model-side report draft
 
-Status: verified draft from frozen evidence, not the final shared report. A5/F12 is explicitly deferred. Systems conclusions and final report alignment await Ritwik. Tables/figures are derived analysis; no new model inference or search was performed.
+Status: verified draft, not the final shared report. A5/F12 is complete, including a version-matched CPU activation diagnostic on the unchanged model and calibration inputs. Systems conclusions and final report alignment await Ritwik. No new chess/search or GPU performance experiment was performed for this analysis.
 
 ## Abstract — provisional shared text
 
-We study a BT3 chess transformer deployed inside lc0 using FP16 and a cumulative W8A8 post-training quantization ladder. We separate changes in neural outputs, preservation of tablebase move results, search at requested node budgets, and performance at fixed time. Percentile calibration and SmoothQuant improve output fidelity relative to naive quantization on the evaluated endgames, while the dense search scores saturate. SparseGPT preserves quality better than magnitude pruning but retains search errors. These observations establish model-side tradeoffs; final throughput, hardware and full-game strength conclusions will be inserted after systems evidence is reviewed. The activation illustration remains deferred until its saved-data consistency issue is resolved.
+We study a BT3 chess transformer deployed inside lc0 using FP16 and a cumulative W8A8 post-training quantization ladder. We separate changes in neural outputs, preservation of tablebase move results, search at requested node budgets, and performance at fixed time. Percentile calibration and SmoothQuant improve output fidelity relative to naive quantization on the evaluated endgames, while the dense search scores saturate. SparseGPT preserves quality better than magnitude pruning but retains search errors. These observations establish model-side tradeoffs; final throughput, hardware and full-game strength conclusions will be inserted after systems evidence is reviewed. A verified activation illustration explains the selected model's compensated rescaling.
 
 ## Introduction and research questions
 
@@ -77,7 +79,13 @@ Seven symmetry-equivalence groups cross pool splits, affecting measured IDs 611,
 
 The ladder is s1 per-tensor signed symmetric minmax W8A8; s2 adds per-channel weight scales; s3 uses selected percentile 99.999; s4 adds SmoothQuant alpha 0.7. The attention extension s4aa additionally quantizes dynamic matrix products. The active graphs request QDQ on 164 fixed-weight matmuls in s4 and all 195 matmuls in s4aa. Biases, normalization, softmax and other floating work are not described as uniformly INT8. Calibration and recipe selection use their prescribed pools; final test plots are not used to choose a new recipe.
 
-SmoothQuant transfers range imbalance between activations and weights [2]. For positive scales, `XW = (X/s)(sW)` before rounding. This implementation inserts explicit branch Mul nodes instead of unrestricted LayerNorm folding because residual/shared consumers must remain correct; shared global Smolgen weights constrain per-block smoothing. The saved activation arrays did not pass their current-model consistency check. **A5 is deferred by the user: F12 and any claims based on that example remain unfinished.** The algebraic mechanism and saved quality metrics can be described independently of that plot.
+SmoothQuant transfers range imbalance between activations and weights [2]. For positive scales, `XW = (X/s)(sW)` before rounding. This implementation inserts explicit branch Mul nodes instead of unrestricted LayerNorm folding because residual/shared consumers must remain correct; shared global Smolgen weights constrain per-block smoothing.
+
+F12 separates the selected alpha-0.7 model's 101 build-time group summaries (original activations with algebraically derived rescaling) from a measured before/after pair at `/encoder14/ln2`. Of the 101 groups, 100 reduce the peak/median channel-maximum ratio; `/attn_body/embedding/reshape` instead increases from 1 to 1.2492. The measured 768-channel example uses the same 512 calibration inputs on CPU. Its peak/median ratio falls from 676,662.01 to 1,131.17, and all channels satisfy the original scaling tolerance (maximum observed difference zero). A channel maximum spans all calibration inputs and board tokens; this ratio describes range imbalance, not WDL or chess accuracy. This diagnostic does not verify GPU runtime precision or acceleration.
+
+The original A5 check paired C1 measurements (alpha 0.5, percentile 99.99) with the final C2 model (alpha 0.7, percentile 99.999). Collection-log/backup hashes and an exact 768-channel scaling match identify that earlier model. We preserve the historical arrays and failed check; F12 uses newly collected final-model arrays instead. Provenance, CPU execution context and checks are in `analysis/person_a/a5/` and `analysis/person_a/run1/smoothquant_verification.json`. Quantization, models, calibration and scoring were unchanged.
+
+![F12: selected-model SmoothQuant group summary and matched channel example](../../analysis/figures/F12-outliers.png)
 
 Magnitude pruning retains the largest two values per group of four along the reduction dimension. SparseGPT uses calibration-dependent compensation [3]; the imported implementation is sequential across 98 dependency stages with 512 calibration inputs. Both pruned source graphs were checked: all 150 unique targeted matrices satisfy at most two nonzeros per K-group of four. The sparse branch is pruned before best-recipe quantization. This experiment is not GPTQ weight quantization, though GPTQ provides related second-order compression context [4].
 
@@ -129,7 +137,7 @@ The verified active graph contains {roof['operations']} matrix operations: {roof
 
 ## Limitations and provisional conclusion
 
-The study uses one checkpoint/device, synthetic decision-sensitive endgames, limited accuracy headroom, printed-output approximations and requested budgets with overshoot. Cross-split symmetry overlap, test-defined hard analysis and sparse calibration coverage constrain generalization. The finite repeated opening book and match uncertainty need review after actual games arrive. A5/F12 remains deferred, not repaired or waived.
+The study uses one checkpoint/device, synthetic decision-sensitive endgames, limited accuracy headroom, printed-output approximations and requested budgets with overshoot. Cross-split symmetry overlap, test-defined hard analysis and sparse calibration coverage constrain generalization. The finite repeated opening book and match uncertainty need review after actual games arrive. F12 is a calibration-input illustration at one layer, not a network-wide distribution or independent performance/accuracy result.
 
 The current evidence supports model fidelity/quality tradeoffs and substantial masking of dense-model errors by search on this corpus. It does not yet establish a full-game playing-strength gain. Final conclusions require the independent hardware/time/match evidence and shared review; a negative or inconclusive result remains a valid answer.
 
@@ -137,7 +145,7 @@ Accepted scope omissions are search-visited calibration, partial INT8, QAT/KD/re
 
 ## Final integration checklist
 
-- Address A5 before autonomous Run 2; resolve the diagnostic example/F12 or obtain an explicit handling decision.
+- A5/F12 is verified; retain its model/statistics identities when reproducing the illustration.
 - Integrate R1/R2/R4 measured findings and align R3 with B's canonical report; audit paired conditions and uncertainty.
 - Combine A/B contributions to the abstract, introduction, related work, discussion, limitations and conclusion.
 - Complete the shared report/presentation/demo and verify the final package/reproduction (R5).
@@ -150,7 +158,7 @@ References and checked claim scope: [references.md](references.md) and [referenc
       {'claim':'Dense network fidelity and move correctness','evidence':'T1-network.csv; F1; scores_test.json','state':'verified for this cohort','limit':'printed priors/value and ceiling accuracy'},
       {'claim':'Search masks dense errors','evidence':'T1-search.csv; F2/F3; hard-lowbudget.csv','state':'verified descriptive finding','limit':'requested-node overshoot; saturated reference'},
       {'claim':'Swap head importance','evidence':'policy-value-swap.csv; F4; swap_provenance.md','state':'inconclusive','limit':'ties, two bodies, moves-left co-swap and numeric differences'},
-      {'claim':'SmoothQuant activation illustration','evidence':'blocker-A5.json','state':'DEFERRED A5','limit':'address before Run 2; no F12 result'},
+      {'claim':'SmoothQuant activation illustration','evidence':'F12; smoothquant_verification.json; a5/provenance.json; a5/collection.json','state':'verified selected-model example','limit':'101 build-time groups; one measured CPU layer on calibration inputs; no speed/accuracy claim'},
       {'claim':'2:4 masks and sparse quality','evidence':'sparse_audit.json; sparse-reconstruction.csv; sparse-move-errors.csv','state':'verified masks/quality','limit':'hardware acceleration WAIT R1/R2'},
       {'claim':'Measured model performance/roofline','evidence':'roofline-operation-inventory.csv; roofline_contract.json','state':'static work ready; WAIT R1/R2','limit':'no measured peaks/timings supplied'},
       {'claim':'Fixed-time accuracy','evidence':'timed-matched-review.csv; timed-matched-positions.csv','state':'existing matched data reviewed; R3 final alignment','limit':'one discordance at 200ms; ceiling at 800ms; early stopping'},
@@ -160,15 +168,17 @@ References and checked claim scope: [references.md](references.md) and [referenc
     put('analysis/person_a/run1/claim_register.md','# Claim/evidence register\n\n'+table(claims,['claim','evidence','state','limit'])+'\n')
     put('analysis/tables/project_hypothesis_evidence.md','# Hypothesis evidence\n\n'+table(claims,['claim','state','evidence','limit'])+
         '\n\nSpeed, more search, timed root accuracy and game strength need separate evidence. GPU energy/node does not complete omitted F8.\n')
-    assert 'F12-outliers.png' not in body
+    assert 'F12-outliers.png' in body
+    assert smooth['groups']==101 and smooth['groups_improved']==100
     assert all(x in body for x in ['A5','R1','R2','R3','R4','R5','F8','F10'])
     return {'report':'deliverables/report/person_a_sections.md','claim_rows':len(claims),
-            'verified_primary_references':len(references['references']),'A5':'deferred; no activation claim',
+            'verified_primary_references':len(references['references']),'A5':'verified selected-model F12',
             'final_shared_report':'WAIT systems evidence and final integration'}
 
 
 def prepare_delivery():
     assert (ROOT/'deliverables/report/person_a_sections.md').exists()
+    assert read(RUN/'progress.json')['steps']['A5']['status']=='verified'
     ledger=[
       ('D1','Shared code/setup','In progress','README.md; maintenance/artifacts.py','R5 fresh setup/reproduction'),
       ('D2','Models/calibration/recipes/engine identities','In progress','models/; data/; frozen manifests','R5 final engine/runtime freeze'),
@@ -189,16 +199,16 @@ def prepare_delivery():
       ('F9','Batch throughput','Completed reduced sweep','reports/c3_hw/batch_sweep/sweep.png','B final caption'),
       ('F10','Accuracy/batch','Omitted','updated_plan.md','no substitute claim'),
       ('F11','Quality/throughput frontier','Quality ready; WAIT R2','analysis/tables/frontier-quality-ready.csv','eight comparable speeds; no swaps'),
-      ('F12','Activation illustration','DEFERRED A5','analysis/person_a/run1/blocker-A5.json','REMINDER: address before autonomous Run 2'),
-      ('D4','Report','A draft ready; shared final pending','deliverables/report/person_a_sections.md','A5 + R1–R5 final integration'),
+      ('F12','Activation illustration','Completed; visual QA recorded separately','analysis/figures/F12-outliers.png; analysis/person_a/run1/smoothquant_verification.json','retain final-model/CPU provenance; no speed claim'),
+      ('D4','Report','A draft ready; shared final pending','deliverables/report/person_a_sections.md','R1–R5 final integration'),
       ('D5','Presentation','A outline ready; final pending','deliverables/presentation/person_a_slides.md','final figures/results and rendered deck'),
       ('D6','Playing demo','Outline ready; recording pending','deliverables/demo/recording_plan.md','R5 runtime + exclusive GPU slot'),
       ('D7','Package/fresh reproduction','Procedure ready; final pending','deliverables/reproduction_plan.md','FP16+s4+sparse path; R5 final assets'),
-      ('D8','Numbers/citations/C4','A-side checks prepared; final pending','deliverables/completion-checklist.md','every retained row verified; A5/R inputs resolved'),
+      ('D8','Numbers/citations/C4','A-side checks prepared; final pending','deliverables/completion-checklist.md','every retained row verified; R inputs integrated'),
     ]
     records=[dict(zip(['ID','deliverable','status','evidence','remaining_check'],r)) for r in ledger]
     put('deliverables/completion-checklist.md','# Final deliverable checklist — Run 1 preparation\n\n'
-        '**Before Run 2: address A5.** This is not C4 sign-off. A deferred item is not completed.\n\n'+
+        '**A5/F12 is verified. Run 2 still requires Ritwik\'s reviewed handoffs.** This is not C4 sign-off.\n\n'+
         table(records,['ID','deliverable','status','evidence','remaining_check'])+'\n')
     put('deliverables/presentation/person_a_slides.md','''# Person A slide contribution
 
@@ -209,7 +219,7 @@ Prepared content for the shared deck; not a rendered final presentation.
 3. **Search:** use F2/F3 and the hard supplement. Explain actual-node overshoot, near-ceiling results and why node-equivalents can be ambiguous.
 4. **Policy/value swap:** use F4. Explain both routes, moves-left co-swap and why ties do not establish equal importance.
 5. **Sparse quality:** verified masks, lower calibration reconstruction loss and persistent chess errors. Hardware conclusions WAIT R1/R2.
-6. **Activation mechanism:** explain compensating rescaling algebraically. A5/F12 is DEFERRED; no unverified channel plot is included. Address it before Run 2.
+6. **Activation mechanism:** use verified F12. Explain compensating rescaling, 100/101 group ratios improving, and the matched final-model CPU layer example. Distinguish derived group summaries from measured channels and avoid speed/accuracy claims from the plot.
 7. **Model work meets hardware:** static 195-operation inventory ready. Final profile/roofline WAIT R1; quality-versus-throughput WAIT R2. Keep actual lc0 separate from standalone sparse probes.
 8. **Does speed pay off?:** existing timed review is near ceiling; final speed/match findings WAIT R2/R3/R4. Include negative/inconclusive outcomes and uncertainty.
 9. **Limits and reproduction:** synthetic endgames, one network/device, split caveat, printed priors, scope omissions; final systems reproduction WAIT R5.
@@ -224,36 +234,36 @@ Use the frozen `models/s4.pb.gz` with lc0 onnx-trt optimize=8, final recorded ru
 
 Prepare a short terminal/UCI or available-GUI sequence without replacing the measured backend or recalibrating. Record actual engine output, not typed performance figures. Save demo logs/recording separately from benchmark results. If final speed/strength is mentioned, use only reviewed R2/R3/R4 findings.
 
-Acceptance: a short playable demo/recording exists; model/backend identifiable; legal moves and nodes/s legible; explanation matches the report. Runtime execution/recording waits for the final environment/GPU slot (R5). A5 is a separate pre-Run2 reminder, not a reason to add an unverified activation illustration to the demo.
+Acceptance: a short playable demo/recording exists; model/backend identifiable; legal moves and nodes/s legible; explanation matches the report. Runtime execution/recording waits for the final environment/GPU slot (R5). F12 is a verified explanatory figure, not a demo or performance measurement.
 ''')
     put('deliverables/reproduction_plan.md','''# Fresh reproduction and packaging procedure — prepared, not executed
 
-**Before autonomous Run 2: address A5**, then validate Ritwik's R1–R5 handoffs and the final model/configuration identities. The final reproduction is distinct from the existing repository and artifact-transfer tests.
+**A5/F12 is verified. Before autonomous Run 2, validate Ritwik's R1–R5 handoffs** and the final model/configuration identities. The final reproduction is distinct from the existing repository and artifact-transfer tests.
 
 1. Freeze source revision, model/recipe hashes, labelled root/cohort IDs, calibration/development inputs, scorer, runtime/backend versions and final system conditions. Preserve original evidence and failed-run records.
 2. Create a clean checkout and a fresh local Python environment; install compatible runtime tools separately. Restore a verified artifact bundle using maintenance/artifacts.py. Do not copy the old virtual environment or assume TensorRT engine portability.
 3. Reproduce a declared, deterministic subset containing **FP16, best PTQ s4 and the selected sparse path (s1sp or the final agreed sparse variant)**. Record exact IDs, budget/batch settings, input/history convention, commands and success tolerances before execution. These are execution checks of frozen variants, not a new selection experiment.
 4. Check model loading/encoding/output routing, selected-move scoring, numerical agreement with the appropriate reference and runtime precision where required. Record any GPU-specific engine rebuild. Actual profiling/performance checks use the frozen B procedure and one GPU job at a time.
 5. A documented sparse-runtime limitation can be an honest outcome, but an unperformed required dense check is not a pass. Do not replace experimental reproduction with parsing old score JSONs or six repository tests.
-6. Regenerate A tables/figures from immutable saved evidence in new output paths and compare them with declared tolerances; review captions and source identities. Keep F12 unfinished until A5 is resolved or explicitly handled by the user.
+6. Regenerate A tables/figures from immutable saved evidence in new output paths and compare them with declared tolerances; review captions and source identities. For F12, verify/reuse the version-matched arrays in analysis/person_a/a5/; do not pair C1 measurements with the final C2 graph or silently recollect inputs.
 7. Audit every final report/slide number and citation. Reconcile paired match results, systems tables, retained deliverables and omitted F8/F10. Generate final artifact inventory/package only after the freeze; verify its hashes and a receiving-side restore.
 8. Record the fresh setup, commands, outputs, runtime limitations and final checklist sign-off. Render/review the final report/deck and complete the real demo before C4.
 
-This procedure is ready for execution after inputs/conditions are finalized. No fresh model inference, GPU reproduction or full-size bundle was created during this Run 1 block.
+This procedure is ready for execution after inputs/conditions are finalized. Original Run 1 collected no fresh inference. The subsequent A5 closure collected a bounded CPU activation diagnostic only; fresh experimental/GPU reproduction and a full-size bundle remain unperformed.
 ''')
     put('analysis/person_a/README.md','''# Person A analysis workspace
 
 Execution script: `run1.py`; outputs and progress: `run1/`; plots: `../figures/`; publication CSVs: `../tables/`. Work is on `anjan` and derives from the frozen consolidation evidence.
 
-The user authorized Run 1 in one autonomous block and then explicitly deferred A5 while resuming A6–A10. The original A5 failure is preserved at `run1/blocker-A5.json`. **Read BEFORE_RUN_2.md and remind Anjan to address A5 before launching Run 2.** No F12 result is fabricated.
+The user authorized Run 1 in one autonomous block, initially deferred A5 while resuming A6–A10, then authorized A5 resolution. The original failure is preserved at `run1/blocker-A5.json`. **A5/F12 is now verified; read BEFORE_RUN_2.md and validate Ritwik's handoffs before Run 2.** Details: `A5_resolution_plan.md`, `a5/provenance.json`, `a5/collection.json` and `run1/smoothquant_verification.json`.
 
-A1–A4 reproduce/cohort-check existing accuracy and swaps. A6 audits sparse masks and quality. A7 verifies the active graph geometry and prepares roofline work. A8 creates matched timed review, eight-model frontier quality and the legal opening-book review. A9 writes the evidence-linked draft and references. A10 prepares the retained-deliverable checklist, slide/demo and fresh-reproduction plans. Final measured R1/R2/R4/R5 conclusions wait for B; R3 already has raw data and needs canonical alignment.
+A1–A4 reproduce/cohort-check existing accuracy and swaps. A5 verifies model/statistics identities and generates the selected-model F12; collection is an explicit CPU-only diagnostic on existing calibration inputs. A6 audits sparse masks and quality. A7 verifies the active graph geometry and prepares roofline work. A8 creates matched timed review, eight-model frontier quality and the legal opening-book review. A9 writes the evidence-linked draft and references. A10 prepares the retained-deliverable checklist, slide/demo and fresh-reproduction plans. Final measured R1/R2/R4/R5 conclusions wait for B; R3 already has raw data and needs canonical alignment.
 
-Normal reproduction commands use `.venv/Scripts/python.exe -B analysis/person_a/run1.py <step>` sequentially. Do not rerun finished steps just to refresh timestamps, and do not run A5 without authorization. The runner's only deferred prerequisite bypass is the user-approved A5 -> A6 transition. Numerical/scorer logic and raw evidence remain unchanged.
+Normal reproduction commands use `.venv/Scripts/python.exe -B analysis/person_a/run1.py <step>` sequentially. Do not rerun finished steps just to refresh timestamps. A5 reuses verified arrays; `smoothquant_diagnostic.py verify` checks their identities. Explicit `collect` reuses an existing verified collection and refuses incompatible/incomplete files. Historical evidence, numerical/scorer logic and the scientific protocol remain unchanged.
 
-`run1/source_manifest.json` records frozen inputs; closing verification and output inventory distinguish completed independent work from A5/system-dependent deliverables. A complete independent block does not mean the entire project or C4 is complete.
+`run1/source_manifest.json` records frozen inputs; the original `run1/verification.json` describes the earlier A5-deferred checkpoint. The subsequent `a5/closure.json` records A5 verification and the current output inventory. A complete independent block does not mean the entire project or C4 is complete.
 ''')
     return {'checklist_rows':len(records),'slides':'prepared outline','demo':'prepared recording plan',
             'reproduction':'prepared FP16 + s4 + sparse-path procedure; not executed',
-            'before_run2':'Address deferred A5 first; then validate Ritwik inputs',
-            'final_delivery':'WAIT A5 handling and R1–R5 integration'}
+            'before_run2':'A5 verified; validate Ritwik inputs',
+            'final_delivery':'WAIT R1–R5 integration'}

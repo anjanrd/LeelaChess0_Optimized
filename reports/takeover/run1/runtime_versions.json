@@ -1,0 +1,32 @@
+{
+  "Observation": "Read-only normal-run metadata, not quiet-testbed validation",
+  "MemoryBytes": 33595191296,
+  "PowerScheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+  "Files": [
+    {
+      "Path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+      "FileVersion": null,
+      "ProductVersion": null
+    },
+    {
+      "Path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\onnxruntime.dll",
+      "FileVersion": "1.22.20250627.2.89746dc",
+      "ProductVersion": "1.22.20250627.2.89746dc"
+    },
+    {
+      "Path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\bin\\trtexec.exe",
+      "FileVersion": null,
+      "ProductVersion": null
+    },
+    {
+      "Path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_10.dll",
+      "FileVersion": null,
+      "ProductVersion": null
+    },
+    {
+      "Path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\TensorRT-10.12.0.36\\lib\\nvinfer_plugin_10.dll",
+      "FileVersion": null,
+      "ProductVersion": null
+    }
+  ]
+}

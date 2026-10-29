@@ -360,8 +360,9 @@ def A4():
 
 
 def A5():
-    import onnx
-    from onnx import numpy_helper
+    from smoothquant_diagnostic import diagnose, validate_current, pair_check, TENSOR
+    provenance=diagnose()
+    values,collection=validate_current()
     side=read('models/s4.json');groups=[]
     for name,g in side['smoothed_groups'].items():
         before,after=g['outlier_before'],g['outlier_after']
@@ -369,23 +370,44 @@ def A5():
         groups.append({'tensor':name,'ratio_before':before,'ratio_after':after,
                        'after_over_before':after/before,'improved':after<before,
                        'consumers':';'.join(g['consumers'])})
-    model=onnx.load(ROOT/'models/s4.onnx')
-    inv=next(t for t in model.graph.initializer if t.name=='/encoder14/ln2/smooth_inv')
-    inv=numpy_helper.to_array(inv).copy()
-    with np.load(ROOT/'reports/C2-ln2-channel-maxima.npz') as z:
-        values={k:z[k].copy() for k in z.files}
-    assert all(v.shape==(768,) and np.isfinite(v).all() and (v>=0).all() for v in values.values())
-    assert np.all(inv>0) and np.allclose(values['s4_raw']*inv,values['s4_smoothed'],rtol=1e-5,atol=1e-12)
-    channels=[{'channel':i,**{k:float(v[i]) for k,v in values.items()},'smooth_inverse':float(inv[i])}
+    inv=values['smooth_inverse']
+    checked=pair_check(values['s4_raw'],values['s4_smoothed'],inv)
+    assert checked['agrees']
+    channels=[{'channel':i,**{k:float(v[i]) for k,v in values.items()}}
               for i in range(768)]
     csvwrite('analysis/tables/smoothquant-groups.csv',groups)
     csvwrite('analysis/tables/smoothquant-channels.csv',channels)
+    stats={}
+    for key in ['s4_raw','s4_smoothed']:
+        a=values[key].astype(np.float64)
+        stats[key]={'max':float(a.max()),'median':float(np.median(a)),
+                    'max_over_median':float(a.max()/max(np.median(a),1e-12)),
+                    'live_channels':int((a>0).sum())}
+    # Independently connect the LN sidecar's derived group statistic to the
+    # original FP32 maxima. These are not the measured within-s4 activations.
+    with np.load(ROOT/'reports/C2-ln2-channel-maxima.npz') as z:
+        original=z['original_raw'].astype(np.float64)
+    ratio=lambda a:float(a.max()/max(np.median(a),1e-12))
+    ln=side['smoothed_groups'][TENSOR]
+    assert np.isclose(ratio(original),ln['outlier_before'],rtol=1e-6)
+    assert np.isclose(ratio(original*inv),ln['outlier_after'],rtol=1e-6)
     result={'groups':len(groups),'groups_improved':sum(g['improved'] for g in groups),
             'groups_not_improved':sum(not g['improved'] for g in groups),'channels':768,
-            'saved_mul_pair_agrees_with_graph':True,'ratio_definitions':{
+            'groups_not_improved_details':[g for g in groups if not g['improved']],
+            'saved_mul_pair_agrees_with_graph':True,'selected_recipe':provenance['selected_recipe'],
+            'measured_example':stats,'pair_check':checked,
+            'provenance':'analysis/person_a/a5/provenance.json',
+            'collection':'analysis/person_a/a5/collection.json',
+            'diagnosis':'Historical alpha-0.5 arrays were paired with the selected alpha-0.7 graph; '
+                        'historical pair verifies exactly against its preserved graph. '
+                        'New selected-model measurements now verify independently.',
+            'ratio_definitions':{
                 'groups':'original-build amax / max(median(all channel amax),1e-12); after derived from smoothing',
-                'saved_example':'within-s4 max over calibration positions/tokens, before/after one Mul'},
-            'quantized_upstream_differs_from_original':True}
+                'saved_example':'selected s4 alpha=0.7, CPU, 512 calibration inputs; channel amax '
+                                'over positions/tokens before/after one Mul; median over all 768 channels'},
+            'collection_elapsed_seconds':collection['collection_elapsed_seconds'],
+            'quantized_upstream_differs_from_original':True,
+            'new_chess_search_or_gpu_performance_measurements':False}
     write(OUT/'smoothquant_verification.json',result)
     from plotting import outliers
     outliers(groups,channels)
@@ -393,14 +415,24 @@ def A5():
           f"Across all {len(groups)} saved groups, {result['groups_improved']} have a lower max/median ratio; "
           f"{result['groups_not_improved']} do not. All groups are retained in the CSV and F12. "
           'The group summary records original-build channel statistics and an algebraic rescaling, not fresh inference. '
-          'The separate 768-channel within-s4 example satisfies after = before × smooth_inverse within numerical tolerance. '
-          'Original FP32 channel maxima are included separately in the source CSV; they are not substituted for the within-s4 before array.\n\n'
+          'The separate 768-channel selected-model example was collected on CPU from both sides of the same Mul '
+          'using the unchanged 512 calibration inputs. It satisfies after = before × smooth_inverse at the original '
+          'rtol=1e-5, atol=1e-12; maximum observed absolute difference is zero. '
+          f"Its peak/median channel-maximum ratio falls from {stats['s4_raw']['max_over_median']:,.2f} to "
+          f"{stats['s4_smoothed']['max_over_median']:,.2f}; all 768 channels are live. "
+          'A channel maximum is the largest absolute value seen for that channel across all calibration inputs and board tokens. '
+          'The ratio compares the largest channel maximum with the median channel maximum. It is neither a WDL probability nor accuracy.\n\n'
+          'The original failed check mixed model versions: the old saved arrays belong to C1 '
+          '(alpha 0.5, percentile 99.99), verified by matching collection-log/backup hashes and all 768 scaling values. '
+          'They are preserved under reports/, together with the original failure record. F12 now uses the final C2 '
+          '(alpha 0.7, percentile 99.999) pair in analysis/person_a/a5/current-channel-maxima.npz. '
+          'The original FP32 maxima independently agree with the final LN sidecar-derived ratios at rtol=1e-6; '
+          'they are not substituted for the measured within-s4 before array. See a5/provenance.json and a5/collection.json.\n\n'
           'For a positive channel scale s, XW = (X/s)(sW) before quantization. This implementation inserts a Mul '
           'on the selected branches and compensates their weights. Unrestricted LayerNorm folding would also '
           'affect residual consumers. Shared global Smolgen weights are not independently smoothed per block. '
           'The chosen alpha is 0.7 from development selection; test plots are explanation, not another tuning pass. '
           'The better printed policy/value fidelity supports the technique here; no latency claim follows from this plot.\n')
-    del model;gc.collect()
     checkpoint('A5',result)
 
 
