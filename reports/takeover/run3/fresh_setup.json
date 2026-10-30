@@ -1,0 +1,69 @@
+{
+  "source_root": "C:\\Users\\HP\\Desktop\\LC0",
+  "source_revision": "eb9e8cf8811f2426884d293e780a55d68240be48",
+  "workspace": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf",
+  "repo": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\repo",
+  "venv": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\.venv",
+  "base_python": "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+  "commands": [
+    {
+      "argv": [
+        "git",
+        "clone",
+        "--no-hardlinks",
+        "C:\\Users\\HP\\Desktop\\LC0",
+        "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\repo"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\control\\setup.log"
+    },
+    {
+      "argv": [
+        "git",
+        "checkout",
+        "--detach",
+        "eb9e8cf8811f2426884d293e780a55d68240be48"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\control\\setup.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\HP\\AppData\\Local\\Programs\\Python\\Python311\\python.exe",
+        "-m",
+        "venv",
+        "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\.venv"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\control\\setup.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pip",
+        "install",
+        "--disable-pip-version-check",
+        "-r",
+        "C:\\Users\\HP\\Desktop\\LC0\\requirements\\windows-prep.lock.txt"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\control\\pip-install.log"
+    },
+    {
+      "argv": [
+        "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\.venv\\Scripts\\python.exe",
+        "-B",
+        "-m",
+        "pip",
+        "check"
+      ],
+      "exit_code": 0,
+      "log": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\control\\pip-check.log"
+    }
+  ],
+  "GPU_workloads_started": 0,
+  "native_runtime": "Existing same-host native tool installation will be checksum-verified and declared, not presented as a new-machine reproduction",
+  "status": "fresh_source_and_python_environment_ready"
+}

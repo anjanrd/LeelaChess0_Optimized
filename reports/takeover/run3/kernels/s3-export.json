@@ -1,0 +1,22 @@
+{
+  "source": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\capture-s3\\attempt-001\\trace.nsys-rep",
+    "bytes": 6900303,
+    "sha256": "09dc4f39176cdd49010a121c0640043bf5edcf0c7650f001d8dd6386683e4a9d"
+  },
+  "command": [
+    "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\nsys\\nsight_systems-windows-x86_64-2025.1.3.140-archive\\nsight-systems\\2025.1.3\\target-windows-x64\\nsys.exe",
+    "export",
+    "--type=sqlite",
+    "--force-overwrite=false",
+    "--output=C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s3.sqlite",
+    "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\capture-s3\\attempt-001\\trace.nsys-rep"
+  ],
+  "exit_code": 0,
+  "database": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s3.sqlite",
+    "bytes": 18690048,
+    "sha256": "bf287d120785cc0fdfdda9fd7878016d9836643d5a285c788bb95a45d9added6"
+  },
+  "scope": "CPU export of saved trace; no new GPU workload"
+}

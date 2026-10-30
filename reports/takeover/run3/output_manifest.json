@@ -1,0 +1,460 @@
+{
+  "scope": "Run3 generated outputs, current documentation and implementation; raw Run2 and external bundle inventories linked separately",
+  "generated_unix": 1793359713.7784948,
+  "source_revision": "eb9e8cf8811f2426884d293e780a55d68240be48",
+  "files": [
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F11-frontier.pdf",
+      "bytes": 24677,
+      "sha256": "3bf5d3b0d503db9e59e23e1c609aeeb33d4f7fe89c049a42dfa8026ddb4429fe"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F11-frontier.png",
+      "bytes": 123769,
+      "sha256": "5a04aa58096d4c53859df4081d940cb0f3c32f484cd6e7a04782537afc35bd5c"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F11-frontier.svg",
+      "bytes": 56564,
+      "sha256": "87f25da2994f3ac9b4933c5b3cfa5d6a3a03ab6d538766937e66b7d531fb1eda"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F5-time.pdf",
+      "bytes": 22175,
+      "sha256": "2b1aabad6879a9c2d1a0262f0b0c587f4f27c5a9ed681e67fba655eeda02bf06"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F5-time.png",
+      "bytes": 147832,
+      "sha256": "264e2c19bfe0be362c7037424aa3431b266733b8bc932eabb42fc71170705f9f"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F5-time.svg",
+      "bytes": 33327,
+      "sha256": "a5b673fd91e0070c18160d6797e505a4a14d725db15148d3db65f457ce9e9f3b"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-profile-breakdown.pdf",
+      "bytes": 20909,
+      "sha256": "783a8da713ea3bd1790d2b04a80c5b42b8ab4e708eb95efecd6572ceecd715e5"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-profile-breakdown.png",
+      "bytes": 85151,
+      "sha256": "59e0dbb8849cc76be2b2ceb3bbe1a689eddf87d1f50f738bb026b2a278f120cd"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-profile-breakdown.svg",
+      "bytes": 19905,
+      "sha256": "3a4b09a713fb6170f4e3440b8506cc05af1b2465ca11eeb4f76dee3cd8d5e5d8"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-roofline.pdf",
+      "bytes": 28845,
+      "sha256": "072722032f1fe297afe884540685dbccd08e2ee4ab2b35979a322947beb601c8"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-roofline.png",
+      "bytes": 156139,
+      "sha256": "77e30f1ad4271d165dd4c3da5a008e18ee4caeff9f4cc528b7eb764f635d5478"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-roofline.svg",
+      "bytes": 149667,
+      "sha256": "216ba2e7a8494092ca9c8ee07f77e414789ba2778122bbf57d70afd7fe7e34e4"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F7-energy.pdf",
+      "bytes": 21152,
+      "sha256": "74fcb03252cbc580ea29f904a53f4a54799de27ae309b6e85adb36b2d9af6923"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F7-energy.png",
+      "bytes": 85599,
+      "sha256": "8153d8d745fb21bb24bdd334d6976042db9254d4cf9d095127bc1e49e5e3f8f1"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F7-energy.svg",
+      "bytes": 32440,
+      "sha256": "416d194576e96108453e05f4e087e2ab2d99c36bf82f16fc6da584b82cbd48a9"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\person_a\\run3_findings.md",
+      "bytes": 11064,
+      "sha256": "a32f4d6067f6059342c797b3d0e68523b904f99988a40a6bce3d9147149efdc6"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\person_a\\run3_finish.py",
+      "bytes": 16307,
+      "sha256": "8966a0af5a2f70cf3e7389ed0e0c8d2385b6c52fe1e1bf15a416e4776ffa61ad"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\person_a\\run3_systems.py",
+      "bytes": 23304,
+      "sha256": "e53c51390f618beeaa6c3945da75576de62ed0473ed118d18a0c044af0b5abce"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\person_a\\run4_prepare.py",
+      "bytes": 13431,
+      "sha256": "51e3f0d9d8c3596172b35453ce7f00c1e99cdea47c791f9580de5f5e4c363bb7"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\F11-frontier.csv",
+      "bytes": 1402,
+      "sha256": "f3bfc0d2534888f375e4d2d13a8900489ae54875b91822b1860392a2d1d14dbe"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\F6-roofline-points.csv",
+      "bytes": 131992,
+      "sha256": "6e9c37e0256358797956a1371c5fa8456a1476f57008a33c8d28d927df7dd818"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-engine-layers.csv",
+      "bytes": 644870,
+      "sha256": "d6bd8eef20dc5d8d74fdec05647f061b8da4e25ee19dad90315a12e002b48770"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-lc0-kernel-tags.csv",
+      "bytes": 3784,
+      "sha256": "d4d401d9b8885274a3710ef71e625beb98eea25c7b4bfc9cee0e72618843af30"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-lc0-kernels.csv",
+      "bytes": 76151,
+      "sha256": "6e77dcb031bc1c569827d7899766ed791feccc957c77fa56d51958aa821963fb"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-network-batch-summary.csv",
+      "bytes": 2548,
+      "sha256": "1342ae60634fc3047e4f8b2d2f075ccdef2201e7910456c0b224542b39d203ab"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-network-batches.csv",
+      "bytes": 5398,
+      "sha256": "8bd96b87c349649c6136aaafe0d377bd910f5dddfe8466f689c6b983650b817c"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-operation-precision.csv",
+      "bytes": 250758,
+      "sha256": "3238e0536eaa4ed80d3e7105a253e7e5ca6fbd1bc178529df661b8a929188d92"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-session-review.csv",
+      "bytes": 992,
+      "sha256": "85a46a62e02378b047d319cd45daa9dfa37a478b4c3e601fc16f9bc64122bf6e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-speed-trials.csv",
+      "bytes": 10109,
+      "sha256": "4bf47d1a6b33a7e9be4e4a49a10d47090b04375fdaaa6555eef768487cba5ac1"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-speed.csv",
+      "bytes": 6582,
+      "sha256": "c2d9c0494af40520264b9f88818724475bd280bd399c71c4a80b64d5db60ff65"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T2-standalone-profiles.csv",
+      "bytes": 1988,
+      "sha256": "d98c125ad18ed33331e74db94196dc2c8317fda63398babb032519d5b5b52a10"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T3-energy.csv",
+      "bytes": 7656,
+      "sha256": "71c446440d87984d6da9abda2e6a42655f505f9fc9613b1a8fcb866f391a8c7b"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T3-idle-telemetry-review.csv",
+      "bytes": 4669,
+      "sha256": "cc3e1b3a009ad75ce2a3efb61f63564d8eb77ecf585445b900be9433117149f3"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T5-sparsity.csv",
+      "bytes": 372,
+      "sha256": "ff7b43d56f1f36d14eecb60f63f63e4c66993e1e0825dceb9a25d199bd4b14f4"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T6-timed-canonical.csv",
+      "bytes": 1251,
+      "sha256": "36d7bcd74649bd98f0505513440f323556b6be48ee57cea6d25d722574f74e96"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\tables\\T6-timed-positions.csv",
+      "bytes": 415486,
+      "sha256": "16f78e7345c0d8173cfb17acb4d68ab64888a17c43c0d1098d51af814e3a83ed"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\consolidation_context.md",
+      "bytes": 25597,
+      "sha256": "2a7d06cb4d008c5b737dc1660b64941a6ec0262c9748098f26fc34811fa60043"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\deliverables\\completion-checklist.md",
+      "bytes": 4039,
+      "sha256": "de5d4d45d154c32444788bf88492880e78ac886c82a5006b55b1d84e885475ff"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\deliverables\\report\\person_a_sections.md",
+      "bytes": 17960,
+      "sha256": "a2ab128e526cd3cab1016c5bea16bec7782dfe4cf452114cbe64f10ce6c50cf9"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\deliverables\\reproduction_plan.md",
+      "bytes": 3748,
+      "sha256": "d91b05d8a06e63915ba8ec8857647b88474c44aeff55459e8e1d860f1cfb8775"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\docs\\takeover_runs.md",
+      "bytes": 12399,
+      "sha256": "9a77da34960957362eb6860a05b6c5a4321019ab045b607ff364631b105069f6"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\run4.py",
+      "bytes": 7207,
+      "sha256": "c5ca39aef53b6fe946140eed7217be4dc3ac9106bc0e315d1c528ed3ff38d0f4"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\run4_checks.py",
+      "bytes": 13495,
+      "sha256": "e05a6299cf2ebc06c3b7e9cb2faa99d0d24ce4f708a288ba3b4946d475fa0f2b"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\person_a_execution_plan.md",
+      "bytes": 5782,
+      "sha256": "9be27d947ba1ea03ec18c1e13f09c2cc750f6f122e605590c3c70e891597fc3e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\README.md",
+      "bytes": 5976,
+      "sha256": "fcc735b4e804a60526d16da402ad563296d0ac73dab7a0de59cc727456428633"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\benchmark-review.json",
+      "bytes": 17273,
+      "sha256": "7b329ab6225a7c136182191295108013b851e42bb426c20236fb7ce5c945e904"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\EXCLUSIVE_RUN_4.md",
+      "bytes": 5155,
+      "sha256": "897b7394b1d6b2a413a3462e59b712b0da9b9d2751d20bb75648e3002cae7445"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\fresh-artifact-restore.json",
+      "bytes": 2424,
+      "sha256": "baa0d775633e4d87ac6f723f61673dbc5d7cf77fb5f2bd74beb455ccc74b4212"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\fresh-cpu-smoke.json",
+      "bytes": 1662,
+      "sha256": "ca3082c8eade70c4fdc08c5e0badfff0788cc09f3d37a00f2957b49c6b25e27a"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\fresh_setup.json",
+      "bytes": 2474,
+      "sha256": "5883adf0d67434bce1e02d2a0f63c404be00cdd6ddcbb668d9d20a99de739b0b"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernel-export-verification.json",
+      "bytes": 1911,
+      "sha256": "06e31eb90ea9cd40be77526860f683e8f71c7cd170f8d9dc019a1cf0fa66800c"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\fp16-export.json",
+      "bytes": 975,
+      "sha256": "637daf8fe307044b80c5e60a81d16ab6d711d342d6a59ce242296e31e3f440c7"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\fp16-export.log",
+      "bytes": 8102,
+      "sha256": "a3b56638ba4eda9bcabd0570304d85ff8dfd4e883aea2b8a044e28d12bf045fb"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\fp16.sqlite",
+      "bytes": 14049280,
+      "sha256": "8a0191c0157e38dfdefaa7a6ba38e874e56b451f59b5169e2b50702316b2a996"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s0-export.json",
+      "bytes": 968,
+      "sha256": "302ef80a9c0b41a24b8e3b7518fbffe71cb05248a5aa204064b06026e03ae86e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s0-export.log",
+      "bytes": 8102,
+      "sha256": "0719dd5484b77bcc4dc1aa6dd57f07187128f114aabb1c402bb332a547570eac"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s0.sqlite",
+      "bytes": 91828224,
+      "sha256": "116f6a3b81d94cae8eb05ff3dedb6db9caaad5cfc3266b0c96b454a2e51f72ef"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s1-export.json",
+      "bytes": 967,
+      "sha256": "ba05900bcd3912c21de3862f07721c925f08aa04baa38b6452f913028080cbff"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s1-export.log",
+      "bytes": 8102,
+      "sha256": "db6051241741b7374dce5e1d75aab86a0e9f25e5054c35b4f7837471dc65a3f5"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s1.sqlite",
+      "bytes": 22835200,
+      "sha256": "304e7a162bce50d7b8dac28035a8311991f7f2d601158a47b87f993ead99a776"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s1sp-export.json",
+      "bytes": 976,
+      "sha256": "a65c171dbaca480a65931d67c6b22c264235256cdc0ef5db2d538822268836f2"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s1sp-export.log",
+      "bytes": 8102,
+      "sha256": "af26f39411df510085b0d5c56c62d8c481c5a5456c0a1baee80bf7a43a1766f8"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s1sp.sqlite",
+      "bytes": 51453952,
+      "sha256": "2b2ed10f5bc6a19ed77691b66885e36508d904b03c90f781da296be0edacb5b3"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s2-export.json",
+      "bytes": 967,
+      "sha256": "cc48c30e438d1703ce1de05bfb09c6eb56b64aa5514ed5d702a69122d79d5bd9"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s2-export.log",
+      "bytes": 8102,
+      "sha256": "10d4b90b6ac9d1391b7feafe0b0d302a0198561bcb2de7f8da8ce86b2a163e7a"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s2.sqlite",
+      "bytes": 21770240,
+      "sha256": "c575c9018b466f85335743c4beb98f16eb57e222028a5530362817335603fc80"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s3-export.json",
+      "bytes": 967,
+      "sha256": "b1288682a0e7acd63b93c5172eadc77a58cb7e5ed31c4b6b9f286f580c669858"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s3-export.log",
+      "bytes": 8102,
+      "sha256": "c9442232f967fad467a9ef0967278e0ff80820217dbdccde4cc9adfaf61814a8"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s3.sqlite",
+      "bytes": 18690048,
+      "sha256": "bf287d120785cc0fdfdda9fd7878016d9836643d5a285c788bb95a45d9added6"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s4-export.json",
+      "bytes": 967,
+      "sha256": "7c868444eed92fc4fdf51dbcb1adb8494374e5756ce081bfc792e7e65198874e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s4-export.log",
+      "bytes": 8102,
+      "sha256": "be417072ee8e46b485a4019a871beff06a8aaaa3caf25a23d0a0a9e3395f926a"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s4.sqlite",
+      "bytes": 18591744,
+      "sha256": "548f828e4a31c0d9837286654848617abfc5da2c47afc2ebc62468fa6cd57284"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s4aa-export.json",
+      "bytes": 975,
+      "sha256": "a4134a9d503e2805db8df95872b56daca12932552aae8e95d8bd54f3bf4f4a67"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s4aa-export.log",
+      "bytes": 8102,
+      "sha256": "c6f878ba4895838db45b455d2a7bd49248ed493e75007b2842afeda135566465"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s4aa.sqlite",
+      "bytes": 18599936,
+      "sha256": "c84385a1d2f120e0a7e72580d6a103024431e91cba5c217858693f23453b25c8"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\match-sizing.json",
+      "bytes": 4632,
+      "sha256": "a61436595acae0d1b5da4a577215858e438036fb65d61e2f45d00712fd6331ea"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\measured-reference-peaks.json",
+      "bytes": 1251,
+      "sha256": "2d83fd4b932b2b81e78ed07272218845df83058ceb3b346c64e5db4608aeead5"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\profile-review.json",
+      "bytes": 8270,
+      "sha256": "fad5d2a5b53d6e66e7708ded7e60bcfbd8ebdd168ab67165e2ab39f47f3e9f77"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\repro-ids.txt",
+      "bytes": 189,
+      "sha256": "d3267d2f7f329438b9c9b455b994f9de48bf0f9ff1601a86f64639cccadd2a3e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\reproduction-contract.json",
+      "bytes": 125182,
+      "sha256": "ae4eb19af29fa16042425e3aecd0b922476edbfe63090c5a69ad1a60f92fb372"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\run4-manifest.json",
+      "bytes": 48027,
+      "sha256": "46fb8e872e7d95993311e720ce9d5ec742132030cb41c849dcca239b0914286e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\run4-preparation.json",
+      "bytes": 1626,
+      "sha256": "a6df3ed923f4440f999a915a49f23f972cc994d30e3757ebfb8f36922b08206c"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\run4-session-template.json",
+      "bytes": 869,
+      "sha256": "bbd32ff384d1610730293a09fb346f60b3048272e6161b5aaf30638a423034ae"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\timed-canonical.json",
+      "bytes": 4328,
+      "sha256": "242da8bbe3bbe40fae2bfba19536a954560c9a26361d47fa6edfd28507707619"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\verification.json",
+      "bytes": 1407,
+      "sha256": "72871238c0ad7311ec5ae46ca9ec11eb3cc86169d2ed484b6bf85dd19abfab98"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\visual_review.json",
+      "bytes": 3802,
+      "sha256": "c55da5a0a400eebfef64a0606d45dec5fd09813646f5f174a8037e2351a734c5"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\STATUS.md",
+      "bytes": 4474,
+      "sha256": "41eb144aba0ee5a30bfc5158fd26b31eeb4c11a63c8d7d41d7a9cca9a6577606"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\tests\\test_run3_analysis.py",
+      "bytes": 1724,
+      "sha256": "208e3f6173eae67c9e0901444b3b229a282cc8aefcee5ae4a5f24255d36debc4"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\tests\\test_run4_preparation.py",
+      "bytes": 4560,
+      "sha256": "c245c6a61cc2915575035f6cb857b7e0f0e11467d36a003cc9a3ab95c20275a5"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\updated_plan.md",
+      "bytes": 24815,
+      "sha256": "5e1d8effaa9f68325d1a95538a05b3c4286e80fe7df0d059c6a44fadeebbb756"
+    }
+  ],
+  "file_count": 90,
+  "bytes": 260891725,
+  "LOG_and_mutable_progress_excluded_to_avoid_self_reference": true
+}

@@ -1,0 +1,67 @@
+{
+  "workspace": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf",
+  "repo": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\repo",
+  "source_revision": "eb9e8cf8811f2426884d293e780a55d68240be48",
+  "fresh_venv": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\.venv",
+  "bundle": {
+    "path": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\reproduction-artifacts.zip",
+    "bytes": 758074355,
+    "sha256": "da8e8e5b82a9898ffd387b112e306191a9672426a26fd5e7f2e24b3a6c90475f"
+  },
+  "manifest": {
+    "schema_version": 1,
+    "roots": [
+      "models",
+      "nets",
+      "data",
+      "results",
+      "reports",
+      "archive/person-a-week1/models"
+    ],
+    "files": [
+      {
+        "path": "models/fp16.pb.gz",
+        "bytes": 294605128,
+        "sha256": "83d01b5bff0891e6e7be18b23ef16193a90c5d7969ddcd053fd11cb3a4542135"
+      },
+      {
+        "path": "models/s4.pb.gz",
+        "bytes": 90915493,
+        "sha256": "b556b45cab302ecf893c4afcd932c3df51358004a14f6e1ec9ef99fb21f75abb"
+      },
+      {
+        "path": "models/s1sp.pb.gz",
+        "bytes": 69089577,
+        "sha256": "b3a020e0fda20925744f35b2540872f54deeec31dcb9f7229c67db80399d5ec9"
+      },
+      {
+        "path": "models/s1sp.onnx",
+        "bytes": 105829506,
+        "sha256": "6cee555e1c6199bf2960e6862ffe24c45d346fe88ad4321277a6da055dce348a"
+      },
+      {
+        "path": "nets/BT3.pb.gz",
+        "bytes": 190937780,
+        "sha256": "e3067757d1fc2dfc66947b21d15ace0cedf4c54254fc1de83d77c378a3e8b8e1"
+      },
+      {
+        "path": "data/tbset.jsonl",
+        "bytes": 6694891,
+        "sha256": "dd128f99f7b4bc5fc3bb884ae88c995cf1368d92e69dc491e662f3ef63d0288c"
+      }
+    ],
+    "scope": "Declared FP16/s4/SparseGPT reproduction subset, not the full final research bundle"
+  },
+  "restored": 5,
+  "already_identical": 1,
+  "native_tools_reused_same_host": true,
+  "old_venv_copied": false,
+  "tracked_source_clean": true,
+  "installed_package_snapshot": {
+    "path": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\control\\installed-packages.txt",
+    "bytes": 371,
+    "sha256": "71905dcdfcddc4ea0c011ec8687b95a789125e4f2ffe2c310310c6e674be5aca"
+  },
+  "GPU_reproduction_executed": false,
+  "limitation": "Same hardware and native tool installation; independent Python/source/artifact setup, not cross-machine validation"
+}

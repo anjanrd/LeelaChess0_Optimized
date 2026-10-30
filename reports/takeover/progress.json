@@ -3,8 +3,8 @@
   "branch": "anjan",
   "workflow": "five-run takeover of remaining A+B work",
   "scope_reference": "docs/takeover_runs.md",
-  "current_run": 2,
-  "authorized_execution": "Run2 completed; stopped after authorized run. Run3 not started",
+  "current_run": 3,
+  "authorized_execution": "Normal Run3 completed; exclusive Run4 prepared but awaits explicit user start",
   "runs": {
     "1": {
       "mode": "normal",
@@ -217,19 +217,51 @@
     },
     "3": {
       "mode": "normal",
-      "status": "ready_for_normal_run_after_Run2_verified_collection",
+      "status": "completed_verified_normal_analysis_and_preparation",
       "depends_on": [
         "2"
       ],
-      "note": "Available analysis can proceed if known standalone profiling branch is explicitly deferred"
+      "note": "Available analysis can proceed if known standalone profiling branch is explicitly deferred",
+      "completed_unix": 1793359713.304769,
+      "verification": "reports/takeover/run3/verification.json",
+      "findings": "analysis/person_a/run3_findings.md",
+      "output_manifest": "reports/takeover/run3/output_manifest.json",
+      "new_GPU_workloads": 0,
+      "completed": [
+        "bounded precision/fusion/sparse/roofline audit",
+        "28-trial repeat/session/thermal/frontier analysis",
+        "canonical2437-ID timed reporting",
+        "F5/F6/F7/F11 tables and visual QA",
+        "250-pair production freeze",
+        "fresh source/Python/artifact subset and CPU smoke",
+        "15 checked Run4 jobs"
+      ],
+      "limitations": [
+        "30 attention MatMuls unresolved in standalone INT8 inspector metadata; lc0 name tags not operation coverage",
+        "modeled logical traffic and empirical roofline references are not DRAM/hard architectural limits",
+        "historical above-idle energy subtraction provisional; controlled Run4 diagnostic pending",
+        "timed accuracy ceiling; no demonstrated strength gain; production match pending"
+      ],
+      "offline_tests_passed": 73
     },
     "4": {
       "mode": "exclusive",
-      "status": "pending_Run3_frozen_match_size_and_reproduction_workspace",
+      "status": "prepared_exclusive_not_started",
       "depends_on": [
         "3"
       ],
-      "estimate": "Use Run2 two-game pilot; provide duration and preparation reminder at Run3 handoff"
+      "estimate": "Two-game duration pilot plus contingency/fresh GPU checks/demo; may extend beyond reserve; no outcome-based resizing",
+      "estimated_hours": [
+        5,
+        6
+      ],
+      "reserve_hours": 7,
+      "frozen_pairs": 250,
+      "frozen_games": 500,
+      "manifest": "reports/takeover/run3/run4-manifest.json",
+      "frozen_source_count": 119,
+      "prepared_jobs": 15,
+      "handoff": "reports/takeover/run3/EXCLUSIVE_RUN_4.md"
     },
     "5": {
       "mode": "normal",
@@ -241,15 +273,16 @@
     }
   },
   "internal_handoffs": {
-    "R1": "Loader fixed; six profiles, ceilings and eight lc0 traces collected/verified; precision/sparse/roofline interpretation Run3",
-    "R2": "All28 benchmark trials verified; five each FP16/s4, three each six others; variability/session/frontier reporting Run3",
-    "R3": "existing matched timed review ready; canonical final alignment in Run3",
-    "R4": "Two-game pilot complete at26.97225885seconds/game; final sizing Run3, production Run4, statistics Run5",
-    "R5": "systems/source preparation ready; fresh setup Run3, GPU reproduction Run4, final writing/package Run5"
+    "R1": "Run3 bounded precision/sparse/roofline audit complete; actual fresh GPU reproduction Run4",
+    "R2": "All28 trials consolidated; repeat/session/thermal/frontier complete; historical idle subtraction provisional",
+    "R3": "Canonical2437-ID200/800ms matched report/T6/F5 verified from original rows",
+    "R4": "250 pairs500games frozen before production; games Run4, final paired/opening-aware statistics Run5",
+    "R5": "Clean source/Python/artifact setup and119-input/15-job Run4 preparation verified; GPU reproduction/full package/final deliverables pending"
   },
   "new_GPU_workloads_started": 46,
   "global_PATH_or_power_settings_changed": false,
   "process_termination_performed": true,
   "commit_push_or_teammate_message_performed": false,
-  "GPU_workload_count_scope": "controller workload attempts:45 valid planned jobs plus one preserved resource-flagged attempt; manual pre-GPU launch failure excluded"
+  "GPU_workload_count_scope": "controller workload attempts:45 valid planned jobs plus one preserved resource-flagged attempt; manual pre-GPU launch failure excluded",
+  "latest_run_new_GPU_workloads": 0
 }

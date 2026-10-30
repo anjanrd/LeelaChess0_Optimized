@@ -1,6 +1,6 @@
 # Person A model-side report draft
 
-Status: verified draft, not the final shared report. A5/F12 is complete, including a version-matched CPU activation diagnostic on the unchanged model and calibration inputs. Systems conclusions and final report alignment await Ritwik. No new chess/search or GPU performance experiment was performed for this analysis.
+Status: verified draft, not the final shared report. A5/F12 is complete, including a version-matched CPU activation diagnostic on the unchanged model and calibration inputs. Run3 systems/timed/frontier evidence is now available in analysis/person_a/run3_findings.md for final Run5 integration; this older model-side draft retains its original checkpoint wording below. Production strength and actual fresh GPU reproduction remain pending. No new chess/search or GPU performance experiment was performed for this analysis.
 
 ## Abstract — provisional shared text
 

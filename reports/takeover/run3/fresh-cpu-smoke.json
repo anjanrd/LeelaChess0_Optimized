@@ -1,0 +1,39 @@
+{
+  "status": "verified_CPU_only",
+  "root": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\repo",
+  "python": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\.venv\\Scripts\\python.exe",
+  "prefix": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\.venv",
+  "modules": {
+    "execution.benchmark": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\repo\\execution\\benchmark.py",
+    "eval.lc0uci": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\repo\\eval\\lc0uci.py",
+    "quant.lc0_encode": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\repo\\quant\\lc0_encode.py",
+    "numpy": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\.venv\\Lib\\site-packages\\numpy\\__init__.py",
+    "onnxruntime": "C:\\Users\\HP\\AppData\\Local\\LC0-BT3-Reproduction\\run4-eb9e8cf\\.venv\\Lib\\site-packages\\onnxruntime\\__init__.py"
+  },
+  "pinned_versions": {
+    "chess": "1.11.2",
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "flatbuffers": "25.12.19",
+    "fonttools": "4.68.0",
+    "kiwisolver": "1.5.1",
+    "matplotlib": "3.11.2",
+    "ml_dtypes": "0.6.0",
+    "numpy": "2.4.6",
+    "nvidia-ml-py": "13.615.71",
+    "onnx": "1.23.2",
+    "onnxruntime": "1.31.1",
+    "packaging": "26.3",
+    "pillow": "13.0.0",
+    "protobuf": "7.36.2",
+    "pyparsing": "3.3.3",
+    "python-chess": "1.999",
+    "python-dateutil": "3.0.0",
+    "six": "1.17.0",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.5"
+  },
+  "tracked_source_clean": true,
+  "native_runtime_same_host_reused": true,
+  "GPU_inference_started": false
+}

@@ -1,0 +1,88 @@
+{
+  "status": "visually_reviewed",
+  "figures": {
+    "F5-time": "Three matched-cohort panels: errors, mean actual visits and mean wall time; early-stop/ceiling limits visible.",
+    "F6-profile-breakdown": "All regions counted once; legend moved outside bars, fused-attention ambiguity caption retained.",
+    "F6-roofline": "Precision-specific axes, empirical reference labels and logical traffic/partial mapping limits visible; no points clipped to the reference.",
+    "F7-energy": "Total and provisional above-idle panels; uncertainty warning and repeat-range interpretation visible.",
+    "F11-frontier": "Full model set plus quality zoom; all labels visible in detailed view; different-workload and not-strength captions retained."
+  },
+  "exports": [
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F5-time.png",
+      "bytes": 147832,
+      "sha256": "264e2c19bfe0be362c7037424aa3431b266733b8bc932eabb42fc71170705f9f"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F5-time.pdf",
+      "bytes": 22175,
+      "sha256": "2b1aabad6879a9c2d1a0262f0b0c587f4f27c5a9ed681e67fba655eeda02bf06"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F5-time.svg",
+      "bytes": 33327,
+      "sha256": "a5b673fd91e0070c18160d6797e505a4a14d725db15148d3db65f457ce9e9f3b"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-profile-breakdown.png",
+      "bytes": 85151,
+      "sha256": "59e0dbb8849cc76be2b2ceb3bbe1a689eddf87d1f50f738bb026b2a278f120cd"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-profile-breakdown.pdf",
+      "bytes": 20909,
+      "sha256": "783a8da713ea3bd1790d2b04a80c5b42b8ab4e708eb95efecd6572ceecd715e5"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-profile-breakdown.svg",
+      "bytes": 19905,
+      "sha256": "3a4b09a713fb6170f4e3440b8506cc05af1b2465ca11eeb4f76dee3cd8d5e5d8"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-roofline.png",
+      "bytes": 156139,
+      "sha256": "77e30f1ad4271d165dd4c3da5a008e18ee4caeff9f4cc528b7eb764f635d5478"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-roofline.pdf",
+      "bytes": 28845,
+      "sha256": "072722032f1fe297afe884540685dbccd08e2ee4ab2b35979a322947beb601c8"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F6-roofline.svg",
+      "bytes": 149667,
+      "sha256": "216ba2e7a8494092ca9c8ee07f77e414789ba2778122bbf57d70afd7fe7e34e4"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F7-energy.png",
+      "bytes": 85599,
+      "sha256": "8153d8d745fb21bb24bdd334d6976042db9254d4cf9d095127bc1e49e5e3f8f1"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F7-energy.pdf",
+      "bytes": 21152,
+      "sha256": "74fcb03252cbc580ea29f904a53f4a54799de27ae309b6e85adb36b2d9af6923"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F7-energy.svg",
+      "bytes": 32440,
+      "sha256": "416d194576e96108453e05f4e087e2ab2d99c36bf82f16fc6da584b82cbd48a9"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F11-frontier.png",
+      "bytes": 123769,
+      "sha256": "5a04aa58096d4c53859df4081d940cb0f3c32f484cd6e7a04782537afc35bd5c"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F11-frontier.pdf",
+      "bytes": 24677,
+      "sha256": "3bf5d3b0d503db9e59e23e1c609aeeb33d4f7fe89c049a42dfa8026ddb4429fe"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\analysis\\figures\\F11-frontier.svg",
+      "bytes": 56564,
+      "sha256": "87f25da2994f3ac9b4933c5b3cfa5d6a3a03ab6d538766937e66b7d531fb1eda"
+    }
+  ],
+  "all_three_formats_present": true
+}

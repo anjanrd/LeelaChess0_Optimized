@@ -1,6 +1,6 @@
 # Person A execution plan and Run 1 handoff
 
-**Current continuation, 30 October 2026:** [five-run takeover](docs/takeover_runs.md). Anjan/Codex is now doing the remaining B work as well. The former A autonomous Run2 is distributed across the new Runs2–5; R1–R5 are internal evidence checkpoints. The A1–A10 outcomes below remain valid. New normal Run1 preparation is complete; exclusive Run2 has not begun.
+**Current continuation, 30 October 2026:** [five-run takeover](docs/takeover_runs.md). Anjan/Codex is now doing the remaining B work as well. The former A autonomous Run2 is distributed across the new Runs2–5; R1–R5 are internal evidence checkpoints. The A1–A10 outcomes below remain valid. New Runs1–3 are complete. R1/R2/R3 analysis is integrated in analysis/person_a/run3_findings.md; R4 production and R5 GPU reproduction/final delivery remain. Exclusive Run4 is prepared and awaits explicit user start. The tables below retain the original Run1 checkpoint; their WAIT labels are historical, not current external waits.
 
 29 October 2026. Branch: `anjan`; source baseline: `7751014`; completed Run 1 checkpoint: `7f9bacc`. Parent scope: [updated_plan.md](updated_plan.md).
 

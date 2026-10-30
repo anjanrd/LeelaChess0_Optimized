@@ -1,0 +1,48 @@
+{
+  "exports": [
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\fp16-export.json",
+      "bytes": 975,
+      "sha256": "637daf8fe307044b80c5e60a81d16ab6d711d342d6a59ce242296e31e3f440c7"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s1-export.json",
+      "bytes": 967,
+      "sha256": "ba05900bcd3912c21de3862f07721c925f08aa04baa38b6452f913028080cbff"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s2-export.json",
+      "bytes": 967,
+      "sha256": "cc48c30e438d1703ce1de05bfb09c6eb56b64aa5514ed5d702a69122d79d5bd9"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s3-export.json",
+      "bytes": 967,
+      "sha256": "b1288682a0e7acd63b93c5172eadc77a58cb7e5ed31c4b6b9f286f580c669858"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s4-export.json",
+      "bytes": 967,
+      "sha256": "7c868444eed92fc4fdf51dbcb1adb8494374e5756ce081bfc792e7e65198874e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s4aa-export.json",
+      "bytes": 975,
+      "sha256": "a4134a9d503e2805db8df95872b56daca12932552aae8e95d8bd54f3bf4f4a67"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s0-export.json",
+      "bytes": 968,
+      "sha256": "302ef80a9c0b41a24b8e3b7518fbffe71cb05248a5aa204064b06026e03ae86e"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\kernels\\s1sp-export.json",
+      "bytes": 976,
+      "sha256": "a65c171dbaca480a65931d67c6b22c264235256cdc0ef5db2d538822268836f2"
+    }
+  ],
+  "models": 8,
+  "original_traces_unchanged": true,
+  "new_GPU_workloads": 0,
+  "classification_limit": "Name tags are execution evidence/time fractions, not per-ONNX-operation precision proof"
+}

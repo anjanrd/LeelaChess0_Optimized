@@ -1,14 +1,14 @@
 # Unified BT3 INT8 project plan
 
-Version 2.4 — 30 October 2026. Original roles: Person A (Anjan, model/analysis) and Person B (Ritwik, systems/experiments). Anjan/Codex now executes the remaining work of both roles.
+Version 2.5 — 30 October 2026. Original roles: Person A (Anjan, model/analysis) and Person B (Ritwik, systems/experiments). Anjan/Codex now executes the remaining work of both roles.
 
 This is the current plan for the shared repository. It supersedes the two earlier roadmaps for future work. The original proposal and plan remain under `archive/person-a-week1/`; the imported pipeline documentation remains under `archive/person-b-import/`.
 
 Person A Run 1's independent block is complete. See [person_a_execution_plan.md](person_a_execution_plan.md), [original Run 1 verification](analysis/person_a/run1/verification.json) and [subsequent A5 closure](analysis/person_a/a5/closure.json). **A5/F12 is resolved and verified.** Final systems-dependent conclusions and shared delivery remain pending.
 
-The accepted [five-run takeover](docs/takeover_runs.md) replaces the external wait for Ritwik and includes the former Person A autonomous Run 2. Runs 1 and 2 are complete. Run 2 verified 35 original jobs plus ten continuation jobs, covering all 45 planned jobs, 28 benchmark trials and the two-game pilot. The GPU loader is resolved; profiles/ceiling microbenchmarks/lc0 captures and repeats are collected. Scientific interpretation remains Run 3. Week-wise responsibilities below remain the deliverable mapping; completed work is not repeated. Current checkpoint: [progress](reports/takeover/progress.json).
+The accepted [five-run takeover](docs/takeover_runs.md) replaces the external wait for Ritwik and includes the former Person A autonomous Run 2. Runs 1–3 are complete. Run 2 verified 35 original jobs plus ten continuation jobs, covering all 45 planned jobs, 28 benchmark trials and the two-game pilot. The GPU loader is resolved; profiles/ceiling microbenchmarks/lc0 captures and repeats are collected. Run 3 has completed the bounded precision/sparse/roofline, repeat/session/frontier and canonical timed analysis, with energy qualifications. Match size is frozen at250 pairs; fresh source/Python/artifacts and15 Run4 jobs are prepared, not executed. Week-wise responsibilities below remain the deliverable mapping; completed work is not repeated. Current checkpoint: [progress](reports/takeover/progress.json).
 
-The manual workflow was abandoned after its preserved pre-GPU PID-gate failure. The user explicitly requested Codex orchestration and disabled background-interference blocking. `execution/codex_run2.py` records this approved policy in a separate continuation manifest/output tree, preserving the original 35 results and failures. Background flags remain logged; AC, monitor failures, single-workload locks and command/output/identity checks remain enforced. The ten remaining jobs completed in original order. Cross-session thermal/clock/energy variability requires Run 3 review; Codex activity is not assumed equal across trials. No new accuracy, production-strength or final reproduction result is implied by collection completion.
+The manual workflow was abandoned after its preserved pre-GPU PID-gate failure. The user explicitly requested Codex orchestration and disabled background-interference blocking. `execution/codex_run2.py` records this approved policy in a separate continuation manifest/output tree, preserving the original 35 results and failures. Background flags remain logged; AC, monitor failures, single-workload locks and command/output/identity checks remain enforced. The ten remaining jobs completed in original order. Run 3 records cross-session thermal/clock/energy variability; Codex activity is not assumed equal across trials. No new accuracy, production-strength or final reproduction result is implied by collection completion.
 
 ## Objective and interpretation
 
@@ -31,7 +31,7 @@ Status definitions:
 | Network | BT3 checkpoint SHA256 `e3067757d1fc2dfc66947b21d15ace0cedf4c54254fc1de83d77c378a3e8b8e1`. |
 | Baseline | `fp16`: exported ONNX wrapped for lc0, executed with `onnx-trt`, `optimize=6`. The raw BT3 checkpoint on the same backend is a wrapping/reference check, not an independent native-CUDA baseline. |
 | INT8 | Signed symmetric W8A8 QDQ from the imported ORT/custom calibration implementation, executed with `optimize=8`; non-INT8 work can remain floating point. Do not describe the whole network as uniformly INT8. |
-| Precision evidence | Observed INT8 kernels establish real low-precision execution. Complete per-model precision/fallback and sparse coverage are still pending; kernel-name time fractions are not operation coverage. |
+| Precision evidence | INT8 execution observed in all eight lc0 captures. Standalone s4 maps164 fixed-weight INT8 GEMMs (97.8517% of matrix arithmetic);30 attention MatMuls unresolved. Fused internals and lc0 operation coverage are not inferred from kernel-time fractions. |
 | Data | Existing `data/tbset.jsonl`: 11,200 synthetic legal roots labelled with local 3–5-piece Syzygy tables; calibration/development/test pools 1,120/3,360/6,720. FEN halfmove clocks are zero. |
 | Calibration | Existing `data/calib.npz`: 256 random-game inputs plus 256 tablebase inputs. Existing development inputs contain 3,360 positions. Preserve supplied history for random-game calibration and the imported FEN-only convention for standalone roots. |
 | Scoring | Preserve the root win/draw outcome. Adopt the imported category mapping: Syzygy +2 is win, -2 loss, and 0/±1 draw. Secondary DTZ-optimal score follows the imported scorer. These are move-selection scores, not WDL-head classification accuracy. |
@@ -40,9 +40,9 @@ Status definitions:
 | Study B | Requested budgets 100/400/800/1,600; record actual nodes because batches overshoot. Threads=1, MinibatchSize=256, smart pruning off. Raw network is the budget-0 comparison. |
 | Hard follow-up | Existing 43-position subset: FP16 raw move wrong or less than 80% correct-move policy mass. Existing supplementary budgets 10/25/50/100/200. Treat test-defined hard analysis as descriptive; do not tune models on it. |
 | Study C | Existing 200/800 ms conditions, FP16 and best dense INT8 (`s4`), default search Threads/smart pruning, MoveOverheadMs=20. Report actual elapsed time and early stopping. |
-| Matches | Paired openings/colors, FP16 versus best dense INT8, configured 10+0.1 time control; estimate runtime before setting the final pair count. The current 250-pair configuration is provisional, not an executed match. |
+| Matches | 250 color-swapped pairs/500 games frozen in Run3 from duration pilot;50 openings repeated five times,10+0.1 and unchanged adjudication. Production pending Run4; final uncertainty must account for repeated openings. |
 | Swaps | Two stitched network bodies inside lc0; fixed-node accuracy analysis only. Exclude swap models from speed comparisons and the speed frontier. |
-| Energy | GPU energy above idle through NVML. CPU RAPL is unavailable on the current Windows stack; no CPU or whole-machine energy claim. |
+| Energy | GPU energy via NVML; retain total under-load and reported above-idle values. Historical idle cross-check is anomalous, so subtraction is provisional. Controlled Run4 diagnostic prepared. No CPU/whole-machine/equal-energy accuracy claim. |
 | Batch study | Reduced MinibatchSize sweep 32/64/128/256 for FP16 and best dense INT8, measuring nodes/s and GPU energy/node. |
 | Timing controls | One GPU workload at a time, plugged-in fixed power mode, warm-up and recorded temperature/clocks. Clock locking was denied. Final headline measurements need repeats/medians and disclosed variability; the imported single-pass results remain preliminary. |
 | Configuration | `config.example.json` is the shared frozen recipe; ignored `config.json` supplies this machine's paths. Historical run snapshots are evidence, not configurations to execute verbatim after relocation. |
@@ -63,27 +63,27 @@ Status definitions:
 | W1.1 | 1 | **Completed:** checkpoint, input/model definitions and initial export. | **Completed:** lc0, runtime/tool installation and machine inventory. | `nets/`, `models/`, imported inventory and C1 records. |
 | W1.2 | 1 | **Completed:** wrapped ONNX and initial INT8 model. | **Completed:** wrapped/native agreement, FP16/INT8 lc0 execution and initial INT8 kernel capture. | `reports/C1-done.md`, `reports/trt/`, `LOG.md`. Detailed coverage remains W3.5. |
 | W1.3 | 1 | **Completed:** calibration/development inputs and outlier diagnostics. | **Completed:** dataset, WDL/DTZ scorer, hard subset and baseline A/B measurements. | `data/`, `reports/outliers.txt`, `reports/scores_test.*`. Final integrity closure is W4.4. |
-| W1.4 | 1 | **Completed:** FP16 NN-level measurements. | **In progress:** baseline hardware evidence; throughput/GPU energy exist, detailed layer profile remains. | Complete the missing profile under W3.5; do not repeat completed baseline accuracy. |
+| W1.4 | 1 | **Completed:** FP16 NN-level measurements. | **Completed bounded audit:** repeated hardware evidence and standalone profile mapped in Run3. | T2/F6; opaque fusion and partial operation coverage disclosed. |
 | W2.1 | 2 | **Completed:** s1 per-tensor, s2 per-channel, s3 percentile 99.999, s4 SmoothQuant alpha 0.7; best=s4 frozen from development selection. | **Completed:** build/load all dense variants in lc0. | `models/*.json`, `reports/C2-recipe-choice.json`, `reports/C2-build-manifest.json`. |
 | W2.2 | 2 | **Completed:** Study A metrics and model-side comparison. | **Completed:** main Study B, paired tests and node-equivalent tables. | `results/<model>/study_a.jsonl`, `study_b.jsonl`, `reports/scores_test.*`. |
-| W2.3 | 2 | **Completed:** magnitude 2:4 (`s0`) model and accuracy measurements. | **In progress:** dense/sparse hardware profiles and three lc0 speed trials collected; actual sparse-tactic interpretation pending Run 3. | Model and supplemental search results exist; hardware completion depends on W3.5. |
+| W2.3 | 2 | **Completed:** magnitude2:4 model and accuracy measurements. | **Completed:** dense/sparse tactic audit and repeated lc0 speed; substantial chess loss and slower search are retained findings. | T2/T5/F6/F11; standalone sparse gain is not lc0 sparse acceleration. |
 | W3.1 | 3 | **Completed:** s4aa attention extension, sequential SparseGPT (`s1sp`), both stitched policy/value swaps. | **Completed:** associated network/fixed-node evaluations. | Model sidecars, C2 manifest, swap provenance and score tables. Sparse accuracy loss is a finding, not incomplete implementation. |
-| W3.2 | 3 | **Completed A analysis:** hard-subset consolidation, paired/actual-node tables and descriptive interpretation. B raw runs remain complete. | **Completed:** six dense models at 10/25/50/100/200 requested nodes. | `results/hard_lowbudget/`; final matched supplemental table still needed. |
-| W3.3 | 3 | **In progress:** matched 2,437-ID timed review and provisional A interpretation complete; R3 canonical final alignment pending. | **In progress:** Study C raw runs complete; consolidate exactly the common 2,437 IDs at 200/800 ms, score and document actual elapsed time. | `results/studyc/`; preserve extra historical rows and filter them explicitly. |
-| W3.4 | 3 | **In progress:** existing 50-opening book/pairing/adjudication review documented; actual match interpretation WAIT R4. | **In progress:** two-game runtime pilot complete; final pair count is Run 3, production match Run 4 and final Elo/CI Run 5. | Pilot estimate 26.9723 seconds/game, provisional 250 pairs about3.7461hours before additional overhead/uncertainty. Two games are not strength evidence. |
-| W3.5 | 3 | **In progress:** active-graph 195-operation geometry, 164/31 fixed/dynamic split and work/traffic method verified; measured contribution awaits R1 interpretation. | **In progress:** GPU loader fixed; six detailed profiles, sparse/dense engines, measured compute/bandwidth probes and eight lc0 traces collected and verified. Precision/fallback/sparse coverage and roofline interpretation remain Run 3. | `reports/takeover/run2/` retains new outputs; original `nvinfer_plugin_10.dll` failed evidence is preserved. Collected files alone do not close the scientific audit. |
-| W3.6 | 3 | **In progress:** eight-model quality coordinates and comparison rules ready; final speed/quality discussion is Run 3. | **Measurement collection complete; reporting in progress:** all28 trials verified, five each FP16/s4 and three each other model. Final variability/session/thermal review remains Run 3. | Frontier model set: fp16,s1,s2,s3,s4,s4aa,s0,s1sp. Separate lc0 speed from standalone sparse-enabled trtexec probes; never mix them on one axis without labelling. |
-| W4.1 | 4 | **In progress:** F1–F4, F12 and hard supplement generated/visually checked; frontier quality ready, measured speeds await B. | **In progress:** reduced batch plot exists. Finish timed, match, hardware/roofline, energy and frontier figures. | Deliverable mapping below; use the frozen cohorts, report uncertainty and avoid claims unsupported by saturated data. |
+| W3.2 | 3 | **Completed:** hard-subset paired/actual-node tables and descriptive interpretation. | **Completed:** six dense models at10/25/50/100/200 requested nodes. | Original results/hard_lowbudget plus analysis/tables/hard-lowbudget*.csv and supplemental figure. |
+| W3.3 | 3 | **Completed:** canonical paired timed analysis. | **Completed:** exactly2437 matching IDs at200/800ms, actual nodes/time and score consolidation. | T6-timed-canonical.csv, T6-timed-positions.csv, F5-time; extras preserved. |
+| W3.4 | 3 | **In progress:** book/pairing review and frozen250-pair design complete; strength interpretation awaits games. | **In progress:** pilot and sizing complete; production Run4, statistics Run5. | reports/takeover/run3/match-sizing.json; plan5–6h/reserve7 for Run4. |
+| W3.5 | 3 | **Completed bounded analysis:** operation/precision/fusion mapping, logical traffic and partial measured-reference roofline. | **Completed bounded analysis:** profiles, eight execution captures and sparse tactic review. Fresh validation pending W4.4. | T2/T5/F6;30 attention MatMuls unresolved, modeled bytes not DRAM, reference curves not hard ceilings. |
+| W3.6 | 3 | **Completed:** eight-model quality/throughput coordinates and limitations. | **Completed:**28 repeated speed trials, variability/session/thermal review. Energy idle subtraction remains provisional. | T2/T3/F11; five trials each FP16/s4, three each others. |
+| W4.1 | 4 | **In progress:** available A figures/tables complete and visually checked, including F6/F11. | **In progress:** F5/F6/F7/F11 complete with limits; match figure awaits Run4/5. | F7 retains energy qualification; F8/F10 omitted. |
 | W4.2 | 4 | **In progress:** evidence-linked A report draft and checked reference scope ready; final dependent discussion/shared integration pending. | **Pending:** harness/runtime, benchmarking, timed/strength and hardware sections. | Final report sources and rendered report. |
 | W4.3 | 4 | **Pending, shared:** abstract/introduction, related work, discussion/limitations/conclusion, presentation and playing demo. | **Pending, shared.** | Include accepted scope reductions and distinguish throughput from demonstrated strength. |
-| W4.4 | 4 | **Pending, shared:** final split-integrity closure, model/data identities, report-number/citation audit, artifact packaging and fresh reproduction. | **Pending, shared:** verify usable setup/resume instructions and hardware-specific engine rebuilding. | Resolve/document the known small cross-split symmetry overlap without overwriting history. Validate the revised reproduction package; the consolidation smoke check is not a full experimental reproduction. |
+| W4.4 | 4 | **In progress:** integrity/source/artifact audit and clean setup complete; final numerical/citation/package closure pending. | **In progress:** fresh source/Python/artifact workspace and checked GPU commands ready; actual reproduction Run4, final bundle/audit Run5. | Source eb9e8cf,21 pinned packages,758MB subset; same-host native tools reused. |
 | W4.5 | 4 | **Pending, shared:** final deliverable-by-deliverable sign-off. | **Pending, shared.** | Every retained item below has a real output file, owner, evidence/configuration and recorded status; every omission is declared. |
 
 ## Remaining execution order
 
 1. Consolidation is an infrastructure/documentation task only: preserve evidence, relocate paths and validate imports/configuration. Do not mark hardware or chess experiments complete because files were moved.
-2. Run 2 collection is verified under its documented original/v2 sessions. Preserve flagged/manual failures and complete precision/sparse/roofline interpretation plus cross-session review in normal Run 3.
-3. Finish matched Study C/hard-subset reporting, comparable per-model speed and headline repeats. Finalize W3.4 match sizing/run. CPU-only analysis can happen while the other teammate owns the GPU.
+2. Runs2/3 collection and bounded analysis are verified under documented sessions. Preserve flagged/manual failures, partial precision coverage and provisional idle-energy subtraction.
+3. Exclusive Run4 first checks fresh reproduction and idle telemetry, then executes frozen250 pairs and captures demo. Current setup and canonical timed/frontier/profile analysis are complete.
 4. Freeze the final experimental inputs/results (C3). Then complete figures, writing, reproducibility, package, presentation/demo and the C4 checklist.
 
 Do not rerun `tbset`, `calib`, selection or all-model builds merely to consolidate. A changed recipe, cohort or search protocol is a new version and must be agreed/documented before execution.
@@ -92,13 +92,13 @@ Do not rerun `tbset`, `calib`, selection or all-model builds merely to consolida
 
 | New run | Mode | Output / dependency gate |
 |---|---|---|
-| 1 | Normal — completed preparation | Original evidence verified; checked wrappers, session/resource rules, manifest and offline tests ready. Actual GPU PATH fix unverified. |
-| 2 | Exclusive — completed and verified | All45 jobs covered by35 original references plus10 approved-policy-v2 jobs. All28 benchmark trials and two pilot games verified. Original failures preserved; no active GPU work. Scientific interpretation remains Run 3. |
-| 3 | Normal — pending | Audit R1/R2; finish available A6/A7/frontier, canonical existing timed report (R3); freeze match size before production; prepare fresh environment/subset. |
+| 1 | Normal - completed preparation | Evidence, checked wrappers and tests ready; subsequent Run2 verified GPU PATH fix. |
+| 2 | Exclusive - completed and verified | All45 job identities/28 trials/pilot verified; bounded interpretation completed in Run3. Original failed/manual evidence preserved. |
+| 3 | Normal - completed and verified | Bounded R1/R2/A6/A7/frontier and R3 analysis,250-pair freeze, fresh setup/subset and15 Run4 jobs ready; no GPU work. |
 | 4 | Exclusive — pending | Fresh FP16/s4/sparse GPU checks, paired production match (R4), demo after measurements and runtime/reproduction evidence (R5). |
 | 5 | Normal — pending | Final paired statistics, both roles' writing/figures/report/deck, package/restore/reproduction audit and C4. Requires every retained item; unresolved profiling needs a later exclusive repair block first. |
 
-Before each future exclusive run, remind Anjan to save/pause work, use AC and consistent power/cooling, close competing jobs, and state an updated duration estimate. Run 2 is complete. Normal Run 3 finalizes match size and provides the Run 4 duration from the pilot plus reproduction/demo overhead. No production match size is fixed by the two-game pilot. Details and procedural differences: `docs/takeover_runs.md`, `docs/takeover_protocol_note.md` and `execution/protocol.json`.
+Before each future exclusive run, remind Anjan to save/pause work, use AC and consistent power/cooling, close competing jobs, and state an updated duration estimate. Run 2 is complete. Run3 froze250 pairs using duration only, not pilot outcomes. Run4 planning range is5–6h, reserve7, with uncertain first-build/two-game extrapolation. Read reports/takeover/run3/EXCLUSIVE_RUN_4.md. Details and procedural differences: `docs/takeover_runs.md`, `docs/takeover_protocol_note.md` and `execution/protocol.json`.
 
 ## Updated deliverable register
 
@@ -106,30 +106,30 @@ Paths below are intended final locations; a pending path does not imply a file a
 
 | ID | Retained deliverable | Owner | Current status | Existing evidence / remaining output |
 |---|---|---|---|---|
-| D1 | Shared code, setup and reproduction instructions | Shared | **In progress** | Active code at root; README and local configuration. Fresh setup and full reproduction still pending. |
-| D2 | Model artifacts, calibration, recipes and engine identities | A+B | **In progress** | `models/`, `nets/`, `data/`, model/build manifests. Final profile engines/package pending; engine binaries are local/GPU-specific. |
+| D1 | Shared code, setup and reproduction instructions | Shared | **In progress** | Clean source/Python setup and subset restore verified; actual GPU reproduction and final documentation pending Run4/5. |
+| D2 | Model artifacts, calibration, recipes and engine identities | A+B | **In progress** | All existing models/engines/receipts preserved; final fresh-engine/runtime freeze and package Run4/5. |
 | D3 | Labelled root lists, splits, hard IDs and scoring scripts | Shared | **In progress** | Data/scorer preserved; A-side cohort/symmetry audit complete in analysis/person_a/run1/cohort_audit.json. Shared final integrity/package closure pending. |
 | T1 | Ablation table: Studies A/B, DTZ secondary, paired statistics and node-equivalents | A | **Completed** | `reports/scores_test.md` and `.json`; publication formatting and supplementary low-budget consolidation under W4.1. |
-| T2 | Latency, NN evals/s, nodes/s, precision/sparse coverage and raw-checkpoint reference | B | **In progress** | `reports/c3_hw/bench/` and initial kernel capture; finish coverage, comparable per-model speed, repeats and `analysis/tables/T2-speed.*`. |
-| T3 | GPU energy above idle per node | B | **In progress** | Existing benchmark/sweep JSON; finish `analysis/tables/T3-energy.*`. CPU/whole-machine energy explicitly excluded. |
+| T2 | Latency, NN evals/s, nodes/s, bounded precision/sparse coverage and wrapping reference | B | **Completed bounded analysis** | analysis/tables/T2-*.csv; repeat/session/thermal review; imported C1 raw-checkpoint/wrapping reference retained, not a new native baseline. Standalone mapping and lc0 execution evidence separately scoped. |
+| T3 | GPU energy above idle per node, with total under-load comparison | B | **In progress — provisional idle subtraction** | T3-energy.csv and idle-telemetry-review.csv preserve both metrics. Under-load internal consistency checked; Run4 diagnostic and final limitation decision pending. CPU/whole-machine energy excluded. |
 | T4 | Paired-match Elo, confidence interval and game count | B | **Pending** | Match results/PGN plus `analysis/tables/T4-matches.*`. |
-| T5 | Magnitude/SparseGPT sparse-enabled versus dense execution, per-layer/end-to-end evidence | B | **In progress** | Dense/sparse profiles collected; actual tactic interpretation/table is Run 3. Include a documented no-sparse-tactics result if that is what the runtime chooses. |
+| T5 | Magnitude/SparseGPT sparse-enabled versus dense execution | B | **Completed bounded analysis** | T5-sparsity.csv;126/125 selected sparse GEMMs;1.077x/1.066x standalone speed ratios, single configuration; no lc0 sparse claim. |
 | F1 | Dense ablation ladder | A | **Completed analysis output** | Data ready; `analysis/figures/F1-ablation.*`. |
 | F2 | Accuracy versus requested/actual node budget | A | **Completed analysis output** | Main and supplementary data ready; `analysis/figures/F2-nodes.*`. |
 | F3 | Node-equivalents | A | **Completed analysis output** | Numerical table ready; `analysis/figures/F3-node-equivalents.*`, with saturation caveat. |
 | F4 | Policy/value swaps | A | **Completed analysis output** | Both swaps evaluated; `analysis/figures/F4-swaps.*`, accuracy only. |
-| F5 | Accuracy versus time, with realized nodes and elapsed-time context | B | **In progress** | Raw matched runs ready; `analysis/figures/F5-time.*`. |
-| F6 | Per-layer time breakdown and roofline | A+B | **In progress** | Profiles and measured ceiling inputs collected/verified; precision/roofline interpretation and `analysis/figures/F6-profile-roofline.*` remain Run 3. |
-| F7 | GPU joules per node | B | **In progress** | Measurement data ready; `analysis/figures/F7-energy.*`. |
+| F5 | Accuracy versus time with actual nodes/elapsed context | B | **Completed analysis output** | analysis/figures/F5-time.* and T6 canonical tables; no robust accuracy gain established. |
+| F6 | Layer-time breakdown and partial measured-reference roofline | A+B | **Completed bounded analysis output** | F6-profile-breakdown.* and F6-roofline.*; exact mapping where available, logical bytes, opaque fusion and empirical-reference limits disclosed. |
+| F7 | GPU joules per node | B | **Completed provisional analysis output** | F7-energy.* retains total and above-idle metrics; historical idle subtraction unvalidated, qualification required in final report. |
 | F8 | Accuracy at equal energy | — | **Omitted** | Not measured by the trimmed pipeline; do not claim stronger per joule from energy/node alone. |
 | F9 | Nodes/s versus four batch settings | B | **Completed** | `reports/c3_hw/batch_sweep/sweep.png`, `.csv`, `.json`; optional publication styling does not require rerunning. |
 | F10 | Fixed-time accuracy versus batch size | — | **Omitted** | Not measured by the reduced speed/energy sweep. |
-| F11 | Headline accuracy-versus-nodes/s frontier for all retained single-body models | A+B | **Pending** | Comparable per-model speed plus `analysis/figures/F11-frontier.*`. State accuracy condition, actual nodes and batch setting explicitly; exclude double-body swaps. |
+| F11 | Raw NN quality versus search-throughput coordinates, eight single-body models | A+B | **Completed analysis output** | F11-frontier.* with repeat range and marginal accuracy intervals; workloads differ, not a strength/fixed-time frontier; swaps excluded. |
 | F12 | Matched activation-channel outliers before/after SmoothQuant | A | **Completed** | analysis/figures/F12-outliers.{png,pdf,svg}; final alpha-0.7 model, matched CPU measurements on 512 frozen inputs; 101-group build summary kept separate. Provenance and original mismatch preserved. |
 | D4 | Final report with methods, results and limitations | A+B | **In progress — A draft ready** | deliverables/report/person_a_sections.md plus checked references and F12; systems-dependent/shared final integration remains. |
 | D5 | Presentation | Shared | **Pending** | `deliverables/presentation/`. |
 | D6 | Short INT8-lc0 playing demo with visible nodes/s | Shared | **Pending** | `deliverables/demo/`. |
-| D7 | Portable artifact inventory/package and fresh reproduction | Shared | **Pending** | Small metadata in Git; large binaries/logs in a checksum-verified artifact bundle. One fresh reproduction including FP16, best PTQ and sparse outputs or their documented runtime limitation. |
+| D7 | Portable artifact inventory/package and fresh reproduction | Shared | **In progress** | Fresh source/Python setup and FP16/s4/SparseGPT subset restored and checked. Actual GPU reproduction Run4; full portable package and final restore audit Run5. |
 | D8 | Final numerical/citation audit and C4 sign-off | Shared | **Pending** | `deliverables/completion-checklist.md`: item -> path -> supporting run/config -> owner -> verification. Include every retained register row. |
 
 ## Consolidation closure
@@ -138,12 +138,12 @@ Repository consolidation is **Completed**: original-file preservation, configura
 
 ## Gates and present position
 
-- **C1 pipeline:** completed under the imported gate definition. Original detailed baseline profiling is still owed under W3.5.
-- **C2 dense recipe/studies:** completed. The original hardware-inclusive sparse ceiling remains unfinished.
-- **C3 final experiment freeze:** in progress; Run 2 measurements collected/verified, precision/thermal/variability interpretation and production matches remain.
+- **C1 pipeline:** completed under the imported gate definition. Detailed baseline profiling has a bounded Run3 audit under W3.5.
+- **C2 dense recipe/studies:** completed. Standalone sparse execution/empirical-reference analysis is complete with explicit scope limits.
+- **C3 final experiment freeze:** in progress; Run2 measurements and Run3 analysis verified; production matches and actual fresh GPU reproduction remain.
 - **C4 final deliverables freeze:** pending.
 
-The main model implementations do not need to be redone. Person A's remaining work is chiefly analysis, figures, roofline support and writing. Person B's remaining work is chiefly hardware completion, comparable/repeated speed measurements, timed consolidation and matches. The adopted scope yields all retained deliverables; it does not silently restore omitted outputs from the original PDF.
+The main model implementations do not need to be redone. Remaining work is fresh GPU validation, production matches, final shared statistics/writing/report/deck/video/package and C4. Current analysis outputs retain their uncertainty and adverse findings. The adopted scope yields all retained deliverables; it does not silently restore omitted outputs from the original PDF.
 
 ## Revision record
 
@@ -153,3 +153,5 @@ The main model implementations do not need to be redone. Person A's remaining wo
 | 2026-10-29 | 2.1 | Execute Person A Run 1 independent analysis on anjan; verify tables/figures, sparse masks, geometry, timed/opening review and report/delivery preparation. User explicitly deferred A5/F12; reminder required before Run 2. No scientific protocol/model change or new engine/GPU experiment. |
 | 2026-10-29 | 2.2 | User authorized A5 resolution. Established C1/C2 model-version mismatch; collected matched final-model activations on CPU using the unchanged 512 calibration inputs; verified scaling, completed F12 and refreshed report/status. No quantizer, scorer, model, calibration or scientific protocol change; no new chess/search/GPU performance experiment. Run 2 still awaits reviewed B inputs. |
 | 2026-10-30 | 2.3 | User takes over remaining B work through five autonomous runs, including old A Run2. Execute only new normal Run1: preserve originals, prepare scoped DLL PATH, declared repeated operating points, checked/resumable wrappers and resource controls; 40 offline tests. No imported quant/eval/hw edits, model/scorer/cohort changes, GPU experiment, global PATH/power change or process termination. Exclusive Run2 awaits user start. |
+| 2026-10-30 | 2.4 | Complete all45 Run2 job identities/28 trials/pilot under preserved original and approved background-monitor-only v2 sessions. Failed/manual evidence unchanged. |
+| 2026-10-30 | 2.5 | Complete CPU-only Run3 profile/sparse/roofline/repeat/frontier/canonical timed analysis and figures; freeze250 pairs, prepare independent source/Python/artifact subset and checked Run4 jobs. Flag repeated anomalous idle telemetry; retain provisional above-idle values and total energy separately. No GPU experiment or scientific model/scorer/cohort change. |

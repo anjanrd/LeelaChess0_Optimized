@@ -1,0 +1,9 @@
+model,n,correct,raw_preserving_move_accuracy,accuracy_ci_low,accuracy_ci_high,search_nps_median,search_nps_min,search_nps_max,trials,scope
+fp16,2437,2431,0.9975379565038982,0.9946386141808582,0.9988711653968089,4842,4820,4952,5,raw NN quality versus lc0 search throughput; not fixed-time strength
+s1,2437,2424,0.9946655724251129,0.9908941827132105,0.9968798703019464,6946,6875,7085,3,raw NN quality versus lc0 search throughput; not fixed-time strength
+s2,2437,2427,0.9958965941731637,0.9924626346406037,0.9977695869013431,7436,7402,7460,3,raw NN quality versus lc0 search throughput; not fixed-time strength
+s3,2437,2431,0.9975379565038982,0.9946386141808582,0.9988711653968089,7111,7095,7169,3,raw NN quality versus lc0 search throughput; not fixed-time strength
+s4,2437,2431,0.9975379565038982,0.9946386141808582,0.9988711653968089,6818,6745,6908,5,raw NN quality versus lc0 search throughput; not fixed-time strength
+s4aa,2437,2431,0.9975379565038982,0.9946386141808582,0.9988711653968089,5956,5832,6036,3,raw NN quality versus lc0 search throughput; not fixed-time strength
+s0,2437,1958,0.8034468608945424,0.7871966440726241,0.8187418977811365,3775,3768,3816,3,raw NN quality versus lc0 search throughput; not fixed-time strength
+s1sp,2437,2415,0.9909725071809602,0.9863687068680926,0.9940308405666938,5316,5305,5632,3,raw NN quality versus lc0 search throughput; not fixed-time strength

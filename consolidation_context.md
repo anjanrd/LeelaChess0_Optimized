@@ -4,6 +4,8 @@
 
 Read this document together with [updated_plan.md](updated_plan.md), [README.md](README.md), [STATUS.md](STATUS.md) and [AGENTS.md](AGENTS.md). The plan is authoritative for scientific scope and responsibilities; this file explains repository structure, lineage and safe continuation.
 
+Current continuation (30 October): new Runs1–3 are complete; see [Run3 analysis](analysis/person_a/run3_findings.md) and [exclusive Run4 handoff](reports/takeover/run3/EXCLUSIVE_RUN_4.md). The clean reproduction clone/environment/artifact subset lives outside the checkout in `%LOCALAPPDATA%/LC0-BT3-Reproduction/run4-eb9e8cf`. Same-host GPU reproduction and production matches remain pending. Historical consolidation and Run2 records below retain their original checkpoint meaning.
+
 ## 1. What was authorized and what changed
 
 The user accepted Person B's conventions, pipeline, rules and trimmed plan as the basis for all future work, then authorized consolidating both workspaces and creating a revised plan/deliverable register. The consolidation preserves completed work instead of replaying Week 1 or rebuilding models.

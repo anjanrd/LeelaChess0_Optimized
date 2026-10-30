@@ -1,0 +1,152 @@
+{
+  "schema_version": 1,
+  "frozen_before_production": true,
+  "pairs": 250,
+  "games": 500,
+  "frozen_unix": 1793357629.121702,
+  "production_started": false,
+  "source_revision": "eb9e8cf8811f2426884d293e780a55d68240be48",
+  "pilot_estimate": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\codex-continuation-v2\\match-estimate-2\\attempt-001\\work\\pilot\\estimate.json",
+    "bytes": 356,
+    "sha256": "ff20a33e6e8b7b6d6f73aaa71767890b35186062080ecd34a2133f455db110e3"
+  },
+  "pilot_contract": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\codex-continuation-v2\\match-estimate-2\\attempt-001\\work\\pilot\\contract.json",
+    "bytes": 3277,
+    "sha256": "98a04a0b3a73cc9d4fc03b3c8c81b05fc62b92caf254e5f3f0f79fcd791944b0"
+  },
+  "seconds_per_game_observed": 26.9722588500008,
+  "production_game_hours_point_estimate": 3.746147062500111,
+  "run4_planning_hours": [
+    5,
+    6
+  ],
+  "run4_reserve_hours": 7,
+  "allocation": "game estimate3.746h;25-35% duration contingency plus fresh GPU checks/engine builds and post-measurement demo",
+  "selection_rule": "Keep the existing250-pair candidate because observed runtime fits one exclusive session; use five cycles of50 openings, both colors. No outcome-based sizing.",
+  "settings": {
+    "tc": "10+0.1",
+    "pairs": 250,
+    "estimate": 2,
+    "threads": 0,
+    "minibatch": 0,
+    "move_overhead": 50,
+    "tb_men": 5,
+    "resign_cp": 1000,
+    "draw_cp": 10,
+    "draw_after": 80,
+    "max_plies": 400,
+    "no_flag": false
+  },
+  "engines": [
+    {
+      "model": {
+        "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz",
+        "bytes": 294605128,
+        "sha256": "83d01b5bff0891e6e7be18b23ef16193a90c5d7969ddcd053fd11cb3a4542135"
+      },
+      "backend": "onnx-trt",
+      "opts": "optimize=6"
+    },
+    {
+      "model": {
+        "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz",
+        "bytes": 90915493,
+        "sha256": "b556b45cab302ecf893c4afcd932c3df51358004a14f6e1ec9ef99fb21f75abb"
+      },
+      "backend": "onnx-trt",
+      "opts": "optimize=8"
+    }
+  ],
+  "openings": [
+    "e4 e5 Nf3 Nc6 Bb5 a6",
+    "e4 e5 Nf3 Nc6 Bc4 Bc5",
+    "e4 e5 Nf3 Nc6 d4 exd4",
+    "e4 e5 Nf3 Nf6",
+    "e4 e5 Nc3 Nf6",
+    "e4 e5 f4 exf4",
+    "e4 c5 Nf3 d6 d4 cxd4",
+    "e4 c5 Nf3 Nc6 d4 cxd4",
+    "e4 c5 Nf3 e6 d4 cxd4",
+    "e4 c5 Nc3 Nc6 g3",
+    "e4 c5 c3 Nf6",
+    "e4 c5 Nf3 d6 Bb5+",
+    "e4 e6 d4 d5 Nc3 Nf6",
+    "e4 e6 d4 d5 Nd2 c5",
+    "e4 e6 d4 d5 e5 c5",
+    "e4 c6 d4 d5 Nc3 dxe4",
+    "e4 c6 d4 d5 e5 Bf5",
+    "e4 d5 exd5 Qxd5 Nc3 Qa5",
+    "e4 d6 d4 Nf6 Nc3 g6",
+    "e4 g6 d4 Bg7 Nc3 d6",
+    "e4 Nf6 e5 Nd5 d4 d6",
+    "d4 d5 c4 e6 Nc3 Nf6",
+    "d4 d5 c4 c6 Nf3 Nf6",
+    "d4 d5 c4 dxc4 Nf3 Nf6",
+    "d4 Nf6 c4 e6 Nc3 Bb4",
+    "d4 Nf6 c4 e6 Nf3 b6",
+    "d4 Nf6 c4 g6 Nc3 Bg7",
+    "d4 Nf6 c4 g6 Nc3 d5",
+    "d4 Nf6 c4 c5 d5 b5",
+    "d4 Nf6 c4 c5 d5 e6",
+    "d4 Nf6 Nf3 e6 Bg5 c5",
+    "d4 d5 Bf4 Nf6 e3 c5",
+    "d4 f5 g3 Nf6 Bg2 g6",
+    "d4 Nf6 c4 e6 g3 d5",
+    "d4 d5 Nf3 Nf6 e3 e6",
+    "d4 e6 c4 Bb4+ Bd2 Qe7",
+    "c4 e5 Nc3 Nf6 Nf3 Nc6",
+    "c4 c5 Nc3 Nc6 g3 g6",
+    "c4 Nf6 Nc3 e6 e4 d5",
+    "c4 e6 Nf3 d5 g3 Nf6",
+    "Nf3 d5 g3 Nf6 Bg2 c6",
+    "Nf3 Nf6 c4 b6 g3 Bb7",
+    "Nf3 c5 c4 Nc6 Nc3 e5",
+    "g3 d5 Bg2 Nf6 Nf3 c6",
+    "b3 e5 Bb2 Nc6 e3 d5",
+    "e4 e5 Nf3 d6 d4 Nf6",
+    "e4 c5 Nf3 g6 d4 cxd4",
+    "d4 c5 d5 e5 e4 d6",
+    "e4 b6 d4 Bb7 Bd3 e6",
+    "d4 Nf6 Bg5 e6 e4 h6"
+  ],
+  "syzygy_arbiter_only": true,
+  "same_clocks_and_adjudication": true,
+  "precision_limit": {
+    "worst_case_95_score_halfwidth_if_independent_pairs": 0.061980642139300234,
+    "approx_Elo_halfwidth_near_equal_score": 43.29122081748646,
+    "limitation": "Not a guaranteed CI or power calculation:50 repeated openings, pair correlation and unknown draws reduce effective information."
+  },
+  "completion_rule": "Exactly250 complete color-swapped pairs; no outcome-based early stop/resizing; resume committed games after authorized review",
+  "pilot_outcomes_used_for_size": false,
+  "strength_inference_from_pilot": false,
+  "pilot_settings": {
+    "tc": "10+0.1",
+    "pairs": 250,
+    "estimate": 2,
+    "threads": 0,
+    "minibatch": 0,
+    "move_overhead": 50,
+    "tb_men": 5,
+    "resign_cp": 1000,
+    "draw_cp": 10,
+    "draw_after": 80,
+    "max_plies": 400,
+    "no_flag": false
+  },
+  "production_settings": {
+    "tc": "10+0.1",
+    "pairs": 250,
+    "estimate": 0,
+    "threads": 0,
+    "minibatch": 0,
+    "move_overhead": 50,
+    "tb_men": 5,
+    "resign_cp": 1000,
+    "draw_cp": 10,
+    "draw_after": 80,
+    "max_plies": 400,
+    "no_flag": false
+  }
+}

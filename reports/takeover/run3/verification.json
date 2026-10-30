@@ -1,0 +1,37 @@
+{
+  "status": "verified_normal_Run3",
+  "branch": "anjan",
+  "source_revision": "eb9e8cf8811f2426884d293e780a55d68240be48",
+  "verified_unix": 1793359622.704333,
+  "Run2_original_and_continuation_sources_unchanged": 72,
+  "Run2_raw_output_files_unchanged": 558,
+  "Run2_raw_output_bytes_unchanged": 2157379271,
+  "Run2_receipts_match_state": true,
+  "Run4_frozen_sources_verified": 119,
+  "Run4_dependency_jobs_verified": 15,
+  "false_session_template_rejected": true,
+  "Run4_output_tree_absent": true,
+  "active_workload_locks_absent": true,
+  "profile_times_reconcile_without_duplication": true,
+  "matrix_inventory_arithmetic_ops_per_position": 9078490112,
+  "timed_common_cohort": 2437,
+  "timed_position_records": 9748,
+  "figures_visually_checked": [
+    "F5-time",
+    "F6-profile-breakdown",
+    "F6-roofline",
+    "F7-energy",
+    "F11-frontier"
+  ],
+  "offline_tests_passed": 73,
+  "fresh_environment_exact_pins": 21,
+  "fresh_CPU_smoke": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run3\\fresh-cpu-smoke.json",
+    "bytes": 1662,
+    "sha256": "ca3082c8eade70c4fdc08c5e0badfff0788cc09f3d37a00f2957b49c6b25e27a"
+  },
+  "new_GPU_workloads": 0,
+  "processes_terminated": 0,
+  "commit_push_or_teammate_message": false,
+  "scope": "Integrity, numerical reconciliation and readiness verification; cumulative hypothesis check is read-only in conversation, not a new gate artifact"
+}
