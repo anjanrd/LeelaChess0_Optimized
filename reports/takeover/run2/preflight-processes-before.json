@@ -1,0 +1,38 @@
+[
+  {
+    "Name": "OneDrive.exe",
+    "ProcessId": 10372,
+    "ParentProcessId": 3588,
+    "ExecutablePath": "C:\\Program Files\\Microsoft OneDrive\\OneDrive.exe"
+  },
+  {
+    "Name": "msedge.exe",
+    "ProcessId": 6076,
+    "ParentProcessId": 6468,
+    "ExecutablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+  },
+  {
+    "Name": "msedge.exe",
+    "ProcessId": 32020,
+    "ParentProcessId": 6076,
+    "ExecutablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+  },
+  {
+    "Name": "msedge.exe",
+    "ProcessId": 24076,
+    "ParentProcessId": 6076,
+    "ExecutablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+  },
+  {
+    "Name": "msedge.exe",
+    "ProcessId": 31156,
+    "ParentProcessId": 6076,
+    "ExecutablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+  },
+  {
+    "Name": "msedge.exe",
+    "ProcessId": 14836,
+    "ParentProcessId": 6076,
+    "ExecutablePath": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
+  }
+]

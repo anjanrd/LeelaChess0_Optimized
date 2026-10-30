@@ -25,6 +25,7 @@ __pycache__/
 /reports/**/*.log
 /reports/**/*.exitcode
 /reports/takeover/**/*.cache
+/reports/takeover/**/*.cache.lock
 /reports/**/*-backup/
 /reports/**/study-backup/
 /reports/**/studyc-backup/

@@ -1,0 +1,113 @@
+{
+  "status": "prepared_offline_verified_not_GPU_executed",
+  "verified_unix": 1793352274.4435177,
+  "branch": "anjan",
+  "head": "9cbc274103ad231cb364fbfa05b2ff89bddd10e8",
+  "test_commands": [
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_manual_run2.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 18
+    },
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_*.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "tests": 58
+    },
+    {
+      "argv": [
+        ".venv/Scripts/python.exe",
+        "-B",
+        "-m",
+        "execution.manual_run2",
+        "--check"
+      ],
+      "exit_code": 0,
+      "GPU_workloads_started": 0
+    }
+  ],
+  "sources": [
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\manual_run2.py",
+      "bytes": 24475,
+      "sha256": "9e5408fe615413d83b7bf1ed93779dc4b4c4771ca387b9f3185957f1774a7e71"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\tests\\test_manual_run2.py",
+      "bytes": 17945,
+      "sha256": "2f99720138b2238a59e62941e9b2e2f14afd799d1fbfc20f1d430c4970752fdf"
+    },
+    {
+      "path": "C:\\Users\\HP\\Desktop\\LC0\\docs\\manual_run2.md",
+      "bytes": 5113,
+      "sha256": "98f8a89f4347d8db401cf8f11a194c46ec9054c7e12ed44003255d6ce977f535"
+    }
+  ],
+  "original_manifest": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run1\\run2_jobs.json",
+    "bytes": 55570,
+    "sha256": "2f07407db23b3108478d6f791c1fb2d6f6d260e50a4a432980c5206b4900138a"
+  },
+  "manifest_fingerprint": "9300e77242ed09d7a3f7fbd270512a6a2d24830ae39bb783139ce213ac4a1fea",
+  "frozen_sources_verified": 69,
+  "reusable_jobs_verified": 35,
+  "verified_output_files": 421,
+  "real_state_unchanged": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\state.json",
+    "bytes": 183086,
+    "sha256": "07b57cb4a18377f36c6bec1311f4d8e55820cbf3f7b7248648c8ff2a30f223d4"
+  },
+  "preserved_failure": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\receipt.json",
+    "bytes": 1763,
+    "sha256": "32d081af30df79797f1400de2fea0291b1cd24629e4d880a427776a9201e7811"
+  },
+  "preserved_failed_files_verified": 15,
+  "remaining": [
+    "bench-s1sp-r3",
+    "bench-s1-r3",
+    "bench-s2-r3",
+    "bench-s3-r3",
+    "bench-s4aa-r3",
+    "bench-s4-r4",
+    "bench-fp16-r4",
+    "bench-fp16-r5",
+    "bench-s4-r5",
+    "match-estimate-2"
+  ],
+  "actual_runtime_identity_observation_matches_original": true,
+  "integrated_terminal_rejection_observed": true,
+  "native_cleanup_test": "isolated CPU-only child and grandchild terminated; test runner preserved",
+  "GPU_experiments_started_during_preparation": 0,
+  "external_user_apps_terminated": false,
+  "retry_review_applied": false,
+  "real_manual_sessions_created": 0,
+  "clock_power_global_PATH_or_scientific_protocol_changes": false,
+  "limitations": [
+    "Full GPU continuation awaits operator launch outside Codex",
+    "Quiet-session check is enforced at manual execution, not claimed by offline tests",
+    "Existing partial scientific outcomes remain unchanged; cumulative alignment follows collection review"
+  ]
+}

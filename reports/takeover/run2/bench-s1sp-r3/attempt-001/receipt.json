@@ -1,0 +1,51 @@
+{
+  "status": "BLOCKED",
+  "manifest": "9300e77242ed09d7a3f7fbd270512a6a2d24830ae39bb783139ce213ac4a1fea",
+  "job": "a3d20bcd492f7fd530e67dcfec63bb1e0a2f6426100c3bbd6556038f223652de",
+  "runtime": "3e66d867667cac116a9c9082fa3f824fac6a6e74d0367f3d50eacf8503f14ff3",
+  "session": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\session.json",
+    "bytes": 1062,
+    "sha256": "97ce3badd097f7cd8c9f10b0561d1fdcd8b8c3239ce8e8d098ae1887bd25c5dd"
+  },
+  "attempt": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001",
+  "command": [
+    "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-m",
+    "execution.benchmark",
+    "--name",
+    "s1sp",
+    "--lc0",
+    "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+    "--weights",
+    "C:\\Users\\HP\\Desktop\\LC0\\models\\s1sp.pb.gz",
+    "--backend-opts",
+    "optimize=8",
+    "--session",
+    "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\session.json",
+    "--out",
+    "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001/work",
+    "--positions",
+    "10",
+    "--movetime",
+    "10000",
+    "--threads",
+    "0",
+    "--minibatch",
+    "64",
+    "--batches",
+    "200",
+    "--conditioning-seconds",
+    "30"
+  ],
+  "started_unix": 1793344971.4559286,
+  "conditions": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\conditions.json",
+    "bytes": 490,
+    "sha256": "7ff197d53293bac8dab59f9cd5e3bb41f6fdc3b85ecf581ae80ad458bb066093"
+  },
+  "exit_code": 0,
+  "elapsed_seconds": 159.38781714439392,
+  "error": "Environmental interference/monitoring failure; preserve and review attempt"
+}

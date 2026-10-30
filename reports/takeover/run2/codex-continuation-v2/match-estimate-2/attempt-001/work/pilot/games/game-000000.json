@@ -1,0 +1,24 @@
+{
+  "contract": "193d849464a5832dbfc8c6616df49f81c683da03a37c74beb5f35bf306fc7ca4",
+  "record": {
+    "game": 0,
+    "pair": 0,
+    "opening": 0,
+    "white": "fp16",
+    "black": "s4",
+    "result": "1/2-1/2",
+    "reason": "adjudicated_draw",
+    "score_a": 0.5,
+    "plies": 89,
+    "seconds": 25.375557099992875,
+    "a_nodes_per_move": 2484.9285714285716,
+    "b_nodes_per_move": 2726.317073170732,
+    "a_ms_per_move": 303.6399571407986,
+    "b_ms_per_move": 306.4493756101001,
+    "clock_left_ms": {
+      "white": 1447.121800086461,
+      "black": 1535.5755999858957
+    }
+  },
+  "pgn": "[Event \"fp16_vs_s4_pilot\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"1\"]\n[White \"fp16\"]\n[Black \"s4\"]\n[Result \"1/2-1/2\"]\n[TimeControl \"10+0.1\"]\n[Termination \"adjudicated_draw\"]\n\n1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Nxe4 6. d4 b5 7. Bb3 d5 8. dxe5 Be6 9. c3 Be7 10. Nbd2 Nc5 11. Bc2 d4 12. Nb3 d3 13. Bb1 Nxb3 14. axb3 Bf5 15. b4 O-O 16. Re1 a5 17. bxa5 Rxa5 18. Rxa5 Nxa5 19. Nd4 Bg6 20. Bxd3 Bxd3 21. b4 c5 22. Qxd3 cxd4 23. bxa5 Qxa5 24. Qxd4 Rd8 25. Qe3 Qa2 26. h3 Qc4 27. Qf3 h6 28. Bf4 Rd3 29. Re3 Rxe3 30. Qxe3 b4 31. cxb4 Bxb4 32. Qc1 Qe4 33. g4 Bf8 34. Bg3 Qd5 35. Qc8 Qe4 36. h4 g6 37. h5 g5 38. Kh2 Qd5 39. Qf5 Bg7 40. Kg1 Bf8 41. Kh2 Qc4 42. e6 Qxe6 43. Qxe6 fxe6 44. Be5 Kf7 45. Kg3 1/2-1/2"
+}

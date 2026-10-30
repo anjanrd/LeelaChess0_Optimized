@@ -1,0 +1,12 @@
+{
+  "argv": [
+    "C:\\Users\\HP\\Desktop\\LC0\\.venv\\Scripts\\python.exe",
+    "-B",
+    "-u",
+    "-m",
+    "execution.manual_run2",
+    "--worker",
+    "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\manual-resume-1793352599487248700"
+  ],
+  "cwd": "C:\\Users\\HP\\Desktop\\LC0"
+}

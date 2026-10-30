@@ -1,0 +1,114 @@
+{
+  "engine_names": [
+    "fp16",
+    "s4"
+  ],
+  "engines": [
+    {
+      "model": {
+        "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\fp16.pb.gz",
+        "bytes": 294605128,
+        "sha256": "83d01b5bff0891e6e7be18b23ef16193a90c5d7969ddcd053fd11cb3a4542135"
+      },
+      "backend": "onnx-trt",
+      "opts": "optimize=6"
+    },
+    {
+      "model": {
+        "path": "C:\\Users\\HP\\Desktop\\LC0\\models\\s4.pb.gz",
+        "bytes": 90915493,
+        "sha256": "b556b45cab302ecf893c4afcd932c3df51358004a14f6e1ec9ef99fb21f75abb"
+      },
+      "backend": "onnx-trt",
+      "opts": "optimize=8"
+    }
+  ],
+  "lc0": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\tools\\lc0\\lc0.exe",
+    "bytes": 1796096,
+    "sha256": "3a437bdcb353fc264df317b9308ba589d29294695521909b459fbb72e918af50"
+  },
+  "rules_source": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\eval\\match.py",
+    "bytes": 13921,
+    "sha256": "4a8e209bf47d8663a5db0ef10d88e11b4f4f03ecfc1539bf3c813a788b6d0cf3"
+  },
+  "uci_source": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\eval\\lc0uci.py",
+    "bytes": 8619,
+    "sha256": "160265fc12d2e8219a2c89ce0de937c99fcca58362989cf6855174942aaf7ccd"
+  },
+  "wrapper_source": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\match_runner.py",
+    "bytes": 11226,
+    "sha256": "02ce3da62773dad82ae464ff1ad4e9849ca010b2a8dab80026fae5b1a22e7c82"
+  },
+  "opening_book": [
+    "e4 e5 Nf3 Nc6 Bb5 a6",
+    "e4 e5 Nf3 Nc6 Bc4 Bc5",
+    "e4 e5 Nf3 Nc6 d4 exd4",
+    "e4 e5 Nf3 Nf6",
+    "e4 e5 Nc3 Nf6",
+    "e4 e5 f4 exf4",
+    "e4 c5 Nf3 d6 d4 cxd4",
+    "e4 c5 Nf3 Nc6 d4 cxd4",
+    "e4 c5 Nf3 e6 d4 cxd4",
+    "e4 c5 Nc3 Nc6 g3",
+    "e4 c5 c3 Nf6",
+    "e4 c5 Nf3 d6 Bb5+",
+    "e4 e6 d4 d5 Nc3 Nf6",
+    "e4 e6 d4 d5 Nd2 c5",
+    "e4 e6 d4 d5 e5 c5",
+    "e4 c6 d4 d5 Nc3 dxe4",
+    "e4 c6 d4 d5 e5 Bf5",
+    "e4 d5 exd5 Qxd5 Nc3 Qa5",
+    "e4 d6 d4 Nf6 Nc3 g6",
+    "e4 g6 d4 Bg7 Nc3 d6",
+    "e4 Nf6 e5 Nd5 d4 d6",
+    "d4 d5 c4 e6 Nc3 Nf6",
+    "d4 d5 c4 c6 Nf3 Nf6",
+    "d4 d5 c4 dxc4 Nf3 Nf6",
+    "d4 Nf6 c4 e6 Nc3 Bb4",
+    "d4 Nf6 c4 e6 Nf3 b6",
+    "d4 Nf6 c4 g6 Nc3 Bg7",
+    "d4 Nf6 c4 g6 Nc3 d5",
+    "d4 Nf6 c4 c5 d5 b5",
+    "d4 Nf6 c4 c5 d5 e6",
+    "d4 Nf6 Nf3 e6 Bg5 c5",
+    "d4 d5 Bf4 Nf6 e3 c5",
+    "d4 f5 g3 Nf6 Bg2 g6",
+    "d4 Nf6 c4 e6 g3 d5",
+    "d4 d5 Nf3 Nf6 e3 e6",
+    "d4 e6 c4 Bb4+ Bd2 Qe7",
+    "c4 e5 Nc3 Nf6 Nf3 Nc6",
+    "c4 c5 Nc3 Nc6 g3 g6",
+    "c4 Nf6 Nc3 e6 e4 d5",
+    "c4 e6 Nf3 d5 g3 Nf6",
+    "Nf3 d5 g3 Nf6 Bg2 c6",
+    "Nf3 Nf6 c4 b6 g3 Bb7",
+    "Nf3 c5 c4 Nc6 Nc3 e5",
+    "g3 d5 Bg2 Nf6 Nf3 c6",
+    "b3 e5 Bb2 Nc6 e3 d5",
+    "e4 e5 Nf3 d6 d4 Nf6",
+    "e4 c5 Nf3 g6 d4 cxd4",
+    "d4 c5 d5 e5 e4 d6",
+    "e4 b6 d4 Bb7 Bd3 e6",
+    "d4 Nf6 Bg5 e6 e4 h6"
+  ],
+  "settings": {
+    "tc": "10+0.1",
+    "pairs": 250,
+    "estimate": 2,
+    "threads": 0,
+    "minibatch": 0,
+    "move_overhead": 50,
+    "tb_men": 5,
+    "resign_cp": 1000,
+    "draw_cp": 10,
+    "draw_after": 80,
+    "max_plies": 400,
+    "no_flag": false
+  },
+  "syzygy_adjudicator_only": "C:\\Users\\HP\\Desktop\\LC0\\.runtime\\syzygy",
+  "warmup": "one unscored 2000ms search per engine before starting match clocks"
+}

@@ -6,11 +6,11 @@ Start with [updated_plan.md](updated_plan.md) for scope, ownership and deliverab
 
 Person A's independent Run 1 analysis is ready: [execution handoff](person_a_execution_plan.md) and [report draft](deliverables/report/person_a_sections.md). **A5/F12 is resolved and verified**; [resolution evidence](analysis/person_a/a5/closure.json). Final systems-dependent outputs remain pending; review [Run 2 prerequisites](analysis/person_a/BEFORE_RUN_2.md).
 
-Anjan is now completing the remaining B-side work too. The [five-run takeover](docs/takeover_runs.md) includes the former A-side Run 2. New Run 1 preparation is complete; [verification](reports/takeover/run1/verification.json). The next run is exclusive GPU work; read its [preparation and duration handoff](reports/takeover/run1/EXCLUSIVE_RUN_2.md). Existing code/evidence remains authoritative; `execution/` provides checked continuation wrappers.
+Anjan is now completing the remaining B-side work too. The [five-run takeover](docs/takeover_runs.md) includes the former A-side Run 2. Runs 1 and 2 are complete: 35 original verified jobs plus ten verified jobs under `reports/takeover/run2/codex-continuation-v2/`, covering all 28 benchmark trials and the two-game pilot. The approved continuation records background-interference flags without stopping; other validation remains. The manual launcher was abandoned after a preserved pre-GPU PID-gate failure. Next is normal Run 3 analysis/reproduction preparation; the laptop is usable. See [current progress](reports/takeover/progress.json) and [policy note](docs/takeover_protocol_note.md).
 
 ## Current position
 
-The dense INT8 ladder, SmoothQuant, attention extension, magnitude/SparseGPT pruning, policy/value swaps and main network/fixed-node evaluations are complete. Fixed-time FP16/s4 raw runs and the reduced speed/energy batch sweep also exist. Detailed profiling is blocked by the saved TensorRT plugin-loading error; matches, final analyses, writing and reproduction remain. No new research experiment was run to consolidate the repository.
+The dense INT8 ladder, SmoothQuant, attention extension, magnitude/SparseGPT pruning, policy/value swaps and main network/fixed-node evaluations are complete. Fixed-time FP16/s4 raw runs and the reduced batch sweep exist. The TensorRT loader is fixed; detailed profiles, ceilings, lc0 traces, all-model repeated benchmarks and runtime pilot are collected and verified. Their final interpretation, production matches, writing and fresh reproduction remain. No research experiment was run merely to consolidate the repository.
 
 ## Layout
 

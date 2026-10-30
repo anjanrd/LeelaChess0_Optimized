@@ -1,0 +1,30 @@
+{
+  "root": "C:\\Users\\HP\\Desktop\\LC0",
+  "created_unix": 1793352691.3556511,
+  "exclusive_authorized": true,
+  "work_saved": true,
+  "ac_power_confirmed": true,
+  "other_work_paused": true,
+  "resource_preflight_passed": true,
+  "runtime": {
+    "GPU_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "GPU_uuid": "GPU-020e5950-8d4c-173a-fa0e-a2c9b981160d",
+    "driver_version": "592.82",
+    "memory_MiB": "8188",
+    "power_limit_query": "[N/A]",
+    "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "prepared_manifest": "9300e77242ed09d7a3f7fbd270512a6a2d24830ae39bb783139ce213ac4a1fea",
+    "OEM_mode": "not programmatically observed; unchanged by Codex"
+  },
+  "preflight": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\manual-resume-1793352599487248700\\preflight.json",
+  "authorization": "Approved manual Run2 continuation; explicit operator CLI confirmations",
+  "operator_same_OEM_and_Windows_power_mode": true,
+  "session_difference": "Codex fully closed; review thermal/clock conditions across sessions",
+  "launcher_source": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\manual_run2.py",
+    "bytes": 24475,
+    "sha256": "9e5408fe615413d83b7bf1ed93779dc4b4c4771ca387b9f3185957f1774a7e71"
+  }
+}

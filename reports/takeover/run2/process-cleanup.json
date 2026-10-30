@@ -1,0 +1,44 @@
+[
+  {
+    "PID": 10372,
+    "Name": "OneDrive.exe",
+    "Action": "closed after saved-work authorization",
+    "GracefulWindowRequest": false
+  },
+  {
+    "PID": 6076,
+    "Name": "msedge.exe",
+    "Action": "closed after saved-work authorization",
+    "GracefulWindowRequest": false
+  },
+  {
+    "PID": 32020,
+    "Name": "msedge.exe",
+    "Action": "closed after saved-work authorization",
+    "GracefulWindowRequest": false
+  },
+  {
+    "PID": 24076,
+    "Name": "msedge.exe",
+    "Action": "closed after saved-work authorization",
+    "GracefulWindowRequest": false
+  },
+  {
+    "PID": 31156,
+    "Name": "msedge.exe",
+    "Action": "closed after saved-work authorization",
+    "GracefulWindowRequest": false
+  },
+  {
+    "PID": 14836,
+    "Name": "msedge.exe",
+    "Action": "closed after saved-work authorization",
+    "GracefulWindowRequest": false
+  },
+  {
+    "PID": 32040,
+    "Name": "SystemSettings",
+    "Action": "graceful settings-window close requested",
+    "GracefulWindowRequest": true
+  }
+]

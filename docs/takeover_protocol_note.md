@@ -31,3 +31,19 @@ The imported pentanomial/normal-approximation summary is retained unmodified und
 Only the exact initial `Unable to open library: nvinfer_plugin_10.dll` failure can take the approved profiling-deferral branch. That does not close R1/F6 or affected T2/T5 work. Other new errors, invalid output, changed artifacts and detected interference preserve BLOCKED evidence and stop. Negative/inconclusive scientific outcomes, such as no sparse tactic selected or no strength gain, remain valid findings.
 
 Windows/driver/security/Codex processes remain running. Identified nonessential user jobs can be stopped after Anjan saves work and starts an exclusive session. Native counters/NVML observations flag app/compute/AC activity and sustained external CPU activity (5% machine CPU for3 successive2-second samples). Their visibility limits and quiet-session observations are recorded; output structure alone is not scientific validity. Normal runs never terminate apps or launch GPU measurements.
+
+## Approved Run 2 continuation v2: Codex orchestration, background flags informational
+
+On 30 October 2026 the user explicitly abandoned manual launching and authorized Codex
+to complete Run 2 after disabling the background interference stop. Activity/CPU/app/GPU
+flags remain logged but do not block new v2 trials. AC checks, single-GPU-workload locks,
+monitoring failures, child exit codes, required numerical outputs and artifact identity
+checks remain enforced. No resource flag is erased or used to discard a slow result.
+
+`execution/codex_run2.py` uses a separate continuation manifest/output tree and references
+the original 35 verified jobs; it does not rewrite their policy or accept the old flagged
+trial retroactively. The original resource guard/controller, model/search commands and
+failed manual-launch evidence remain unchanged. Remaining jobs run in the original order.
+New receipts identify this approved policy/session. Codex activity is not assumed identical
+across trials; Run 3 must review cross-session temperature, clocks, variability and energy
+telemetry before pooling results or claiming a controlled speed/strength improvement.

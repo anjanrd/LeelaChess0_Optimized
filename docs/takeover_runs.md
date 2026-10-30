@@ -14,9 +14,15 @@ If the initial GPU probe still fails with the known plugin-load error, preserve 
 
 ## Current checkpoint
 
-New Run 1 is prepared and verified in `reports/takeover/run1/verification.json`. Its execution code is in `execution/`. Original A-side outcomes, A5/F12 and prior manifests are preserved as historical checkpoints. `analysis/person_a/readiness.py` still describes the old final-integration intake; its waiting R1–R5 state does not mean the new measurement-collection Run 2 waits for Ritwik.
+Runs 1 and 2 are complete. Run 2 has 45 verified job identities: 35 preserved original jobs and ten approved-policy continuation jobs under `reports/takeover/run2/codex-continuation-v2/`. All 28 benchmark trials and two pilot games are verified. The pilot measured26.9723seconds/game;250 pairs provisionally estimate3.7461hours before overhead/uncertainty. Final match size is frozen in Run 3, not inferred from the two pilot outcomes.
 
-Current metadata: `reports/takeover/progress.json`. Current command/input freeze: `reports/takeover/run1/run2_jobs.json`. An initial CPU-only draft is preserved in `run1/initial-cpu-draft/`; only the final root manifest is the execution target. No GPU check ran to create it.
+The original CPU-resource failure is preserved. The manual route passed its quiet preflight and recorded retry review, but failed before any GPU work because Windows virtual-environment Python adds an intermediate process and the worker gate assumed a direct PID relationship. That failure and its original source/session/review remain unchanged. The user then explicitly authorized Codex orchestration with background-interference flags informational. The separate v2 controller/manifest records that policy; it does not alter the old guard, model/search commands or failed evidence. AC, monitor errors, one-workload locks and command/output/identity validation remain enforced. Do not relaunch legacy/manual commands against the preserved original state.
+
+Closure verified 72 frozen continuation inputs and 558 output files (2,157,379,271 bytes), exact model trial counts,112 NN-batch rows,280 actual-node/time search records and two pilot games. All62 offline tests pass. No new background flags were observed. The initial implausible idle-power query is preserved for energy review; measured search counter/sample means agree within0.60%. GPU idle/process shutdown, released awake request and absent active locks were checked. Next is normal Run 3: final precision/sparse/roofline, thermal/session/variability/frontier/timed review, sizing and reproduction preparation. No Run 3, production match, commit or push has started.
+
+Execution code is in `execution/`. Original A-side outcomes, A5/F12 and prior manifests are preserved as historical checkpoints. `analysis/person_a/readiness.py` still describes the old final-integration intake; its waiting R1–R5 state does not mean this takeover waits for Ritwik.
+
+Current metadata: `reports/takeover/progress.json`. Original freeze: `reports/takeover/run1/run2_jobs.json`. The v2 continuation manifest links the immutable original manifest/state, its35 reusable jobs and the ten newly collected jobs. An initial CPU-only draft is preserved in `run1/initial-cpu-draft/`; it is historical preparation, not an execution target.
 
 ## Run 1 outputs and execution checks
 
@@ -41,7 +47,7 @@ At the preceding run's handoff, Codex must state the next run is exclusive, give
 5. Run one GPU workload at a time. Keep lightweight monitoring; do not run unrelated rendering/analysis during measured intervals. Headline throughput/energy excludes profiler and screen-recording overhead. Clock locking was previously denied; record floating clocks and thermal behavior honestly.
 6. The controller flags nonessential application presence, external compute PIDs, AC disconnection and sustained external CPU activity (>5% of total logical-machine capacity over 3 consecutive 2-second samples). Preserve flagged attempts and stop for review. Do not discard results because they are slow or unfavorable. Unknown/short graphics interference can require manual review even without an automatic flag.
 
-## New Run 2 commands — future authorization required
+## Run 2 commands and resumption gate
 
 Safe inspection only:
 
@@ -49,13 +55,13 @@ Safe inspection only:
 .\.venv\Scripts\python.exe -B -m execution.run_jobs
 ```
 
-Only after an explicitly started exclusive Run 2 and the real session preflight:
+Only after an explicitly started exclusive Run 2 and the real session preflight; a recorded BLOCKED attempt additionally requires explicit review before retry:
 
 ```powershell
 .\.venv\Scripts\python.exe -B -m execution.run_jobs --execute --session reports/takeover/run2/session.json
 ```
 
-The child environment prepends `.runtime/tools/TensorRT-10.12.0.36/lib` and the lc0 tool directory to PATH. It does not change the machine-wide PATH or swap DLL files. Static PE checks and a CPU child PATH check passed in Run 1; actual GPU loading remains unverified.
+The child environment prepends `.runtime/tools/TensorRT-10.12.0.36/lib` and the lc0 tool directory to PATH. It does not change the machine-wide PATH or swap DLL files. Static PE checks and a CPU child PATH check passed in Run 1; actual GPU loading and all six full profiles passed in Run 2. Historical plugin failures remain preserved.
 
 The 45-job order is frozen: one small probe; six model profile jobs (FP16/s4 each reuse one engine at batches64/256; four sparse/dense configurations at256); one three-microbenchmark ceiling job; eight actual lc0 captures; 28 benchmark trials; a two-game pilot. Headline FP16/s4 each have five trials with alternating adjacent order; the other six models each have three with rotated order. The pilot uses the same imported 10+0.1 rules; 250 pairs remains provisional until Run 3 sizing.
 

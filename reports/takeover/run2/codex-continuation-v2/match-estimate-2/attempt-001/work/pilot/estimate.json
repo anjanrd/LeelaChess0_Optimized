@@ -1,0 +1,9 @@
+{
+  "games": 2,
+  "seconds_per_game": 26.9722588500008,
+  "provisional_pairs": 250,
+  "provisional_hours": 3.746147062500111,
+  "wall_seconds_current_invocation_including_startup": 69.25829070000327,
+  "contract": "193d849464a5832dbfc8c6616df49f81c683da03a37c74beb5f35bf306fc7ca4",
+  "scope": "two-game planning estimate, not strength evidence"
+}

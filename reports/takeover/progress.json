@@ -3,8 +3,8 @@
   "branch": "anjan",
   "workflow": "five-run takeover of remaining A+B work",
   "scope_reference": "docs/takeover_runs.md",
-  "current_run": 1,
-  "authorized_execution": "new Run 1 only; no exclusive Run 2 start yet",
+  "current_run": 2,
+  "authorized_execution": "Run2 completed; stopped after authorized run. Run3 not started",
   "runs": {
     "1": {
       "mode": "normal",
@@ -13,7 +13,7 @@
     },
     "2": {
       "mode": "exclusive",
-      "status": "awaiting_user_start_and_quiet_preflight",
+      "status": "completed_verified_collection",
       "depends_on": [
         "1"
       ],
@@ -23,11 +23,201 @@
       ],
       "reserve_hours": 8,
       "manifest": "reports/takeover/run1/run2_jobs.json",
-      "handoff": "reports/takeover/run1/EXCLUSIVE_RUN_2.md"
+      "handoff": "reports/takeover/run1/EXCLUSIVE_RUN_2.md",
+      "session": "reports/takeover/run2/session.json",
+      "verified_jobs": 45,
+      "planned_jobs": 45,
+      "started_jobs": 45,
+      "verified_benchmark_trials": 28,
+      "planned_benchmark_trials": 28,
+      "remaining_jobs": [],
+      "checkpoint": {
+        "verified_unix": 1793345880.198821,
+        "frozen_sources_verified": 69,
+        "frozen_source_bytes": 7877040237,
+        "verified_output_files": 421,
+        "verified_output_bytes": 2140054181,
+        "blocked_attempt_inventory": [
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\activity.log",
+            "bytes": 1921975,
+            "sha256": "54c30757bb15be3e51569cef2d396c26018f0e243fac7425e457ec52701f22ac"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\command.log",
+            "bytes": 693,
+            "sha256": "8fbca5eeee1cf7d69a1677d4126a45f58ca03533ce701a30b68558bbe3b71ef3"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\conditions.json",
+            "bytes": 490,
+            "sha256": "7ff197d53293bac8dab59f9cd5e3bb41f6fdc3b85ecf581ae80ad458bb066093"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\receipt.json",
+            "bytes": 1763,
+            "sha256": "32d081af30df79797f1400de2fea0291b1cd24629e4d880a427776a9201e7811"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\backend-b128.log",
+            "bytes": 877,
+            "sha256": "4ef9eb81ff4c3d50bbb0fbe2f03155de69953b253b9b4621291300aa508116ec"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\backend-b256.log",
+            "bytes": 877,
+            "sha256": "fc32d2869aa82eb4bbab9966e551ff4e55a07ad7214d67eab80b6a94b2d2b0ed"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\backend-b32.log",
+            "bytes": 875,
+            "sha256": "860d68de3758a70564988d0712226ffc78f7b73e28ded901c93e7774de341236"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\backend-b64.log",
+            "bytes": 875,
+            "sha256": "5dbbba59823f7612b9d9c3ae7e2b9ae8976580578f81eaad7ab4a7bd278537c1"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\conditioning-000.log",
+            "bytes": 856,
+            "sha256": "4aedaa52bfae33a936e0bff3e3e5ef178b9123af3b48bd8aa383374f74c889e8"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\conditioning-001.log",
+            "bytes": 856,
+            "sha256": "e47a546e936c321183fc4b094deab32aa3ef96302fcb270c9d3f72d0608e0fe7"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\conditioning-002.log",
+            "bytes": 856,
+            "sha256": "c178262dcfee42348c0535c082b1fdfef12632bd40cc196363656a86c48ac0d6"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\conditioning-003.log",
+            "bytes": 856,
+            "sha256": "53713ef2996f41cf923e0116aaa9533afa00156e21aae582e90b66f119d025e6"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\result.json",
+            "bytes": 5136,
+            "sha256": "d30608c2572416bff6b0c5a3d210249f5868fbbe54c32caf6cc5f37ee18e0662"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\search.lc0.log",
+            "bytes": 52176,
+            "sha256": "8acdfef907e1ca166dc4d360bca5ba80aa9e4cd89238db815cb30162cdb27cab"
+          },
+          {
+            "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\bench-s1sp-r3\\attempt-001\\work\\warmup.log",
+            "bytes": 854,
+            "sha256": "93ed2e4eeba71cc4a23733e0fedd4511db54bfd6c90ef627ea24eb8d7931df79"
+          }
+        ],
+        "failed_child_exit_code": 0,
+        "controller_exit_code": 1,
+        "resource_flag": "sustained external CPU activity: ChatGPT.exe",
+        "flag_process_pid": 740,
+        "flag_scope": "three consecutive 2-second intervals at 5.10-5.25 percent of whole-machine CPU, approximately 18.15-24.18 seconds after trial start; during conditioning",
+        "guard_unchanged": true,
+        "awake_request_released": true,
+        "postflight": "2026-10-30 13:04:01 local nvidia-smi: no GPU processes, 0 MiB used, 0% utilization, 41C; no python/lc0/trtexec/nsys processes found"
+      },
+      "manual_launcher": {
+        "status": "abandoned_after_preserved_pre_GPU_PID_gate_failure",
+        "source": "execution/manual_run2.py",
+        "instructions": "docs/manual_run2.md",
+        "verification": "reports/takeover/run2/manual-launcher-verification.json",
+        "tests_passed": 58,
+        "new_launcher_tests": 18,
+        "original_guard_and_manifest_unchanged": true,
+        "retry_applied": true,
+        "actual_GPU_continuation_started": false,
+        "operator_must_close_Codex": true,
+        "failure_folder": "reports/takeover/run2/manual-resume-1793352599487248700",
+        "note": "Review transition occurred, but no benchmark began; original state/receipt and failed manual attempt remain unchanged"
+      },
+      "active_continuation": "reports/takeover/run2/codex-continuation-v2",
+      "continuation_policy": {
+        "version": "run2-background-monitor-only-v2",
+        "authorization": "User explicitly disabled interference blocking and resumed Codex orchestration",
+        "background_interference_blocks": false,
+        "activity_logging": true,
+        "AC_loss_blocks": true,
+        "monitor_error_blocks": true,
+        "command_and_output_validation": true,
+        "single_GPU_workload": true,
+        "limits": "Codex spikes are not assumed equal across trials; review session/thermal variability"
+      },
+      "workload_attempts_started": 46,
+      "original_verified_jobs": 35,
+      "continuation_verified_jobs": 10,
+      "canonical_continuation": "reports/takeover/run2/codex-continuation-v2/state.json",
+      "policy_record": "reports/takeover/run2/codex-continuation-v2/manifest.json",
+      "collection_verified_unix": 1793355509.7848177,
+      "observed_background_flags_in_new_jobs": [],
+      "pilot_games": 2,
+      "pilot_seconds_per_game": 26.9722588500008,
+      "pilot_provisional_250_pairs_hours": 3.746147062500111,
+      "final_match_size_frozen": false,
+      "historical_blocked_job": "bench-s1sp-r3",
+      "preserved_original_blocked_receipt": "reports/takeover/run2/bench-s1sp-r3/attempt-001/receipt.json",
+      "historical_controller_stop": "reports/takeover/run2/controller-stop.json",
+      "historical_continuation_estimate_minutes": [
+        30,
+        45
+      ],
+      "completion_verification": {
+        "frozen_continuation_sources_verified": 72,
+        "original_execution_sources_unchanged": 69,
+        "original_verified_output_files": 421,
+        "combined_verified_output_files": 558,
+        "combined_verified_output_bytes": 2157379271,
+        "combined_receipts_match_state": true,
+        "benchmark_counts": {
+          "fp16": 5,
+          "s4": 5,
+          "s1": 3,
+          "s2": 3,
+          "s3": 3,
+          "s4aa": 3,
+          "s0": 3,
+          "s1sp": 3
+        },
+        "network_batch_rows_validated": 112,
+        "per_position_search_records_validated": 280,
+        "pilot_game_ids": [
+          0,
+          1
+        ],
+        "sleep_prevention": {
+          "requested": true,
+          "released": true
+        },
+        "active_locks_absent": true,
+        "postflight": "nvidia-smi: GPU idle0%,0MiB allocated, no GPU processes,48C; no lc0/trtexec/nsys processes found",
+        "offline_tests_passed": 62,
+        "source_original_manifest": {
+          "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run1\\run2_jobs.json",
+          "bytes": 55570,
+          "sha256": "2f07407db23b3108478d6f791c1fb2d6f6d260e50a4a432980c5206b4900138a"
+        },
+        "source_original_state_preserved": {
+          "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\state.json",
+          "bytes": 183365,
+          "sha256": "1e080c8e80750c4c9b5ce0d04fc60439b1cf3ecc1926de46d646dc413c6355bc"
+        },
+        "continuation_state": {
+          "path": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\codex-continuation-v2\\state.json",
+          "bytes": 67805,
+          "sha256": "6c4aeaab49ea076236306db27bdfaef1f8c05fa9ae2dd055fc620f251055b9b8"
+        },
+        "note": "Collection/identity/numerical validity checks complete; session variability/precision/sparse/roofline/report interpretation is Run3"
+      }
     },
     "3": {
       "mode": "normal",
-      "status": "pending_Run2_collected_evidence",
+      "status": "ready_for_normal_run_after_Run2_verified_collection",
       "depends_on": [
         "2"
       ],
@@ -51,14 +241,15 @@
     }
   },
   "internal_handoffs": {
-    "R1": "imported profiling blocker; scoped PATH prepared, actual GPU validation pending",
-    "R2": "historical preliminary data preserved; new 28-trial measurement pending",
+    "R1": "Loader fixed; six profiles, ceilings and eight lc0 traces collected/verified; precision/sparse/roofline interpretation Run3",
+    "R2": "All28 benchmark trials verified; five each FP16/s4, three each six others; variability/session/frontier reporting Run3",
     "R3": "existing matched timed review ready; canonical final alignment in Run3",
-    "R4": "pilot pending Run2; sizing Run3; production Run4; statistics Run5",
+    "R4": "Two-game pilot complete at26.97225885seconds/game; final sizing Run3, production Run4, statistics Run5",
     "R5": "systems/source preparation ready; fresh setup Run3, GPU reproduction Run4, final writing/package Run5"
   },
-  "new_GPU_workloads_started": 0,
+  "new_GPU_workloads_started": 46,
   "global_PATH_or_power_settings_changed": false,
-  "process_termination_performed": false,
-  "commit_push_or_teammate_message_performed": false
+  "process_termination_performed": true,
+  "commit_push_or_teammate_message_performed": false,
+  "GPU_workload_count_scope": "controller workload attempts:45 valid planned jobs plus one preserved resource-flagged attempt; manual pre-GPU launch failure excluded"
 }

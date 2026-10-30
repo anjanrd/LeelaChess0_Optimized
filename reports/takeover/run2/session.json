@@ -1,0 +1,24 @@
+{
+  "root": "C:\\Users\\HP\\Desktop\\LC0",
+  "created_unix": 1793338888.916872,
+  "exclusive_authorized": true,
+  "work_saved": true,
+  "ac_power_confirmed": true,
+  "other_work_paused": true,
+  "resource_preflight_passed": true,
+  "runtime": {
+    "GPU_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "GPU_uuid": "GPU-020e5950-8d4c-173a-fa0e-a2c9b981160d",
+    "driver_version": "592.82",
+    "memory_MiB": "8188",
+    "power_limit_query": "[N/A]",
+    "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+    "OEM_mode": "not programmatically observed; unchanged by Codex",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "prepared_manifest": "9300e77242ed09d7a3f7fbd270512a6a2d24830ae39bb783139ce213ac4a1fea"
+  },
+  "preflight": "reports/takeover/run2/preflight.json",
+  "termination_record": "reports/takeover/run2/process-cleanup.json",
+  "authorization": "User explicitly started exclusive Run2 after confirming work saved; nonessential app closing already authorized."
+}

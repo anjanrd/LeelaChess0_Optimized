@@ -1,0 +1,22 @@
+{
+  "imported_summary": {
+    "games": 2,
+    "a": "fp16",
+    "b": "s4",
+    "w": 0,
+    "d": 2,
+    "l": 0,
+    "pairs_complete": 1,
+    "score": 0.5,
+    "elo": 0.0
+  },
+  "complete_color_pairs": 1,
+  "incomplete_pair_ids": [],
+  "normal_score_interval": null,
+  "ci_reportable": false,
+  "elo_ci95_reportable": null,
+  "inference_limits": [
+    "normal-approximation pair interval; repeated 50-opening book",
+    "insufficient pairs or zero observed pair variance; no reliable CI"
+  ]
+}

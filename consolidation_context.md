@@ -210,3 +210,17 @@ New code under `execution/` wraps the unchanged imported pipeline with checked b
 Preparation evidence lives in `reports/takeover/run1/`; current five-run status is `reports/takeover/progress.json`. The final45-job command/input manifest is `run1/run2_jobs.json`; its earlier CPU-only draft is preserved separately.40 offline tests pass, including original score reproduction, fake-command resumption/failure handling, real CPU-only Windows/PE observations and synthetic match-clock/journal checks. No engine/profiler, GPU benchmark, match, model inference, app termination, global PATH/power change, commit or push ran in new Run1.
 
 The SDK plugin exists and the scoped CPU child PATH check passes, but actual GPU loading remains unverified. Initial exclusive Run2 estimate is3–7hours; reserve up to8hours for cold compilation. Read its handoff before beginning. A repeated exact plugin-load error can defer only that branch; profiling-dependent retained deliverables remain open. Original A5 manifests are historical checkpoints; the new takeover verification/inventory describe current preparation.
+
+## 14. Run 2 completion under the approved continuation policy
+
+Run 2 is now collected and verified on anjan:35 original verified jobs plus ten jobs
+under `reports/takeover/run2/codex-continuation-v2/`, covering all45 planned jobs,
+28 benchmark trials and the two-game pilot. The continuation manifest links the original
+manifest/state and records its own sources/session/policy. The original state remains a
+lineage checkpoint, not the combined completion record; use `reports/takeover/progress.json`.
+The original resource-flagged attempt and manual launch's pre-GPU PID-gate failure are
+preserved. The user explicitly abandoned manual launching and approved Codex orchestration
+with background flags informational; activity/AC/exit/output/identity checks remain.
+Model bytes, scientific settings and original execution code are unchanged. Normal Run3
+analysis/reproduction preparation is next; production matches are Run4. No new experiment
+was launched merely to consolidate, and no commit/push or teammate message occurred here.

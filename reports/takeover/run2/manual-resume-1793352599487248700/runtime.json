@@ -1,0 +1,10 @@
+{
+  "gpu_query_argv": [
+    "nvidia-smi",
+    "--query-gpu=name,uuid,driver_version,memory.total,power.limit",
+    "--format=csv,noheader,nounits"
+  ],
+  "gpu_query_stdout": "NVIDIA GeForce RTX 4060 Laptop GPU, GPU-020e5950-8d4c-173a-fa0e-a2c9b981160d, 592.82, 8188, [N/A]\n",
+  "powercfg_stdout": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+  "OEM_mode": "not observed; operator confirms unchanged"
+}

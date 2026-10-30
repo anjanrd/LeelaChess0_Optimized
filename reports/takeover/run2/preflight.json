@@ -1,0 +1,39 @@
+{
+  "activity": {
+    "samples": 7,
+    "period_seconds": 2,
+    "flags": [],
+    "monitor_errors": [],
+    "gpu_process_visibility": "NVML compute process query; WDDM graphics activity may not be fully visible",
+    "rules": "5% total-machine CPU for 3 consecutive samples; nonessential app presence; external compute PID; AC disconnect",
+    "raw_log": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\preflight-activity.log"
+  },
+  "GPU_query_fields": [
+    "name",
+    "uuid",
+    "driver",
+    "memory_MiB",
+    "power_limit_W",
+    "power_W",
+    "SM_MHz",
+    "memory_MHz",
+    "temperature_C"
+  ],
+  "GPU_query_values": [
+    "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "GPU-020e5950-8d4c-173a-fa0e-a2c9b981160d",
+    "592.82",
+    "8188",
+    "[N/A]",
+    "12.81",
+    "2250",
+    "8001",
+    "40"
+  ],
+  "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+  "work_saved_authorization": "User: work saved; begin run 2",
+  "ac_line": 1,
+  "process_cleanup": "reports/takeover/run2/process-cleanup.json",
+  "clock_locking": "not attempted; previous denial retained",
+  "OEM_mode": "not programmatically observed; unchanged by Codex"
+}

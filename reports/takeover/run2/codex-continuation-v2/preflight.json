@@ -1,0 +1,46 @@
+{
+  "activity": {
+    "samples": 7,
+    "period_seconds": 2,
+    "flags": [],
+    "monitor_errors": [],
+    "gpu_process_visibility": "NVML compute process query; WDDM graphics activity may not be fully visible",
+    "rules": "5% total-machine CPU for 3 consecutive samples; nonessential app presence; external compute PID; AC disconnect",
+    "raw_log": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\codex-continuation-v2\\preflight-activity.log",
+    "enforcement": {
+      "version": "run2-background-monitor-only-v2",
+      "authorization": "User explicitly disabled interference blocking and resumed Codex orchestration",
+      "background_interference_blocks": false,
+      "activity_logging": true,
+      "AC_loss_blocks": true,
+      "monitor_error_blocks": true,
+      "command_and_output_validation": true,
+      "single_GPU_workload": true,
+      "limits": "Codex spikes are not assumed equal across trials; review session/thermal variability"
+    }
+  },
+  "observations": {
+    "gpu_query_argv": [
+      "nvidia-smi",
+      "--query-gpu=name,uuid,driver_version,memory.total,power.limit",
+      "--format=csv,noheader,nounits"
+    ],
+    "gpu_query_stdout": "NVIDIA GeForce RTX 4060 Laptop GPU, GPU-020e5950-8d4c-173a-fa0e-a2c9b981160d, 592.82, 8188, [N/A]\n",
+    "powercfg_stdout": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+    "OEM_mode": "not observed; operator confirms unchanged",
+    "nvidia_smi": "Fri Oct 30 15:15:10 2026       \n+-----------------------------------------------------------------------------------------+\n| NVIDIA-SMI 592.82                 Driver Version: 592.82         CUDA Version: 13.1     |\n+-----------------------------------------+------------------------+----------------------+\n| GPU  Name                  Driver-Model | Bus-Id          Disp.A | Volatile Uncorr. ECC |\n| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |\n|                                         |                        |               MIG M. |\n|=========================================+========================+======================|\n|   0  NVIDIA GeForce RTX 4060 ...  WDDM  |   00000000:01:00.0 Off |                  N/A |\n| N/A   40C    P0             17W /  120W |       0MiB /   8188MiB |      0%      Default |\n|                                         |                        |                  N/A |\n+-----------------------------------------+------------------------+----------------------+\n\n+-----------------------------------------------------------------------------------------+\n| Processes:                                                                              |\n|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |\n|        ID   ID                                                               Usage      |\n|=========================================================================================|\n|  No running processes found                                                             |\n+-----------------------------------------------------------------------------------------+\n",
+    "earlier_idle_power_observation": "An initial idle nvidia-smi query printed an implausible 590W at 40C/0% utilization; subsequent four NVML samples showed16.658/1.201/1.201/1.201W and counter-derived average29.650W. Preserve telemetry and review energy validity in Run3; do not silently correct data."
+  },
+  "user_assurance": "No other application/process being used; user explicitly requested Codex orchestration and disabled interference blocking",
+  "policy": {
+    "version": "run2-background-monitor-only-v2",
+    "authorization": "User explicitly disabled interference blocking and resumed Codex orchestration",
+    "background_interference_blocks": false,
+    "activity_logging": true,
+    "AC_loss_blocks": true,
+    "monitor_error_blocks": true,
+    "command_and_output_validation": true,
+    "single_GPU_workload": true,
+    "limits": "Codex spikes are not assumed equal across trials; review session/thermal variability"
+  }
+}

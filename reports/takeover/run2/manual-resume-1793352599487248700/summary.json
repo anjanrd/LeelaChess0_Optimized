@@ -1,0 +1,25 @@
+{
+  "status": "BLOCKED",
+  "started_unix": 1793352599.4872487,
+  "launcher_source": {
+    "path": "C:\\Users\\HP\\Desktop\\LC0\\execution\\manual_run2.py",
+    "bytes": 24475,
+    "sha256": "9e5408fe615413d83b7bf1ed93779dc4b4c4771ca387b9f3185957f1774a7e71"
+  },
+  "manifest": "9300e77242ed09d7a3f7fbd270512a6a2d24830ae39bb783139ce213ac4a1fea",
+  "operator_confirmations": {
+    "check": false,
+    "execute": true,
+    "confirm_exclusive": true,
+    "confirm_same_power_mode": true,
+    "approve_retry": "bench-s1sp-r3",
+    "worker": null
+  },
+  "awake_request": {
+    "requested": true,
+    "released": true
+  },
+  "mode": "external PowerShell; Codex fully closed; original guard unchanged",
+  "error": "RuntimeError('Controller stopped; inspect controller.log and the latest receipt')",
+  "ended_unix": 1793352691.521674
+}

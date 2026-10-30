@@ -1,0 +1,24 @@
+{
+  "contract": "193d849464a5832dbfc8c6616df49f81c683da03a37c74beb5f35bf306fc7ca4",
+  "record": {
+    "game": 1,
+    "pair": 0,
+    "opening": 0,
+    "white": "s4",
+    "black": "fp16",
+    "result": "1/2-1/2",
+    "reason": "threefold_repetition",
+    "score_a": 0.5,
+    "plies": 103,
+    "seconds": 28.568960600008722,
+    "a_nodes_per_move": 2208.3125,
+    "b_nodes_per_move": 2522.3061224489797,
+    "a_ms_per_move": 296.1068520835397,
+    "b_ms_per_move": 290.12089388026874,
+    "clock_left_ms": {
+      "white": 684.0761998668313,
+      "black": 586.8710999900941
+    }
+  },
+  "pgn": "[Event \"fp16_vs_s4_pilot\"]\n[Site \"?\"]\n[Date \"????.??.??\"]\n[Round \"2\"]\n[White \"s4\"]\n[Black \"fp16\"]\n[Result \"1/2-1/2\"]\n[TimeControl \"10+0.1\"]\n[Termination \"threefold_repetition\"]\n\n1. e4 e5 2. Nf3 Nc6 3. Bb5 a6 4. Ba4 Nf6 5. O-O Nxe4 6. d4 b5 7. Bb3 d5 8. dxe5 Be6 9. c3 Be7 10. Be3 Qd7 11. Nbd2 Rd8 12. Qe2 O-O 13. Rad1 Nxd2 14. Bxd2 Na5 15. Bc2 c5 16. Rfe1 Bf5 17. e6 fxe6 18. Bxf5 Rxf5 19. Qxe6+ Qxe6 20. Rxe6 Bd6 21. Bg5 Rd7 22. Re8+ Rf8 23. Rxf8+ Bxf8 24. Ne5 Rd6 25. b3 g6 26. Be3 Nb7 27. Nd3 c4 28. Nf4 cxb3 29. axb3 a5 30. Kf1 a4 31. bxa4 bxa4 32. Rb1 Rd7 33. Rb6 Bc5 34. Ra6 Bxe3 35. fxe3 Nc5 36. Ra5 g5 37. Rxc5 gxf4 38. exf4 d4 39. Ke2 dxc3 40. Rxc3 Ra7 41. Ra3 Kf7 42. g4 h5 43. g5 Kg6 44. Kf3 Kf5 45. Kg3 Ra8 46. Kh4 Ra7 47. Kg3 Ra8 48. h3 Ra7 49. Kf3 Ra8 50. Kg3 Ra7 51. Kf3 Ra5 52. Kg3 1/2-1/2"
+}

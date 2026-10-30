@@ -1,0 +1,34 @@
+{
+  "root": "C:\\Users\\HP\\Desktop\\LC0",
+  "created_unix": 1793353522.5426216,
+  "exclusive_authorized": true,
+  "work_saved": true,
+  "ac_power_confirmed": true,
+  "other_work_paused": true,
+  "resource_preflight_passed": true,
+  "runtime": {
+    "GPU_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+    "GPU_uuid": "GPU-020e5950-8d4c-173a-fa0e-a2c9b981160d",
+    "driver_version": "592.82",
+    "memory_MiB": "8188",
+    "power_limit_query": "[N/A]",
+    "power_scheme": "Power Scheme GUID: 381b4222-f694-41f0-9685-ff5bb260df2e  (Balanced)",
+    "python": "3.11.9",
+    "platform": "Windows-10-10.0.26200-SP0",
+    "prepared_manifest": "9300e77242ed09d7a3f7fbd270512a6a2d24830ae39bb783139ce213ac4a1fea",
+    "OEM_mode": "not programmatically observed; unchanged by Codex"
+  },
+  "preflight": "C:\\Users\\HP\\Desktop\\LC0\\reports\\takeover\\run2\\codex-continuation-v2\\preflight.json",
+  "authorization": "User explicitly requested completion of autonomous Run2 by Codex with interference blocking disabled",
+  "policy": {
+    "version": "run2-background-monitor-only-v2",
+    "authorization": "User explicitly disabled interference blocking and resumed Codex orchestration",
+    "background_interference_blocks": false,
+    "activity_logging": true,
+    "AC_loss_blocks": true,
+    "monitor_error_blocks": true,
+    "command_and_output_validation": true,
+    "single_GPU_workload": true,
+    "limits": "Codex spikes are not assumed equal across trials; review session/thermal variability"
+  }
+}
